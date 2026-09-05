@@ -1,4 +1,4 @@
-name: Publish Storybook documentation
+name: Publish Kanonis documentation
 
 on:
   push:
