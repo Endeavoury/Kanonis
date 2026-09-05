@@ -54,7 +54,7 @@ const columns: DsTableColumn[] = [
   },
 ];
 const meta: Meta = {
-  title: 'Components/Data/Data Table',
+  title: 'Patterns/Product/Data Table',
   tags: ['autodocs'],
   argTypes: {
     density: { control: 'select', options: ['compact', 'comfortable'] },
@@ -122,16 +122,16 @@ export const InlineActions: StoryObj = {
       description="Links remain independently accessible within selectable rows."
       selectable
       .columns=${[
-      ...columns,
-      {
-        key: 'id',
-        label: 'Actions',
-        format: (_value: unknown, row: Record<string, unknown>) =>
-          html`<a href=${`#entry-${row['id']}`} aria-label=${`View ${row['counterparty']} entry`}
-            >View entry</a
-          >`,
-      },
-    ]}
+        ...columns,
+        {
+          key: 'id',
+          label: 'Actions',
+          format: (_value: unknown, row: Record<string, unknown>) =>
+            html`<a href=${`#entry-${row['id']}`} aria-label=${`View ${row['counterparty']} entry`}
+              >View entry</a
+            >`,
+        },
+      ]}
       .rows=${rows}
     ></ds-data-table>`,
 };

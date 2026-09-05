@@ -1,5 +1,35 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
+
+const installCode = `npm config set @endeavoury:registry https://npm.pkg.github.com
+npm install @endeavoury/kanosis @endeavoury/kanosis-styles`;
+
+const vanillaCode = `import '@endeavoury/kanosis';
+import '@endeavoury/kanosis/styles.css';
+
+document.querySelector('#app')!.innerHTML =
+  '<ds-button tone="accent">Save changes</ds-button>';`;
+
+const reactCode = `import { DsButton } from '@endeavoury/kanosis-react';
+import '@endeavoury/kanosis/styles.css';
+
+export function SaveButton() {
+  return <DsButton tone="accent">Save changes</DsButton>;
+}`;
+
+const angularCode = `import { Component } from '@angular/core';
+import { DESIGN_SYSTEM_SCHEMAS, registerDesignSystem } from '@endeavoury/kanosis-angular';
+
+registerDesignSystem();
+
+@Component({
+  selector: 'app-save',
+  standalone: true,
+  schemas: [...DESIGN_SYSTEM_SCHEMAS],
+  template: '<ds-button tone="accent">Save changes</ds-button>',
+})
+export class SaveComponent {}`;
+
 const meta: Meta = {
   title: 'Introduction/Kanosis',
   parameters: { layout: 'fullscreen' },
@@ -49,5 +79,49 @@ export const Welcome: StoryObj = {
           application or APIs.</ds-alert
         >
       </div>
+      <section style="margin-top:48px">
+        <h2>Install the packages</h2>
+        <p style="max-width:700px;color:var(--ds-color-text-secondary)">
+          Kanosis is distributed as native Web Components. Install the core package and shared
+          styles, then add the small adapter package for your framework when you want typed props
+          and events.
+        </p>
+        <pre
+          style="overflow:auto;padding:20px;border:1px solid var(--ds-color-border-subtle);border-radius:12px;background:var(--ds-color-bg-surface)"
+        ><code>${installCode}</code></pre>
+        <p style="color:var(--ds-color-text-secondary)">
+          GitHub Packages requires a token with <code>read:packages</code> and the scope mapping
+          above in your project or user <code>.npmrc</code>.
+        </p>
+      </section>
+      <section style="margin-top:40px;display:grid;gap:24px">
+        <div>
+          <h2>Vanilla</h2>
+          <p style="color:var(--ds-color-text-secondary)">
+            Import the registration entry point and use the custom elements directly.
+          </p>
+          <pre
+            style="overflow:auto;padding:20px;border:1px solid var(--ds-color-border-subtle);border-radius:12px;background:var(--ds-color-bg-surface)"
+          ><code>${vanillaCode}</code></pre>
+        </div>
+        <div>
+          <h2>React</h2>
+          <p style="color:var(--ds-color-text-secondary)">
+            Use the typed adapters from <code>@endeavoury/kanosis-react</code>.
+          </p>
+          <pre
+            style="overflow:auto;padding:20px;border:1px solid var(--ds-color-border-subtle);border-radius:12px;background:var(--ds-color-bg-surface)"
+          ><code>${reactCode}</code></pre>
+        </div>
+        <div>
+          <h2>Angular</h2>
+          <p style="color:var(--ds-color-text-secondary)">
+            Register the elements once and opt into Angular's custom-element schema.
+          </p>
+          <pre
+            style="overflow:auto;padding:20px;border:1px solid var(--ds-color-border-subtle);border-radius:12px;background:var(--ds-color-bg-surface)"
+          ><code>${angularCode}</code></pre>
+        </div>
+      </section>
     </div>`,
 };
