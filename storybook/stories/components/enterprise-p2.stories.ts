@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 const meta: Meta = {
-  title: 'Patterns/Productivity/Operations',
+  title: 'Patterns/Operations',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };

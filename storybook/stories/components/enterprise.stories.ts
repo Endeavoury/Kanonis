@@ -14,7 +14,7 @@ const rows = [
 ];
 
 const meta: Meta = {
-  title: 'Patterns/Productivity/Workflow',
+  title: 'Patterns/Workflow',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };

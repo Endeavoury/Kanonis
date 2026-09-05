@@ -54,7 +54,7 @@ const columns: DsTableColumn[] = [
   },
 ];
 const meta: Meta = {
-  title: 'Components/Data/Data Table',
+  title: 'Components/Data Table',
   tags: ['autodocs'],
   argTypes: {
     density: { control: 'select', options: ['compact', 'comfortable'] },
