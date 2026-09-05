@@ -14,14 +14,14 @@ const withTheme: Decorator = (story, context) => {
   document.documentElement.dataset['dsBrand'] = brand;
   document.documentElement.dir = direction;
   return html`<div
-    data-ds-theme=${theme}
-    data-ds-contrast=${contrast}
-    data-ds-brand=${brand}
+    data-kanonis-theme=${theme}
+    data-kanonis-contrast=${contrast}
+    data-kanonis-brand=${brand}
     dir=${direction}
     style=${
       fullscreen
-        ? 'width:100%;height:100dvh;min-width:0;min-height:0;overflow:hidden;color:var(--ds-color-text-primary);background:var(--ds-color-bg-canvas)'
-        : 'min-height:100%;color:var(--ds-color-text-primary);background:var(--ds-color-bg-canvas);padding:1.5rem'
+        ? 'width:100%;height:100dvh;min-width:0;min-height:0;overflow:hidden;color:var(--kanonis-color-text-primary);background:var(--kanonis-color-bg-canvas)'
+        : 'min-height:100%;color:var(--kanonis-color-text-primary);background:var(--kanonis-color-bg-canvas);padding:1.5rem'
     }
   >
     ${story()}

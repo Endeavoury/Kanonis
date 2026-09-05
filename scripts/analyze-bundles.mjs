@@ -78,7 +78,7 @@ for (const [name, source] of Object.entries(entries)) {
     // may intentionally use the same transition sequence without duplicating
     // the shared form-control foundation.
     const sharedControlMarker =
-      '.control{min-height:var(--ds-control-height-md);border:1pxsolidvar(--ds-color-border-default)';
+      '.control{min-height:var(--kanonis-control-height-md);border:1pxsolidvar(--kanonis-color-border-default)';
     const markerOccurrences = normalizedCode.split(sharedControlMarker).length - 1;
     report.sharedControlFoundationOccurrences = markerOccurrences;
     if (markerOccurrences !== 1)

@@ -32,49 +32,49 @@ const fieldSpecificStyles = css`
   }
   input,
   select {
-    height: var(--ds-control-height-md);
-    padding: 0 var(--ds-space-3);
-    font-size: var(--ds-font-size-md);
+    height: var(--kanonis-control-height-md);
+    padding: 0 var(--kanonis-space-3);
+    font-size: var(--kanonis-font-size-md);
   }
   :host([size='small']) input,
   :host([size='small']) select {
-    height: var(--ds-control-height-sm);
-    font-size: var(--ds-font-size-sm);
+    height: var(--kanonis-control-height-sm);
+    font-size: var(--kanonis-font-size-sm);
   }
   :host([size='large']) input,
   :host([size='large']) select {
-    height: var(--ds-control-height-lg);
-    font-size: var(--ds-font-size-lg);
+    height: var(--kanonis-control-height-lg);
+    font-size: var(--kanonis-font-size-lg);
   }
   input::placeholder {
-    color: var(--ds-color-text-muted);
+    color: var(--kanonis-color-text-muted);
   }
   .invalid {
-    border-color: var(--ds-color-danger) !important;
+    border-color: var(--kanonis-color-danger) !important;
   }
   .prefix,
   .suffix {
     position: absolute;
     display: inline-flex;
-    color: var(--ds-color-text-muted);
+    color: var(--kanonis-color-text-muted);
     pointer-events: none;
   }
   .prefix {
-    left: var(--ds-space-3);
+    left: var(--kanonis-space-3);
   }
   .suffix {
-    right: var(--ds-space-3);
+    right: var(--kanonis-space-3);
   }
   .has-prefix {
-    padding-left: calc(var(--ds-space-3) + var(--ds-icon-md) + var(--ds-space-2));
+    padding-left: calc(var(--kanonis-space-3) + var(--kanonis-icon-md) + var(--kanonis-space-2));
   }
   .has-suffix {
-    padding-right: calc(var(--ds-space-3) + var(--ds-icon-md) + var(--ds-space-2));
+    padding-right: calc(var(--kanonis-space-3) + var(--kanonis-icon-md) + var(--kanonis-space-2));
   }
   ::slotted([slot='prefix']),
   ::slotted([slot='suffix']) {
-    width: var(--ds-icon-md);
-    height: var(--ds-icon-md);
+    width: var(--kanonis-icon-md);
+    height: var(--kanonis-icon-md);
   }
 `;
 
@@ -224,20 +224,20 @@ export class DsSearchInput extends DsInput {
     css`
       .clear {
         position: absolute;
-        right: var(--ds-space-2);
+        right: var(--kanonis-space-2);
         display: grid;
         place-items: center;
         width: 1.75rem;
         height: 1.75rem;
         border: 0;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: transparent;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
         cursor: pointer;
       }
       .clear:hover {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
       .clear[hidden] {
         display: none;
@@ -258,9 +258,9 @@ export class DsSelect extends DsElement {
       }
       .chevron {
         position: absolute;
-        right: var(--ds-space-3);
+        right: var(--kanonis-space-3);
         pointer-events: none;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
     `,
   ];
@@ -340,10 +340,10 @@ export class DsCheckbox extends DsElement {
       .wrap {
         display: inline-grid;
         grid-template-columns: 1.125rem minmax(0, 1fr);
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         align-items: start;
-        color: var(--ds-color-text-primary);
-        font-size: var(--ds-font-size-md);
+        color: var(--kanonis-color-text-primary);
+        font-size: var(--kanonis-font-size-md);
         cursor: pointer;
       }
       .box {
@@ -352,13 +352,13 @@ export class DsCheckbox extends DsElement {
         width: 1.125rem;
         height: 1.125rem;
         margin-top: 0.1rem;
-        border: 1px solid var(--ds-color-border-strong);
-        border-radius: var(--ds-radius-sm);
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-text-inverse);
+        border: 1px solid var(--kanonis-color-border-strong);
+        border-radius: var(--kanonis-radius-sm);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-text-inverse);
         transition:
-          background var(--ds-duration-fast),
-          border-color var(--ds-duration-fast);
+          background var(--kanonis-duration-fast),
+          border-color var(--kanonis-duration-fast);
       }
       input {
         position: absolute;
@@ -366,8 +366,8 @@ export class DsCheckbox extends DsElement {
         pointer-events: none;
       }
       .checked {
-        background: var(--ds-color-accent-primary);
-        border-color: var(--ds-color-accent-primary);
+        background: var(--kanonis-color-accent-primary);
+        border-color: var(--kanonis-color-accent-primary);
       }
       .mark {
         font-size: 0.75rem;
@@ -459,21 +459,21 @@ export class DsFormField extends DsElement {
     css`
       :host {
         display: grid;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
       .label {
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
-        font-weight: var(--ds-font-weight-semibold);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
+        font-weight: var(--kanonis-font-weight-semibold);
         cursor: default;
       }
       .help {
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
       }
       .error {
-        color: var(--ds-color-danger);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-danger);
+        font-size: var(--kanonis-font-size-xs);
       }
     `,
   ];

@@ -28,12 +28,12 @@ const enterpriseSurface = css`
     display: flex;
     min-width: 0;
     align-items: center;
-    gap: var(--ds-space-3);
-    padding: var(--ds-space-3) var(--ds-space-4);
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-lg);
-    background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-    box-shadow: var(--ds-shadow-panel);
+    gap: var(--kanonis-space-3);
+    padding: var(--kanonis-space-3) var(--kanonis-space-4);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-lg);
+    background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+    box-shadow: var(--kanonis-shadow-panel);
   }
   button,
   input,
@@ -41,27 +41,27 @@ const enterpriseSurface = css`
     font: inherit;
   }
   button {
-    min-height: var(--ds-control-height-sm);
-    padding: 0 var(--ds-space-3);
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-md);
-    background: var(--ds-color-bg-surface-subtle);
-    color: var(--ds-color-text-primary);
+    min-height: var(--kanonis-control-height-sm);
+    padding: 0 var(--kanonis-space-3);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-md);
+    background: var(--kanonis-color-bg-surface-subtle);
+    color: var(--kanonis-color-text-primary);
     cursor: pointer;
   }
   button:hover {
-    border-color: var(--ds-color-border-strong);
-    background: var(--ds-color-bg-hover);
+    border-color: var(--kanonis-color-border-strong);
+    background: var(--kanonis-color-bg-hover);
   }
   button:focus-visible,
   input:focus-visible,
   select:focus-visible {
-    outline: 2px solid var(--ds-color-focus);
+    outline: 2px solid var(--kanonis-color-focus);
     outline-offset: 2px;
   }
   .muted {
-    color: var(--ds-color-text-muted);
-    font-size: var(--ds-font-size-sm);
+    color: var(--kanonis-color-text-muted);
+    font-size: var(--kanonis-font-size-sm);
   }
 `;
 
@@ -157,18 +157,18 @@ export class DsViewToolbar extends DsElement {
       }
       input {
         width: 100%;
-        min-height: var(--ds-control-height-sm);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        min-height: var(--kanonis-control-height-sm);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
       .actions {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
     `,
   ];
@@ -207,22 +207,22 @@ export class DsColumnManager extends DsElement {
     css`
       .surface {
         display: grid;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         align-items: stretch;
       }
       label {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        padding: var(--ds-space-2);
-        border-radius: var(--ds-radius-sm);
+        gap: var(--kanonis-space-2);
+        padding: var(--kanonis-space-2);
+        border-radius: var(--kanonis-radius-sm);
         cursor: pointer;
       }
       label:hover {
-        background: var(--ds-color-bg-hover);
+        background: var(--kanonis-color-bg-hover);
       }
       input {
-        accent-color: var(--ds-color-accent-primary);
+        accent-color: var(--kanonis-color-accent-primary);
       }
     `,
   ];
@@ -249,12 +249,12 @@ export class DsBulkActions extends DsElement {
       .surface {
         justify-content: space-between;
         flex-wrap: wrap;
-        background: var(--ds-color-bg-selected);
+        background: var(--kanonis-color-bg-selected);
       }
       .actions {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
     `,
   ];
@@ -288,13 +288,13 @@ export class DsSavedView extends DsElement {
         flex-wrap: wrap;
       }
       select {
-        min-height: var(--ds-control-height-sm);
+        min-height: var(--kanonis-control-height-sm);
         min-width: 12rem;
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
     `,
   ];
@@ -337,41 +337,41 @@ export class DsCombobox extends DsElement {
       }
       .field {
         display: grid;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         position: relative;
       }
       .label {
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
-        font-weight: var(--ds-font-weight-semibold);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
+        font-weight: var(--kanonis-font-weight-semibold);
       }
       input {
         width: 100%;
-        height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-3);
+        height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-3);
       }
       [role='listbox'] {
         position: absolute;
-        z-index: var(--ds-z-dropdown);
+        z-index: var(--kanonis-z-dropdown);
         inset: 100% 0 auto;
         max-height: 16rem;
-        margin-top: var(--ds-space-1);
+        margin-top: var(--kanonis-space-1);
         overflow-y: auto;
-        padding: var(--ds-space-1);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-elevated);
-        box-shadow: var(--ds-shadow-md);
+        padding: var(--kanonis-space-1);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-elevated);
+        box-shadow: var(--kanonis-shadow-md);
       }
       [role='option'] {
-        padding: var(--ds-space-2) var(--ds-space-3);
-        border-radius: var(--ds-radius-sm);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
+        border-radius: var(--kanonis-radius-sm);
         cursor: pointer;
       }
       [role='option']:hover,
       [role='option'][aria-selected='true'],
       [role='option'][data-active] {
-        background: var(--ds-color-bg-selected);
+        background: var(--kanonis-color-bg-selected);
       }
     `,
   ];
@@ -450,19 +450,19 @@ export class DsValidationSummary extends DsElement {
     css`
       :host {
         display: block;
-        padding: var(--ds-space-4);
-        border: 1px solid var(--ds-color-danger);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-danger-soft);
-        color: var(--ds-color-text-primary);
+        padding: var(--kanonis-space-4);
+        border: 1px solid var(--kanonis-color-danger);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-danger-soft);
+        color: var(--kanonis-color-text-primary);
       }
       h2 {
-        margin: 0 0 var(--ds-space-2);
-        font-size: var(--ds-font-size-lg);
+        margin: 0 0 var(--kanonis-space-2);
+        font-size: var(--kanonis-font-size-lg);
       }
       ul {
         margin: 0;
-        padding-left: var(--ds-space-5);
+        padding-left: var(--kanonis-space-5);
       }
       a {
         color: inherit;

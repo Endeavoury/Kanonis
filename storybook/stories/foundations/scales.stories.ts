@@ -6,13 +6,13 @@ export const Spacing: StoryObj = {
   render: () =>
     html`<h2>Spacing</h2>
       <div style="display:grid;gap:10px">
-        ${[1, 2, 3, 4, 5, 6, 7, 8].map((step) => html`<div style="display:flex;align-items:center;gap:12px"><code style="width:100px">--ds-space-${step}</code><span style=${`display:block;height:18px;width:var(--ds-space-${step});background:var(--ds-color-accent-primary)`}></span></div>`)}
+        ${[1, 2, 3, 4, 5, 6, 7, 8].map((step) => html`<div style="display:flex;align-items:center;gap:12px"><code style="width:100px">--kanonis-space-${step}</code><span style=${`display:block;height:18px;width:var(--kanonis-space-${step});background:var(--kanonis-color-accent-primary)`}></span></div>`)}
       </div>`,
 };
 export const RadiusAndElevation: StoryObj = {
   render: () =>
     html`<div style="display:flex;gap:24px;flex-wrap:wrap">
-      ${['sm', 'md', 'lg'].map((size) => html`<div style=${`width:150px;height:100px;padding:16px;border:1px solid var(--ds-color-border-default);border-radius:var(--ds-radius-${size});background:var(--ds-color-bg-surface);box-shadow:var(--ds-shadow-${size === 'lg' ? 'lg' : 'sm'})`}><code>radius-${size}</code></div>`)}
+      ${['sm', 'md', 'lg'].map((size) => html`<div style=${`width:150px;height:100px;padding:16px;border:1px solid var(--kanonis-color-border-default);border-radius:var(--kanonis-radius-${size});background:var(--kanonis-color-bg-surface);box-shadow:var(--kanonis-shadow-${size === 'lg' ? 'lg' : 'sm'})`}><code>radius-${size}</code></div>`)}
     </div>`,
 };
 export const MotionAndBreakpoints: StoryObj = {
@@ -22,7 +22,7 @@ export const MotionAndBreakpoints: StoryObj = {
       description="Fast 140ms feedback, 220ms structural transitions, semantic motion roles, and automatic reduction when requested."
       ><kanonis-stack gap="3"
         ><code>compact ≤40rem · medium ≤48rem · expanded ≤56.25rem · wide ≤68.75rem</code>
-        <p style="color:var(--ds-color-text-secondary)">
+        <p style="color:var(--kanonis-color-text-secondary)">
           Component responsiveness is container-conscious where possible; application-shell
           structure uses the shared compact, medium, expanded, and wide contract.
         </p></kanonis-stack

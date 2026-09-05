@@ -57,7 +57,7 @@ Dependencies only point downward. Penpot does not contain runtime behavior, Web 
 Penpot is the design and collaboration surface. It owns what a component should look like and how its variants, states, layout, and interaction are intended to work. The Penpot libraries should be organized into:
 
 - **Foundations:** primitive palettes and scales for color, typography, spacing, radius, elevation, motion, breakpoints, icons, and density.
-- **Semantic tokens:** purpose-based names such as `color.bg.surface` and `color.text.primary`, with light and dark theme values. These map to code variables such as `--ds-color-bg-surface` and `--ds-color-text-primary`.
+- **Semantic tokens:** purpose-based names such as `color.bg.surface` and `color.text.primary`, with light and dark theme values. These map to code variables such as `--kanonis-color-bg-surface` and `--kanonis-color-text-primary`.
 - **Components:** reusable Penpot components with variants and states matching the public `kanonis-*` elements.
 - **Patterns and screens:** compositions used to validate workflows and responsive behavior; these do not become a separate component implementation.
 - **Specifications:** anatomy, content guidance, keyboard behavior, accessibility annotations, and responsive rules used during implementation and review.
@@ -191,7 +191,7 @@ Penpot remains outside the npm workspace because it is a design-authoring servic
 ## Storybook architecture
 
 - Dedicated Storybook 10 Web Components + Vite project; stories render the actual registered `kanonis-*` elements with Lit templates.
-- Global Light, Dark, and System toolbar writes `data-ds-theme` on the preview root.
+- Global Light, Dark, and System toolbar writes `data-kanonis-theme` on the preview root.
 - Viewports cover mobile (390), tablet (768), laptop (1280), desktop (1440), and wide (1920).
 - Foundations, components, patterns, and current-product mock screens have separate navigation groups.
 - `@storybook/addon-a11y` runs axe in the visual review surface. Interaction stories cover keyboard and event behavior.

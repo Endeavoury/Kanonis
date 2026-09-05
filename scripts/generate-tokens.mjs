@@ -7,45 +7,45 @@ const outputPath = fileURLToPath(new URL('../packages/tokens/src/index.ts', impo
 const css = await readFile(cssPath, 'utf8');
 
 const firstValues = new Map();
-for (const match of css.matchAll(/(--ds-[a-z0-9-]+):\s*([^;]+);/g)) {
+for (const match of css.matchAll(/(--kanonis-[a-z0-9-]+):\s*([^;]+);/g)) {
   if (!firstValues.has(match[1])) firstValues.set(match[1], match[2].replace(/\s+/g, ' ').trim());
 }
 
 const groupFor = (name) => {
-  if (name.startsWith('--ds-color') || name.startsWith('--ds-gradient')) return 'color';
-  if (/--ds-(font|line-height|letter-spacing)/.test(name)) return 'typography';
-  if (name.startsWith('--ds-space')) return 'spacing';
-  if (/--ds-(radius|shape)/.test(name)) return 'radius';
-  if (/--ds-(shadow|elevation)/.test(name)) return 'elevation';
-  if (/--ds-(duration|ease|motion)/.test(name)) return 'motion';
-  if (/--ds-(breakpoint|container)/.test(name)) return 'breakpoint';
-  if (name.startsWith('--ds-z')) return 'zIndex';
-  if (name.startsWith('--ds-icon')) return 'icon';
-  if (/--ds-(density|control|target)/.test(name)) return 'density';
+  if (name.startsWith('--kanonis-color') || name.startsWith('--kanonis-gradient')) return 'color';
+  if (/--kanonis-(font|line-height|letter-spacing)/.test(name)) return 'typography';
+  if (name.startsWith('--kanonis-space')) return 'spacing';
+  if (/--kanonis-(radius|shape)/.test(name)) return 'radius';
+  if (/--kanonis-(shadow|elevation)/.test(name)) return 'elevation';
+  if (/--kanonis-(duration|ease|motion)/.test(name)) return 'motion';
+  if (/--kanonis-(breakpoint|container)/.test(name)) return 'breakpoint';
+  if (name.startsWith('--kanonis-z')) return 'zIndex';
+  if (name.startsWith('--kanonis-icon')) return 'icon';
+  if (/--kanonis-(density|control|target)/.test(name)) return 'density';
   return 'other';
 };
 
 const descriptions = {
-  '--ds-color-bg-canvas': 'Application canvas',
-  '--ds-color-bg-surface': 'Default component surface',
-  '--ds-color-bg-elevated': 'Raised and overlay surface',
-  '--ds-color-text-primary': 'Primary content',
-  '--ds-color-text-secondary': 'Supporting content',
-  '--ds-color-text-muted': 'Low-emphasis metadata',
-  '--ds-color-border-default': 'Default boundary',
-  '--ds-color-accent-primary': 'Primary interactive accent',
+  '--kanonis-color-bg-canvas': 'Application canvas',
+  '--kanonis-color-bg-surface': 'Default component surface',
+  '--kanonis-color-bg-elevated': 'Raised and overlay surface',
+  '--kanonis-color-text-primary': 'Primary content',
+  '--kanonis-color-text-secondary': 'Supporting content',
+  '--kanonis-color-text-muted': 'Low-emphasis metadata',
+  '--kanonis-color-border-default': 'Default boundary',
+  '--kanonis-color-accent-primary': 'Primary interactive accent',
 };
 
 const deprecated = {
-  '--ds-breakpoint-mobile': '--ds-breakpoint-compact',
-  '--ds-breakpoint-tablet': '--ds-breakpoint-medium',
-  '--ds-breakpoint-desktop': '--ds-breakpoint-expanded',
+  '--kanonis-breakpoint-mobile': '--kanonis-breakpoint-compact',
+  '--kanonis-breakpoint-tablet': '--kanonis-breakpoint-medium',
+  '--kanonis-breakpoint-desktop': '--kanonis-breakpoint-expanded',
 };
 
 const describe = (name) =>
   descriptions[name] ??
   name
-    .replace('--ds-', '')
+    .replace('--kanonis-', '')
     .replaceAll('-', ' ')
     .replace(/^./, (letter) => letter.toUpperCase());
 
@@ -82,10 +82,10 @@ export interface DesignToken {
 export const tokens = ${JSON.stringify(entries, null, 2)} as const satisfies readonly DesignToken[];
 
 export const breakpoints = {
-  compact: '${firstValues.get('--ds-breakpoint-compact')}',
-  medium: '${firstValues.get('--ds-breakpoint-medium')}',
-  expanded: '${firstValues.get('--ds-breakpoint-expanded')}',
-  wide: '${firstValues.get('--ds-breakpoint-wide')}',
+  compact: '${firstValues.get('--kanonis-breakpoint-compact')}',
+  medium: '${firstValues.get('--kanonis-breakpoint-medium')}',
+  expanded: '${firstValues.get('--kanonis-breakpoint-expanded')}',
+  wide: '${firstValues.get('--kanonis-breakpoint-wide')}',
 } as const;
 
 export const themes = ['light', 'dark', 'system'] as const;

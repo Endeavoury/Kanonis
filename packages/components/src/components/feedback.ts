@@ -16,76 +16,76 @@ export class DsAlert extends DsElement {
         display: block;
       }
       .alert {
-        --alert-accent: var(--ds-color-info);
+        --alert-accent: var(--kanonis-color-info);
         display: grid;
         grid-template-columns: auto minmax(0, 1fr) auto;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         align-items: start;
-        padding: 0.875rem var(--ds-space-4);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-lg);
+        padding: 0.875rem var(--kanonis-space-4);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-lg);
         background:
           linear-gradient(
             90deg,
             color-mix(in srgb, var(--alert-accent) 8%, transparent),
             transparent 34%
           ),
-          var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-md);
+          var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-md);
         box-shadow:
           inset 3px 0 var(--alert-accent),
-          var(--ds-shadow-sm);
+          var(--kanonis-shadow-sm);
       }
       :host([tone='info']) .alert,
       :host([tone='accent']) .alert {
-        --alert-accent: var(--ds-color-info);
-        border-color: color-mix(in srgb, var(--ds-color-info) 24%, var(--ds-color-border-default));
+        --alert-accent: var(--kanonis-color-info);
+        border-color: color-mix(in srgb, var(--kanonis-color-info) 24%, var(--kanonis-color-border-default));
       }
       :host([tone='success']) .alert {
-        --alert-accent: var(--ds-color-success);
+        --alert-accent: var(--kanonis-color-success);
         border-color: color-mix(
           in srgb,
-          var(--ds-color-success) 24%,
-          var(--ds-color-border-default)
+          var(--kanonis-color-success) 24%,
+          var(--kanonis-color-border-default)
         );
       }
       :host([tone='warning']) .alert {
-        --alert-accent: var(--ds-color-warning);
+        --alert-accent: var(--kanonis-color-warning);
         border-color: color-mix(
           in srgb,
-          var(--ds-color-warning) 24%,
-          var(--ds-color-border-default)
+          var(--kanonis-color-warning) 24%,
+          var(--kanonis-color-border-default)
         );
       }
       :host([tone='danger']) .alert {
-        --alert-accent: var(--ds-color-danger);
+        --alert-accent: var(--kanonis-color-danger);
         border-color: color-mix(
           in srgb,
-          var(--ds-color-danger) 24%,
-          var(--ds-color-border-default)
+          var(--kanonis-color-danger) 24%,
+          var(--kanonis-color-border-default)
         );
       }
       .title {
         display: block;
-        color: var(--ds-color-text-primary);
-        font-weight: var(--ds-font-weight-semibold);
+        color: var(--kanonis-color-text-primary);
+        font-weight: var(--kanonis-font-weight-semibold);
         letter-spacing: -0.01em;
       }
       .message {
-        margin-top: var(--ds-space-1);
+        margin-top: var(--kanonis-space-1);
       }
       button {
         width: 1.75rem;
         height: 1.75rem;
         border: 0;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: transparent;
-        color: var(--ds-color-text-secondary);
+        color: var(--kanonis-color-text-secondary);
         cursor: pointer;
       }
       button:hover {
-        background: color-mix(in srgb, var(--ds-color-text-primary) 8%, transparent);
+        background: color-mix(in srgb, var(--kanonis-color-text-primary) 8%, transparent);
       }
     `,
   ];
@@ -124,14 +124,14 @@ export class DsLoadingState extends DsElement {
       .state {
         display: grid;
         place-items: center;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         min-height: 11rem;
-        padding: var(--ds-space-8);
+        padding: var(--kanonis-space-8);
         text-align: center;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       .spinner {
-        --ds-spinner-size: 1.75rem;
+        --kanonis-spinner-size: 1.75rem;
       }
     `,
   ];
@@ -154,9 +154,9 @@ export class DsEmptyState extends DsElement {
       .state {
         display: grid;
         place-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         min-height: 12rem;
-        padding: var(--ds-space-8);
+        padding: var(--kanonis-space-8);
         border-style: dashed;
         text-align: center;
       }
@@ -165,25 +165,25 @@ export class DsEmptyState extends DsElement {
         place-items: center;
         width: 3rem;
         height: 3rem;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-gradient-elevated, var(--ds-color-bg-hover));
-        color: var(--ds-color-accent-hover);
-        box-shadow: var(--ds-shadow-control);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-gradient-elevated, var(--kanonis-color-bg-hover));
+        color: var(--kanonis-color-accent-hover);
+        box-shadow: var(--kanonis-shadow-control);
       }
       h2 {
-        margin: var(--ds-space-2) 0 0;
-        font-size: var(--ds-font-size-lg);
-        letter-spacing: var(--ds-letter-spacing-tight);
+        margin: var(--kanonis-space-2) 0 0;
+        font-size: var(--kanonis-font-size-lg);
+        letter-spacing: var(--kanonis-letter-spacing-tight);
       }
       p {
         max-width: 34rem;
         margin: 0;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .actions {
-        margin-top: var(--ds-space-2);
+        margin-top: var(--kanonis-space-2);
       }
     `,
   ];
@@ -209,13 +209,13 @@ export class DsProgress extends DsElement {
       .header {
         display: flex;
         justify-content: space-between;
-        gap: var(--ds-space-3);
-        margin-bottom: var(--ds-space-2);
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
+        gap: var(--kanonis-space-3);
+        margin-bottom: var(--kanonis-space-2);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
       }
       .value {
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
         font-variant-numeric: tabular-nums;
       }
       progress {
@@ -224,41 +224,41 @@ export class DsProgress extends DsElement {
         height: 0.5rem;
         overflow: hidden;
         border: 0;
-        border-radius: var(--ds-radius-round);
+        border-radius: var(--kanonis-radius-round);
         appearance: none;
-        background: var(--ds-color-bg-sunken);
+        background: var(--kanonis-color-bg-sunken);
       }
       progress::-webkit-progress-bar {
         border-radius: inherit;
-        background: var(--ds-color-bg-sunken);
+        background: var(--kanonis-color-bg-sunken);
       }
       progress::-webkit-progress-value {
         border-radius: inherit;
-        background: var(--progress-color, var(--ds-color-accent-primary));
-        transition: width var(--ds-duration-normal) var(--ds-ease-standard);
+        background: var(--progress-color, var(--kanonis-color-accent-primary));
+        transition: width var(--kanonis-duration-normal) var(--kanonis-ease-standard);
       }
       progress::-moz-progress-bar {
         border-radius: inherit;
-        background: var(--progress-color, var(--ds-color-accent-primary));
+        background: var(--progress-color, var(--kanonis-color-accent-primary));
       }
       :host([tone='success']) progress {
-        --progress-color: var(--ds-color-success);
+        --progress-color: var(--kanonis-color-success);
       }
       :host([tone='warning']) progress {
-        --progress-color: var(--ds-color-warning);
+        --progress-color: var(--kanonis-color-warning);
       }
       :host([tone='danger']) progress {
-        --progress-color: var(--ds-color-danger);
+        --progress-color: var(--kanonis-color-danger);
       }
       progress:indeterminate {
         background: linear-gradient(
           90deg,
-          var(--ds-color-bg-sunken) 0 25%,
-          var(--progress-color, var(--ds-color-accent-primary)) 45% 55%,
-          var(--ds-color-bg-sunken) 75% 100%
+          var(--kanonis-color-bg-sunken) 0 25%,
+          var(--progress-color, var(--kanonis-color-accent-primary)) 45% 55%,
+          var(--kanonis-color-bg-sunken) 75% 100%
         );
         background-size: 220% 100%;
-        animation: kanonis-progress var(--ds-duration-progress) linear infinite;
+        animation: kanonis-progress var(--kanonis-duration-progress) linear infinite;
       }
       @keyframes kanonis-progress {
         to {
@@ -317,15 +317,15 @@ export class DsSkeleton extends DsElement {
         width: 100%;
         height: var(--skeleton-height, 1rem);
         overflow: hidden;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: linear-gradient(
           100deg,
-          var(--ds-color-bg-sunken) 20%,
-          var(--ds-color-bg-hover) 38%,
-          var(--ds-color-bg-sunken) 56%
+          var(--kanonis-color-bg-sunken) 20%,
+          var(--kanonis-color-bg-hover) 38%,
+          var(--kanonis-color-bg-sunken) 56%
         );
         background-size: 220% 100%;
-        animation: kanonis-skeleton var(--ds-duration-skeleton) var(--ds-ease-standard) infinite;
+        animation: kanonis-skeleton var(--kanonis-duration-skeleton) var(--kanonis-ease-standard) infinite;
       }
       :host([shape='circle']) {
         width: var(--skeleton-width, 2.5rem);
@@ -335,7 +335,7 @@ export class DsSkeleton extends DsElement {
         border-radius: 50%;
       }
       :host([shape='rectangle']) .skeleton {
-        border-radius: var(--ds-radius-lg);
+        border-radius: var(--kanonis-radius-lg);
       }
       @keyframes kanonis-skeleton {
         to {
@@ -380,39 +380,39 @@ export class DsToast extends DsElement {
         display: none;
       }
       .toast {
-        --toast-accent: var(--ds-color-info);
+        --toast-accent: var(--kanonis-color-info);
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         width: min(24rem, calc(100vw - 2rem));
-        padding: var(--ds-space-4);
-        border: 1px solid var(--ds-color-border-default);
+        padding: var(--kanonis-space-4);
+        border: 1px solid var(--kanonis-color-border-default);
         border-left: 3px solid var(--toast-accent);
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-gradient-elevated, var(--ds-color-bg-elevated));
-        color: var(--ds-color-text-secondary);
-        box-shadow: var(--ds-shadow-lg);
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-gradient-elevated, var(--kanonis-color-bg-elevated));
+        color: var(--kanonis-color-text-secondary);
+        box-shadow: var(--kanonis-shadow-lg);
       }
       :host([tone='success']) .toast {
-        --toast-accent: var(--ds-color-success);
+        --toast-accent: var(--kanonis-color-success);
       }
       :host([tone='warning']) .toast {
-        --toast-accent: var(--ds-color-warning);
+        --toast-accent: var(--kanonis-color-warning);
       }
       :host([tone='danger']) .toast {
-        --toast-accent: var(--ds-color-danger);
+        --toast-accent: var(--kanonis-color-danger);
       }
       strong {
         display: block;
-        margin-bottom: var(--ds-space-1);
-        color: var(--ds-color-text-primary);
-        font-size: var(--ds-font-size-md);
+        margin-bottom: var(--kanonis-space-1);
+        color: var(--kanonis-color-text-primary);
+        font-size: var(--kanonis-font-size-md);
       }
       .message {
-        font-size: var(--ds-font-size-sm);
+        font-size: var(--kanonis-font-size-sm);
       }
       .actions {
-        margin-top: var(--ds-space-3);
+        margin-top: var(--kanonis-space-3);
       }
       button {
         display: grid;
@@ -420,14 +420,14 @@ export class DsToast extends DsElement {
         width: 1.75rem;
         height: 1.75rem;
         border: 0;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: transparent;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
         cursor: pointer;
       }
       button:hover {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
     `,
   ];
@@ -503,12 +503,12 @@ export class DsToastRegion extends DsElement {
     css`
       :host {
         position: fixed;
-        z-index: var(--ds-z-toast);
-        top: var(--ds-space-4);
-        right: var(--ds-space-4);
+        z-index: var(--kanonis-z-toast);
+        top: var(--kanonis-space-4);
+        right: var(--kanonis-space-4);
         display: grid;
-        gap: var(--ds-space-3);
-        max-height: calc(100dvh - 2 * var(--ds-space-4));
+        gap: var(--kanonis-space-3);
+        max-height: calc(100dvh - 2 * var(--kanonis-space-4));
         overflow: auto;
         pointer-events: none;
       }
@@ -517,25 +517,25 @@ export class DsToastRegion extends DsElement {
       }
       :host([position='top-start']) {
         right: auto;
-        left: var(--ds-space-4);
+        left: var(--kanonis-space-4);
       }
       :host([position='bottom-end']) {
         top: auto;
-        bottom: var(--ds-space-4);
+        bottom: var(--kanonis-space-4);
       }
       :host([position='bottom-start']) {
         top: auto;
         right: auto;
-        bottom: var(--ds-space-4);
-        left: var(--ds-space-4);
+        bottom: var(--kanonis-space-4);
+        left: var(--kanonis-space-4);
       }
       @media ${mediaCompact} {
         :host,
         :host([position]) {
-          top: var(--ds-space-2);
-          right: var(--ds-space-2);
+          top: var(--kanonis-space-2);
+          right: var(--kanonis-space-2);
           bottom: auto;
-          left: var(--ds-space-2);
+          left: var(--kanonis-space-2);
         }
       }
     `,

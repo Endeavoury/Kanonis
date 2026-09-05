@@ -5,28 +5,28 @@ import { DsElement } from '../core/ds-element.js';
 
 const gaps = css`
   :host([gap='0']) {
-    --gap: var(--ds-space-0);
+    --gap: var(--kanonis-space-0);
   }
   :host([gap='1']) {
-    --gap: var(--ds-space-1);
+    --gap: var(--kanonis-space-1);
   }
   :host([gap='2']) {
-    --gap: var(--ds-space-2);
+    --gap: var(--kanonis-space-2);
   }
   :host([gap='3']) {
-    --gap: var(--ds-space-3);
+    --gap: var(--kanonis-space-3);
   }
   :host([gap='4']) {
-    --gap: var(--ds-space-4);
+    --gap: var(--kanonis-space-4);
   }
   :host([gap='5']) {
-    --gap: var(--ds-space-5);
+    --gap: var(--kanonis-space-5);
   }
   :host([gap='6']) {
-    --gap: var(--ds-space-6);
+    --gap: var(--kanonis-space-6);
   }
   :host([gap='8']) {
-    --gap: var(--ds-space-8);
+    --gap: var(--kanonis-space-8);
   }
 `;
 
@@ -45,18 +45,18 @@ const scrollablePane = css`
     overscroll-behavior: contain;
     scrollbar-gutter: stable;
     scrollbar-width: thin;
-    scrollbar-color: var(--ds-color-border-strong) transparent;
+    scrollbar-color: var(--kanonis-color-border-strong) transparent;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y pinch-zoom;
   }
   :host::-webkit-scrollbar {
-    width: var(--ds-scrollbar-size);
-    height: var(--ds-scrollbar-size);
+    width: var(--kanonis-scrollbar-size);
+    height: var(--kanonis-scrollbar-size);
   }
   :host::-webkit-scrollbar-thumb {
     border: 0.1875rem solid transparent;
-    border-radius: var(--ds-radius-round);
-    background: var(--ds-color-border-strong);
+    border-radius: var(--kanonis-radius-round);
+    background: var(--kanonis-color-border-strong);
     background-clip: padding-box;
   }
 `;
@@ -67,7 +67,7 @@ export class DsWorkspace extends DsElement {
     foundationStyles,
     css`
       :host {
-        --workspace-pane-margin: clamp(var(--ds-space-4), 1.25vw, var(--ds-space-8));
+        --workspace-pane-margin: clamp(var(--kanonis-space-4), 1.25vw, var(--kanonis-space-8));
         display: grid;
         grid-template-rows: auto minmax(0, 1fr);
         width: 100%;
@@ -90,7 +90,7 @@ export class DsWorkspace extends DsElement {
       }
       @media ${mediaCompact} {
         :host {
-          --workspace-pane-margin: var(--ds-space-4);
+          --workspace-pane-margin: var(--kanonis-space-4);
         }
       }
     `,
@@ -109,13 +109,13 @@ export class DsWorkspaceHeader extends DsElement {
       :host {
         display: block;
         min-width: 0;
-        padding: var(--ds-space-5) var(--workspace-pane-margin, var(--ds-space-6)) var(--ds-space-2);
+        padding: var(--kanonis-space-5) var(--workspace-pane-margin, var(--kanonis-space-6)) var(--kanonis-space-2);
       }
       .header {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
         align-items: end;
-        gap: var(--ds-space-5);
+        gap: var(--kanonis-space-5);
       }
       .copy,
       .meta {
@@ -125,30 +125,30 @@ export class DsWorkspaceHeader extends DsElement {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         flex-wrap: wrap;
       }
       .breadcrumb {
-        margin-bottom: var(--ds-space-2);
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        margin-bottom: var(--kanonis-space-2);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       h1 {
         margin: 0;
-        color: var(--ds-color-text-primary);
-        font-size: clamp(var(--ds-font-size-xl), 1.8vw, var(--ds-font-size-2xl));
-        font-weight: var(--ds-font-weight-semibold);
-        letter-spacing: var(--ds-letter-spacing-tight);
-        line-height: var(--ds-line-height-tight);
+        color: var(--kanonis-color-text-primary);
+        font-size: clamp(var(--kanonis-font-size-xl), 1.8vw, var(--kanonis-font-size-2xl));
+        font-weight: var(--kanonis-font-weight-semibold);
+        letter-spacing: var(--kanonis-letter-spacing-tight);
+        line-height: var(--kanonis-line-height-tight);
       }
       @media ${mediaCompact} {
         :host {
-          padding-top: var(--ds-space-4);
+          padding-top: var(--kanonis-space-4);
         }
         .header {
           grid-template-columns: 1fr;
           align-items: start;
-          gap: var(--ds-space-3);
+          gap: var(--kanonis-space-3);
         }
         .meta {
           justify-content: flex-start;
@@ -185,25 +185,25 @@ export class DsPaneWindow extends DsElement {
         min-height: 0;
         overflow-x: auto;
         overflow-y: hidden;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-color-bg-surface);
-        box-shadow: var(--ds-shadow-panel);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-color-bg-surface);
+        box-shadow: var(--kanonis-shadow-panel);
         scrollbar-width: thin;
-        scrollbar-color: var(--ds-color-border-strong) transparent;
+        scrollbar-color: var(--kanonis-color-border-strong) transparent;
         overscroll-behavior-inline: contain;
       }
       :host::-webkit-scrollbar {
-        height: var(--ds-scrollbar-size);
+        height: var(--kanonis-scrollbar-size);
       }
       :host::-webkit-scrollbar-thumb {
         border: 0.1875rem solid transparent;
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-border-strong);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-border-strong);
         background-clip: padding-box;
       }
       :host(:focus-visible) {
-        outline: 2px solid var(--ds-color-focus);
+        outline: 2px solid var(--kanonis-color-focus);
         outline-offset: 2px;
       }
       .track {
@@ -225,8 +225,8 @@ export class DsPaneWindow extends DsElement {
         background: linear-gradient(
           90deg,
           transparent,
-          color-mix(in srgb, var(--ds-color-border-highlight) 82%, transparent) 18%,
-          color-mix(in srgb, var(--ds-color-accent-soft) 44%, transparent) 50%,
+          color-mix(in srgb, var(--kanonis-color-border-highlight) 82%, transparent) 18%,
+          color-mix(in srgb, var(--kanonis-color-accent-soft) 44%, transparent) 50%,
           transparent 82%
         );
         opacity: 0.85;
@@ -241,11 +241,11 @@ export class DsPaneWindow extends DsElement {
         background: linear-gradient(
           100deg,
           transparent,
-          color-mix(in srgb, var(--ds-color-accent-soft) 12%, transparent),
+          color-mix(in srgb, var(--kanonis-color-accent-soft) 12%, transparent),
           transparent
         );
         transform: translateX(-120%);
-        animation: pane-window-sweep var(--ds-motion-pane) both;
+        animation: pane-window-sweep var(--kanonis-motion-pane) both;
       }
       ::slotted(kanonis-pane),
       ::slotted(kanonis-pane-stack) {
@@ -259,10 +259,10 @@ export class DsPaneWindow extends DsElement {
         max-width: var(--pane-max-width);
         height: 100%;
         transition:
-          flex-basis var(--ds-duration-normal) var(--ds-ease-emphasized),
-          width var(--ds-duration-normal) var(--ds-ease-emphasized),
-          opacity var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-normal) var(--ds-ease-emphasized);
+          flex-basis var(--kanonis-duration-normal) var(--kanonis-ease-emphasized),
+          width var(--kanonis-duration-normal) var(--kanonis-ease-emphasized),
+          opacity var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-normal) var(--kanonis-ease-emphasized);
       }
       ::slotted(kanonis-pane-stack) {
         display: grid;
@@ -322,14 +322,14 @@ export class DsPaneStack extends DsElement {
         min-width: 0;
         min-height: 0;
         overflow: hidden;
-        transition: grid-template-rows var(--ds-duration-normal) var(--ds-ease-emphasized);
+        transition: grid-template-rows var(--kanonis-duration-normal) var(--kanonis-ease-emphasized);
       }
       ::slotted(*) {
         min-width: 0;
         min-height: 0;
       }
       ::slotted(kanonis-pane:not(:last-child)) {
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       :host([split='40/60']) {
         grid-template-rows: 40fr 60fr;
@@ -395,34 +395,34 @@ export class DsPane extends DsElement {
         overflow: hidden;
         background: linear-gradient(
           180deg,
-          color-mix(in srgb, var(--ds-color-bg-surface) 96%, var(--ds-color-accent-soft)),
-          var(--ds-color-bg-canvas)
+          color-mix(in srgb, var(--kanonis-color-bg-surface) 96%, var(--kanonis-color-accent-soft)),
+          var(--kanonis-color-bg-canvas)
         );
-        box-shadow: inset 0 1px 0 var(--ds-color-border-highlight);
+        box-shadow: inset 0 1px 0 var(--kanonis-color-border-highlight);
         transition:
-          flex-basis var(--ds-duration-normal) var(--ds-ease-emphasized),
-          width var(--ds-duration-normal) var(--ds-ease-emphasized),
-          opacity var(--ds-duration-fast) var(--ds-ease-standard);
+          flex-basis var(--kanonis-duration-normal) var(--kanonis-ease-emphasized),
+          width var(--kanonis-duration-normal) var(--kanonis-ease-emphasized),
+          opacity var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       :host([position='left']) {
         order: -20;
-        flex: 0 0 var(--ds-pane-size, var(--ds-pane-sidebar-width));
-        border-right: 1px solid var(--ds-color-border-subtle);
+        flex: 0 0 var(--kanonis-pane-size, var(--kanonis-pane-sidebar-width));
+        border-right: 1px solid var(--kanonis-color-border-subtle);
       }
       :host([position='right']) {
         order: 20;
-        flex: 0 0 var(--ds-pane-size, var(--ds-pane-inspector-width));
-        border-left: 1px solid var(--ds-color-border-subtle);
+        flex: 0 0 var(--kanonis-pane-size, var(--kanonis-pane-inspector-width));
+        border-left: 1px solid var(--kanonis-color-border-subtle);
       }
       :host([position='top']) {
         order: -20;
-        flex: 0 0 var(--ds-pane-size, auto);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        flex: 0 0 var(--kanonis-pane-size, auto);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       :host([position='bottom']) {
         order: 20;
-        flex: 0 0 var(--ds-pane-size, auto);
-        border-top: 1px solid var(--ds-color-border-subtle);
+        flex: 0 0 var(--kanonis-pane-size, auto);
+        border-top: 1px solid var(--kanonis-color-border-subtle);
       }
       :host([position='left']),
       :host([position='right']) {
@@ -470,11 +470,11 @@ export class DsPaneHeader extends DsElement {
     css`
       :host {
         position: relative;
-        z-index: var(--ds-z-pane-header);
+        z-index: var(--kanonis-z-pane-header);
         display: block;
         flex: 0 0 auto;
-        border-bottom: 1px solid var(--ds-color-border-subtle);
-        background: var(--ds-color-bg-surface-subtle);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
+        background: var(--kanonis-color-bg-surface-subtle);
       }
       :host([sticky]) {
         position: sticky;
@@ -504,18 +504,18 @@ export class DsPaneContent extends DsElement {
         overscroll-behavior: contain;
         scrollbar-gutter: stable;
         scrollbar-width: thin;
-        scrollbar-color: var(--ds-color-border-strong) transparent;
+        scrollbar-color: var(--kanonis-color-border-strong) transparent;
         -webkit-overflow-scrolling: touch;
         touch-action: pan-y pinch-zoom;
       }
       :host([scrollable])::-webkit-scrollbar {
-        width: var(--ds-scrollbar-size);
-        height: var(--ds-scrollbar-size);
+        width: var(--kanonis-scrollbar-size);
+        height: var(--kanonis-scrollbar-size);
       }
       :host([scrollable])::-webkit-scrollbar-thumb {
         border: 0.1875rem solid transparent;
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-border-strong);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-border-strong);
         background-clip: padding-box;
       }
     `,
@@ -533,14 +533,14 @@ export class DsInspectorPane extends DsElement {
     css`
       :host {
         position: relative;
-        z-index: var(--ds-z-pane);
+        z-index: var(--kanonis-z-pane);
         display: flex;
-        flex: 0 0 var(--ds-pane-size, var(--ds-pane-inspector-width));
+        flex: 0 0 var(--kanonis-pane-size, var(--kanonis-pane-inspector-width));
         flex-direction: column;
         overflow: hidden;
-        border-left: 1px solid var(--ds-color-border-default);
-        background: var(--ds-color-bg-surface);
-        box-shadow: var(--ds-shadow-md);
+        border-left: 1px solid var(--kanonis-color-border-default);
+        background: var(--kanonis-color-bg-surface);
+        box-shadow: var(--kanonis-shadow-md);
       }
       :host([collapsed]) {
         display: none;
@@ -548,14 +548,14 @@ export class DsInspectorPane extends DsElement {
       @media ${mediaExpanded} {
         :host {
           position: absolute;
-          z-index: var(--ds-z-drawer);
+          z-index: var(--kanonis-z-drawer);
           inset: 0 0 0 auto;
-          width: min(var(--ds-pane-size, var(--ds-pane-inspector-width)), 100%);
+          width: min(var(--kanonis-pane-size, var(--kanonis-pane-inspector-width)), 100%);
           max-width: 100%;
           transform: translateX(0);
           transition:
-            transform var(--ds-duration-normal) var(--ds-ease-standard),
-            opacity var(--ds-duration-fast) var(--ds-ease-standard),
+            transform var(--kanonis-duration-normal) var(--kanonis-ease-standard),
+            opacity var(--kanonis-duration-fast) var(--kanonis-ease-standard),
             visibility 0s linear 0s;
         }
         :host([collapsed]) {
@@ -564,7 +564,7 @@ export class DsInspectorPane extends DsElement {
           opacity: 0;
           pointer-events: none;
           transform: translateX(100%);
-          transition-delay: 0s, 0s, var(--ds-duration-normal);
+          transition-delay: 0s, 0s, var(--kanonis-duration-normal);
         }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -587,7 +587,7 @@ export class DsStack extends DsElement {
       :host {
         display: flex;
         flex-direction: column;
-        gap: var(--gap, var(--ds-space-4));
+        gap: var(--gap, var(--kanonis-space-4));
       }
       :host([align='start']) {
         align-items: flex-start;
@@ -617,7 +617,7 @@ export class DsInline extends DsElement {
       :host {
         display: flex;
         align-items: center;
-        gap: var(--gap, var(--ds-space-3));
+        gap: var(--gap, var(--kanonis-space-3));
         flex-wrap: wrap;
       }
       :host([align='start']) {
@@ -667,7 +667,7 @@ export class DsGrid extends DsElement {
       :host {
         display: grid;
         grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr));
-        gap: var(--gap, var(--ds-space-4));
+        gap: var(--gap, var(--kanonis-space-4));
       }
       :host([columns='1']) {
         --columns: 1;
@@ -718,24 +718,24 @@ export class DsContainer extends DsElement {
       :host {
         display: block;
         width: min(
-          calc(100% - 2 * var(--ds-space-5)),
-          var(--container, var(--ds-container-normal))
+          calc(100% - 2 * var(--kanonis-space-5)),
+          var(--container, var(--kanonis-container-normal))
         );
         margin-inline: auto;
       }
       @media ${mediaCompact} {
         :host {
           width: min(
-            calc(100% - 2 * var(--ds-space-4)),
-            var(--container, var(--ds-container-normal))
+            calc(100% - 2 * var(--kanonis-space-4)),
+            var(--container, var(--kanonis-container-normal))
           );
         }
       }
       :host([size='narrow']) {
-        --container: var(--ds-container-narrow);
+        --container: var(--kanonis-container-narrow);
       }
       :host([size='wide']) {
-        --container: var(--ds-container-wide);
+        --container: var(--kanonis-container-wide);
       }
       :host([flush]) {
         width: 100%;
@@ -760,24 +760,24 @@ export class DsPageHeader extends DsElement {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: var(--ds-space-6);
-        padding: var(--ds-space-2) 0 var(--ds-space-5);
+        gap: var(--kanonis-space-6);
+        padding: var(--kanonis-space-2) 0 var(--kanonis-space-5);
       }
       .copy {
         min-width: 0;
       }
       h1 {
         margin: 0.375rem 0 0;
-        font-size: clamp(var(--ds-font-size-2xl), 2.3vw, var(--ds-font-size-3xl));
-        font-weight: var(--ds-font-weight-semibold);
-        letter-spacing: var(--ds-letter-spacing-tight);
-        line-height: var(--ds-line-height-tight);
+        font-size: clamp(var(--kanonis-font-size-2xl), 2.3vw, var(--kanonis-font-size-3xl));
+        font-weight: var(--kanonis-font-weight-semibold);
+        letter-spacing: var(--kanonis-letter-spacing-tight);
+        line-height: var(--kanonis-line-height-tight);
       }
       p {
         max-width: 48rem;
         margin: 0.4375rem 0 0;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-md);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-md);
       }
       .actions {
         flex: 0 0 auto;
@@ -814,12 +814,12 @@ export class DsDetailSidebar extends DsElement {
     css`
       :host {
         position: fixed;
-        z-index: var(--ds-z-modal);
+        z-index: var(--kanonis-z-modal);
         inset: 0;
         display: block;
         visibility: hidden;
         pointer-events: none;
-        transition: visibility 0s linear var(--ds-duration-normal);
+        transition: visibility 0s linear var(--kanonis-duration-normal);
       }
       :host([open]) {
         visibility: visible;
@@ -835,11 +835,11 @@ export class DsDetailSidebar extends DsElement {
         height: 100%;
         padding: 0;
         border: 0;
-        background: color-mix(in srgb, var(--ds-color-bg-sunken) 38%, transparent);
+        background: color-mix(in srgb, var(--kanonis-color-bg-sunken) 38%, transparent);
         opacity: 0;
         pointer-events: none;
         cursor: default;
-        transition: opacity var(--ds-duration-normal) var(--ds-ease-standard);
+        transition: opacity var(--kanonis-duration-normal) var(--kanonis-ease-standard);
       }
       :host([open][modal]) .backdrop {
         opacity: 1;
@@ -850,15 +850,15 @@ export class DsDetailSidebar extends DsElement {
         inset: 0 0 0 auto;
         display: grid;
         grid-template-rows: auto auto minmax(0, 1fr) auto;
-        width: min(var(--ds-detail-sidebar-width, 30rem), 100%);
-        border-left: 1px solid var(--ds-color-border-default);
+        width: min(var(--kanonis-detail-sidebar-width, 30rem), 100%);
+        border-left: 1px solid var(--kanonis-color-border-default);
         outline: 0;
-        background: var(--ds-color-bg-surface);
-        box-shadow: var(--ds-shadow-lg);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-surface);
+        box-shadow: var(--kanonis-shadow-lg);
+        color: var(--kanonis-color-text-primary);
         pointer-events: auto;
         transform: translateX(100%);
-        transition: transform var(--ds-duration-normal) var(--ds-ease-standard);
+        transition: transform var(--kanonis-duration-normal) var(--kanonis-ease-standard);
       }
       :host([open]) aside {
         transform: translateX(0);
@@ -867,14 +867,14 @@ export class DsDetailSidebar extends DsElement {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: var(--ds-space-4);
-        padding: var(--ds-space-6);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        gap: var(--kanonis-space-4);
+        padding: var(--kanonis-space-6);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       h2 {
         margin: 0;
-        font-size: var(--ds-font-size-xl);
-        line-height: var(--ds-line-height-tight);
+        font-size: var(--kanonis-font-size-xl);
+        line-height: var(--kanonis-line-height-tight);
       }
       .close {
         display: grid;
@@ -883,36 +883,36 @@ export class DsDetailSidebar extends DsElement {
         width: 2.25rem;
         height: 2.25rem;
         padding: 0;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-muted);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-muted);
         font: inherit;
         font-size: 1.375rem;
         line-height: 1;
         cursor: pointer;
       }
       .close:hover {
-        border-color: var(--ds-color-border-strong);
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        border-color: var(--kanonis-color-border-strong);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
       .summary {
-        padding: var(--ds-space-5) var(--ds-space-6);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
-        background: var(--ds-color-bg-surface-subtle);
+        padding: var(--kanonis-space-5) var(--kanonis-space-6);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
+        background: var(--kanonis-color-bg-surface-subtle);
       }
       .content {
         min-height: 0;
-        padding: var(--ds-space-5) var(--ds-space-6);
+        padding: var(--kanonis-space-5) var(--kanonis-space-6);
         overflow: auto;
         overscroll-behavior: contain;
         scrollbar-gutter: stable;
       }
       footer {
-        padding: var(--ds-space-4) var(--ds-space-6);
-        border-top: 1px solid var(--ds-color-border-subtle);
-        background: var(--ds-color-bg-surface-subtle);
+        padding: var(--kanonis-space-4) var(--kanonis-space-6);
+        border-top: 1px solid var(--kanonis-color-border-subtle);
+        background: var(--kanonis-color-bg-surface-subtle);
       }
       @media ${mediaCompact} {
         aside {
@@ -922,7 +922,7 @@ export class DsDetailSidebar extends DsElement {
         .summary,
         .content,
         footer {
-          padding-inline: var(--ds-space-4);
+          padding-inline: var(--kanonis-space-4);
         }
       }
       @media (prefers-reduced-motion: reduce) {

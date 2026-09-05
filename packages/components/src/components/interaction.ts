@@ -19,33 +19,33 @@ export class DsThemeToggle extends DsElement {
       button {
         display: grid;
         place-items: center;
-        width: var(--ds-control-height-md);
-        height: var(--ds-control-height-md);
+        width: var(--kanonis-control-height-md);
+        height: var(--kanonis-control-height-md);
         padding: 0;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        color: var(--ds-color-text-secondary);
-        box-shadow: var(--ds-shadow-control);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        color: var(--kanonis-color-text-secondary);
+        box-shadow: var(--kanonis-shadow-control);
         cursor: pointer;
         transition:
-          background var(--ds-duration-fast) var(--ds-ease-standard),
-          border-color var(--ds-duration-fast) var(--ds-ease-standard),
-          color var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-fast) var(--ds-ease-standard);
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       button:hover {
-        border-color: var(--ds-color-border-strong);
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        border-color: var(--kanonis-color-border-strong);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
         transform: translateY(-1px);
       }
       button:active {
         transform: translateY(1px);
       }
       .glyph {
-        width: var(--ds-icon-md);
-        height: var(--ds-icon-md);
+        width: var(--kanonis-icon-md);
+        height: var(--kanonis-icon-md);
         font-size: 1.05rem;
         line-height: 0.9;
       }
@@ -141,43 +141,43 @@ export class DsTabs extends DsElement {
       }
       .tablist {
         display: flex;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         max-width: 100%;
-        padding: var(--ds-space-1);
+        padding: var(--kanonis-space-1);
         overflow-x: auto;
-        border: 1px solid var(--ds-color-border-subtle);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-sunken);
+        border: 1px solid var(--kanonis-color-border-subtle);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-sunken);
         scrollbar-width: thin;
       }
       button {
         flex: 0 0 auto;
-        min-height: var(--ds-control-height-sm);
-        padding: 0 var(--ds-space-3);
+        min-height: var(--kanonis-control-height-sm);
+        padding: 0 var(--kanonis-space-3);
         border: 1px solid transparent;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: transparent;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
-        font-weight: var(--ds-font-weight-semibold);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
+        font-weight: var(--kanonis-font-weight-semibold);
         cursor: pointer;
       }
       button:hover:not(:disabled) {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
       button[aria-selected='true'] {
-        border-color: var(--ds-color-border-default);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-control);
+        border-color: var(--kanonis-color-border-default);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-control);
       }
       button:disabled {
         cursor: not-allowed;
         opacity: 0.5;
       }
       .panels {
-        margin-top: var(--ds-space-4);
+        margin-top: var(--kanonis-space-4);
       }
     `,
   ];
@@ -283,13 +283,13 @@ export class DsDisclosure extends DsElement {
       summary {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         align-items: center;
-        min-height: var(--ds-control-height-lg);
-        padding: var(--ds-space-3) var(--ds-space-4);
-        color: var(--ds-color-text-primary);
-        font-size: var(--ds-font-size-md);
-        font-weight: var(--ds-font-weight-semibold);
+        min-height: var(--kanonis-control-height-lg);
+        padding: var(--kanonis-space-3) var(--kanonis-space-4);
+        color: var(--kanonis-color-text-primary);
+        font-size: var(--kanonis-font-size-md);
+        font-weight: var(--kanonis-font-weight-semibold);
         cursor: pointer;
         list-style: none;
       }
@@ -297,19 +297,19 @@ export class DsDisclosure extends DsElement {
         display: none;
       }
       summary:hover {
-        background: var(--ds-color-bg-hover);
+        background: var(--kanonis-color-bg-hover);
       }
       .chevron {
-        color: var(--ds-color-text-muted);
-        transition: transform var(--ds-duration-fast) var(--ds-ease-standard);
+        color: var(--kanonis-color-text-muted);
+        transition: transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       details[open] .chevron {
         transform: rotate(180deg);
       }
       .content {
-        padding: 0 var(--ds-space-4) var(--ds-space-4);
-        border-top: 1px solid var(--ds-color-border-subtle);
-        color: var(--ds-color-text-secondary);
+        padding: 0 var(--kanonis-space-4) var(--kanonis-space-4);
+        border-top: 1px solid var(--kanonis-color-border-subtle);
+        color: var(--kanonis-color-text-secondary);
       }
       :host([disabled]) {
         opacity: 0.55;

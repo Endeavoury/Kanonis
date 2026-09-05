@@ -21,20 +21,20 @@ export class DsFilterBar extends DsElement {
       .bar {
         display: flex;
         align-items: flex-end;
-        gap: var(--ds-space-4);
-        padding: var(--ds-space-5);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
+        gap: var(--kanonis-space-4);
+        padding: var(--kanonis-space-5);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
       }
       .fields {
         display: grid;
         grid-template-columns: repeat(var(--columns, 4), minmax(8rem, 1fr));
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         min-width: 0;
         flex: 1;
       }
       .actions {
         display: flex;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         flex: 0 0 auto;
       }
       @media ${mediaExpanded} {
@@ -78,7 +78,7 @@ export class DsKpiGrid extends DsElement {
       :host {
         display: grid;
         grid-template-columns: repeat(var(--columns, 4), minmax(0, 1fr));
-        gap: var(--ds-space-4);
+        gap: var(--kanonis-space-4);
       }
       @media ${mediaWide} {
         :host {

@@ -10,8 +10,8 @@ export const ThemeComparison: StoryObj = {
       ${['light', 'dark'].map(
         (theme) =>
           html`<section
-            data-ds-theme=${theme}
-            style="padding:20px;border:1px solid var(--ds-color-border-default);border-radius:10px;background:var(--ds-color-bg-canvas);color:var(--ds-color-text-primary)"
+            data-kanonis-theme=${theme}
+            style="padding:20px;border:1px solid var(--kanonis-color-border-default);border-radius:10px;background:var(--kanonis-color-bg-canvas);color:var(--kanonis-color-text-primary)"
           >
             <h2>${theme}</h2>
             <kanonis-panel heading="Surface hierarchy"
@@ -48,7 +48,7 @@ export const AccessibilityFoundation: StoryObj = {
 export const ContrastAndBrandMatrix: StoryObj = {
   render: () =>
     html`<div
-      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--ds-space-4)"
+      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--kanonis-space-4)"
     >
       ${[
         { brand: 'default', contrast: 'standard' },
@@ -58,10 +58,10 @@ export const ContrastAndBrandMatrix: StoryObj = {
       ].map(
         ({ brand, contrast }) =>
           html`<section
-            data-ds-theme="light"
-            data-ds-brand=${brand}
-            data-ds-contrast=${contrast}
-            style="padding:var(--ds-space-5);border:1px solid var(--ds-color-border-default);border-radius:var(--ds-shape-surface);background:var(--ds-color-bg-canvas);color:var(--ds-color-text-primary)"
+            data-kanonis-theme="light"
+            data-kanonis-brand=${brand}
+            data-kanonis-contrast=${contrast}
+            style="padding:var(--kanonis-space-5);border:1px solid var(--kanonis-color-border-default);border-radius:var(--kanonis-shape-surface);background:var(--kanonis-color-bg-canvas);color:var(--kanonis-color-text-primary)"
           >
             <kanonis-brand-mark name=${brand === 'default' ? 'Kanonis' : brand}></kanonis-brand-mark>
             <p>${brand === 'default' ? 'Kanonis' : brand} · ${contrast}</p>

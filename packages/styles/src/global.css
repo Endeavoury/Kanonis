@@ -1,10 +1,10 @@
 @import '@endeavoury/kanonis-tokens/tokens.css';
 
 :where(html) {
-  background: var(--ds-color-bg-canvas);
-  color: var(--ds-color-text-primary);
-  font-family: var(--ds-font-sans);
-  line-height: var(--ds-line-height-normal);
+  background: var(--kanonis-color-bg-canvas);
+  color: var(--kanonis-color-text-primary);
+  font-family: var(--kanonis-font-sans);
+  line-height: var(--kanonis-line-height-normal);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
@@ -13,7 +13,7 @@
 :where(body) {
   margin: 0;
   min-height: 100dvh;
-  background: var(--ds-color-bg-canvas);
+  background: var(--kanonis-color-bg-canvas);
 }
 
 /*
@@ -45,12 +45,12 @@
   display: none !important;
 }
 :where(:focus-visible) {
-  outline: 2px solid color-mix(in srgb, var(--ds-color-focus) 82%, white);
+  outline: 2px solid color-mix(in srgb, var(--kanonis-color-focus) 82%, white);
   outline-offset: 3px;
 }
 :where(::selection) {
-  background: color-mix(in srgb, var(--ds-color-accent-primary) 28%, transparent);
-  color: var(--ds-color-text-primary);
+  background: color-mix(in srgb, var(--kanonis-color-accent-primary) 28%, transparent);
+  color: var(--kanonis-color-text-primary);
 }
 
 .kanonis-visually-hidden {
@@ -67,7 +67,7 @@
 
 .kanonis-page-flow {
   display: grid;
-  gap: var(--ds-space-7);
+  gap: var(--kanonis-space-7);
 }
 .kanonis-content-width {
   width: min(100% - 2rem, 90rem);

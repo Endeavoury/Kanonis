@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 const box = (label: string) =>
   html`<div
-    style="min-height:48px;padding:12px;border:1px solid var(--ds-color-border-default);border-radius:6px;background:var(--ds-color-bg-surface)"
+    style="min-height:48px;padding:12px;border:1px solid var(--kanonis-color-border-default);border-radius:6px;background:var(--kanonis-color-bg-surface)"
   >
     ${label}
   </div>`;
@@ -44,7 +44,7 @@ export const PaneWorkspace: StoryObj = {
   render: () =>
     html`<div style="height:100dvh;min-width:0;min-height:0;overflow:hidden">
       <kanonis-pane-group>
-        <kanonis-pane position="left" style="--ds-pane-size:16rem">
+        <kanonis-pane position="left" style="--kanonis-pane-size:16rem">
           <kanonis-pane-header
             ><strong style="display:block;padding:1rem">Navigation</strong></kanonis-pane-header
           >
@@ -96,7 +96,7 @@ export const ShellPaneWorkspace: StoryObj = {
         <kanonis-icon-button label="Open commands"><kanonis-icon name="search"></kanonis-icon></kanonis-icon-button>
       </kanonis-inline>
       <kanonis-pane-group orientation="vertical">
-        <kanonis-pane position="top" style="--ds-pane-size:3.25rem">
+        <kanonis-pane position="top" style="--kanonis-pane-size:3.25rem">
           <kanonis-pane-header
             ><span style="display:block;padding:1rem">Fixed tabs</span></kanonis-pane-header
           >
@@ -108,7 +108,7 @@ export const ShellPaneWorkspace: StoryObj = {
             >
           </kanonis-pane-content>
         </kanonis-pane>
-        <kanonis-pane position="bottom" style="--ds-pane-size:3rem">
+        <kanonis-pane position="bottom" style="--kanonis-pane-size:3rem">
           <span style="display:block;padding:.875rem 1rem">Fixed status bar</span>
         </kanonis-pane>
       </kanonis-pane-group>
@@ -147,9 +147,9 @@ export const CollapsedShellPanes: StoryObj = {
 const workspacePane = (heading: string, body: string) =>
   html`<kanonis-pane>
     <kanonis-pane-header
-      ><strong style="display:block;padding:var(--ds-space-4)">${heading}</strong></kanonis-pane-header
+      ><strong style="display:block;padding:var(--kanonis-space-4)">${heading}</strong></kanonis-pane-header
     >
-    <kanonis-pane-content scrollable style="padding:var(--ds-space-4)"
+    <kanonis-pane-content scrollable style="padding:var(--kanonis-space-4)"
       ><p>${body}</p>
       ${Array.from({ length: 5 }, (_, i) => box(`${heading} detail ${i + 1}`))}</kanonis-pane-content
     >
@@ -237,7 +237,7 @@ export const DetailSidebar: StoryObj = {
       ></kanonis-page-header>
       <kanonis-detail-sidebar open heading="Groceries" close-label="Close insight details">
         <kanonis-stack slot="summary" gap="2">
-          <span style="color:var(--ds-color-text-muted)">Selected insight</span>
+          <span style="color:var(--kanonis-color-text-muted)">Selected insight</span>
           <strong style="font-size:1.75rem">€842.31</strong>
           <span>Food · 14 transactions</span>
         </kanonis-stack>

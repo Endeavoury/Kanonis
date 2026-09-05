@@ -29,15 +29,15 @@ Review enabled, hover, focus, pressed, selected, dragged, loading, error, disabl
 states. Focus always has a visible outline. Selection, errors, and drag placement need a second cue
 such as text, iconography, border, position, or programmatic state.
 
-Semantic motion roles are `--ds-motion-control`, `--ds-motion-popup-enter`,
-`--ds-motion-popup-exit`, `--ds-motion-pane`, and `--ds-motion-update`. Reduced motion collapses all
+Semantic motion roles are `--kanonis-motion-control`, `--kanonis-motion-popup-enter`,
+`--kanonis-motion-popup-exit`, `--kanonis-motion-pane`, and `--kanonis-motion-update`. Reduced motion collapses all
 duration tokens to 1ms.
 
 Semantic elevation roles are surface, raised, overlay, and overflow. Use an elevation because it
 communicates layering or clipped content, not as generic decoration.
 
-Interactive hit areas use `--ds-target-min-touch` (2.75rem) when a control can be used by touch or
-needs a generous pointer target. `--ds-target-min` remains the compact inline target for tightly
+Interactive hit areas use `--kanonis-target-min-touch` (2.75rem) when a control can be used by touch or
+needs a generous pointer target. `--kanonis-target-min` remains the compact inline target for tightly
 packed affordances; visual size and hit-area size should be treated separately.
 
 ## Required preference matrix
@@ -45,7 +45,7 @@ packed affordances; visual size and hit-area size should be treated separately.
 Ready components are reviewed with:
 
 - light, dark, and system color modes;
-- standard and increased contrast (`data-ds-contrast="more"` and `prefers-contrast`);
+- standard and increased contrast (`data-kanonis-contrast="more"` and `prefers-contrast`);
 - Windows forced colors;
 - reduced motion;
 - browser default text-size changes, 200% text, and 400% zoom/reflow;

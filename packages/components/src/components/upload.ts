@@ -23,38 +23,38 @@ export class DsDropZone extends DsElement {
         position: relative;
         display: grid;
         place-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         min-height: 14rem;
-        padding: var(--ds-space-8) var(--ds-space-5);
+        padding: var(--kanonis-space-8) var(--kanonis-space-5);
         border: 1px dashed
-          color-mix(in srgb, var(--ds-color-info) 42%, var(--ds-color-border-default));
-        border-radius: var(--ds-radius-xl);
+          color-mix(in srgb, var(--kanonis-color-info) 42%, var(--kanonis-color-border-default));
+        border-radius: var(--kanonis-radius-xl);
         background:
           radial-gradient(
             circle at 50% 0,
-            color-mix(in srgb, var(--ds-color-info-soft) 68%, transparent),
+            color-mix(in srgb, var(--kanonis-color-info-soft) 68%, transparent),
             transparent 58%
           ),
-          var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-secondary);
+          var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-secondary);
         text-align: center;
-        box-shadow: inset 0 1px 0 var(--ds-color-border-highlight);
+        box-shadow: inset 0 1px 0 var(--kanonis-color-border-highlight);
         cursor: pointer;
         transition:
-          background var(--ds-duration-fast) var(--ds-ease-standard),
-          border-color var(--ds-duration-fast) var(--ds-ease-standard),
-          box-shadow var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-fast) var(--ds-ease-standard);
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          box-shadow var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       .zone:hover,
       .zone.dragging {
-        border-color: var(--ds-color-info);
-        background: var(--ds-color-info-soft);
-        box-shadow: var(--ds-shadow-md);
+        border-color: var(--kanonis-color-info);
+        background: var(--kanonis-color-info-soft);
+        box-shadow: var(--kanonis-shadow-md);
         transform: translateY(-1px);
       }
       .zone:focus-within {
-        outline: 2px solid color-mix(in srgb, var(--ds-color-focus) 82%, white);
+        outline: 2px solid color-mix(in srgb, var(--kanonis-color-focus) 82%, white);
         outline-offset: 3px;
       }
       .zone.disabled {
@@ -79,27 +79,27 @@ export class DsDropZone extends DsElement {
         width: 3rem;
         height: 3rem;
         border: 1px solid
-          color-mix(in srgb, var(--ds-color-info) 18%, var(--ds-color-border-default));
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-info);
-        box-shadow: var(--ds-shadow-control);
+          color-mix(in srgb, var(--kanonis-color-info) 18%, var(--kanonis-color-border-default));
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-info);
+        box-shadow: var(--kanonis-shadow-control);
       }
       .icon ::slotted(*) {
-        width: var(--ds-icon-lg);
-        height: var(--ds-icon-lg);
+        width: var(--kanonis-icon-lg);
+        height: var(--kanonis-icon-lg);
       }
       strong {
-        color: var(--ds-color-text-primary);
-        font-size: var(--ds-font-size-lg);
+        color: var(--kanonis-color-text-primary);
+        font-size: var(--kanonis-font-size-lg);
       }
       small {
         max-width: 34rem;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .spinner {
-        --ds-spinner-size: 1.5rem;
+        --kanonis-spinner-size: 1.5rem;
       }
     `,
   ];

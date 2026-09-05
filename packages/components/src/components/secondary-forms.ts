@@ -23,14 +23,14 @@ export class DsTextarea extends DsElement {
       textarea {
         width: 100%;
         min-height: 6rem;
-        padding: var(--ds-space-3);
+        padding: var(--kanonis-space-3);
         resize: vertical;
       }
       textarea::placeholder {
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       .invalid {
-        border-color: var(--ds-color-danger);
+        border-color: var(--kanonis-color-danger);
       }
     `,
   ];
@@ -142,9 +142,9 @@ export class DsSwitch extends DsElement {
       label {
         display: inline-grid;
         grid-template-columns: auto minmax(0, 1fr);
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         align-items: center;
-        color: var(--ds-color-text-primary);
+        color: var(--kanonis-color-text-primary);
         cursor: pointer;
       }
       input {
@@ -157,12 +157,12 @@ export class DsSwitch extends DsElement {
         position: relative;
         width: 2.5rem;
         height: 1.375rem;
-        border: 1px solid var(--ds-color-border-strong);
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-bg-sunken);
+        border: 1px solid var(--kanonis-color-border-strong);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-bg-sunken);
         transition:
-          background var(--ds-duration-fast) var(--ds-ease-standard),
-          border-color var(--ds-duration-fast) var(--ds-ease-standard);
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       .thumb {
         position: absolute;
@@ -171,22 +171,22 @@ export class DsSwitch extends DsElement {
         width: 0.875rem;
         height: 0.875rem;
         border-radius: 50%;
-        background: var(--ds-color-text-muted);
-        box-shadow: var(--ds-shadow-sm);
+        background: var(--kanonis-color-text-muted);
+        box-shadow: var(--kanonis-shadow-sm);
         transition:
-          transform var(--ds-duration-fast) var(--ds-ease-emphasized),
-          background var(--ds-duration-fast) var(--ds-ease-standard);
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-emphasized),
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       input:checked + .track {
-        border-color: var(--ds-color-accent-primary);
-        background: var(--ds-color-accent-primary);
+        border-color: var(--kanonis-color-accent-primary);
+        background: var(--kanonis-color-accent-primary);
       }
       input:checked + .track .thumb {
         transform: translateX(1.125rem);
-        background: var(--ds-color-text-inverse);
+        background: var(--kanonis-color-text-inverse);
       }
       input:focus-visible + .track {
-        outline: 2px solid var(--ds-color-focus);
+        outline: 2px solid var(--kanonis-color-focus);
         outline-offset: 3px;
       }
       .text {
@@ -278,17 +278,17 @@ export class DsRange extends DsElement {
       .heading {
         display: flex;
         justify-content: space-between;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
       }
       output {
-        color: var(--ds-color-text-primary);
+        color: var(--kanonis-color-text-primary);
         font-variant-numeric: tabular-nums;
       }
       input {
         width: 100%;
-        height: var(--ds-control-height-md);
+        height: var(--kanonis-control-height-md);
         margin: 0;
-        accent-color: var(--ds-color-accent-primary);
+        accent-color: var(--kanonis-color-accent-primary);
         cursor: pointer;
       }
       input:disabled {
@@ -379,24 +379,24 @@ export class DsRadio extends DsElement {
       :host {
         display: inline-grid;
         grid-template-columns: 1.125rem minmax(0, 1fr);
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         align-items: center;
-        color: var(--ds-color-text-primary);
+        color: var(--kanonis-color-text-primary);
         cursor: pointer;
       }
       :host(:focus-visible) {
-        outline: 2px solid var(--ds-color-focus);
+        outline: 2px solid var(--kanonis-color-focus);
         outline-offset: 3px;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
       }
       .circle {
         display: grid;
         place-items: center;
         width: 1.125rem;
         height: 1.125rem;
-        border: 1px solid var(--ds-color-border-strong);
+        border: 1px solid var(--kanonis-color-border-strong);
         border-radius: 50%;
-        background: var(--ds-color-bg-surface);
+        background: var(--kanonis-color-bg-surface);
       }
       .dot {
         width: 0.5625rem;
@@ -405,10 +405,10 @@ export class DsRadio extends DsElement {
         background: transparent;
       }
       :host([checked]) .circle {
-        border-color: var(--ds-color-accent-primary);
+        border-color: var(--kanonis-color-accent-primary);
       }
       :host([checked]) .dot {
-        background: var(--ds-color-accent-primary);
+        background: var(--kanonis-color-accent-primary);
       }
       :host([disabled]) {
         cursor: not-allowed;
@@ -466,12 +466,12 @@ export class DsRadioGroup extends DsElement {
       }
       .options {
         display: grid;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
       }
       .invalid {
-        padding: var(--ds-space-2);
-        border: 1px solid var(--ds-color-danger);
-        border-radius: var(--ds-radius-md);
+        padding: var(--kanonis-space-2);
+        border: 1px solid var(--kanonis-color-danger);
+        border-radius: var(--kanonis-radius-md);
       }
     `,
   ];

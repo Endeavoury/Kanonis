@@ -22,19 +22,19 @@ export class DsSidebarItem extends DsElement {
         min-height: 2.625rem;
         padding: 0 0.8125rem;
         border: 1px solid transparent;
-        border-radius: var(--ds-radius-md);
+        border-radius: var(--kanonis-radius-md);
         background: transparent;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-md);
-        font-weight: var(--ds-font-weight-medium);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-md);
+        font-weight: var(--kanonis-font-weight-medium);
         text-decoration: none;
         cursor: pointer;
         text-align: left;
         transition:
-          background var(--ds-duration-fast) var(--ds-ease-standard),
-          border-color var(--ds-duration-fast) var(--ds-ease-standard),
-          color var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-fast) var(--ds-ease-standard);
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       .item::before {
         content: '';
@@ -47,36 +47,36 @@ export class DsSidebarItem extends DsElement {
         background: transparent;
       }
       .item:hover {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
         transform: translateX(2px);
       }
       :host([active]) .item {
         background: linear-gradient(
           90deg,
-          var(--ds-color-bg-selected),
-          color-mix(in srgb, var(--ds-color-bg-selected) 58%, transparent)
+          var(--kanonis-color-bg-selected),
+          color-mix(in srgb, var(--kanonis-color-bg-selected) 58%, transparent)
         );
         border-color: color-mix(
           in srgb,
-          var(--ds-color-accent-primary) 18%,
-          var(--ds-color-border-default)
+          var(--kanonis-color-accent-primary) 18%,
+          var(--kanonis-color-border-default)
         );
-        color: var(--ds-color-text-primary);
-        box-shadow: inset 0 1px 0 var(--ds-color-border-highlight);
+        color: var(--kanonis-color-text-primary);
+        box-shadow: inset 0 1px 0 var(--kanonis-color-border-highlight);
       }
       :host([active]) .item::before {
-        background: var(--ds-color-accent-primary);
+        background: var(--kanonis-color-accent-primary);
       }
       .icon {
         display: inline-flex;
         width: 1.125rem;
         height: 1.125rem;
         flex: 0 0 auto;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       :host([active]) .icon {
-        color: var(--ds-color-accent-hover);
+        color: var(--kanonis-color-accent-hover);
       }
       .label {
         overflow: hidden;
@@ -88,8 +88,8 @@ export class DsSidebarItem extends DsElement {
           min-height: 3.25rem;
           flex-direction: column;
           justify-content: center;
-          gap: var(--ds-space-1);
-          padding: var(--ds-space-1);
+          gap: var(--kanonis-space-1);
+          padding: var(--kanonis-space-1);
           font-size: 0.625rem;
         }
         .item::before {
@@ -144,26 +144,26 @@ export class DsSidebar extends DsElement {
       :host {
         display: flex;
         flex-direction: column;
-        width: var(--ds-shell-sidebar-width);
+        width: var(--kanonis-shell-sidebar-width);
         min-width: 0;
         min-height: 0;
         height: 100%;
         overflow: hidden;
         padding: 1.125rem;
-        border-right: 1px solid var(--ds-color-border-subtle);
+        border-right: 1px solid var(--kanonis-color-border-subtle);
         background: linear-gradient(
           180deg,
-          var(--ds-color-bg-surface-subtle),
-          color-mix(in srgb, var(--ds-color-bg-sunken) 78%, var(--ds-color-bg-surface-subtle))
+          var(--kanonis-color-bg-surface-subtle),
+          color-mix(in srgb, var(--kanonis-color-bg-sunken) 78%, var(--kanonis-color-bg-surface-subtle))
         );
         box-shadow: inset -1px 0 0
-          color-mix(in srgb, var(--ds-color-border-highlight) 52%, transparent);
+          color-mix(in srgb, var(--kanonis-color-border-highlight) 52%, transparent);
       }
       :host([collapsed]) {
         display: none;
       }
       .brand {
-        padding: var(--ds-space-2) var(--ds-space-2) var(--ds-space-8);
+        padding: var(--kanonis-space-2) var(--kanonis-space-2) var(--kanonis-space-8);
       }
       nav {
         display: flex;
@@ -175,32 +175,32 @@ export class DsSidebar extends DsElement {
         overscroll-behavior: contain;
         scrollbar-gutter: stable;
         scrollbar-width: thin;
-        scrollbar-color: var(--ds-color-border-strong) transparent;
+        scrollbar-color: var(--kanonis-color-border-strong) transparent;
       }
       nav::-webkit-scrollbar {
-        width: var(--ds-scrollbar-size);
-        height: var(--ds-scrollbar-size);
+        width: var(--kanonis-scrollbar-size);
+        height: var(--kanonis-scrollbar-size);
       }
       nav::-webkit-scrollbar-thumb {
         border: 0.1875rem solid transparent;
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-border-strong);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-border-strong);
         background-clip: padding-box;
       }
       .footer {
         flex: 0 0 auto;
-        padding-top: var(--ds-space-4);
+        padding-top: var(--kanonis-space-4);
       }
       @media ${mediaMedium} {
         :host {
           width: auto;
           height: auto;
-          padding: var(--ds-space-2) max(var(--ds-space-2), env(safe-area-inset-right))
-            calc(var(--ds-space-2) + env(safe-area-inset-bottom))
-            max(var(--ds-space-2), env(safe-area-inset-left));
-          border-top: 1px solid var(--ds-color-border-default);
+          padding: var(--kanonis-space-2) max(var(--kanonis-space-2), env(safe-area-inset-right))
+            calc(var(--kanonis-space-2) + env(safe-area-inset-bottom))
+            max(var(--kanonis-space-2), env(safe-area-inset-left));
+          border-top: 1px solid var(--kanonis-color-border-default);
           border-right: 0;
-          background: color-mix(in srgb, var(--ds-color-bg-surface-subtle) 94%, transparent);
+          background: color-mix(in srgb, var(--kanonis-color-bg-surface-subtle) 94%, transparent);
           backdrop-filter: blur(16px);
         }
         .brand,
@@ -211,7 +211,7 @@ export class DsSidebar extends DsElement {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
-          gap: var(--ds-space-1);
+          gap: var(--kanonis-space-1);
           overflow-x: auto;
           overflow-y: hidden;
           overscroll-behavior-inline: contain;
@@ -244,9 +244,9 @@ export class DsAppShell extends DsElement {
     css`
       :host {
         position: relative;
-        z-index: var(--ds-z-shell);
+        z-index: var(--kanonis-z-shell);
         display: grid;
-        grid-template-columns: var(--ds-shell-sidebar-width) minmax(0, 1fr);
+        grid-template-columns: var(--kanonis-shell-sidebar-width) minmax(0, 1fr);
         width: 100%;
         height: 100dvh;
         min-width: 0;
@@ -255,20 +255,20 @@ export class DsAppShell extends DsElement {
         background:
           radial-gradient(
             circle at 76% -12%,
-            color-mix(in srgb, var(--ds-color-accent-soft) 36%, transparent),
+            color-mix(in srgb, var(--kanonis-color-accent-soft) 36%, transparent),
             transparent 34rem
           ),
-          var(--ds-color-bg-canvas);
+          var(--kanonis-color-bg-canvas);
       }
       .sidebar {
-        z-index: var(--ds-z-navigation);
+        z-index: var(--kanonis-z-navigation);
         min-width: 0;
         min-height: 0;
         height: 100%;
         overflow: hidden;
         transition:
-          transform var(--ds-duration-normal) var(--ds-ease-emphasized),
-          opacity var(--ds-duration-fast) var(--ds-ease-standard),
+          transform var(--kanonis-duration-normal) var(--kanonis-ease-emphasized),
+          opacity var(--kanonis-duration-fast) var(--kanonis-ease-standard),
           visibility 0s linear 0s;
       }
       ::slotted([slot='sidebar']) {
@@ -285,7 +285,7 @@ export class DsAppShell extends DsElement {
         opacity: 0;
         pointer-events: none;
         transform: translateX(-100%);
-        transition-delay: 0s, 0s, var(--ds-duration-normal);
+        transition-delay: 0s, 0s, var(--kanonis-duration-normal);
       }
       .workspace {
         display: grid;
@@ -296,12 +296,12 @@ export class DsAppShell extends DsElement {
       }
       .header {
         position: relative;
-        z-index: var(--ds-z-pane-header);
+        z-index: var(--kanonis-z-pane-header);
         min-width: 0;
         min-height: 4.5rem;
-        border-bottom: 1px solid var(--ds-color-border-subtle);
-        background: color-mix(in srgb, var(--ds-color-bg-surface-subtle) 86%, transparent);
-        box-shadow: 0 1px 0 color-mix(in srgb, var(--ds-color-border-highlight) 48%, transparent);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
+        background: color-mix(in srgb, var(--kanonis-color-bg-surface-subtle) 86%, transparent);
+        box-shadow: 0 1px 0 color-mix(in srgb, var(--kanonis-color-border-highlight) 48%, transparent);
         backdrop-filter: blur(22px) saturate(130%);
       }
       .header {
@@ -316,18 +316,18 @@ export class DsAppShell extends DsElement {
         flex: 0 0 auto;
         display: inline-grid;
         place-items: center;
-        min-width: var(--ds-target-min-touch);
-        min-height: var(--ds-target-min-touch);
-        margin-inline: var(--ds-space-3) 0;
-        padding: var(--ds-space-2);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-text-primary);
+        min-width: var(--kanonis-target-min-touch);
+        min-height: var(--kanonis-target-min-touch);
+        margin-inline: var(--kanonis-space-3) 0;
+        padding: var(--kanonis-space-2);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-text-primary);
         cursor: pointer;
       }
       .sidebar-toggle:hover {
-        background: var(--ds-color-bg-hover);
+        background: var(--kanonis-color-bg-hover);
       }
       .sidebar-toggle svg {
         width: 1.25rem;
@@ -345,18 +345,18 @@ export class DsAppShell extends DsElement {
         overscroll-behavior: contain;
         scrollbar-gutter: stable;
         scrollbar-width: thin;
-        scrollbar-color: var(--ds-color-border-strong) transparent;
+        scrollbar-color: var(--kanonis-color-border-strong) transparent;
         -webkit-overflow-scrolling: touch;
-        padding: var(--ds-space-8);
+        padding: var(--kanonis-space-8);
       }
       .main::-webkit-scrollbar {
-        width: var(--ds-scrollbar-size);
-        height: var(--ds-scrollbar-size);
+        width: var(--kanonis-scrollbar-size);
+        height: var(--kanonis-scrollbar-size);
       }
       .main::-webkit-scrollbar-thumb {
         border: 0.1875rem solid transparent;
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-border-strong);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-border-strong);
         background-clip: padding-box;
       }
       .workspace-body {
@@ -388,7 +388,7 @@ export class DsAppShell extends DsElement {
         }
         .sidebar {
           position: absolute;
-          z-index: var(--ds-z-navigation);
+          z-index: var(--kanonis-z-navigation);
           inset: auto 0 0;
           height: auto;
         }
@@ -399,13 +399,13 @@ export class DsAppShell extends DsElement {
           min-height: 4rem;
         }
         .main {
-          padding: var(--ds-space-4) var(--ds-space-3) calc(5rem + env(safe-area-inset-bottom));
+          padding: var(--kanonis-space-4) var(--kanonis-space-3) calc(5rem + env(safe-area-inset-bottom));
         }
         :host([content-mode='pane']) .main {
           padding: 0 0 calc(5rem + env(safe-area-inset-bottom));
         }
         :host([sidebar-collapsed]) .main {
-          padding-bottom: var(--ds-space-4);
+          padding-bottom: var(--kanonis-space-4);
         }
         :host([content-mode='pane'][sidebar-collapsed]) .main {
           padding: 0;

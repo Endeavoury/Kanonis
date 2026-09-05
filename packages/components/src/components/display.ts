@@ -13,38 +13,38 @@ export class DsBadge extends DsElement {
       .badge {
         display: inline-flex;
         align-items: center;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         min-height: 1.5rem;
         padding: 0 0.625rem;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-xs);
-        font-weight: var(--ds-font-weight-semibold);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-xs);
+        font-weight: var(--kanonis-font-weight-semibold);
         letter-spacing: 0.01em;
         white-space: nowrap;
       }
       :host([tone='accent']) .badge,
       :host([tone='info']) .badge {
-        background: var(--ds-color-info-soft);
-        border-color: color-mix(in srgb, var(--ds-color-info) 30%, transparent);
-        color: var(--ds-color-info);
+        background: var(--kanonis-color-info-soft);
+        border-color: color-mix(in srgb, var(--kanonis-color-info) 30%, transparent);
+        color: var(--kanonis-color-info);
       }
       :host([tone='success']) .badge {
-        background: var(--ds-color-success-soft);
-        border-color: color-mix(in srgb, var(--ds-color-success) 30%, transparent);
-        color: var(--ds-color-success);
+        background: var(--kanonis-color-success-soft);
+        border-color: color-mix(in srgb, var(--kanonis-color-success) 30%, transparent);
+        color: var(--kanonis-color-success);
       }
       :host([tone='warning']) .badge {
-        background: var(--ds-color-warning-soft);
-        border-color: color-mix(in srgb, var(--ds-color-warning) 30%, transparent);
-        color: var(--ds-color-warning);
+        background: var(--kanonis-color-warning-soft);
+        border-color: color-mix(in srgb, var(--kanonis-color-warning) 30%, transparent);
+        color: var(--kanonis-color-warning);
       }
       :host([tone='danger']) .badge {
-        background: var(--ds-color-danger-soft);
-        border-color: color-mix(in srgb, var(--ds-color-danger) 30%, transparent);
-        color: var(--ds-color-danger);
+        background: var(--kanonis-color-danger-soft);
+        border-color: color-mix(in srgb, var(--kanonis-color-danger) 30%, transparent);
+        color: var(--kanonis-color-danger);
       }
     `,
   ];
@@ -64,34 +64,34 @@ export class DsStatusBadge extends DsElement {
       .status {
         display: inline-flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
-        font-weight: var(--ds-font-weight-medium);
+        gap: var(--kanonis-space-2);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
+        font-weight: var(--kanonis-font-weight-medium);
         white-space: nowrap;
       }
       .dot {
         width: 0.4375rem;
         height: 0.4375rem;
         border-radius: 50%;
-        background: var(--ds-color-text-muted);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-text-muted) 12%, transparent);
+        background: var(--kanonis-color-text-muted);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--kanonis-color-text-muted) 12%, transparent);
       }
       :host([tone='success']) .dot {
-        background: var(--ds-color-success);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-success) 14%, transparent);
+        background: var(--kanonis-color-success);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--kanonis-color-success) 14%, transparent);
       }
       :host([tone='warning']) .dot {
-        background: var(--ds-color-warning);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-warning) 14%, transparent);
+        background: var(--kanonis-color-warning);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--kanonis-color-warning) 14%, transparent);
       }
       :host([tone='danger']) .dot {
-        background: var(--ds-color-danger);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-danger) 14%, transparent);
+        background: var(--kanonis-color-danger);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--kanonis-color-danger) 14%, transparent);
       }
       :host([tone='info']) .dot,
       :host([tone='accent']) .dot {
-        background: var(--ds-color-info);
+        background: var(--kanonis-color-info);
       }
     `,
   ];
@@ -115,17 +115,17 @@ export class DsAvatar extends DsElement {
         place-items: center;
         width: 2rem;
         height: 2rem;
-        border: 1px solid color-mix(in srgb, var(--ds-color-accent-hover) 46%, transparent);
-        border-radius: var(--ds-radius-md);
+        border: 1px solid color-mix(in srgb, var(--kanonis-color-accent-hover) 46%, transparent);
+        border-radius: var(--kanonis-radius-md);
         overflow: hidden;
-        background: var(--ds-gradient-accent);
-        color: var(--ds-color-text-inverse);
-        font-size: var(--ds-font-size-xs);
-        font-weight: var(--ds-font-weight-semibold);
+        background: var(--kanonis-gradient-accent);
+        color: var(--kanonis-color-text-inverse);
+        font-size: var(--kanonis-font-size-xs);
+        font-weight: var(--kanonis-font-weight-semibold);
         text-transform: uppercase;
         box-shadow:
-          inset 0 1px 0 var(--ds-color-highlight),
-          0 5px 14px color-mix(in srgb, var(--ds-color-accent-primary) 16%, transparent);
+          inset 0 1px 0 var(--kanonis-color-highlight),
+          0 5px 14px color-mix(in srgb, var(--kanonis-color-accent-primary) 16%, transparent);
       }
       :host([size='small']) .avatar {
         width: 1.5rem;
@@ -134,7 +134,7 @@ export class DsAvatar extends DsElement {
       :host([size='large']) .avatar {
         width: 2.75rem;
         height: 2.75rem;
-        font-size: var(--ds-font-size-sm);
+        font-size: var(--kanonis-font-size-sm);
       }
       img {
         width: 100%;
@@ -177,18 +177,18 @@ export class DsCard extends DsElement {
       .header,
       .body,
       .footer {
-        padding: var(--ds-space-5);
+        padding: var(--kanonis-space-5);
       }
       .header {
         display: flex;
         justify-content: space-between;
-        gap: var(--ds-space-4);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
-        background: color-mix(in srgb, var(--ds-color-bg-elevated) 34%, transparent);
+        gap: var(--kanonis-space-4);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
+        background: color-mix(in srgb, var(--kanonis-color-bg-elevated) 34%, transparent);
       }
       .footer {
-        border-top: 1px solid var(--ds-color-border-subtle);
-        background: color-mix(in srgb, var(--ds-color-bg-surface-subtle) 50%, transparent);
+        border-top: 1px solid var(--kanonis-color-border-subtle);
+        background: color-mix(in srgb, var(--kanonis-color-bg-surface-subtle) 50%, transparent);
       }
       [hidden] {
         display: none;
@@ -197,7 +197,7 @@ export class DsCard extends DsElement {
         padding: 0;
       }
       :host([padding='compact']) .body {
-        padding: var(--ds-space-3);
+        padding: var(--kanonis-space-3);
       }
     `,
   ];
@@ -237,28 +237,28 @@ export class DsPanel extends DsElement {
         display: block;
       }
       .panel {
-        padding: var(--ds-space-5);
+        padding: var(--kanonis-space-5);
       }
       header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: var(--ds-space-4);
-        padding-bottom: var(--ds-space-4);
-        margin-bottom: var(--ds-space-4);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        gap: var(--kanonis-space-4);
+        padding-bottom: var(--kanonis-space-4);
+        margin-bottom: var(--kanonis-space-4);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       h2 {
         margin: 0.375rem 0 0;
-        font-size: var(--ds-font-size-xl);
-        font-weight: var(--ds-font-weight-semibold);
-        letter-spacing: var(--ds-letter-spacing-tight);
-        line-height: var(--ds-line-height-tight);
+        font-size: var(--kanonis-font-size-xl);
+        font-weight: var(--kanonis-font-weight-semibold);
+        letter-spacing: var(--kanonis-letter-spacing-tight);
+        line-height: var(--kanonis-line-height-tight);
       }
       .description {
-        margin: var(--ds-space-1) 0 0;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        margin: var(--kanonis-space-1) 0 0;
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
     `,
   ];
@@ -302,16 +302,16 @@ export class DsMetric extends DsElement {
       .metric {
         position: relative;
         min-height: 7rem;
-        padding: var(--ds-space-5);
+        padding: var(--kanonis-space-5);
         overflow: hidden;
       }
       .metric::before {
         content: '';
         position: absolute;
-        inset: 0 var(--ds-space-4) auto;
+        inset: 0 var(--kanonis-space-4) auto;
         height: 2px;
-        border-radius: 0 0 var(--ds-radius-round) var(--ds-radius-round);
-        background: var(--ds-color-border-strong);
+        border-radius: 0 0 var(--kanonis-radius-round) var(--kanonis-radius-round);
+        background: var(--kanonis-color-border-strong);
       }
       .metric::after {
         content: '';
@@ -324,36 +324,36 @@ export class DsMetric extends DsElement {
         border-radius: 50%;
         background: radial-gradient(
           circle,
-          color-mix(in srgb, var(--metric-accent, var(--ds-color-border-strong)) 12%, transparent),
+          color-mix(in srgb, var(--metric-accent, var(--kanonis-color-border-strong)) 12%, transparent),
           transparent 68%
         );
         pointer-events: none;
       }
       :host([tone='accent']) .metric::before,
       :host([tone='info']) .metric::before {
-        background: var(--ds-color-info);
+        background: var(--kanonis-color-info);
       }
       :host([tone='success']) .metric::before {
-        background: var(--ds-color-success);
+        background: var(--kanonis-color-success);
       }
       :host([tone='warning']) .metric::before {
-        background: var(--ds-color-warning);
+        background: var(--kanonis-color-warning);
       }
       :host([tone='danger']) .metric::before {
-        background: var(--ds-color-danger);
+        background: var(--kanonis-color-danger);
       }
       :host([tone='accent']) .metric,
       :host([tone='info']) .metric {
-        --metric-accent: var(--ds-color-info);
+        --metric-accent: var(--kanonis-color-info);
       }
       :host([tone='success']) .metric {
-        --metric-accent: var(--ds-color-success);
+        --metric-accent: var(--kanonis-color-success);
       }
       :host([tone='warning']) .metric {
-        --metric-accent: var(--ds-color-warning);
+        --metric-accent: var(--kanonis-color-warning);
       }
       :host([tone='danger']) .metric {
-        --metric-accent: var(--ds-color-danger);
+        --metric-accent: var(--kanonis-color-danger);
       }
       .label,
       .value,
@@ -363,38 +363,38 @@ export class DsMetric extends DsElement {
       }
       .label {
         display: block;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
-        font-weight: var(--ds-font-weight-semibold);
-        letter-spacing: var(--ds-letter-spacing-wide);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
+        font-weight: var(--kanonis-font-weight-semibold);
+        letter-spacing: var(--kanonis-letter-spacing-wide);
         text-transform: uppercase;
       }
       .value {
         display: block;
-        margin: 0.625rem 0 var(--ds-space-1);
-        font-size: var(--ds-font-size-2xl);
-        font-weight: var(--ds-font-weight-semibold);
-        letter-spacing: var(--ds-letter-spacing-tight);
-        line-height: var(--ds-line-height-tight);
+        margin: 0.625rem 0 var(--kanonis-space-1);
+        font-size: var(--kanonis-font-size-2xl);
+        font-weight: var(--kanonis-font-weight-semibold);
+        letter-spacing: var(--kanonis-letter-spacing-tight);
+        line-height: var(--kanonis-line-height-tight);
         overflow-wrap: anywhere;
       }
       .detail {
         display: block;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
       }
       :host([tone='success']) .value {
-        color: var(--ds-color-success);
+        color: var(--kanonis-color-success);
       }
       :host([tone='warning']) .value {
-        color: var(--ds-color-warning);
+        color: var(--kanonis-color-warning);
       }
       :host([tone='danger']) .value {
-        color: var(--ds-color-danger);
+        color: var(--kanonis-color-danger);
       }
       :host([tone='accent']) .value,
       :host([tone='info']) .value {
-        color: var(--ds-color-info);
+        color: var(--kanonis-color-info);
       }
     `,
   ];
@@ -421,17 +421,17 @@ export class DsDescriptionList extends DsElement {
     foundationStyles,
     css`
       :host { display: block; }
-      dl { display: grid; grid-template-columns: repeat(var(--ds-description-columns, 2), minmax(0, 1fr)); gap: var(--ds-space-4); margin: 0; }
-      div { min-width: 0; padding: var(--ds-space-3); border: 1px solid var(--ds-color-border-subtle); border-radius: var(--ds-radius-md); background: var(--ds-color-bg-surface-subtle); }
-      dt { color: var(--ds-color-text-muted); font-size: var(--ds-font-size-xs); font-weight: var(--ds-font-weight-semibold); letter-spacing: var(--ds-letter-spacing-wide); text-transform: uppercase; }
-      dd { margin: var(--ds-space-1) 0 0; color: var(--ds-color-text-primary); font-weight: var(--ds-font-weight-medium); overflow-wrap: anywhere; }
+      dl { display: grid; grid-template-columns: repeat(var(--kanonis-description-columns, 2), minmax(0, 1fr)); gap: var(--kanonis-space-4); margin: 0; }
+      div { min-width: 0; padding: var(--kanonis-space-3); border: 1px solid var(--kanonis-color-border-subtle); border-radius: var(--kanonis-radius-md); background: var(--kanonis-color-bg-surface-subtle); }
+      dt { color: var(--kanonis-color-text-muted); font-size: var(--kanonis-font-size-xs); font-weight: var(--kanonis-font-weight-semibold); letter-spacing: var(--kanonis-letter-spacing-wide); text-transform: uppercase; }
+      dd { margin: var(--kanonis-space-1) 0 0; color: var(--kanonis-color-text-primary); font-weight: var(--kanonis-font-weight-medium); overflow-wrap: anywhere; }
       @media ${mediaCompact} { dl { grid-template-columns: 1fr; } }
     `,
   ];
   @property({ attribute: false }) items: DsDescriptionItem[] = [];
   @property({ type: Number, reflect: true }) columns = 2;
   protected override render() {
-    return html`<dl part="list" style=${`--ds-description-columns:${Math.max(1, Math.min(this.columns, 4))}`}>
+    return html`<dl part="list" style=${`--kanonis-description-columns:${Math.max(1, Math.min(this.columns, 4))}`}>
       ${this.items.map((item) => html`<div part="item"><dt part="term">${item.term}</dt><dd part="value">${item.value}</dd></div>`)}
     </dl>`;
   }
@@ -442,11 +442,11 @@ export class DsCodeBlock extends DsElement {
     foundationStyles,
     css`
       :host { display: block; min-width: 0; }
-      figure { margin: 0; overflow: hidden; border: 1px solid var(--ds-color-border-default); border-radius: var(--ds-radius-lg); background: var(--ds-color-bg-inverse); color: var(--ds-color-text-inverse); }
-      figcaption { display: flex; justify-content: space-between; gap: var(--ds-space-3); padding: var(--ds-space-2) var(--ds-space-4); border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent); color: color-mix(in srgb, currentColor 72%, transparent); font-size: var(--ds-font-size-xs); }
-      pre { max-width: 100%; margin: 0; padding: var(--ds-space-4); overflow: auto; font-family: var(--ds-font-mono); font-size: var(--ds-font-size-sm); line-height: var(--ds-line-height-normal); tab-size: 2; }
+      figure { margin: 0; overflow: hidden; border: 1px solid var(--kanonis-color-border-default); border-radius: var(--kanonis-radius-lg); background: var(--kanonis-color-bg-inverse); color: var(--kanonis-color-text-inverse); }
+      figcaption { display: flex; justify-content: space-between; gap: var(--kanonis-space-3); padding: var(--kanonis-space-2) var(--kanonis-space-4); border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent); color: color-mix(in srgb, currentColor 72%, transparent); font-size: var(--kanonis-font-size-xs); }
+      pre { max-width: 100%; margin: 0; padding: var(--kanonis-space-4); overflow: auto; font-family: var(--kanonis-font-mono); font-size: var(--kanonis-font-size-sm); line-height: var(--kanonis-line-height-normal); tab-size: 2; }
       :host([wrap]) pre { white-space: pre-wrap; overflow-wrap: anywhere; }
-      pre:focus-visible { outline: 2px solid var(--ds-color-focus); outline-offset: -2px; }
+      pre:focus-visible { outline: 2px solid var(--kanonis-color-focus); outline-offset: -2px; }
     `,
   ];
   @property() label = '';

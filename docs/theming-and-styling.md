@@ -2,13 +2,13 @@
 
 ## Token layers
 
-`@endeavoury/kanonis-tokens/tokens.css` defines primitive scales and semantic aliases. Components consume semantic variables such as `--ds-color-bg-surface`, never theme-specific raw colors. Light and dark themes assign the same semantic names.
+`@endeavoury/kanonis-tokens/tokens.css` defines primitive scales and semantic aliases. Components consume semantic variables such as `--kanonis-color-bg-surface`, never theme-specific raw colors. Light and dark themes assign the same semantic names.
 
-Set `data-ds-theme="light"` or `data-ds-theme="dark"` on `html` or any application subtree. `data-ds-theme="system"` follows `prefers-color-scheme`. CSS custom properties inherit across Shadow DOM, so nested theme previews and application-level overrides remain possible.
+Set `data-kanonis-theme="light"` or `data-kanonis-theme="dark"` on `html` or any application subtree. `data-kanonis-theme="system"` follows `prefers-color-scheme`. CSS custom properties inherit across Shadow DOM, so nested theme previews and application-level overrides remain possible.
 
-Set `data-ds-contrast="more"` for an explicit high-contrast palette; otherwise
+Set `data-kanonis-contrast="more"` for an explicit high-contrast palette; otherwise
 `prefers-contrast: more` is honored automatically. Forced-colors mode maps semantic roles to system
-colors. Kanonis is the default brand. Set `data-ds-brand="finance"` or `data-ds-brand="ontology"` to change semantic accent roles
+colors. Kanonis is the default brand. Set `data-kanonis-brand="finance"` or `data-kanonis-brand="ontology"` to change semantic accent roles
 without forking component styles.
 
 ## Shared Shadow DOM styles
@@ -34,8 +34,8 @@ Prefer semantic custom properties for theme-level customization:
 
 ```css
 .branded-area {
-  --ds-color-accent-primary: oklch(62% 0.18 250);
-  --ds-radius-md: 0.5rem;
+  --kanonis-color-accent-primary: oklch(62% 0.18 250);
+  --kanonis-radius-md: 0.5rem;
 }
 ```
 

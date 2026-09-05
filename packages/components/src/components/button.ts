@@ -31,24 +31,24 @@ export class DsButton extends DsElement {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         width: 100%;
-        min-height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-4);
+        min-height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-4);
         border: 1px solid transparent;
-        border-radius: var(--ds-radius-md);
+        border-radius: var(--kanonis-radius-md);
         cursor: pointer;
-        font-size: var(--ds-font-size-md);
-        font-weight: var(--ds-font-weight-semibold);
+        font-size: var(--kanonis-font-size-md);
+        font-weight: var(--kanonis-font-weight-semibold);
         letter-spacing: -0.005em;
         white-space: nowrap;
         text-decoration: none;
         transition:
-          background var(--ds-duration-fast) var(--ds-ease-standard),
-          border-color var(--ds-duration-fast) var(--ds-ease-standard),
-          box-shadow var(--ds-duration-fast) var(--ds-ease-standard),
-          color var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-fast) var(--ds-ease-standard);
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          box-shadow var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       :is(button, a):hover:not(:disabled):not([aria-disabled='true']) {
         transform: translateY(-1px);
@@ -57,78 +57,78 @@ export class DsButton extends DsElement {
         transform: translateY(1px);
       }
       :host([size='small']) :is(button, a) {
-        min-height: var(--ds-control-height-sm);
-        padding-inline: var(--ds-space-3);
-        font-size: var(--ds-font-size-sm);
+        min-height: var(--kanonis-control-height-sm);
+        padding-inline: var(--kanonis-space-3);
+        font-size: var(--kanonis-font-size-sm);
       }
       :host([size='large']) :is(button, a) {
-        min-height: var(--ds-control-height-lg);
-        padding-inline: var(--ds-space-5);
-        font-size: var(--ds-font-size-lg);
+        min-height: var(--kanonis-control-height-lg);
+        padding-inline: var(--kanonis-space-5);
+        font-size: var(--kanonis-font-size-lg);
       }
       :host([variant='primary']) :is(button, a) {
-        border-color: color-mix(in srgb, var(--ds-color-accent-hover) 68%, transparent);
+        border-color: color-mix(in srgb, var(--kanonis-color-accent-hover) 68%, transparent);
         background: linear-gradient(
           180deg,
-          color-mix(in srgb, var(--ds-color-accent-hover) 72%, var(--ds-color-accent-primary)),
-          var(--ds-color-accent-primary)
+          color-mix(in srgb, var(--kanonis-color-accent-hover) 72%, var(--kanonis-color-accent-primary)),
+          var(--kanonis-color-accent-primary)
         );
-        color: var(--ds-color-text-inverse);
+        color: var(--kanonis-color-text-inverse);
         box-shadow:
-          inset 0 1px 0 var(--ds-color-highlight),
-          var(--ds-shadow-accent);
+          inset 0 1px 0 var(--kanonis-color-highlight),
+          var(--kanonis-shadow-accent);
       }
       :host([variant='primary']) :is(button, a):hover:not(:disabled):not([aria-disabled='true']) {
         background: linear-gradient(
           180deg,
-          var(--ds-color-accent-hover),
-          color-mix(in srgb, var(--ds-color-accent-primary) 88%, black)
+          var(--kanonis-color-accent-hover),
+          color-mix(in srgb, var(--kanonis-color-accent-primary) 88%, black)
         );
         box-shadow:
-          inset 0 1px 0 var(--ds-color-highlight),
-          0 10px 26px color-mix(in srgb, var(--ds-color-accent-primary) 26%, transparent);
+          inset 0 1px 0 var(--kanonis-color-highlight),
+          0 10px 26px color-mix(in srgb, var(--kanonis-color-accent-primary) 26%, transparent);
       }
       :host([variant='secondary']) :is(button, a) {
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        border-color: var(--ds-color-border-default);
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-control);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        border-color: var(--kanonis-color-border-default);
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-control);
       }
       :host([variant='secondary']) :is(button, a):hover:not(:disabled):not([aria-disabled='true']) {
-        background: var(--ds-color-bg-hover);
-        border-color: var(--ds-color-border-strong);
+        background: var(--kanonis-color-bg-hover);
+        border-color: var(--kanonis-color-border-strong);
       }
       :host([variant='ghost']) :is(button, a) {
         background: transparent;
-        color: var(--ds-color-text-secondary);
+        color: var(--kanonis-color-text-secondary);
       }
       :host([variant='ghost']) :is(button, a):hover:not(:disabled):not([aria-disabled='true']) {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
       :host([variant='danger']) :is(button, a) {
-        border-color: color-mix(in srgb, var(--ds-color-danger) 70%, black);
+        border-color: color-mix(in srgb, var(--kanonis-color-danger) 70%, black);
         background: linear-gradient(
           180deg,
-          color-mix(in srgb, var(--ds-color-danger) 88%, white),
-          var(--ds-color-danger)
+          color-mix(in srgb, var(--kanonis-color-danger) 88%, white),
+          var(--kanonis-color-danger)
         );
-        color: var(--ds-color-text-inverse);
-        box-shadow: 0 8px 20px color-mix(in srgb, var(--ds-color-danger) 20%, transparent);
+        color: var(--kanonis-color-text-inverse);
+        box-shadow: 0 8px 20px color-mix(in srgb, var(--kanonis-color-danger) 20%, transparent);
       }
       :is(button, a):is(:disabled, [aria-disabled='true']) {
         cursor: not-allowed;
         opacity: 0.5;
       }
       .spinner {
-        --ds-spinner-size: 1em;
-        --ds-spinner-track: currentColor;
-        --ds-spinner-color: currentColor;
+        --kanonis-spinner-size: 1em;
+        --kanonis-spinner-track: currentColor;
+        --kanonis-spinner-color: currentColor;
       }
       ::slotted([slot='prefix']),
       ::slotted([slot='suffix']) {
-        width: var(--ds-icon-md);
-        height: var(--ds-icon-md);
+        width: var(--kanonis-icon-md);
+        height: var(--kanonis-icon-md);
       }
     `,
   ];
@@ -192,25 +192,25 @@ export class DsIconButton extends DsElement {
       button {
         display: grid;
         place-items: center;
-        width: var(--ds-control-height-md);
-        height: var(--ds-control-height-md);
+        width: var(--kanonis-control-height-md);
+        height: var(--kanonis-control-height-md);
         padding: 0;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        color: var(--ds-color-text-secondary);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        color: var(--kanonis-color-text-secondary);
         cursor: pointer;
-        box-shadow: var(--ds-shadow-control);
+        box-shadow: var(--kanonis-shadow-control);
         transition:
-          background var(--ds-duration-fast) var(--ds-ease-standard),
-          border-color var(--ds-duration-fast) var(--ds-ease-standard),
-          color var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-fast) var(--ds-ease-standard);
+          background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       button:hover:not(:disabled) {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
-        border-color: var(--ds-color-border-strong);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
+        border-color: var(--kanonis-color-border-strong);
         transform: translateY(-1px);
       }
       button:active:not(:disabled) {
@@ -221,16 +221,16 @@ export class DsIconButton extends DsElement {
         cursor: not-allowed;
       }
       :host([size='small']) button {
-        width: var(--ds-control-height-sm);
-        height: var(--ds-control-height-sm);
+        width: var(--kanonis-control-height-sm);
+        height: var(--kanonis-control-height-sm);
       }
       :host([size='large']) button {
-        width: var(--ds-control-height-lg);
-        height: var(--ds-control-height-lg);
+        width: var(--kanonis-control-height-lg);
+        height: var(--kanonis-control-height-lg);
       }
       ::slotted(*) {
-        width: var(--ds-icon-md);
-        height: var(--ds-icon-md);
+        width: var(--kanonis-icon-md);
+        height: var(--kanonis-icon-md);
       }
     `,
   ];

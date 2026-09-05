@@ -10,9 +10,9 @@ export const mediaWide = unsafeCSS(`(max-width: ${breakpoints.wide})`);
 export const hostStyles = css`
   :host {
     box-sizing: border-box;
-    color: var(--ds-color-text-primary);
-    font-family: var(--ds-font-sans);
-    line-height: var(--ds-line-height-normal);
+    color: var(--kanonis-color-text-primary);
+    font-family: var(--kanonis-font-sans);
+    line-height: var(--kanonis-line-height-normal);
     -webkit-font-smoothing: antialiased;
   }
   :host([hidden]) {
@@ -34,21 +34,21 @@ export const typographyStyles = css`
   }
   .eyebrow {
     margin: 0;
-    color: var(--ds-color-text-muted);
-    font-size: var(--ds-font-size-xs);
-    font-weight: var(--ds-font-weight-semibold);
-    letter-spacing: var(--ds-letter-spacing-wide);
-    line-height: var(--ds-line-height-tight);
+    color: var(--kanonis-color-text-muted);
+    font-size: var(--kanonis-font-size-xs);
+    font-weight: var(--kanonis-font-weight-semibold);
+    letter-spacing: var(--kanonis-letter-spacing-wide);
+    line-height: var(--kanonis-line-height-tight);
     text-transform: uppercase;
   }
   .muted {
-    color: var(--ds-color-text-muted);
+    color: var(--kanonis-color-text-muted);
   }
 `;
 
 export const focusStyles = css`
   :where(button, input, select, textarea, a, [tabindex]):focus-visible {
-    outline: 2px solid color-mix(in srgb, var(--ds-color-focus) 82%, white);
+    outline: 2px solid color-mix(in srgb, var(--kanonis-color-focus) 82%, white);
     outline-offset: 3px;
   }
 `;
@@ -70,31 +70,31 @@ export const preferenceStyles = css`
 
 export const controlStyles = css`
   .control {
-    min-height: var(--ds-control-height-md);
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-md);
-    background: var(--ds-color-bg-surface-subtle);
-    color: var(--ds-color-text-primary);
-    box-shadow: var(--ds-shadow-control);
+    min-height: var(--kanonis-control-height-md);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-md);
+    background: var(--kanonis-color-bg-surface-subtle);
+    color: var(--kanonis-color-text-primary);
+    box-shadow: var(--kanonis-shadow-control);
     transition:
-      background var(--ds-duration-fast) var(--ds-ease-standard),
-      border-color var(--ds-duration-fast) var(--ds-ease-standard),
-      box-shadow var(--ds-duration-fast) var(--ds-ease-standard);
+      background var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+      border-color var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+      box-shadow var(--kanonis-duration-fast) var(--kanonis-ease-standard);
   }
   .control:hover:not(:disabled) {
-    border-color: var(--ds-color-border-strong);
-    background: var(--ds-color-bg-elevated);
+    border-color: var(--kanonis-color-border-strong);
+    background: var(--kanonis-color-bg-elevated);
   }
   .control:focus-visible {
-    border-color: var(--ds-color-focus);
+    border-color: var(--kanonis-color-focus);
     outline: 0;
     box-shadow:
-      var(--ds-shadow-control),
-      0 0 0 3px color-mix(in srgb, var(--ds-color-focus) 18%, transparent);
+      var(--kanonis-shadow-control),
+      0 0 0 3px color-mix(in srgb, var(--kanonis-color-focus) 18%, transparent);
   }
   .control:disabled {
     cursor: not-allowed;
-    opacity: var(--ds-opacity-disabled);
+    opacity: var(--kanonis-opacity-disabled);
   }
 `;
 
@@ -105,35 +105,35 @@ export const formStyles = css`
     min-width: 0;
   }
   .label {
-    color: var(--ds-color-text-secondary);
-    font-size: var(--ds-font-size-sm);
-    font-weight: var(--ds-font-weight-semibold);
+    color: var(--kanonis-color-text-secondary);
+    font-size: var(--kanonis-font-size-sm);
+    font-weight: var(--kanonis-font-weight-semibold);
     letter-spacing: 0.01em;
   }
   .required {
-    color: var(--ds-color-danger);
+    color: var(--kanonis-color-danger);
   }
   .help,
   .error {
     margin: 0;
-    font-size: var(--ds-font-size-xs);
-    line-height: var(--ds-line-height-normal);
+    font-size: var(--kanonis-font-size-xs);
+    line-height: var(--kanonis-line-height-normal);
   }
   .help {
-    color: var(--ds-color-text-muted);
+    color: var(--kanonis-color-text-muted);
   }
   .error {
-    color: var(--ds-color-danger);
+    color: var(--kanonis-color-danger);
   }
 `;
 
 export const surfaceStyles = css`
   .surface {
-    background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-    border: 1px solid var(--ds-color-border-default);
-    border-top-color: var(--ds-color-border-highlight, var(--ds-color-border-default));
-    border-radius: var(--ds-radius-lg);
-    box-shadow: var(--ds-shadow-panel, var(--ds-shadow-sm));
+    background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+    border: 1px solid var(--kanonis-color-border-default);
+    border-top-color: var(--kanonis-color-border-highlight, var(--kanonis-color-border-default));
+    border-radius: var(--kanonis-radius-lg);
+    box-shadow: var(--kanonis-shadow-panel, var(--kanonis-shadow-sm));
   }
 `;
 
@@ -154,13 +154,13 @@ export const a11yStyles = css`
 export const spinnerStyles = css`
   .spinner {
     display: inline-block;
-    width: var(--ds-spinner-size, 1.5rem);
-    height: var(--ds-spinner-size, 1.5rem);
-    border: 2px solid var(--ds-spinner-track, var(--ds-color-border-default));
-    border-top-color: var(--ds-spinner-color, var(--ds-color-accent-primary));
-    border-right-color: var(--ds-spinner-gap, transparent);
+    width: var(--kanonis-spinner-size, 1.5rem);
+    height: var(--kanonis-spinner-size, 1.5rem);
+    border: 2px solid var(--kanonis-spinner-track, var(--kanonis-color-border-default));
+    border-top-color: var(--kanonis-spinner-color, var(--kanonis-color-accent-primary));
+    border-right-color: var(--kanonis-spinner-gap, transparent);
     border-radius: 50%;
-    animation: kanonis-spin var(--ds-duration-progress) linear infinite;
+    animation: kanonis-spin var(--kanonis-duration-progress) linear infinite;
   }
   @keyframes kanonis-spin {
     to {
@@ -170,7 +170,7 @@ export const spinnerStyles = css`
   @media (prefers-reduced-motion: reduce) {
     .spinner {
       animation: none;
-      border-right-color: var(--ds-spinner-color, var(--ds-color-accent-primary));
+      border-right-color: var(--kanonis-spinner-color, var(--kanonis-color-accent-primary));
     }
   }
 `;

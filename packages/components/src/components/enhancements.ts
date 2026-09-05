@@ -41,31 +41,31 @@ export class DsSegment extends DsElement {
         display: inline-flex;
       }
       button {
-        min-height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-4);
+        min-height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-4);
         border: 0;
-        border-radius: var(--ds-shape-control);
+        border-radius: var(--kanonis-shape-control);
         background: transparent;
-        color: var(--ds-color-text-secondary);
+        color: var(--kanonis-color-text-secondary);
         font: inherit;
-        font-weight: var(--ds-font-weight-medium);
+        font-weight: var(--kanonis-font-weight-medium);
         cursor: pointer;
         transition:
-          background var(--ds-motion-control),
-          color var(--ds-motion-control),
-          box-shadow var(--ds-motion-control);
+          background var(--kanonis-motion-control),
+          color var(--kanonis-motion-control),
+          box-shadow var(--kanonis-motion-control);
       }
       button[aria-checked='true'] {
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-control);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-control);
       }
       button:hover:not(:disabled) {
-        background: var(--ds-color-bg-hover);
+        background: var(--kanonis-color-bg-hover);
       }
       button:disabled {
         cursor: not-allowed;
-        opacity: var(--ds-opacity-disabled);
+        opacity: var(--kanonis-opacity-disabled);
       }
     `,
   ];
@@ -104,12 +104,12 @@ export class DsSegmentedControl extends DsElement {
       .group {
         display: inline-flex;
         max-width: 100%;
-        gap: var(--ds-space-1);
-        padding: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
+        padding: var(--kanonis-space-1);
         overflow-x: auto;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-surface);
-        background: var(--ds-color-bg-surface-subtle);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-surface);
+        background: var(--kanonis-color-bg-surface-subtle);
       }
     `,
   ];
@@ -180,13 +180,13 @@ export class DsActionBar extends DsElement {
         display: flex;
         min-width: 0;
         align-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
       .actions {
         display: flex;
         min-width: 0;
         align-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         overflow: hidden;
       }
       details {
@@ -198,12 +198,12 @@ export class DsActionBar extends DsElement {
       }
       summary {
         display: grid;
-        min-width: var(--ds-control-height-md);
-        min-height: var(--ds-control-height-md);
+        min-width: var(--kanonis-control-height-md);
+        min-height: var(--kanonis-control-height-md);
         place-items: center;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-control);
-        background: var(--ds-color-bg-surface);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-control);
+        background: var(--kanonis-color-bg-surface);
         cursor: pointer;
         list-style: none;
       }
@@ -212,17 +212,17 @@ export class DsActionBar extends DsElement {
       }
       .overflow {
         position: absolute;
-        z-index: var(--ds-z-dropdown);
-        inset-block-start: calc(100% + var(--ds-space-1));
+        z-index: var(--kanonis-z-dropdown);
+        inset-block-start: calc(100% + var(--kanonis-space-1));
         inset-inline-end: 0;
         display: grid;
         min-width: 12rem;
-        gap: var(--ds-space-1);
-        padding: var(--ds-space-2);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-surface);
-        background: var(--ds-color-bg-elevated);
-        box-shadow: var(--ds-elevation-overlay);
+        gap: var(--kanonis-space-1);
+        padding: var(--kanonis-space-2);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-surface);
+        background: var(--kanonis-color-bg-elevated);
+        box-shadow: var(--kanonis-elevation-overlay);
       }
       ::slotted([slot='overflow']) {
         width: 100%;
@@ -321,45 +321,45 @@ export class DsSplitButton extends DsElement {
         display: inline-flex;
       }
       button {
-        min-height: var(--ds-control-height-md);
-        border: 1px solid var(--ds-color-accent-primary);
-        background: var(--ds-gradient-accent);
-        color: var(--ds-color-text-inverse);
+        min-height: var(--kanonis-control-height-md);
+        border: 1px solid var(--kanonis-color-accent-primary);
+        background: var(--kanonis-gradient-accent);
+        color: var(--kanonis-color-text-inverse);
         font: inherit;
-        font-weight: var(--ds-font-weight-semibold);
+        font-weight: var(--kanonis-font-weight-semibold);
         cursor: pointer;
       }
       .primary {
-        padding-inline: var(--ds-space-4);
-        border-radius: var(--ds-shape-control) 0 0 var(--ds-shape-control);
+        padding-inline: var(--kanonis-space-4);
+        border-radius: var(--kanonis-shape-control) 0 0 var(--kanonis-shape-control);
       }
       .toggle {
-        min-width: var(--ds-control-height-md);
-        border-inline-start-color: var(--ds-color-highlight);
-        border-radius: 0 var(--ds-shape-control) var(--ds-shape-control) 0;
+        min-width: var(--kanonis-control-height-md);
+        border-inline-start-color: var(--kanonis-color-highlight);
+        border-radius: 0 var(--kanonis-shape-control) var(--kanonis-shape-control) 0;
       }
       :host-context([dir='rtl']) .primary {
-        border-radius: 0 var(--ds-shape-control) var(--ds-shape-control) 0;
+        border-radius: 0 var(--kanonis-shape-control) var(--kanonis-shape-control) 0;
       }
       :host-context([dir='rtl']) .toggle {
-        border-radius: var(--ds-shape-control) 0 0 var(--ds-shape-control);
+        border-radius: var(--kanonis-shape-control) 0 0 var(--kanonis-shape-control);
       }
       button:disabled {
         cursor: not-allowed;
-        opacity: var(--ds-opacity-disabled);
+        opacity: var(--kanonis-opacity-disabled);
       }
       .menu {
         position: absolute;
-        z-index: var(--ds-z-dropdown);
-        inset-block-start: calc(100% + var(--ds-space-1));
+        z-index: var(--kanonis-z-dropdown);
+        inset-block-start: calc(100% + var(--kanonis-space-1));
         inset-inline-end: 0;
         min-width: 12rem;
-        padding: var(--ds-space-2);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-surface);
-        background: var(--ds-color-bg-elevated);
-        box-shadow: var(--ds-elevation-overlay);
-        color: var(--ds-color-text-primary);
+        padding: var(--kanonis-space-2);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-surface);
+        background: var(--kanonis-color-bg-elevated);
+        box-shadow: var(--kanonis-elevation-overlay);
+        color: var(--kanonis-color-text-primary);
       }
     `,
   ];
@@ -429,22 +429,22 @@ export class DsInputGroup extends DsElement {
         min-width: 0;
         align-items: stretch;
         overflow: hidden;
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-control);
-        background: var(--ds-color-bg-surface-subtle);
-        box-shadow: var(--ds-shadow-control);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-control);
+        background: var(--kanonis-color-bg-surface-subtle);
+        box-shadow: var(--kanonis-shadow-control);
       }
       .affix {
         display: flex;
         align-items: center;
-        padding-inline: var(--ds-space-3);
-        color: var(--ds-color-text-muted);
+        padding-inline: var(--kanonis-space-3);
+        color: var(--kanonis-color-text-muted);
       }
       .prefix {
-        border-inline-end: 1px solid var(--ds-color-border-subtle);
+        border-inline-end: 1px solid var(--kanonis-color-border-subtle);
       }
       .suffix {
-        border-inline-start: 1px solid var(--ds-color-border-subtle);
+        border-inline-start: 1px solid var(--kanonis-color-border-subtle);
       }
       .control {
         min-width: 0;
@@ -474,14 +474,14 @@ export class DsChip extends DsElement {
       }
       .chip {
         display: inline-flex;
-        min-height: var(--ds-control-height-sm);
+        min-height: var(--kanonis-control-height-sm);
         align-items: center;
-        gap: var(--ds-space-1);
-        padding-inline: var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-secondary);
+        gap: var(--kanonis-space-1);
+        padding-inline: var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-secondary);
       }
       button {
         border: 0;
@@ -494,18 +494,18 @@ export class DsChip extends DsElement {
         padding: 0;
       }
       .dismiss {
-        min-width: var(--ds-target-min-touch);
-        min-height: var(--ds-target-min-touch);
+        min-width: var(--kanonis-target-min-touch);
+        min-height: var(--kanonis-target-min-touch);
         padding: 0;
-        border-radius: var(--ds-radius-round);
+        border-radius: var(--kanonis-radius-round);
       }
       :host([selected]) .chip {
-        border-color: var(--ds-color-accent-primary);
-        background: var(--ds-color-accent-soft);
-        color: var(--ds-color-text-primary);
+        border-color: var(--kanonis-color-accent-primary);
+        background: var(--kanonis-color-accent-soft);
+        color: var(--kanonis-color-text-primary);
       }
       :host([disabled]) {
-        opacity: var(--ds-opacity-disabled);
+        opacity: var(--kanonis-opacity-disabled);
       }
     `,
   ];
@@ -561,9 +561,9 @@ export class DsIllustration extends DsElement {
     css`
       :host {
         display: inline-grid;
-        width: var(--ds-illustration-size, 10rem);
+        width: var(--kanonis-illustration-size, 10rem);
         max-width: 100%;
-        color: var(--ds-color-accent-primary);
+        color: var(--kanonis-color-accent-primary);
       }
       svg {
         display: block;
@@ -571,7 +571,7 @@ export class DsIllustration extends DsElement {
         height: auto;
       }
       .soft {
-        fill: var(--ds-color-accent-soft);
+        fill: var(--kanonis-color-accent-soft);
       }
       .line {
         fill: none;
@@ -619,14 +619,14 @@ export class DsBrandMark extends DsElement {
       :host {
         display: inline-flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        color: var(--ds-color-text-primary);
-        font-weight: var(--ds-font-weight-semibold);
+        gap: var(--kanonis-space-2);
+        color: var(--kanonis-color-text-primary);
+        font-weight: var(--kanonis-font-weight-semibold);
       }
       svg {
-        width: var(--ds-brand-mark-size, 2rem);
-        height: var(--ds-brand-mark-size, 2rem);
-        color: var(--ds-color-accent-primary);
+        width: var(--kanonis-brand-mark-size, 2rem);
+        height: var(--kanonis-brand-mark-size, 2rem);
+        color: var(--kanonis-color-accent-primary);
       }
     `,
   ];
@@ -663,28 +663,28 @@ export class DsReorderItem extends DsElement {
       .item {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        padding: var(--ds-space-2) var(--ds-space-3);
+        gap: var(--kanonis-space-2);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
       }
       .content {
         min-width: 0;
         flex: 1 1 auto;
       }
       .handle {
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
         cursor: grab;
       }
       .moves {
         display: inline-flex;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
       }
       button {
-        min-width: var(--ds-target-min-touch);
-        min-height: var(--ds-target-min-touch);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-control);
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-text-primary);
+        min-width: var(--kanonis-target-min-touch);
+        min-height: var(--kanonis-target-min-touch);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-control);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-text-primary);
         cursor: pointer;
       }
       :host([dragging]) {
@@ -735,11 +735,11 @@ export class DsReorderList extends DsElement {
     css`
       :host {
         display: grid;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
       .list {
         display: grid;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
     `,
   ];

@@ -63,7 +63,7 @@ for (const entry of cases) {
     await page.goto(
       `/iframe.html?id=${entry.story}&viewMode=story&globals=${encodeURIComponent(entry.globals)}`,
     );
-    await page.locator('#storybook-root [data-ds-theme]').waitFor();
+    await page.locator('#storybook-root [data-kanonis-theme]').waitFor();
     await page.evaluate(() => document.fonts.ready);
     if ('zoom' in entry && entry.zoom)
       await page.locator('#storybook-root').evaluate((element, zoom) => {

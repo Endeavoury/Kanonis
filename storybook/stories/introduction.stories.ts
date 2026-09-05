@@ -48,7 +48,7 @@ export const Welcome: StoryObj = {
           padding: clamp(32px, 6vw, 64px) 24px 80px;
         }
         .eyebrow {
-          color: var(--ds-color-accent-primary);
+          color: var(--kanonis-color-accent-primary);
           font-weight: 650;
           letter-spacing: 0.12em;
           text-transform: uppercase;
@@ -63,7 +63,7 @@ export const Welcome: StoryObj = {
         .lede,
         .section-copy {
           max-width: 720px;
-          color: var(--ds-color-text-secondary);
+          color: var(--kanonis-color-text-secondary);
           font-size: 1rem;
           line-height: 1.6;
         }
@@ -82,10 +82,10 @@ export const Welcome: StoryObj = {
           overflow: auto;
           margin: 16px 0 12px;
           padding: 18px 20px;
-          border: 1px solid var(--ds-color-border-subtle);
+          border: 1px solid var(--kanonis-color-border-subtle);
           border-radius: 12px;
-          background: var(--ds-color-bg-surface);
-          color: var(--ds-color-text-primary);
+          background: var(--kanonis-color-bg-surface);
+          color: var(--kanonis-color-text-primary);
           font:
             0.875rem/1.6 ui-monospace,
             SFMono-Regular,
@@ -101,9 +101,9 @@ export const Welcome: StoryObj = {
         .framework {
           min-width: 0;
           padding: 20px;
-          border: 1px solid var(--ds-color-border-subtle);
+          border: 1px solid var(--kanonis-color-border-subtle);
           border-radius: 14px;
-          background: var(--ds-color-bg-surface);
+          background: var(--kanonis-color-bg-surface);
         }
         .framework .code {
           margin-bottom: 0;
@@ -123,7 +123,7 @@ export const Welcome: StoryObj = {
           grid-template-columns: 2rem 1fr;
           gap: 12px;
           align-items: start;
-          color: var(--ds-color-text-secondary);
+          color: var(--kanonis-color-text-secondary);
           line-height: 1.55;
         }
         .steps li::before {
@@ -131,9 +131,9 @@ export const Welcome: StoryObj = {
           place-items: center;
           width: 2rem;
           height: 2rem;
-          border: 1px solid var(--ds-color-border-subtle);
+          border: 1px solid var(--kanonis-color-border-subtle);
           border-radius: 999px;
-          color: var(--ds-color-accent-primary);
+          color: var(--kanonis-color-accent-primary);
           font-weight: 700;
           content: counter(step);
           counter-increment: step;
@@ -146,17 +146,17 @@ export const Welcome: StoryObj = {
         }
         .package-list div {
           padding: 16px;
-          border-left: 2px solid var(--ds-color-accent-primary);
-          background: var(--ds-color-bg-surface);
+          border-left: 2px solid var(--kanonis-color-accent-primary);
+          background: var(--kanonis-color-bg-surface);
         }
         .package-list code {
           display: block;
           margin-bottom: 6px;
-          color: var(--ds-color-text-primary);
+          color: var(--kanonis-color-text-primary);
           font-size: 0.82rem;
         }
         .package-list span {
-          color: var(--ds-color-text-secondary);
+          color: var(--kanonis-color-text-secondary);
           font-size: 0.875rem;
         }
       </style>

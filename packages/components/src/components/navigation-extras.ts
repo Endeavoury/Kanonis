@@ -10,24 +10,24 @@ export class DsBreadcrumb extends DsElement {
       :host {
         display: inline-flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        gap: var(--kanonis-space-2);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       a {
-        color: var(--ds-color-text-secondary);
+        color: var(--kanonis-color-text-secondary);
         text-decoration: none;
       }
       a:hover {
-        color: var(--ds-color-accent-hover);
+        color: var(--kanonis-color-accent-hover);
         text-decoration: underline;
       }
       .current {
-        color: var(--ds-color-text-primary);
-        font-weight: var(--ds-font-weight-medium);
+        color: var(--kanonis-color-text-primary);
+        font-weight: var(--kanonis-font-weight-medium);
       }
       .separator {
-        color: var(--ds-color-border-strong);
+        color: var(--kanonis-color-border-strong);
         user-select: none;
       }
       :host([disabled]) {
@@ -75,7 +75,7 @@ export class DsBreadcrumbs extends DsElement {
       }
       .list {
         display: flex;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         align-items: center;
         width: max-content;
         min-width: 100%;
@@ -108,36 +108,36 @@ export class DsPagination extends DsElement {
       nav {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         align-items: center;
       }
       button {
         display: grid;
         place-items: center;
-        min-width: var(--ds-control-height-sm);
-        height: var(--ds-control-height-sm);
-        padding: 0 var(--ds-space-2);
+        min-width: var(--kanonis-control-height-sm);
+        height: var(--kanonis-control-height-sm);
+        padding: 0 var(--kanonis-space-2);
         border: 1px solid transparent;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: transparent;
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
         cursor: pointer;
       }
       button:hover:not(:disabled) {
-        border-color: var(--ds-color-border-default);
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        border-color: var(--kanonis-color-border-default);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
       button[aria-current='page'] {
         border-color: color-mix(
           in srgb,
-          var(--ds-color-accent-primary) 38%,
-          var(--ds-color-border-default)
+          var(--kanonis-color-accent-primary) 38%,
+          var(--kanonis-color-border-default)
         );
-        background: var(--ds-color-bg-selected);
-        color: var(--ds-color-accent-hover);
-        font-weight: var(--ds-font-weight-semibold);
+        background: var(--kanonis-color-bg-selected);
+        color: var(--kanonis-color-accent-hover);
+        font-weight: var(--kanonis-font-weight-semibold);
       }
       button:disabled {
         cursor: not-allowed;
@@ -146,8 +146,8 @@ export class DsPagination extends DsElement {
       .ellipsis {
         display: grid;
         place-items: center;
-        width: var(--ds-control-height-sm);
-        color: var(--ds-color-text-muted);
+        width: var(--kanonis-control-height-sm);
+        color: var(--kanonis-color-text-muted);
       }
     `,
   ];
@@ -235,15 +235,15 @@ export class DsListItem extends DsElement {
       .item {
         display: grid;
         grid-template-columns: auto minmax(0, 1fr) auto;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
         align-items: center;
         width: 100%;
-        min-height: var(--ds-control-height-lg);
-        padding: var(--ds-space-2) var(--ds-space-3);
+        min-height: var(--kanonis-control-height-lg);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
         border: 0;
-        border-radius: var(--ds-radius-md);
+        border-radius: var(--kanonis-radius-md);
         background: transparent;
-        color: var(--ds-color-text-primary);
+        color: var(--kanonis-color-text-primary);
         font: inherit;
         text-align: left;
         text-decoration: none;
@@ -254,10 +254,10 @@ export class DsListItem extends DsElement {
       }
       button.item:hover,
       a.item:hover {
-        background: var(--ds-color-bg-hover);
+        background: var(--kanonis-color-bg-hover);
       }
       :host([selected]) .item {
-        background: var(--ds-color-bg-selected);
+        background: var(--kanonis-color-bg-selected);
       }
       .content {
         min-width: 0;
@@ -270,15 +270,15 @@ export class DsListItem extends DsElement {
       .supporting {
         margin-top: 0.125rem;
         overflow: hidden;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
         text-overflow: ellipsis;
         white-space: nowrap;
       }
       .leading,
       .trailing {
         display: inline-flex;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       :host([disabled]) {
         opacity: 0.5;
@@ -344,15 +344,15 @@ export class DsList extends DsElement {
     css`
       :host {
         display: grid;
-        gap: var(--ds-space-1);
-        padding: var(--ds-space-2);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        box-shadow: var(--ds-shadow-sm);
+        gap: var(--kanonis-space-1);
+        padding: var(--kanonis-space-2);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        box-shadow: var(--kanonis-shadow-sm);
       }
       :host([divided]) ::slotted(kanonis-list-item:not(:last-child)) {
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
     `,
   ];

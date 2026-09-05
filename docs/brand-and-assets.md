@@ -1,6 +1,6 @@
 # Brand themes, shape, and shared assets
 
-Use `data-ds-brand="finance"` or `data-ds-brand="ontology"` on the application root or a subtree.
+Use `data-kanonis-brand="finance"` or `data-kanonis-brand="ontology"` on the application root or a subtree.
 Brand themes change semantic accent roles; light, dark, contrast, and forced-color behavior continue
 to use the same component contracts. Kanonis is the default brand and provides the neutral baseline.
 

@@ -17,19 +17,19 @@ export class DsDialog extends DsElement {
         display: contents;
       }
       dialog {
-        width: min(calc(100vw - 2rem), var(--ds-dialog-width, 34rem));
+        width: min(calc(100vw - 2rem), var(--kanonis-dialog-width, 34rem));
         max-height: min(calc(100dvh - 2rem), 44rem);
         padding: 0;
         overflow: hidden;
-        border: 1px solid var(--ds-color-border-default);
-        border-top-color: var(--ds-color-border-highlight);
-        border-radius: var(--ds-radius-xl);
-        background: var(--ds-gradient-elevated, var(--ds-color-bg-elevated));
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-lg);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-top-color: var(--kanonis-color-border-highlight);
+        border-radius: var(--kanonis-radius-xl);
+        background: var(--kanonis-gradient-elevated, var(--kanonis-color-bg-elevated));
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-lg);
       }
       dialog::backdrop {
-        background: var(--ds-color-overlay);
+        background: var(--kanonis-color-overlay);
         backdrop-filter: blur(3px);
       }
       .frame {
@@ -40,52 +40,52 @@ export class DsDialog extends DsElement {
       header {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: var(--ds-space-4);
+        gap: var(--kanonis-space-4);
         align-items: start;
-        padding: var(--ds-space-5) var(--ds-space-6);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        padding: var(--kanonis-space-5) var(--kanonis-space-6);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       h2 {
         margin: 0;
-        font-size: var(--ds-font-size-xl);
-        letter-spacing: var(--ds-letter-spacing-tight);
+        font-size: var(--kanonis-font-size-xl);
+        letter-spacing: var(--kanonis-letter-spacing-tight);
       }
       .description {
-        margin: var(--ds-space-1) 0 0;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        margin: var(--kanonis-space-1) 0 0;
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .close {
         display: grid;
         place-items: center;
-        width: var(--ds-control-height-sm);
-        height: var(--ds-control-height-sm);
+        width: var(--kanonis-control-height-sm);
+        height: var(--kanonis-control-height-sm);
         border: 0;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
         background: transparent;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
         font-size: 1.25rem;
         cursor: pointer;
       }
       .close:hover {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
       }
       .body {
         min-height: 0;
-        padding: var(--ds-space-6);
+        padding: var(--kanonis-space-6);
         overflow: auto;
-        color: var(--ds-color-text-secondary);
+        color: var(--kanonis-color-text-secondary);
       }
       footer {
-        padding: var(--ds-space-4) var(--ds-space-6);
-        border-top: 1px solid var(--ds-color-border-subtle);
+        padding: var(--kanonis-space-4) var(--kanonis-space-6);
+        border-top: 1px solid var(--kanonis-color-border-subtle);
       }
       ::slotted([slot='footer']) {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
       @media ${mediaCompact} {
         dialog {
@@ -95,8 +95,8 @@ export class DsDialog extends DsElement {
         header,
         .body,
         footer {
-          padding-left: var(--ds-space-4);
-          padding-right: var(--ds-space-4);
+          padding-left: var(--kanonis-space-4);
+          padding-right: var(--kanonis-space-4);
         }
       }
     `,
@@ -194,22 +194,22 @@ export class DsDrawer extends DsDialog {
     DsDialog.styles,
     css`
       dialog {
-        width: min(92vw, var(--ds-drawer-width, 26rem));
+        width: min(92vw, var(--kanonis-drawer-width, 26rem));
         height: 100dvh;
         max-height: 100dvh;
         margin: 0 0 0 auto;
-        border-radius: var(--ds-radius-xl) 0 0 var(--ds-radius-xl);
+        border-radius: var(--kanonis-radius-xl) 0 0 var(--kanonis-radius-xl);
       }
       :host([position='start']) dialog {
         margin: 0 auto 0 0;
-        border-radius: 0 var(--ds-radius-xl) var(--ds-radius-xl) 0;
+        border-radius: 0 var(--kanonis-radius-xl) var(--kanonis-radius-xl) 0;
       }
       .frame {
         height: 100%;
       }
       @media ${mediaCompact} {
         dialog {
-          width: min(94vw, var(--ds-drawer-width, 26rem));
+          width: min(94vw, var(--kanonis-drawer-width, 26rem));
           height: 100dvh;
           max-height: 100dvh;
         }
@@ -231,23 +231,23 @@ export class DsMenuItem extends DsElement {
       :host {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        min-height: var(--ds-control-height-sm);
-        padding: var(--ds-space-2) var(--ds-space-3);
-        border-radius: var(--ds-radius-sm);
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-md);
+        gap: var(--kanonis-space-2);
+        min-height: var(--kanonis-control-height-sm);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
+        border-radius: var(--kanonis-radius-sm);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-md);
         cursor: pointer;
         user-select: none;
       }
       :host(:hover),
       :host(:focus-visible) {
-        background: var(--ds-color-bg-hover);
-        color: var(--ds-color-text-primary);
+        background: var(--kanonis-color-bg-hover);
+        color: var(--kanonis-color-text-primary);
         outline: 0;
       }
       :host([tone='danger']) {
-        color: var(--ds-color-danger);
+        color: var(--kanonis-color-danger);
       }
       :host([disabled]) {
         cursor: not-allowed;
@@ -255,7 +255,7 @@ export class DsMenuItem extends DsElement {
       }
       .icon {
         display: inline-flex;
-        width: var(--ds-icon-md);
+        width: var(--kanonis-icon-md);
       }
     `,
   ];
@@ -312,34 +312,34 @@ export class DsMenu extends DsElement {
       .trigger {
         display: inline-flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        min-height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-control);
+        gap: var(--kanonis-space-2);
+        min-height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-control);
         cursor: pointer;
       }
       .trigger:hover {
-        border-color: var(--ds-color-border-strong);
-        background: var(--ds-color-bg-hover);
+        border-color: var(--kanonis-color-border-strong);
+        background: var(--kanonis-color-bg-hover);
       }
       .surface {
         position: absolute;
-        z-index: var(--ds-z-overlay);
-        top: calc(100% + var(--ds-space-2));
+        z-index: var(--kanonis-z-overlay);
+        top: calc(100% + var(--kanonis-space-2));
         right: 0;
         display: grid;
-        gap: var(--ds-space-1);
-        min-width: var(--ds-menu-min-width, 12rem);
-        padding: var(--ds-space-2);
-        border: 1px solid var(--ds-color-border-default);
-        border-top-color: var(--ds-color-border-highlight);
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-gradient-elevated, var(--ds-color-bg-elevated));
-        box-shadow: var(--ds-shadow-lg);
+        gap: var(--kanonis-space-1);
+        min-width: var(--kanonis-menu-min-width, 12rem);
+        padding: var(--kanonis-space-2);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-top-color: var(--kanonis-color-border-highlight);
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-gradient-elevated, var(--kanonis-color-bg-elevated));
+        box-shadow: var(--kanonis-shadow-lg);
       }
       :host([placement='start']) .surface {
         right: auto;
@@ -349,8 +349,8 @@ export class DsMenu extends DsElement {
         display: none;
       }
       .chevron {
-        color: var(--ds-color-text-muted);
-        transition: transform var(--ds-duration-fast) var(--ds-ease-standard);
+        color: var(--kanonis-color-text-muted);
+        transition: transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       :host([open]) .chevron {
         transform: rotate(180deg);
@@ -455,25 +455,25 @@ export class DsTooltip extends DsElement {
       }
       .tooltip {
         position: absolute;
-        z-index: var(--ds-z-toast);
+        z-index: var(--kanonis-z-toast);
         left: 50%;
-        bottom: calc(100% + var(--ds-space-2));
+        bottom: calc(100% + var(--kanonis-space-2));
         width: max-content;
         max-width: 18rem;
-        padding: var(--ds-space-2) var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-sm);
-        background: var(--ds-color-bg-elevated);
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-md);
-        font-size: var(--ds-font-size-xs);
-        line-height: var(--ds-line-height-normal);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-sm);
+        background: var(--kanonis-color-bg-elevated);
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-md);
+        font-size: var(--kanonis-font-size-xs);
+        line-height: var(--kanonis-line-height-normal);
         opacity: 0;
         pointer-events: none;
-        transform: translate(-50%, var(--ds-space-1));
+        transform: translate(-50%, var(--kanonis-space-1));
         transition:
-          opacity var(--ds-duration-fast) var(--ds-ease-standard),
-          transform var(--ds-duration-fast) var(--ds-ease-standard);
+          opacity var(--kanonis-duration-fast) var(--kanonis-ease-standard),
+          transform var(--kanonis-duration-fast) var(--kanonis-ease-standard);
       }
       :host(:hover) .tooltip,
       :host(:focus-within) .tooltip,
@@ -482,21 +482,21 @@ export class DsTooltip extends DsElement {
         transform: translate(-50%, 0);
       }
       :host([placement='bottom']) .tooltip {
-        top: calc(100% + var(--ds-space-2));
+        top: calc(100% + var(--kanonis-space-2));
         bottom: auto;
       }
       :host([placement='start']) .tooltip {
         top: 50%;
-        right: calc(100% + var(--ds-space-2));
+        right: calc(100% + var(--kanonis-space-2));
         bottom: auto;
         left: auto;
-        transform: translate(var(--ds-space-1), -50%);
+        transform: translate(var(--kanonis-space-1), -50%);
       }
       :host([placement='end']) .tooltip {
         top: 50%;
         bottom: auto;
-        left: calc(100% + var(--ds-space-2));
-        transform: translate(calc(-1 * var(--ds-space-1)), -50%);
+        left: calc(100% + var(--kanonis-space-2));
+        transform: translate(calc(-1 * var(--kanonis-space-1)), -50%);
       }
       :host([placement='start']:hover) .tooltip,
       :host([placement='start']:focus-within) .tooltip,

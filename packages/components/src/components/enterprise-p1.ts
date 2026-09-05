@@ -42,44 +42,44 @@ const p1Surface = css`
     font: inherit;
   }
   button {
-    min-height: var(--ds-control-height-sm);
-    padding: 0 var(--ds-space-3);
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-md);
-    background: var(--ds-color-bg-surface-subtle);
-    color: var(--ds-color-text-primary);
+    min-height: var(--kanonis-control-height-sm);
+    padding: 0 var(--kanonis-space-3);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-md);
+    background: var(--kanonis-color-bg-surface-subtle);
+    color: var(--kanonis-color-text-primary);
     cursor: pointer;
   }
   button:hover {
-    border-color: var(--ds-color-border-strong);
-    background: var(--ds-color-bg-hover);
+    border-color: var(--kanonis-color-border-strong);
+    background: var(--kanonis-color-bg-hover);
   }
   button:focus-visible,
   input:focus-visible,
   select:focus-visible {
-    outline: 2px solid var(--ds-color-focus);
+    outline: 2px solid var(--kanonis-color-focus);
     outline-offset: 2px;
   }
   .surface {
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-lg);
-    background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-    box-shadow: var(--ds-shadow-panel);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-lg);
+    background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+    box-shadow: var(--kanonis-shadow-panel);
   }
   .muted {
-    color: var(--ds-color-text-muted);
-    font-size: var(--ds-font-size-sm);
+    color: var(--kanonis-color-text-muted);
+    font-size: var(--kanonis-font-size-sm);
   }
 `;
 
 const overlayStyles = css`
   :host {
     position: fixed;
-    z-index: var(--ds-z-overlay);
+    z-index: var(--kanonis-z-overlay);
     inset: 0;
     display: grid;
     place-items: start center;
-    padding: min(16vh, 8rem) var(--ds-space-4);
+    padding: min(16vh, 8rem) var(--kanonis-space-4);
     pointer-events: none;
   }
   :host([open]) {
@@ -88,9 +88,9 @@ const overlayStyles = css`
   .backdrop {
     position: absolute;
     inset: 0;
-    background: var(--ds-color-overlay);
+    background: var(--kanonis-color-overlay);
     opacity: 0;
-    transition: opacity var(--ds-duration-normal) var(--ds-ease-standard);
+    transition: opacity var(--kanonis-duration-normal) var(--kanonis-ease-standard);
   }
   :host([open]) .backdrop {
     opacity: 1;
@@ -100,15 +100,15 @@ const overlayStyles = css`
     width: min(100%, 42rem);
     max-height: min(70dvh, 40rem);
     overflow: hidden;
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-xl);
-    background: var(--ds-color-bg-elevated);
-    box-shadow: var(--ds-shadow-lg);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-xl);
+    background: var(--kanonis-color-bg-elevated);
+    box-shadow: var(--kanonis-shadow-lg);
     transform: translateY(-0.5rem) scale(0.98);
     opacity: 0;
     transition:
-      transform var(--ds-duration-normal) var(--ds-ease-emphasized),
-      opacity var(--ds-duration-fast) var(--ds-ease-standard);
+      transform var(--kanonis-duration-normal) var(--kanonis-ease-emphasized),
+      opacity var(--kanonis-duration-fast) var(--kanonis-ease-standard);
   }
   :host([open]) .panel {
     transform: none;
@@ -131,38 +131,38 @@ export class DsCommandPalette extends DsElement {
       .search {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-3);
-        padding: var(--ds-space-4);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        gap: var(--kanonis-space-3);
+        padding: var(--kanonis-space-4);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       input {
         width: 100%;
-        height: var(--ds-control-height-lg);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        height: var(--kanonis-control-height-lg);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
       ul {
         max-height: 28rem;
         overflow: auto;
         margin: 0;
-        padding: var(--ds-space-2);
+        padding: var(--kanonis-space-2);
         list-style: none;
       }
       li {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: var(--ds-space-3);
-        padding: var(--ds-space-3);
-        border-radius: var(--ds-radius-md);
+        gap: var(--kanonis-space-3);
+        padding: var(--kanonis-space-3);
+        border-radius: var(--kanonis-radius-md);
         cursor: pointer;
       }
       li[data-active],
       li:hover {
-        background: var(--ds-color-bg-selected);
+        background: var(--kanonis-color-bg-selected);
       }
       .copy {
         min-width: 0;
@@ -170,13 +170,13 @@ export class DsCommandPalette extends DsElement {
       .description {
         display: block;
         margin-top: 0.125rem;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       kbd {
         flex: 0 0 auto;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
       }
     `,
   ];
@@ -263,17 +263,17 @@ export class DsGlobalSearch extends DsElement {
       .search {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
       input {
         width: 100%;
         min-width: 12rem;
-        height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
       button {
         flex: 0 0 auto;
@@ -312,12 +312,12 @@ export class DsTenantSwitcher extends DsElement {
     css`
       select {
         width: 100%;
-        min-height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        min-height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
     `,
   ];
@@ -349,11 +349,11 @@ export class DsUserMenu extends DsElement {
       }
       .panel {
         position: absolute;
-        z-index: var(--ds-z-popover);
+        z-index: var(--kanonis-z-popover);
         top: calc(100% + 0.5rem);
         right: 0;
         min-width: 12rem;
-        padding: var(--ds-space-2);
+        padding: var(--kanonis-space-2);
       }
       .panel ::slotted(*) {
         display: block;
@@ -385,27 +385,27 @@ export class DsWorkspaceTabs extends DsElement {
       nav {
         display: flex;
         min-width: 0;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         overflow-x: auto;
-        padding: var(--ds-space-1);
+        padding: var(--kanonis-space-1);
       }
       .tab {
         display: flex;
         align-items: center;
         gap: 0.5rem;
         flex: 0 0 auto;
-        padding: var(--ds-space-2) var(--ds-space-3);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
         border: 1px solid transparent;
-        border-radius: var(--ds-radius-md);
+        border-radius: var(--kanonis-radius-md);
         background: transparent;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
         cursor: pointer;
       }
       .tab[aria-selected='true'] {
-        border-color: var(--ds-color-border-default);
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-text-primary);
-        box-shadow: var(--ds-shadow-control);
+        border-color: var(--kanonis-color-border-default);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-text-primary);
+        box-shadow: var(--kanonis-shadow-control);
       }
       .close {
         min-height: 1.25rem;
@@ -444,11 +444,11 @@ export class DsNavigationGroup extends DsElement {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: var(--ds-space-2);
-        padding: var(--ds-space-2) var(--ds-space-3);
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
-        font-weight: var(--ds-font-weight-semibold);
+        gap: var(--kanonis-space-2);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
+        font-weight: var(--kanonis-font-weight-semibold);
         cursor: pointer;
         list-style: none;
       }
@@ -458,7 +458,7 @@ export class DsNavigationGroup extends DsElement {
       .content {
         display: grid;
         gap: 0.125rem;
-        padding: 0 var(--ds-space-1) var(--ds-space-2);
+        padding: 0 var(--kanonis-space-1) var(--kanonis-space-2);
       }
     `,
   ];
@@ -486,11 +486,11 @@ export class DsContextMenu extends DsElement {
       }
       .panel {
         position: absolute;
-        z-index: var(--ds-z-popover);
+        z-index: var(--kanonis-z-popover);
         top: calc(100% + 0.25rem);
         left: 0;
         min-width: 12rem;
-        padding: var(--ds-space-1);
+        padding: var(--kanonis-space-1);
       }
       .panel ::slotted(*) {
         display: block;
@@ -522,7 +522,7 @@ export class DsQuickActions extends DsElement {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         min-width: 0;
       }
     `,
@@ -540,31 +540,31 @@ export class DsRecordHeader extends DsElement {
       .header {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: var(--ds-space-4);
+        gap: var(--kanonis-space-4);
         align-items: start;
-        padding: var(--ds-space-5) var(--ds-space-6);
+        padding: var(--kanonis-space-5) var(--kanonis-space-6);
       }
       h1 {
         margin: 0;
-        font-size: var(--ds-font-size-2xl);
-        line-height: var(--ds-line-height-tight);
+        font-size: var(--kanonis-font-size-2xl);
+        line-height: var(--kanonis-line-height-tight);
       }
       .meta {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--ds-space-2);
-        margin-top: var(--ds-space-2);
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        gap: var(--kanonis-space-2);
+        margin-top: var(--kanonis-space-2);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .actions {
         display: flex;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
       }
       @media ${mediaCompact} {
         .header {
           grid-template-columns: 1fr;
-          padding: var(--ds-space-4);
+          padding: var(--kanonis-space-4);
         }
       }
     `,
@@ -599,15 +599,15 @@ export class DsDetailList extends DsElement {
       dt,
       dd {
         margin: 0;
-        padding: var(--ds-space-3) var(--ds-space-4);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        padding: var(--kanonis-space-3) var(--kanonis-space-4);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       dt {
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       dd {
-        color: var(--ds-color-text-primary);
+        color: var(--kanonis-color-text-primary);
       }
       @media ${mediaCompact} {
         dl {
@@ -646,28 +646,28 @@ export class DsNotificationCenter extends DsElement {
         right: -0.35rem;
         min-width: 1.15rem;
         padding: 0.1rem 0.3rem;
-        border-radius: var(--ds-radius-round);
-        background: var(--ds-color-danger);
-        color: var(--ds-color-text-inverse);
-        font-size: var(--ds-font-size-xs);
+        border-radius: var(--kanonis-radius-round);
+        background: var(--kanonis-color-danger);
+        color: var(--kanonis-color-text-inverse);
+        font-size: var(--kanonis-font-size-xs);
         text-align: center;
       }
       .panel {
         position: absolute;
-        z-index: var(--ds-z-popover);
+        z-index: var(--kanonis-z-popover);
         top: calc(100% + 0.5rem);
         right: 0;
         width: min(24rem, calc(100vw - 2rem));
         max-height: 28rem;
         overflow: auto;
-        padding: var(--ds-space-2);
+        padding: var(--kanonis-space-2);
       }
       .notification {
-        padding: var(--ds-space-3);
-        border-radius: var(--ds-radius-md);
+        padding: var(--kanonis-space-3);
+        border-radius: var(--kanonis-radius-md);
       }
       .notification:not([data-read]) {
-        background: var(--ds-color-bg-selected);
+        background: var(--kanonis-color-bg-selected);
       }
     `,
   ];
@@ -700,8 +700,8 @@ export class DsBanner extends DsElement {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: var(--ds-space-4);
-        padding: var(--ds-space-3) var(--ds-space-4);
+        gap: var(--kanonis-space-4);
+        padding: var(--kanonis-space-3) var(--kanonis-space-4);
       }
       .copy {
         min-width: 0;

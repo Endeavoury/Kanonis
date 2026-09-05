@@ -82,7 +82,7 @@ export const FormFieldComposition: StoryObj = {
       label="Composed field"
       helpText="Form field can arrange a custom or native control"
       ><input
-        style="height:40px;border:1px solid var(--ds-color-border-default);border-radius:7px;background:var(--ds-color-bg-surface);color:var(--ds-color-text-primary);padding:0 12px"
+        style="height:40px;border:1px solid var(--kanonis-color-border-default);border-radius:7px;background:var(--kanonis-color-bg-surface);color:var(--kanonis-color-text-primary);padding:0 12px"
         value="Native consumer control"
     /></kanonis-form-field>`,
 };

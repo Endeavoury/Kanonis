@@ -34,9 +34,9 @@ export const SemanticTokens: StoryObj = {
         }
         .swatch {
           overflow: hidden;
-          border: 1px solid var(--ds-color-border-default);
+          border: 1px solid var(--kanonis-color-border-default);
           border-radius: 8px;
-          background: var(--ds-color-bg-surface);
+          background: var(--kanonis-color-bg-surface);
         }
         .color {
           height: 76px;
@@ -52,7 +52,7 @@ export const SemanticTokens: StoryObj = {
         }
         .copy span {
           font-size: 11px;
-          color: var(--ds-color-text-muted);
+          color: var(--kanonis-color-text-muted);
         }
       </style>
       <h1>Semantic color roles</h1>
@@ -62,10 +62,10 @@ export const SemanticTokens: StoryObj = {
       <div class="swatches">
         ${semantic.map(
           (name) =>
-            html`<div class="swatch" style=${`--token:var(--ds-color-${name})`}>
+            html`<div class="swatch" style=${`--token:var(--kanonis-color-${name})`}>
               <div class="color"></div>
               <div class="copy">
-                <code>--ds-color-${name}</code><span>${name.replaceAll('-', ' ')}</span>
+                <code>--kanonis-color-${name}</code><span>${name.replaceAll('-', ' ')}</span>
               </div>
             </div>`,
         )}
@@ -78,14 +78,14 @@ export const DataVisualization: StoryObj = {
         .palette {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-          gap: var(--ds-space-3);
-          margin-top: var(--ds-space-5);
+          gap: var(--kanonis-space-3);
+          margin-top: var(--kanonis-space-5);
         }
         .swatch {
           overflow: hidden;
-          border: 1px solid var(--ds-color-border-default);
-          border-radius: var(--ds-radius-md);
-          background: var(--ds-color-bg-surface);
+          border: 1px solid var(--kanonis-color-border-default);
+          border-radius: var(--kanonis-radius-md);
+          background: var(--kanonis-color-bg-surface);
         }
         .color {
           height: 88px;
@@ -93,9 +93,9 @@ export const DataVisualization: StoryObj = {
         }
         code {
           display: block;
-          padding: var(--ds-space-3);
-          color: var(--ds-color-text-secondary);
-          font-size: var(--ds-font-size-xs);
+          padding: var(--kanonis-space-3);
+          color: var(--kanonis-color-text-secondary);
+          font-size: var(--kanonis-font-size-xs);
         }
       </style>
       <h1>Data visualization</h1>
@@ -106,9 +106,9 @@ export const DataVisualization: StoryObj = {
       <div class="palette">
         ${dataVisualization.map(
           (name) =>
-            html`<div class="swatch" style=${`--token:var(--ds-color-${name})`}>
+            html`<div class="swatch" style=${`--token:var(--kanonis-color-${name})`}>
               <div class="color"></div>
-              <code>--ds-color-${name}</code>
+              <code>--kanonis-color-${name}</code>
             </div>`,
         )}
       </div>`,

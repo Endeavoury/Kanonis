@@ -15,8 +15,8 @@ export const productStyles = html`<style>
   }
   .content {
     display: grid;
-    gap: var(--ds-space-6);
-    margin-top: var(--ds-space-6);
+    gap: var(--kanonis-space-6);
+    margin-top: var(--kanonis-space-6);
   }
   .chart {
     display: flex;
@@ -24,12 +24,12 @@ export const productStyles = html`<style>
     gap: 12px;
     height: 220px;
     padding: 22px 10px 0;
-    border-bottom: 1px solid var(--ds-color-border-default);
+    border-bottom: 1px solid var(--kanonis-color-border-default);
     background: repeating-linear-gradient(
       to bottom,
       transparent 0,
       transparent 54px,
-      var(--ds-color-border-subtle) 55px
+      var(--kanonis-color-border-subtle) 55px
     );
   }
   .chart-group {
@@ -47,23 +47,23 @@ export const productStyles = html`<style>
     border-radius: 3px 3px 0 0;
     background: linear-gradient(
       180deg,
-      color-mix(in srgb, var(--ds-color-success) 84%, white),
-      var(--ds-color-success)
+      color-mix(in srgb, var(--kanonis-color-success) 84%, white),
+      var(--kanonis-color-success)
     );
-    box-shadow: 0 -6px 18px color-mix(in srgb, var(--ds-color-success) 16%, transparent);
+    box-shadow: 0 -6px 18px color-mix(in srgb, var(--kanonis-color-success) 16%, transparent);
   }
   .bar.out {
     background: linear-gradient(
       180deg,
-      color-mix(in srgb, var(--ds-color-danger) 84%, white),
-      var(--ds-color-danger)
+      color-mix(in srgb, var(--kanonis-color-danger) 84%, white),
+      var(--kanonis-color-danger)
     );
-    box-shadow: 0 -6px 18px color-mix(in srgb, var(--ds-color-danger) 14%, transparent);
+    box-shadow: 0 -6px 18px color-mix(in srgb, var(--kanonis-color-danger) 14%, transparent);
   }
   .split {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: var(--ds-space-6);
+    gap: var(--kanonis-space-6);
   }
   .category-list {
     display: grid;
@@ -74,7 +74,7 @@ export const productStyles = html`<style>
     grid-template-columns: 1fr auto;
     gap: 12px;
     padding: 12px 0;
-    border-bottom: 1px solid var(--ds-color-border-subtle);
+    border-bottom: 1px solid var(--kanonis-color-border-subtle);
   }
   .category:first-child {
     padding-top: 2px;
@@ -85,14 +85,14 @@ export const productStyles = html`<style>
   }
   .category small {
     display: block;
-    color: var(--ds-color-text-muted);
+    color: var(--kanonis-color-text-muted);
   }
   .category i {
     display: block;
     height: 3px;
     margin-top: 6px;
-    border-radius: var(--ds-radius-round);
-    background: var(--ds-color-accent-primary);
+    border-radius: var(--kanonis-radius-round);
+    background: var(--kanonis-color-accent-primary);
   }
   .calendar {
     display: grid;
@@ -104,47 +104,47 @@ export const productStyles = html`<style>
     place-items: center;
     min-height: 50px;
     border: 1px solid transparent;
-    border-radius: var(--ds-radius-sm);
-    background: var(--ds-color-bg-hover);
-    color: var(--ds-color-text-secondary);
+    border-radius: var(--kanonis-radius-sm);
+    background: var(--kanonis-color-bg-hover);
+    color: var(--kanonis-color-text-secondary);
     font-size: 11px;
   }
   .day.hot {
-    border-color: color-mix(in srgb, var(--ds-color-accent-primary) 46%, transparent);
-    background: color-mix(in srgb, var(--ds-color-accent-primary) 20%, var(--ds-color-bg-surface));
+    border-color: color-mix(in srgb, var(--kanonis-color-accent-primary) 46%, transparent);
+    background: color-mix(in srgb, var(--kanonis-color-accent-primary) 20%, var(--kanonis-color-bg-surface));
     color: #fff;
   }
   .settings {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--ds-space-6);
+    gap: var(--kanonis-space-6);
   }
   .drop {
     display: grid;
     place-items: center;
     min-height: 190px;
-    border: 1px dashed var(--ds-color-border-strong);
-    border-radius: var(--ds-radius-lg);
-    background: var(--ds-gradient-surface);
+    border: 1px dashed var(--kanonis-color-border-strong);
+    border-radius: var(--kanonis-radius-lg);
+    background: var(--kanonis-gradient-surface);
     text-align: center;
   }
   .brand {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--ds-color-text-primary);
-    font-weight: var(--ds-font-weight-semibold);
-    letter-spacing: var(--ds-letter-spacing-tight);
+    color: var(--kanonis-color-text-primary);
+    font-weight: var(--kanonis-font-weight-semibold);
+    letter-spacing: var(--kanonis-letter-spacing-tight);
   }
   .brandmark {
     display: grid;
     place-items: center;
     width: 34px;
     height: 34px;
-    border: 1px solid color-mix(in srgb, var(--ds-color-accent-primary) 48%, white);
-    border-radius: var(--ds-radius-md);
-    background: var(--ds-gradient-accent);
-    box-shadow: var(--ds-shadow-accent);
+    border: 1px solid color-mix(in srgb, var(--kanonis-color-accent-primary) 48%, white);
+    border-radius: var(--kanonis-radius-md);
+    background: var(--kanonis-gradient-accent);
+    box-shadow: var(--kanonis-shadow-accent);
     color: #fff;
   }
   @media (max-width: 48rem) {
@@ -177,7 +177,7 @@ export const productHeader = (title: string) =>
   html`<kanonis-inline slot="header" class="topbar" justify="between"
     ><div>
       <span
-        style="display:block;color:var(--ds-color-text-muted);font-size:11px;letter-spacing:.12em"
+        style="display:block;color:var(--kanonis-color-text-muted);font-size:11px;letter-spacing:.12em"
         >PERSONAL FINANCE</span
       ><strong>${title}</strong>
     </div>

@@ -46,10 +46,10 @@ const p2Base = css`
   }
   .surface {
     min-width: 0;
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-lg);
-    background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-    box-shadow: var(--ds-shadow-panel);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-lg);
+    background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+    box-shadow: var(--kanonis-shadow-panel);
   }
   button,
   input,
@@ -58,28 +58,28 @@ const p2Base = css`
     font: inherit;
   }
   button {
-    min-height: var(--ds-control-height-sm);
-    padding: 0 var(--ds-space-3);
-    border: 1px solid var(--ds-color-border-default);
-    border-radius: var(--ds-radius-md);
-    background: var(--ds-color-bg-surface-subtle);
-    color: var(--ds-color-text-primary);
+    min-height: var(--kanonis-control-height-sm);
+    padding: 0 var(--kanonis-space-3);
+    border: 1px solid var(--kanonis-color-border-default);
+    border-radius: var(--kanonis-radius-md);
+    background: var(--kanonis-color-bg-surface-subtle);
+    color: var(--kanonis-color-text-primary);
     cursor: pointer;
   }
   button:hover {
-    border-color: var(--ds-color-border-strong);
-    background: var(--ds-color-bg-hover);
+    border-color: var(--kanonis-color-border-strong);
+    background: var(--kanonis-color-bg-hover);
   }
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    outline: 2px solid var(--ds-color-focus);
+    outline: 2px solid var(--kanonis-color-focus);
     outline-offset: 2px;
   }
   .muted {
-    color: var(--ds-color-text-muted);
-    font-size: var(--ds-font-size-sm);
+    color: var(--kanonis-color-text-muted);
+    font-size: var(--kanonis-font-size-sm);
   }
 `;
 
@@ -89,27 +89,27 @@ export class DsFormSection extends DsElement {
     p2Base,
     css`
       section {
-        padding: var(--ds-space-5);
+        padding: var(--kanonis-space-5);
       }
       header {
         display: flex;
         justify-content: space-between;
-        gap: var(--ds-space-3);
-        margin-bottom: var(--ds-space-4);
+        gap: var(--kanonis-space-3);
+        margin-bottom: var(--kanonis-space-4);
       }
       h2 {
         margin: 0;
-        font-size: var(--ds-font-size-lg);
+        font-size: var(--kanonis-font-size-lg);
       }
       .description {
         margin: 0.25rem 0 0;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .fields {
         display: grid;
         grid-template-columns: repeat(var(--columns, 2), minmax(0, 1fr));
-        gap: var(--ds-space-4);
+        gap: var(--kanonis-space-4);
       }
       @media ${mediaCompact} {
         .fields {
@@ -145,36 +145,36 @@ export class DsFieldArray extends DsElement {
     css`
       .array {
         display: grid;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
       }
       .row {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         align-items: end;
-        padding: var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-subtle);
-        border-radius: var(--ds-radius-md);
+        padding: var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-subtle);
+        border-radius: var(--kanonis-radius-md);
       }
       label {
         display: grid;
         gap: 0.25rem;
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
       }
       input {
-        min-height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        min-height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
       .footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: var(--ds-space-3);
+        gap: var(--kanonis-space-3);
       }
     `,
   ];
@@ -227,16 +227,16 @@ export class DsDatePicker extends DsElement {
       label {
         display: grid;
         gap: 0.25rem;
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
       }
       input {
-        min-height: var(--ds-control-height-md);
-        padding: 0 var(--ds-space-3);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-radius-md);
-        background: var(--ds-color-bg-surface-subtle);
-        color: var(--ds-color-text-primary);
+        min-height: var(--kanonis-control-height-md);
+        padding: 0 var(--kanonis-space-3);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-radius-md);
+        background: var(--kanonis-color-bg-surface-subtle);
+        color: var(--kanonis-color-text-primary);
       }
     `,
   ];
@@ -283,7 +283,7 @@ export class DsStepper extends DsElement {
     css`
       ol {
         display: flex;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         margin: 0;
         padding: 0;
         list-style: none;
@@ -292,13 +292,13 @@ export class DsStepper extends DsElement {
       li {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         min-width: max-content;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       li::after {
         content: '›';
-        color: var(--ds-color-border-strong);
+        color: var(--kanonis-color-border-strong);
       }
       li:last-child::after {
         display: none;
@@ -309,8 +309,8 @@ export class DsStepper extends DsElement {
         color: inherit;
       }
       li[data-active] {
-        color: var(--ds-color-text-primary);
-        font-weight: var(--ds-font-weight-semibold);
+        color: var(--kanonis-color-text-primary);
+        font-weight: var(--kanonis-font-weight-semibold);
       }
       .number {
         display: grid;
@@ -319,7 +319,7 @@ export class DsStepper extends DsElement {
         height: 1.75rem;
         border: 1px solid currentColor;
         border-radius: 50%;
-        font-size: var(--ds-font-size-sm);
+        font-size: var(--kanonis-font-size-sm);
       }
     `,
   ];
@@ -353,19 +353,19 @@ export class DsApprovalFlow extends DsElement {
       .flow {
         display: flex;
         align-items: center;
-        gap: var(--ds-space-2);
-        padding: var(--ds-space-4);
+        gap: var(--kanonis-space-2);
+        padding: var(--kanonis-space-4);
       }
       .state {
         display: flex;
         align-items: center;
         gap: 0.35rem;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .state[data-current] {
-        color: var(--ds-color-text-primary);
-        font-weight: var(--ds-font-weight-semibold);
+        color: var(--kanonis-color-text-primary);
+        font-weight: var(--kanonis-font-weight-semibold);
       }
       .dot {
         width: 0.6rem;
@@ -376,7 +376,7 @@ export class DsApprovalFlow extends DsElement {
       .connector {
         flex: 1;
         height: 1px;
-        background: var(--ds-color-border-default);
+        background: var(--kanonis-color-border-default);
       }
     `,
   ];
@@ -397,34 +397,34 @@ export class DsTaskList extends DsElement {
     css`
       ul {
         display: grid;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         margin: 0;
-        padding: var(--ds-space-2);
+        padding: var(--kanonis-space-2);
         list-style: none;
       }
       li {
         display: flex;
-        gap: var(--ds-space-3);
-        padding: var(--ds-space-3);
-        border-radius: var(--ds-radius-md);
+        gap: var(--kanonis-space-3);
+        padding: var(--kanonis-space-3);
+        border-radius: var(--kanonis-radius-md);
       }
       li:hover {
-        background: var(--ds-color-bg-hover);
+        background: var(--kanonis-color-bg-hover);
       }
       .copy {
         min-width: 0;
       }
       .detail {
         display: block;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       li[data-completed] strong {
         text-decoration: line-through;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       input {
-        accent-color: var(--ds-color-accent-primary);
+        accent-color: var(--kanonis-color-accent-primary);
       }
     `,
   ];
@@ -462,15 +462,15 @@ export class DsTimeline extends DsElement {
     css`
       ol {
         margin: 0;
-        padding: var(--ds-space-4);
+        padding: var(--kanonis-space-4);
         list-style: none;
       }
       li {
         position: relative;
         display: grid;
         grid-template-columns: 1rem minmax(0, 1fr);
-        gap: var(--ds-space-3);
-        padding-bottom: var(--ds-space-5);
+        gap: var(--kanonis-space-3);
+        padding-bottom: var(--kanonis-space-5);
       }
       li:last-child {
         padding-bottom: 0;
@@ -482,7 +482,7 @@ export class DsTimeline extends DsElement {
         bottom: -0.25rem;
         left: 0.28rem;
         width: 1px;
-        background: var(--ds-color-border-default);
+        background: var(--kanonis-color-border-default);
       }
       li:last-child::before {
         display: none;
@@ -494,18 +494,18 @@ export class DsTimeline extends DsElement {
         height: 0.65rem;
         margin-top: 0.3rem;
         border-radius: 50%;
-        background: var(--ds-color-accent-primary);
-        box-shadow: 0 0 0 3px var(--ds-color-bg-surface);
+        background: var(--kanonis-color-accent-primary);
+        box-shadow: 0 0 0 3px var(--kanonis-color-bg-surface);
       }
       .time {
         margin-left: 0.5rem;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
       }
       p {
         margin: 0.25rem 0 0;
-        color: var(--ds-color-text-secondary);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-secondary);
+        font-size: var(--kanonis-font-size-sm);
       }
     `,
   ];
@@ -533,26 +533,26 @@ export class DsActivityFeed extends DsElement {
     css`
       ul {
         display: grid;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         margin: 0;
-        padding: var(--ds-space-3);
+        padding: var(--kanonis-space-3);
         list-style: none;
       }
       li {
-        padding: var(--ds-space-3);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        padding: var(--kanonis-space-3);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
       }
       li:last-child {
         border-bottom: 0;
       }
       .time {
         margin-left: 0.5rem;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
       }
       p {
         margin: 0.25rem 0 0;
-        color: var(--ds-color-text-secondary);
+        color: var(--kanonis-color-text-secondary);
       }
     `,
   ];
@@ -591,22 +591,22 @@ export class DsChangeSummary extends DsElement {
       }
       th,
       td {
-        padding: var(--ds-space-3) var(--ds-space-4);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        padding: var(--kanonis-space-3) var(--kanonis-space-4);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
         text-align: left;
         vertical-align: top;
       }
       th {
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
       .before {
-        color: var(--ds-color-danger);
+        color: var(--kanonis-color-danger);
       }
       .after {
-        color: var(--ds-color-success);
+        color: var(--kanonis-color-success);
       }
     `,
   ];

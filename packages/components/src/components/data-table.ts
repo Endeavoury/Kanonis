@@ -37,39 +37,39 @@ export class DsDataTable extends DsElement {
         position: relative;
         max-width: 100%;
         overflow: auto;
-        border: 1px solid var(--ds-color-border-default);
-        border-top-color: var(--ds-color-border-highlight);
-        border-radius: var(--ds-radius-lg);
-        background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
-        box-shadow: var(--ds-shadow-panel);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-top-color: var(--kanonis-color-border-highlight);
+        border-radius: var(--kanonis-radius-lg);
+        background: var(--kanonis-gradient-surface, var(--kanonis-color-bg-surface));
+        box-shadow: var(--kanonis-shadow-panel);
       }
       .frame:focus-visible {
-        outline: 2px solid var(--ds-color-focus);
+        outline: 2px solid var(--kanonis-color-focus);
         outline-offset: 2px;
       }
       table {
         width: 100%;
         min-width: 38rem;
         border-collapse: collapse;
-        font-size: var(--ds-font-size-md);
+        font-size: var(--kanonis-font-size-md);
         font-variant-numeric: tabular-nums;
       }
       caption {
-        padding: var(--ds-space-3);
+        padding: var(--kanonis-space-3);
         text-align: start;
-        font-weight: var(--ds-font-weight-semibold);
+        font-weight: var(--kanonis-font-weight-semibold);
       }
       .description {
         display: block;
-        margin-top: var(--ds-space-1);
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
-        font-weight: var(--ds-font-weight-regular);
+        margin-top: var(--kanonis-space-1);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
+        font-weight: var(--kanonis-font-weight-regular);
       }
       th,
       td {
-        padding: 0.8125rem var(--ds-space-4);
-        border-bottom: 1px solid var(--ds-color-border-subtle);
+        padding: 0.8125rem var(--kanonis-space-4);
+        border-bottom: 1px solid var(--kanonis-color-border-subtle);
         text-align: start;
         vertical-align: middle;
       }
@@ -77,34 +77,34 @@ export class DsDataTable extends DsElement {
         position: sticky;
         top: 0;
         z-index: 1;
-        background: color-mix(in srgb, var(--ds-color-bg-elevated) 72%, var(--ds-color-bg-surface));
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-xs);
-        font-weight: var(--ds-font-weight-semibold);
+        background: color-mix(in srgb, var(--kanonis-color-bg-elevated) 72%, var(--kanonis-color-bg-surface));
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-xs);
+        font-weight: var(--kanonis-font-weight-semibold);
         letter-spacing: 0.085em;
         text-transform: uppercase;
       }
       tbody th {
-        font-weight: var(--ds-font-weight-medium);
+        font-weight: var(--kanonis-font-weight-medium);
       }
       tbody tr:last-child > * {
         border-bottom: 0;
       }
       tbody tr {
-        transition: background var(--ds-duration-fast);
+        transition: background var(--kanonis-duration-fast);
       }
       tbody tr[data-interactive] {
         cursor: pointer;
       }
       tbody tr[data-interactive]:hover,
       tbody tr[data-selected] {
-        background: color-mix(in srgb, var(--ds-color-bg-selected) 72%, transparent);
+        background: color-mix(in srgb, var(--kanonis-color-bg-selected) 72%, transparent);
       }
       tbody tr[data-selected] > :first-child {
-        box-shadow: inset 2px 0 var(--ds-color-accent-primary);
+        box-shadow: inset 2px 0 var(--kanonis-color-accent-primary);
       }
       tbody tr[data-interactive]:focus-visible {
-        outline: 2px solid var(--ds-color-focus);
+        outline: 2px solid var(--kanonis-color-focus);
         outline-offset: -2px;
       }
       .end {
@@ -120,10 +120,10 @@ export class DsDataTable extends DsElement {
       .sort {
         display: inline-flex;
         align-items: center;
-        gap: var(--ds-space-1);
+        gap: var(--kanonis-space-1);
         width: 100%;
-        min-height: var(--ds-target-min-touch);
-        padding: var(--ds-space-1) 0;
+        min-height: var(--kanonis-target-min-touch);
+        padding: var(--kanonis-space-1) 0;
         border: 0;
         background: transparent;
         color: inherit;
@@ -138,7 +138,7 @@ export class DsDataTable extends DsElement {
       }
       .sort:focus-visible {
         outline-offset: 3px;
-        border-radius: var(--ds-radius-sm);
+        border-radius: var(--kanonis-radius-sm);
       }
       .sort.end {
         justify-content: flex-end;
@@ -150,9 +150,9 @@ export class DsDataTable extends DsElement {
         font-size: 0.75rem;
       }
       .empty {
-        padding: var(--ds-space-8);
+        padding: var(--kanonis-space-8);
         text-align: center;
-        color: var(--ds-color-text-muted);
+        color: var(--kanonis-color-text-muted);
       }
       .busy {
         position: absolute;
@@ -160,7 +160,7 @@ export class DsDataTable extends DsElement {
         z-index: 2;
         display: grid;
         place-items: center;
-        background: color-mix(in srgb, var(--ds-color-bg-surface) 82%, transparent);
+        background: color-mix(in srgb, var(--kanonis-color-bg-surface) 82%, transparent);
         backdrop-filter: blur(2px);
       }
       .pagination {
@@ -170,34 +170,34 @@ export class DsDataTable extends DsElement {
         flex-wrap: wrap;
         align-items: center;
         justify-content: flex-end;
-        gap: var(--ds-space-2);
+        gap: var(--kanonis-space-2);
         min-width: 100%;
-        padding: var(--ds-space-2) var(--ds-space-3);
-        border-top: 1px solid var(--ds-color-border-subtle);
-        background: var(--ds-color-bg-surface-subtle);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
+        border-top: 1px solid var(--kanonis-color-border-subtle);
+        background: var(--kanonis-color-bg-surface-subtle);
       }
       .range {
         margin-inline-end: auto;
-        color: var(--ds-color-text-muted);
-        font-size: var(--ds-font-size-sm);
+        color: var(--kanonis-color-text-muted);
+        font-size: var(--kanonis-font-size-sm);
       }
       .pagination button {
-        min-width: var(--ds-target-min-touch);
-        min-height: var(--ds-target-min-touch);
-        border: 1px solid var(--ds-color-border-default);
-        border-radius: var(--ds-shape-control);
-        background: var(--ds-color-bg-surface);
-        color: var(--ds-color-text-primary);
+        min-width: var(--kanonis-target-min-touch);
+        min-height: var(--kanonis-target-min-touch);
+        border: 1px solid var(--kanonis-color-border-default);
+        border-radius: var(--kanonis-shape-control);
+        background: var(--kanonis-color-bg-surface);
+        color: var(--kanonis-color-text-primary);
         cursor: pointer;
       }
       .pagination button:disabled {
         cursor: not-allowed;
-        opacity: var(--ds-opacity-disabled);
+        opacity: var(--kanonis-opacity-disabled);
       }
       :host([density='compact']) th,
       :host([density='compact']) td {
-        padding: var(--ds-space-2) var(--ds-space-3);
-        font-size: var(--ds-font-size-sm);
+        padding: var(--kanonis-space-2) var(--kanonis-space-3);
+        font-size: var(--kanonis-font-size-sm);
       }
     `,
   ];

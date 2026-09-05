@@ -35,7 +35,7 @@ export const AccountSettings: StoryObj = {
                       ><kanonis-icon name="wallet"></kanonis-icon>
                       <div>
                         <strong>${account[0]}</strong
-                        ><small style="display:block;color:var(--ds-color-text-muted)"
+                        ><small style="display:block;color:var(--kanonis-color-text-muted)"
                           >${account[1]}</small
                         >
                       </div></kanonis-inline
@@ -72,10 +72,10 @@ export const ImportWorkflow: StoryObj = {
                 ><div>
                   <kanonis-icon
                     name="upload"
-                    style="font-size:32px;color:var(--ds-color-accent-primary)"
+                    style="font-size:32px;color:var(--kanonis-color-accent-primary)"
                   ></kanonis-icon>
                   <h3>Choose or drop an XML / ZIP file</h3>
-                  <p style="color:var(--ds-color-text-muted)">Maximum ZIP size 2 GiB</p>
+                  <p style="color:var(--kanonis-color-text-muted)">Maximum ZIP size 2 GiB</p>
                   <kanonis-button variant="secondary">Choose file</kanonis-button>
                 </div></label
               ></kanonis-panel

@@ -51,7 +51,7 @@ All design-system custom events use the `kanonis-` prefix, bubble, cross Shadow 
 
 ## Theme and interaction
 
-`kanonis-theme-toggle` writes `data-ds-theme` to the document root. Set `storage-key` to persist the preference. Applications should still apply the stored value in the document head to avoid a theme flash before components load.
+`kanonis-theme-toggle` writes `data-kanonis-theme` to the document root. Set `storage-key` to persist the preference. Applications should still apply the stored value in the document head to avoid a theme flash before components load.
 
 ```html
 <kanonis-theme-toggle theme="dark" storage-key="product-theme"></kanonis-theme-toggle>

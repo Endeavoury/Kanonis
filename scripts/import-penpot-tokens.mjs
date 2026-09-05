@@ -14,11 +14,11 @@ if (!Array.isArray(exported.sets)) {
   throw new Error('Penpot export must contain a sets array of { selector, values }.');
 }
 
-const known = new Set([...source.matchAll(/(--ds-[a-z0-9-]+):\s*[^;]+;/g)].map((match) => match[1]));
+const known = new Set([...source.matchAll(/(--kanonis-[a-z0-9-]+):\s*[^;]+;/g)].map((match) => match[1]));
 const deprecated = new Set([
-  '--ds-breakpoint-mobile',
-  '--ds-breakpoint-tablet',
-  '--ds-breakpoint-desktop',
+  '--kanonis-breakpoint-mobile',
+  '--kanonis-breakpoint-tablet',
+  '--kanonis-breakpoint-desktop',
 ]);
 let next = source;
 let updates = 0;

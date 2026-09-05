@@ -9,16 +9,16 @@ const meta: Meta = {
 export default meta;
 
 const paneContent = (heading: string, description: string) => html`<kanonis-pane-header>
-    <div style="padding:var(--ds-space-4)"><strong>${heading}</strong></div>
+    <div style="padding:var(--kanonis-space-4)"><strong>${heading}</strong></div>
   </kanonis-pane-header>
   <kanonis-pane-content scrollable>
-    <div style="padding:var(--ds-space-4)"><p>${description}</p><slot></slot></div>
+    <div style="padding:var(--kanonis-space-4)"><p>${description}</p><slot></slot></div>
   </kanonis-pane-content>`;
 
 export const ListDetail: StoryObj = {
   render: () => html`<div style="height:36rem;max-height:80vh">
     <kanonis-pane-group>
-      <kanonis-pane position="left" style="--ds-pane-size:19rem">
+      <kanonis-pane position="left" style="--kanonis-pane-size:19rem">
         ${paneContent('Records', 'Choose a record to inspect.')}
         <kanonis-list label="Records">
           <kanonis-list-item value="one" selected>Commercial Node</kanonis-list-item>
