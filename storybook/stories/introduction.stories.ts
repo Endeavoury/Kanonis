@@ -164,10 +164,19 @@ export const Welcome: StoryObj = {
         <p class="eyebrow">Cross-framework Web Components</p>
         <h1>A restrained interface system for technical products.</h1>
         <p class="lede">
-          Kanosis gives teams one accessible, token-driven UI language across Vanilla, React, and
+          Kanonis gives teams one accessible, token-driven UI language across Vanilla, React, and
           Angular. Components are implemented once as native Web Components and documented here with
           real, runnable examples.
         </p>
+        <section class="section" aria-labelledby="name-heading" style="margin-top:32px">
+          <h2 id="name-heading">Why Kanonis?</h2>
+          <p class="section-copy">
+            Kanonis is the name we chose for our shared design system. It is inspired by the Greek
+            word <em>kanōn</em>, meaning a rule, standard, measure, or guiding principle. The name
+            reflects the system's purpose: defining the visual and interaction rules shared across
+            multiple products.
+          </p>
+        </section>
         <div style="margin-top:32px">
           <ds-kpi-grid columns="3"
             ><ds-metric

@@ -4,7 +4,7 @@ addons.setConfig({
   title: 'Kanonis Design System',
   theme: create({
     base: 'dark',
-    brandTitle: 'Kanosis',
+    brandTitle: 'Kanonis',
     brandUrl: '/',
     colorPrimary: '#2f91dc',
     colorSecondary: '#62b2ec',

@@ -1,10 +1,17 @@
-# Kanosis
+# Kanonis
 
-A standalone, framework-independent design system shared by Finance-Inzicht and Ontarchon. Lit Web Components are the only component implementation; Vanilla JavaScript, React, and Angular consume those same custom elements. Kanosis packages use the `@endeavoury/kanosis*` package family, while the component contracts and semantic tokens remain product-neutral.
+A standalone, framework-independent design system shared by Finance-Inzicht and Ontarchon. Lit Web Components are the only component implementation; Vanilla JavaScript, React, and Angular consume those same custom elements. Kanonis packages use the `@endeavoury/kanosis*` package family, while the component contracts and semantic tokens remain product-neutral.
 
 ![Finance Inzicht application and design-system example](docs/images/finance-workspace-example.png)
 
 This repository is independent of both product applications. It has no application imports, API clients, authentication, financial business logic, or MDM domain logic.
+
+## Why Kanosis?
+
+Kanonis is the name we chose for our shared design system. It is inspired by the
+Greek word _kanōn_, meaning a rule, standard, measure, or guiding principle. The
+name reflects the system's purpose: defining the visual and interaction rules
+shared across multiple products.
 
 ## Architecture at a glance
 
