@@ -81,7 +81,7 @@ for (const entry of cases) {
 for (const width of [390, 1100]) {
   test(`sidebar keyboard collapse and restore at ${width}px`, async ({ page }, testInfo) => {
     await page.setViewportSize({ width, height: 844 });
-    await page.goto('/iframe.html?id=components-navigation--collapsible-sidebar&viewMode=story');
+    await page.goto('/iframe.html?id=composites-navigation--collapsible-sidebar&viewMode=story');
     const toggle = page.locator('kanonis-app-shell .sidebar-toggle');
     await expect(toggle).toBeVisible();
     await toggle.focus();
@@ -110,9 +110,9 @@ for (const width of [390, 1100]) {
 }
 
 for (const [story, width] of [
-  ['components-layout--desktop-workspace', 1920],
-  ['components-layout--desktop-workspace-stacks', 1440],
-  ['components-layout--desktop-workspace-four-pane-grid', 3440],
+  ['composites-layout--desktop-workspace', 1920],
+  ['composites-layout--desktop-workspace-stacks', 1440],
+  ['composites-layout--desktop-workspace-four-pane-grid', 3440],
 ] as const) {
   test(`desktop pane workspace fits at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
