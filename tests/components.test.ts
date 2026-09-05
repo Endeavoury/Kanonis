@@ -484,6 +484,12 @@ describe('display foundations', () => {
     expect(window.shadowRoot!.querySelector('.track')).not.toBeNull();
     expect(stack.getAttribute('split')).toBe('40/60');
     expect(window.shadowRoot!.querySelector('.track')?.querySelector('slot')).not.toBeNull();
+    const track = window.shadowRoot!.querySelector('.track')!;
+    track.querySelector('slot')!.dispatchEvent(new Event('slotchange'));
+    await window.updateComplete;
+    expect(track.hasAttribute('data-changing')).toBe(true);
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 400));
+    expect(track.hasAttribute('data-changing')).toBe(false);
   });
 
   it('creates icon geometry in the SVG namespace', async () => {

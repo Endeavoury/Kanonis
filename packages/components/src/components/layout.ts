@@ -1,5 +1,5 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
-import { property, query } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact, mediaExpanded } from '@endeavoury/kanosis-styles';
 import { DsElement } from '../core/ds-element.js';
 
@@ -207,11 +207,45 @@ export class DsPaneWindow extends DsElement {
         outline-offset: 2px;
       }
       .track {
+        position: relative;
         display: flex;
         width: max-content;
         min-width: 100%;
         height: 100%;
         min-height: 0;
+        isolation: isolate;
+      }
+      .track::before {
+        position: absolute;
+        z-index: 3;
+        inset: 0 0 auto;
+        height: 1px;
+        content: '';
+        pointer-events: none;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          color-mix(in srgb, var(--ds-color-border-highlight) 82%, transparent) 18%,
+          color-mix(in srgb, var(--ds-color-accent-soft) 44%, transparent) 50%,
+          transparent 82%
+        );
+        opacity: 0.85;
+      }
+      .track[data-changing]::after {
+        position: absolute;
+        z-index: 4;
+        inset: 0;
+        width: 18rem;
+        content: '';
+        pointer-events: none;
+        background: linear-gradient(
+          100deg,
+          transparent,
+          color-mix(in srgb, var(--ds-color-accent-soft) 12%, transparent),
+          transparent
+        );
+        transform: translateX(-120%);
+        animation: pane-window-sweep 360ms var(--ds-ease-emphasized) both;
       }
       ::slotted(ds-pane),
       ::slotted(ds-pane-stack) {
@@ -224,6 +258,11 @@ export class DsPaneWindow extends DsElement {
         min-width: var(--pane-min-width);
         max-width: var(--pane-max-width);
         height: 100%;
+        transition:
+          flex-basis var(--ds-duration-normal) var(--ds-ease-emphasized),
+          width var(--ds-duration-normal) var(--ds-ease-emphasized),
+          opacity var(--ds-duration-fast) var(--ds-ease-standard),
+          transform var(--ds-duration-normal) var(--ds-ease-emphasized);
       }
       ::slotted(ds-pane-stack) {
         display: grid;
@@ -234,14 +273,38 @@ export class DsPaneWindow extends DsElement {
           --pane-preferred-width: min(30rem, 86vw);
         }
       }
+      @keyframes pane-window-sweep {
+        to {
+          transform: translateX(calc(100vw + 18rem));
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .track[data-changing]::after {
+          animation: none;
+          display: none;
+        }
+      }
     `,
   ];
   @property({ type: Boolean, attribute: 'focusable-overflow' }) focusableOverflow = true;
+  @state() private changing = false;
+  private transitionTimer?: ReturnType<typeof globalThis.setTimeout>;
+  override disconnectedCallback() {
+    if (this.transitionTimer) globalThis.clearTimeout(this.transitionTimer);
+    super.disconnectedCallback();
+  }
+  private handleSlotChange() {
+    this.changing = true;
+    if (this.transitionTimer) globalThis.clearTimeout(this.transitionTimer);
+    this.transitionTimer = globalThis.setTimeout(() => (this.changing = false), 380);
+  }
   protected override updated() {
     this.tabIndex = this.focusableOverflow ? 0 : -1;
   }
   protected override render() {
-    return html`<div class="track" part="track"><slot></slot></div>`;
+    return html`<div class="track" part="track" data-changing=${this.changing ? true : nothing}>
+      <slot @slotchange=${this.handleSlotChange}></slot>
+    </div>`;
   }
 }
 
@@ -259,6 +322,7 @@ export class DsPaneStack extends DsElement {
         min-width: 0;
         min-height: 0;
         overflow: hidden;
+        transition: grid-template-rows var(--ds-duration-normal) var(--ds-ease-emphasized);
       }
       ::slotted(*) {
         min-width: 0;
@@ -322,13 +386,23 @@ export class DsPane extends DsElement {
     paneFoundation,
     css`
       :host {
+        position: relative;
         display: flex;
         flex: 1 1 0;
         flex-direction: column;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background: var(--ds-color-bg-canvas);
+        background: linear-gradient(
+          180deg,
+          color-mix(in srgb, var(--ds-color-bg-surface) 96%, var(--ds-color-accent-soft)),
+          var(--ds-color-bg-canvas)
+        );
+        box-shadow: inset 0 1px 0 var(--ds-color-border-highlight);
+        transition:
+          flex-basis var(--ds-duration-normal) var(--ds-ease-emphasized),
+          width var(--ds-duration-normal) var(--ds-ease-emphasized),
+          opacity var(--ds-duration-fast) var(--ds-ease-standard);
       }
       :host([position='left']) {
         order: -20;
