@@ -15,6 +15,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -25,6 +26,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -51,6 +53,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -61,6 +64,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -87,6 +91,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/introduction.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
@@ -102,6 +107,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/introduction.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
@@ -133,6 +139,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -148,6 +155,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -179,6 +187,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -189,6 +198,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -215,6 +225,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -225,6 +236,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -251,6 +263,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
@@ -262,6 +275,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
@@ -289,6 +303,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
@@ -302,6 +317,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
@@ -331,6 +347,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -342,6 +359,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -369,6 +387,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/foundations/themes.stories.ts"
         ]
@@ -380,6 +399,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/foundations/themes.stories.ts"
         ]
@@ -407,6 +427,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
@@ -418,6 +439,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
@@ -445,6 +467,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
@@ -456,6 +479,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
@@ -483,6 +507,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -493,6 +518,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -519,6 +545,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
@@ -545,6 +573,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
@@ -587,6 +617,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
@@ -599,6 +630,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
@@ -627,6 +659,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts",
@@ -640,6 +673,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts",
@@ -669,6 +703,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -679,6 +714,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -705,6 +741,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -715,6 +752,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -741,6 +779,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -751,6 +790,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -777,6 +817,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -787,6 +828,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -813,6 +855,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts"
         ]
       },
@@ -823,6 +866,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts"
         ]
       },
@@ -849,6 +893,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -859,6 +904,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -885,6 +931,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -895,6 +942,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -921,6 +969,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -931,6 +980,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -957,6 +1007,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -967,6 +1018,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -993,6 +1045,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -1003,6 +1056,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -1029,6 +1083,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -1040,6 +1095,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -1067,6 +1123,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -1077,6 +1134,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -1103,6 +1161,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -1113,6 +1172,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/data-table.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -1139,6 +1199,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/data-table.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
@@ -1150,6 +1211,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/data-table.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/data-table.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
@@ -1177,6 +1239,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1187,6 +1250,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1213,6 +1277,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts"
         ]
       },
@@ -1223,6 +1288,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts"
         ]
       },
@@ -1249,6 +1315,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -1259,6 +1326,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -1285,6 +1353,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -1295,6 +1364,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -1321,6 +1391,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
       },
@@ -1331,6 +1402,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
       },
@@ -1357,6 +1429,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -1367,6 +1440,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -1393,6 +1467,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/interaction.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
@@ -1404,6 +1479,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/interaction.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
@@ -1431,6 +1507,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
       },
@@ -1441,6 +1518,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
       },
@@ -1467,6 +1545,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -1477,6 +1556,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -1503,6 +1583,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -1514,6 +1595,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -1541,6 +1623,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1551,6 +1634,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1577,6 +1661,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1587,6 +1672,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1613,6 +1699,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-patterns.stories.ts",
           "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
@@ -1624,6 +1711,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-patterns.stories.ts",
           "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
@@ -1651,6 +1739,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -1661,6 +1750,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -1687,6 +1777,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -1697,6 +1788,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -1723,6 +1815,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1733,6 +1826,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -1759,6 +1853,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -1769,6 +1864,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -1795,6 +1891,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
@@ -1807,6 +1904,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
@@ -1835,6 +1933,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -1845,6 +1944,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -1871,6 +1971,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/components/forms.stories.ts",
@@ -1889,6 +1991,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/components/forms.stories.ts",
@@ -1923,6 +2027,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
@@ -1937,6 +2042,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
@@ -1967,6 +2073,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -1977,6 +2084,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -2003,6 +2111,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
@@ -2022,6 +2131,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
@@ -2057,6 +2167,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts",
           "storybook/stories/components/forms.stories.ts",
@@ -2073,6 +2184,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts",
           "storybook/stories/components/forms.stories.ts",
@@ -2105,6 +2217,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -2115,6 +2228,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -2141,6 +2255,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2152,6 +2267,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2179,6 +2295,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -2189,6 +2306,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -2215,6 +2333,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -2225,6 +2344,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -2251,6 +2371,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-patterns.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/introduction.stories.ts",
@@ -2266,6 +2387,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-patterns.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/introduction.stories.ts",
@@ -2297,6 +2419,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2308,6 +2431,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2335,6 +2459,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2346,6 +2471,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2373,6 +2499,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -2383,6 +2510,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -2409,6 +2537,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts"
         ]
       },
@@ -2419,6 +2548,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts"
         ]
       },
@@ -2445,6 +2575,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -2455,6 +2586,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -2481,6 +2613,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
@@ -2493,6 +2626,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
@@ -2521,6 +2655,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
@@ -2533,6 +2668,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
@@ -2561,6 +2697,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/components/overlays.stories.ts",
@@ -2577,6 +2714,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/components/overlays.stories.ts",
@@ -2609,6 +2747,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -2619,6 +2758,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -2645,6 +2785,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -2655,6 +2796,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -2681,6 +2823,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -2696,6 +2839,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -2727,6 +2871,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
       },
@@ -2737,6 +2882,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
       },
@@ -2763,6 +2909,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/interaction.stories.ts",
           "storybook/stories/components/layout.stories.ts",
@@ -2781,6 +2929,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/interaction.stories.ts",
           "storybook/stories/components/layout.stories.ts",
@@ -2815,6 +2965,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2826,6 +2977,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2853,6 +3005,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2864,6 +3017,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2891,6 +3045,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2902,6 +3057,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
@@ -2929,6 +3085,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -2939,6 +3096,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -2965,6 +3123,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -2975,6 +3134,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -3001,6 +3161,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/interaction.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
@@ -3017,6 +3178,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/interaction.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
@@ -3049,6 +3211,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -3059,6 +3222,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -3085,6 +3249,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts"
         ]
       },
@@ -3095,6 +3260,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts"
         ]
       },
@@ -3121,6 +3287,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -3131,6 +3298,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -3157,6 +3325,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3167,6 +3336,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3193,6 +3363,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3203,6 +3374,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3229,6 +3401,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3239,6 +3412,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3265,6 +3439,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -3275,6 +3450,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -3301,6 +3477,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3311,6 +3488,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3337,6 +3515,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3347,6 +3526,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3373,6 +3553,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -3383,6 +3564,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -3409,6 +3591,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -3419,6 +3602,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -3445,6 +3629,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -3455,6 +3640,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -3481,6 +3667,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts",
           "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
@@ -3493,6 +3680,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts",
           "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
@@ -3521,6 +3709,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3531,6 +3720,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3557,6 +3747,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3567,6 +3758,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3593,6 +3785,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts",
           "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
@@ -3606,6 +3799,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts",
           "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
@@ -3635,6 +3829,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
@@ -3647,6 +3842,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
@@ -3675,6 +3871,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
@@ -3687,6 +3884,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
@@ -3715,6 +3913,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts"
         ]
       },
@@ -3725,6 +3924,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/feedback.stories.ts"
         ]
       },
@@ -3751,6 +3951,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3761,6 +3962,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enhancements.stories.ts"
         ]
       },
@@ -3787,6 +3989,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/data-table.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
@@ -3807,6 +4010,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/actions.stories.ts",
           "storybook/stories/components/data-table.stories.ts",
           "storybook/stories/components/enhancements.stories.ts",
@@ -3843,6 +4047,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
@@ -3856,6 +4061,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/display.stories.ts",
           "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts",
@@ -3885,6 +4091,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -3895,6 +4102,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -3921,6 +4129,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3931,6 +4140,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -3957,6 +4167,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/interaction.stories.ts"
         ]
       },
@@ -3967,6 +4178,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/interaction.stories.ts"
         ]
       },
@@ -3993,6 +4205,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/interaction.stories.ts"
         ]
       },
@@ -4003,6 +4216,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/interaction.stories.ts"
         ]
       },
@@ -4029,6 +4243,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -4039,6 +4254,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -4065,6 +4281,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -4075,6 +4292,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -4101,6 +4319,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -4111,6 +4330,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/forms.stories.ts"
         ]
       },
@@ -4137,6 +4357,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/interaction.stories.ts"
         ]
       },
@@ -4147,6 +4368,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-foundation.stories.ts",
           "storybook/stories/components/interaction.stories.ts"
         ]
       },
@@ -4173,6 +4395,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -4183,6 +4406,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -4209,6 +4433,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -4219,6 +4444,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise-p2.stories.ts"
         ]
       },
@@ -4245,6 +4471,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -4256,6 +4483,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -4283,6 +4511,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -4294,6 +4523,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
@@ -4321,6 +4551,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
       },
@@ -4331,6 +4562,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/overlays.stories.ts"
         ]
       },
@@ -4357,6 +4589,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -4367,6 +4600,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p3.stories.ts"
         ]
       },
@@ -4393,6 +4627,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/tree.stories.ts"
         ]
       },
@@ -4403,6 +4638,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/tree.stories.ts"
         ]
       },
@@ -4429,6 +4665,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/tree.stories.ts"
         ]
       },
@@ -4439,6 +4676,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/tree.stories.ts"
         ]
       },
@@ -4465,6 +4703,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -4475,6 +4714,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -4501,6 +4741,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -4511,6 +4752,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-components.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -4537,6 +4779,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -4547,6 +4790,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise.stories.ts"
         ]
       },
@@ -4573,6 +4817,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
@@ -4584,6 +4830,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
@@ -4611,6 +4859,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -4621,6 +4870,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
+          "storybook/stories/catalog-layout.stories.ts",
           "storybook/stories/components/layout.stories.ts"
         ]
       },
@@ -4647,6 +4897,7 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
@@ -4657,6 +4908,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/catalog-composites.stories.ts",
           "storybook/stories/components/enterprise-p1.stories.ts"
         ]
       },
