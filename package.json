@@ -14,6 +14,9 @@
     "examples/*"
   ],
   "scripts": {
+    "prepare": "node scripts/setup-git-hooks.mjs",
+    "check:precommit": "npm run verify:tokens && npm run typecheck && npm run lint && npm run verify:stories && npm run verify:components",
+    "check:prepush": "npm run check && npm run release:verify",
     "clean": "node scripts/clean.mjs",
     "tokens:generate": "node scripts/generate-tokens.mjs",
     "penpot:sync": "node scripts/import-penpot-tokens.mjs --write",

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -eu
+
+echo "Kanonis pre-push checks (same quality gate used by GitHub Actions)"
+npm run check:prepush
