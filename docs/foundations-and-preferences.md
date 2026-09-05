@@ -36,6 +36,10 @@ duration tokens to 1ms.
 Semantic elevation roles are surface, raised, overlay, and overflow. Use an elevation because it
 communicates layering or clipped content, not as generic decoration.
 
+Interactive hit areas use `--ds-target-min-touch` (2.75rem) when a control can be used by touch or
+needs a generous pointer target. `--ds-target-min` remains the compact inline target for tightly
+packed affordances; visual size and hit-area size should be treated separately.
+
 ## Required preference matrix
 
 Ready components are reviewed with:

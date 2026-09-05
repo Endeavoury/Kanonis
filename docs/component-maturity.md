@@ -28,6 +28,20 @@ A component becomes ready only when it has:
 
 Story presence proves discoverability only. It does not imply that this checklist is complete.
 
+## Promotion batches
+
+Review and promote components by capability family so one product does not establish a private
+variant of the same pattern. Start with the stable foundation and navigation families, then forms,
+feedback, overlays, data, and finally enterprise extensions. A component remains Experimental when
+any required evidence is missing; adding a Storybook story or framework adapter alone does not change
+its status.
+
+Overlapping APIs should be resolved before promotion. Prefer `ds-card` for content objects,
+`ds-panel` for structural regions, `ds-pane` inside `ds-pane-window` for persistent work regions,
+`ds-detail-sidebar` for contextual overlays, `ds-data-table` for stable tabular data, and
+`ds-data-grid` only for the experimental editable-grid contract. Deprecate an overlapping API only
+after a replacement, migration note, warning, and removal release are recorded.
+
 ## Promotion workflow
 
 1. Prove the behavior in one product and audit similar existing components.

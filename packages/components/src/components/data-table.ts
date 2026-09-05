@@ -122,7 +122,7 @@ export class DsDataTable extends DsElement {
         align-items: center;
         gap: var(--ds-space-1);
         width: 100%;
-        min-height: var(--ds-target-min);
+        min-height: var(--ds-target-min-touch);
         padding: var(--ds-space-1) 0;
         border: 0;
         background: transparent;
@@ -182,8 +182,8 @@ export class DsDataTable extends DsElement {
         font-size: var(--ds-font-size-sm);
       }
       .pagination button {
-        min-width: var(--ds-target-min);
-        min-height: var(--ds-target-min);
+        min-width: var(--ds-target-min-touch);
+        min-height: var(--ds-target-min-touch);
         border: 1px solid var(--ds-color-border-default);
         border-radius: var(--ds-shape-control);
         background: var(--ds-color-bg-surface);

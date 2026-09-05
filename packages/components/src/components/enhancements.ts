@@ -494,8 +494,8 @@ export class DsChip extends DsElement {
         padding: 0;
       }
       .dismiss {
-        min-width: var(--ds-target-min);
-        min-height: var(--ds-target-min);
+        min-width: var(--ds-target-min-touch);
+        min-height: var(--ds-target-min-touch);
         padding: 0;
         border-radius: var(--ds-radius-round);
       }
@@ -679,8 +679,8 @@ export class DsReorderItem extends DsElement {
         gap: var(--ds-space-1);
       }
       button {
-        min-width: var(--ds-target-min);
-        min-height: var(--ds-target-min);
+        min-width: var(--ds-target-min-touch);
+        min-height: var(--ds-target-min-touch);
         border: 1px solid var(--ds-color-border-default);
         border-radius: var(--ds-shape-control);
         background: var(--ds-color-bg-surface);

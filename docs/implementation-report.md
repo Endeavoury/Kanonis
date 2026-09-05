@@ -7,7 +7,7 @@ catalog-only components stay experimental until their evidence is complete.
 | ID | Priority/type | Delivered implementation |
 | --- | --- | --- |
 | P0-1 | P0 foundation | `tokens.css` is the machine-readable release source; typed metadata and package CSS are generated/verified. CI rejects drift, unknown token references, raw colors, and raw motion values. |
-| P0-2 | P0 change | `component-status.json` covers all 118 elements with owner, adoption evidence, stability, documentation, state coverage, and accessibility/behavior/visual review state. |
+| P0-2 | P0 change | `component-status.json` covers all 122 elements with owner, adoption evidence, stability, documentation, state coverage, and accessibility/behavior/visual review state. |
 | P0-3 | P0 change | The complete documentation template and generated readiness/state manifest gate every ready component. The hardened table has a full guide; incomplete components are classified experimental. |
 | P0-4 | P0 foundation | Shared compact/medium/expanded/wide ranges replaced private breakpoints. Theme guidance and tests cover contrast, forced colors, zoom/reflow, text spacing, reduced motion, and RTL. |
 | P0-5 | P0 component | Data table/grid now cover accessible names and descriptions, row identity, unique-action guidance, busy/sort/page announcements, focusable overflow, numeric comparison, pagination, zoom, and text spacing. |

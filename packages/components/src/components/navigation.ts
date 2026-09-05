@@ -316,8 +316,8 @@ export class DsAppShell extends DsElement {
         flex: 0 0 auto;
         display: inline-grid;
         place-items: center;
-        min-width: var(--ds-target-min);
-        min-height: var(--ds-target-min);
+        min-width: var(--ds-target-min-touch);
+        min-height: var(--ds-target-min-touch);
         margin-inline: var(--ds-space-3) 0;
         padding: var(--ds-space-2);
         border: 1px solid var(--ds-color-border-default);

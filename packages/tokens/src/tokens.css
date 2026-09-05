@@ -163,6 +163,7 @@
   --ds-opacity-disabled: 0.5;
   --ds-opacity-muted: 0.72;
   --ds-target-min: 1.5rem;
+  --ds-target-min-touch: 2.75rem;
   --ds-icon-sm: 0.875rem;
   --ds-icon-md: 1rem;
   --ds-icon-lg: 1.25rem;

@@ -641,6 +641,12 @@ export const tokens = [
     description: 'Target min',
   },
   {
+    name: '--ds-target-min-touch',
+    value: '2.75rem',
+    group: 'density',
+    description: 'Target min touch',
+  },
+  {
     name: '--ds-icon-sm',
     value: '0.875rem',
     group: 'icon',

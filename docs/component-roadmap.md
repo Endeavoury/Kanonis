@@ -2,7 +2,7 @@
 
 ## Delivery status
 
-The September 2026 cross-product design-system review completed the maturity backlog and a broader Material/Bootstrap capability pass. The system now includes 118 registered elements spanning actions, forms, navigation, overlays, feedback, data display, application structure, layout, and enterprise workflows. Every delivered element has Web Component registration, React adapters, Storybook coverage, and automated quality gates. Registration and story presence establish discoverability; readiness is assigned only when the evidence in the [component status manifest](component-status.json) satisfies the maturity policy.
+The September 2026 cross-product design-system review completed the maturity backlog and a broader Material/Bootstrap capability pass. The system now includes 122 registered elements spanning actions, forms, navigation, overlays, feedback, data display, application structure, layout, and enterprise workflows. Every delivered element has Web Component registration, React adapters, Storybook coverage, and automated quality gates. Registration and story presence establish discoverability; readiness is assigned only when the evidence in the [component status manifest](component-status.json) satisfies the maturity policy.
 
 ## Gap analysis
 

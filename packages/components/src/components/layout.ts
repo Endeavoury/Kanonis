@@ -245,7 +245,7 @@ export class DsPaneWindow extends DsElement {
           transparent
         );
         transform: translateX(-120%);
-        animation: pane-window-sweep 360ms var(--ds-ease-emphasized) both;
+        animation: pane-window-sweep var(--ds-motion-pane) both;
       }
       ::slotted(ds-pane),
       ::slotted(ds-pane-stack) {

@@ -42,6 +42,19 @@ stories](../storybook/stories/components/layout.stories.ts)
 
 The full desktop composition is documented in [Desktop pane workspace](patterns/desktop-pane-workspace.md).
 
+## Choosing between overlapping primitives
+
+Use `ds-card` for a self-contained content object and `ds-panel` for a structural region with
+header/body/footer slots. Use `ds-pane` inside a `ds-pane-window` for persistent multi-region work;
+use `ds-detail-sidebar` for contextual detail that overlays or complements the current page. Use
+`ds-pane-content scrollable` for pane-local scrolling; `ds-scrollable-pane` remains available for
+legacy compositions.
+
+Use `ds-status-badge` when a tone communicates state and `ds-badge` for neutral metadata. Use
+`ds-data-table` for stable tabular data; `ds-data-grid` remains experimental until its editing and
+keyboard model is finalized. Use `ds-page-header` for a normal page heading and `ds-workspace-header`
+when the heading belongs above a framed pane workspace.
+
 When a component gains a dedicated story family, update its link here; the tag itself must remain present so `npm run verify:components` can enforce coverage.
 
 ## Collapsible application sidebar

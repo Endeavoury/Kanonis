@@ -31,6 +31,11 @@ A second breadth pass benchmarked the catalog against Material Design 3 and Boot
 
 ## Remaining priorities
 
+The catalog now contains 122 registered elements. Most remain experimental because breadth coverage
+is complete before the full maturity matrix is; production promotion should follow evidence rather
+than registration or Storybook presence. Prefer consolidating overlapping primitives and completing
+interaction, visual, RTL, forced-colors, and product-adoption reviews before adding more surface APIs.
+
 The general-purpose component catalog is now broad enough for full application work. The next additions should target deeper capabilities rather than more shallow wrappers:
 
 1. autocomplete/combobox with async results and robust screen-reader announcements;

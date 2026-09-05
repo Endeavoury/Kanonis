@@ -169,7 +169,7 @@ Penpot remains outside the npm workspace because it is a design-authoring servic
 - Native slots provide composition. Stable internals only are exposed through `::part()`; private structure stays private.
 - Theme values cross Shadow DOM through inheritable semantic custom properties.
 - Form controls use `ElementInternals` when available for form value, validity, reset, labels, and disabled state. Their internal native control remains the keyboard and accessibility implementation.
-- Overlay components are P1. When introduced, they will render with the top-layer `<dialog>`/Popover APIs rather than a document-level framework portal.
+- Overlay components are delivered P1 capabilities. They render with the top-layer `<dialog>`/Popover APIs rather than a document-level framework portal.
 
 ## Styling and token architecture
 

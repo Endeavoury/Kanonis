@@ -36,7 +36,7 @@ Kanosis deliberately keeps one semantic, accessible Web Component API instead of
 | Data display           | `ds-data-table`, `ds-list`, layout primitives                                             | Tables and list groups                                    | Covered                     |
 | Application structure  | `ds-app-shell`, `ds-page-header`, `ds-filter-bar`, layout primitives                      | Navbar/sidebar, containers, grid, stacks                  | Covered                     |
 
-The complete package currently registers 118 custom elements. Storybook is required to contain every registered element, so the catalog cannot silently grow without a reviewable example. Presence is a discoverability check; it is not by itself evidence that every state is production-ready.
+The complete package currently registers 122 custom elements. Storybook is required to contain every registered element, so the catalog cannot silently grow without a reviewable example. Presence is a discoverability check; it is not by itself evidence that every state is production-ready.
 
 ## Deliberate differences
 
