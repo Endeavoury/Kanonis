@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T09:55:10.219Z",
+  "generatedAt": "2026-09-05T22:24:53.472Z",
   "budgets": {
     "button": {
       "rawBytes": 45000,
@@ -64,64 +64,64 @@
   },
   "bundles": {
     "button": {
-      "rawBytes": 37803,
-      "gzipBytes": 11494
+      "rawBytes": 38648,
+      "gzipBytes": 11521
     },
     "forms": {
-      "rawBytes": 59810,
-      "gzipBytes": 13694
+      "rawBytes": 61220,
+      "gzipBytes": 13739
     },
     "secondaryForms": {
-      "rawBytes": 42594,
-      "gzipBytes": 11661
+      "rawBytes": 43424,
+      "gzipBytes": 11692
     },
     "interaction": {
-      "rawBytes": 35428,
-      "gzipBytes": 10950
+      "rawBytes": 36173,
+      "gzipBytes": 10977
     },
     "overlays": {
-      "rawBytes": 41049,
-      "gzipBytes": 11832
+      "rawBytes": 42034,
+      "gzipBytes": 11870
     },
     "upload": {
-      "rawBytes": 30821,
-      "gzipBytes": 10079
+      "rawBytes": 31366,
+      "gzipBytes": 10105
     },
     "feedback": {
-      "rawBytes": 40564,
-      "gzipBytes": 11337
+      "rawBytes": 41659,
+      "gzipBytes": 11371
     },
     "navigation": {
-      "rawBytes": 55212,
-      "gzipBytes": 14444
+      "rawBytes": 56514,
+      "gzipBytes": 14504
     },
     "tree": {
-      "rawBytes": 28320,
-      "gzipBytes": 9581
+      "rawBytes": 28820,
+      "gzipBytes": 9607
     },
     "enterprise": {
-      "rawBytes": 56081,
-      "gzipBytes": 14709
+      "rawBytes": 57424,
+      "gzipBytes": 14758
     },
     "enterpriseP1": {
-      "rawBytes": 46287,
-      "gzipBytes": 12392
+      "rawBytes": 47557,
+      "gzipBytes": 12434
     },
     "enterpriseP2": {
-      "rawBytes": 65591,
-      "gzipBytes": 15361
+      "rawBytes": 67696,
+      "gzipBytes": 15419
     },
     "enterpriseP3": {
-      "rawBytes": 40553,
-      "gzipBytes": 11699
+      "rawBytes": 41623,
+      "gzipBytes": 11731
     },
     "enhancements": {
-      "rawBytes": 52450,
-      "gzipBytes": 13798
+      "rawBytes": 53729,
+      "gzipBytes": 13844
     },
     "full": {
-      "rawBytes": 322222,
-      "gzipBytes": 54519
+      "rawBytes": 344396,
+      "gzipBytes": 56387
     }
   },
   "sharedControlFoundationOccurrences": 1,
