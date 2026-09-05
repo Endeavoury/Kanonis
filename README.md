@@ -98,24 +98,29 @@ token setup, release procedure, image tags, and artifact verification.
 
 ## Product integrations
 
-Ontarchon, Oikonomis, and Nomopsis consume this repository as a sibling checkout. Package history, releases, CI, and working trees remain fully independent while a shared parent directory lets local tools inspect all codebases. Ontarchon additionally passes this checkout as the named `design_system` Docker build context so its images remain reproducible without copying component source.
+Kanonis is consumed by three product identities. Ontarchon provides master data
+management, Oikonomis provides financial insights, and Nomopsis provides legal
+and legislation visualization. Each product consumes the same published
+components, tokens, and framework adapters while keeping its domain language and
+application logic independent.
+
+During local development, products can use Kanonis as a sibling checkout. This
+keeps package history, releases, CI, and working trees independent while allowing
+local tools to inspect the design system. Ontarchon additionally passes this
+checkout as the named `design_system` Docker build context so its images remain
+reproducible without copying component source.
 
 ```text
-Finance-Inzicht/
-├── application/  → Endeavoury/Finance-Inzicht
-└── design/       → Endeavoury/Kanosis
+Kanonis/   → shared design system
+Ontarchon/ → master data management
+Oikonomis/ → financial insights
+Nomopsis/  → legal / legislation visualization
 
-MDM/
-└── projects/
-    ├── studio/    → Angular consumer
-    ├── nexus/     → Angular consumer
-    └── website/   → Vanilla browser-bundle consumer
 ```
 
-The application repository provides `scripts/setup-workspace.sh`, which clones
-or updates this repository in the expected `design/` directory and prepares
-both Node workspaces. Changes are committed and pushed directly from the
-relevant sibling repository; there is no submodule pointer to update.
+Consumer applications can use the same packages from Vanilla, React, or
+Angular. The `@endeavoury/kanosis` package family provides the shared runtime;
+product names do not change the stable `ds-*` element contracts.
 
 ## Packages
 
