@@ -69,6 +69,9 @@ whenever `main` changes. It uses GitHub's Pages artifact and deployment actions,
 so no hosting token or checked-in build output is required. Run it manually from
 the Actions tab with `workflow_dispatch` when a redeploy is needed.
 
+For a new repository, open **Settings → Pages**, choose **GitHub Actions** as the
+source, and save once. Subsequent pushes use the workflow automatically.
+
 ## Release checklist
 
 1. Choose `main`, `release/minor`, or `release/major` for the intended change.
