@@ -110,9 +110,9 @@ for (const width of [390, 1100]) {
 }
 
 for (const [story, width] of [
-  ['composites-layout--desktop-workspace', 1920],
-  ['composites-layout--desktop-workspace-stacks', 1440],
-  ['composites-layout--desktop-workspace-four-pane-grid', 3440],
+  ['layout--desktop-workspace', 1920],
+  ['layout--desktop-workspace-stacks', 1440],
+  ['layout--desktop-workspace-four-pane-grid', 3440],
 ] as const) {
   test(`desktop pane workspace fits at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
