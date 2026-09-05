@@ -6,7 +6,7 @@ const box = (label: string) =>
   >
     ${label}
   </div>`;
-const meta: Meta = { title: 'Layout', tags: ['autodocs'] };
+const meta: Meta = { title: 'Foundation/Layout', tags: ['autodocs'] };
 export default meta;
 export const Stack: StoryObj = {
   render: () => html`<kanonis-stack gap="3">${box('First')}${box('Second')}${box('Third')}</kanonis-stack>`,
@@ -269,4 +269,89 @@ export const ModalDetailSidebar: StoryObj = {
         <p>Use this variant for focused tasks instead of persistent dashboard context.</p>
       </kanonis-detail-sidebar>
     </div>`,
+};
+
+export const Workspace: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () => html`<kanonis-workspace style="height:100dvh;min-height:560px">
+    <kanonis-workspace-header slot="header" heading="Workspace">
+      <kanonis-breadcrumbs slot="breadcrumb" label="Location"
+        ><kanonis-breadcrumb current>Projects</kanonis-breadcrumb></kanonis-breadcrumbs
+      >
+      <kanonis-status-badge slot="status" tone="success">Ready</kanonis-status-badge>
+    </kanonis-workspace-header>
+    <kanonis-pane-window aria-label="Workspace content">
+      <kanonis-pane><kanonis-pane-header>Primary pane</kanonis-pane-header><kanonis-pane-content>${box('Workspace content')}</kanonis-pane-content></kanonis-pane>
+    </kanonis-pane-window>
+  </kanonis-workspace>`,
+};
+
+export const WorkspaceHeader: StoryObj = {
+  render: () => html`<kanonis-workspace-header
+    heading="Project Alpha"
+    style="display:block;max-width:960px;margin:auto"
+  >
+    <kanonis-breadcrumbs slot="breadcrumb" label="Location"
+      ><kanonis-breadcrumb href="#projects">Projects</kanonis-breadcrumb
+      ><kanonis-breadcrumb current>Alpha</kanonis-breadcrumb></kanonis-breadcrumbs
+    >
+    <kanonis-status-badge slot="status" tone="success">Synced</kanonis-status-badge>
+    <kanonis-button slot="actions" variant="secondary">Share</kanonis-button>
+  </kanonis-workspace-header>`,
+};
+
+export const PaneWindow: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () => html`<kanonis-pane-window style="height:70dvh;margin:2rem" aria-label="Pane window">
+    ${workspacePane('Overview', 'A full-height pane inside the window.')}
+    ${workspacePane('Details', 'Additional context remains visible beside it.')}
+  </kanonis-pane-window>`,
+};
+
+export const PaneStack: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () => html`<kanonis-pane-stack split="40/60" style="height:70dvh;margin:2rem">
+    ${workspacePane('Upper pane', 'The stack allocates forty percent of the height.')}
+    ${workspacePane('Lower pane', 'The second pane receives the remaining space.')}
+  </kanonis-pane-stack>`,
+};
+
+export const PaneGroup: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () => html`<kanonis-pane-group style="height:70dvh;margin:2rem">
+    ${workspacePane('Navigation', 'A grouped pane layout.')}
+    ${workspacePane('Content', 'Groups align panes across the full height.')}
+  </kanonis-pane-group>`,
+};
+
+export const Pane: StoryObj = {
+  render: () => html`<kanonis-pane style="display:block;height:24rem;max-width:28rem;margin:2rem">
+    <kanonis-pane-header>Pane header</kanonis-pane-header>
+    <kanonis-pane-content scrollable style="padding:1rem">${box('Pane body')}</kanonis-pane-content>
+  </kanonis-pane>`,
+};
+
+export const PaneHeader: StoryObj = {
+  render: () => html`<kanonis-pane style="display:block;max-width:28rem;margin:2rem">
+    <kanonis-pane-header><strong>Persistent pane heading</strong></kanonis-pane-header>
+  </kanonis-pane>`,
+};
+
+export const PaneContent: StoryObj = {
+  render: () => html`<kanonis-pane-content style="display:block;max-width:28rem;margin:2rem;padding:1rem">
+    ${box('Pane content owns the body layout and overflow.')}
+  </kanonis-pane-content>`,
+};
+
+export const ScrollablePane: StoryObj = {
+  render: () => html`<kanonis-scrollable-pane style="display:block;height:18rem;max-width:28rem;margin:2rem;padding:1rem">
+    <kanonis-stack gap="2">${Array.from({ length: 12 }, (_, index) => box(`Scrollable row ${index + 1}`))}</kanonis-stack>
+  </kanonis-scrollable-pane>`,
+};
+
+export const InspectorPane: StoryObj = {
+  render: () => html`<kanonis-inspector-pane style="display:block;height:24rem;max-width:28rem;margin:2rem">
+    <kanonis-pane-header>Inspector</kanonis-pane-header>
+    <kanonis-scrollable-pane style="padding:1rem">${box('Selected item properties')}</kanonis-scrollable-pane>
+  </kanonis-inspector-pane>`,
 };
