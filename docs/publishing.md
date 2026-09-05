@@ -61,6 +61,14 @@ separate account or publishing secret is required.
 The committed `.npmrc` only maps the `@endeavoury` scope to GitHub Packages. It
 contains no credentials; GitHub Actions injects authentication at runtime.
 
+## Storybook documentation site
+
+The `Publish Storybook documentation` workflow builds the static Storybook and
+deploys it to [endeavoury.github.io/Kanonis](https://endeavoury.github.io/Kanonis/)
+whenever `main` changes. It uses GitHub's Pages artifact and deployment actions,
+so no hosting token or checked-in build output is required. Run it manually from
+the Actions tab with `workflow_dispatch` when a redeploy is needed.
+
 ## Release checklist
 
 1. Choose `main`, `release/minor`, or `release/major` for the intended change.

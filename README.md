@@ -147,6 +147,8 @@ The global stylesheet is intentionally opt-in. It installs tokens, theme default
 
 ## Documentation
 
+[Open the live Storybook documentation](https://endeavoury.github.io/Kanonis/) (published automatically from `main` with GitHub Pages).
+
 - [Architecture](docs/architecture.md)
 - [Current-product UI inventory](docs/ui-inventory.md)
 - [Component roadmap and gap analysis](docs/component-roadmap.md)
