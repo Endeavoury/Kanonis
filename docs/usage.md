@@ -114,11 +114,11 @@ Import the design-system registration once and add the exported schema to a stan
 
 ```ts
 import '@endeavoury/kanonis';
-import { KANOSIS_CUSTOM_ELEMENTS_SCHEMA } from '@endeavoury/kanonis-angular';
+import { KANONIS_CUSTOM_ELEMENTS_SCHEMA } from '@endeavoury/kanonis-angular';
 
 @Component({
   standalone: true,
-  schemas: [KANOSIS_CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [KANONIS_CUSTOM_ELEMENTS_SCHEMA],
   template: `<ds-button (ds-activate)="handle($event)">Save</ds-button>`,
 })
 export class ExampleComponent {}
