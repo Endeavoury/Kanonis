@@ -85,7 +85,7 @@ for (const [name, source] of Object.entries(entries)) {
       throw new Error(
         `Expected one shared control foundation in the full bundle, found ${markerOccurrences}.`,
       );
-    const spinnerFoundationOccurrences = normalizedCode.split('@keyframesds-spin').length - 1;
+    const spinnerFoundationOccurrences = normalizedCode.split('@keyframeskanonis-spin').length - 1;
     report.sharedSpinnerFoundationOccurrences = spinnerFoundationOccurrences;
     if (spinnerFoundationOccurrences !== 1)
       throw new Error(
