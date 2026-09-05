@@ -63,14 +63,14 @@ contains no credentials; GitHub Actions injects authentication at runtime.
 
 ## Storybook documentation site
 
-The `Publish Storybook documentation` workflow builds the static Storybook and
-publishes it to a dedicated `gh-pages` branch whenever `main` changes. Run it
+The `Publish Storybook documentation` workflow builds the static Storybook from
+`main` and deploys the generated artifact whenever `main` changes. Run it
 manually from the Actions tab with `workflow_dispatch` when a redeploy is
-needed. The generated output is never checked into `main`.
+needed. The generated output is never checked into a source branch.
 
-For a new repository, open **Settings → Pages**, choose **Deploy from a branch**,
-select `gh-pages` and its `/ (root)` directory, and save once. The site is then
-available at [endeavoury.github.io/Kanonis](https://endeavoury.github.io/Kanonis/).
+For a new repository, open **Settings → Pages**, choose **GitHub Actions** as the
+source, and save once. The site is then available at
+[endeavoury.github.io/Kanonis](https://endeavoury.github.io/Kanonis/).
 
 ## Release checklist
 
