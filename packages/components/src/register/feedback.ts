@@ -1,18 +1,18 @@
-import { defineComponent } from '../core/ds-element.js';
+import { defineComponent } from '../core/kanonis-element.js';
 import {
-  DsAlert,
-  DsEmptyState,
-  DsLoadingState,
-  DsProgress,
-  DsSkeleton,
-  DsToast,
-  DsToastRegion,
+  KanonisAlert,
+  KanonisEmptyState,
+  KanonisLoadingState,
+  KanonisProgress,
+  KanonisSkeleton,
+  KanonisToast,
+  KanonisToastRegion,
 } from '../components/feedback.js';
-defineComponent('kanonis-alert', DsAlert);
-defineComponent('kanonis-empty-state', DsEmptyState);
-defineComponent('kanonis-loading-state', DsLoadingState);
-defineComponent('kanonis-progress', DsProgress);
-defineComponent('kanonis-skeleton', DsSkeleton);
-defineComponent('kanonis-toast', DsToast);
-defineComponent('kanonis-toast-region', DsToastRegion);
-export { DsAlert, DsEmptyState, DsLoadingState, DsProgress, DsSkeleton, DsToast, DsToastRegion };
+defineComponent('kanonis-alert', KanonisAlert);
+defineComponent('kanonis-empty-state', KanonisEmptyState);
+defineComponent('kanonis-loading-state', KanonisLoadingState);
+defineComponent('kanonis-progress', KanonisProgress);
+defineComponent('kanonis-skeleton', KanonisSkeleton);
+defineComponent('kanonis-toast', KanonisToast);
+defineComponent('kanonis-toast-region', KanonisToastRegion);
+export { KanonisAlert, KanonisEmptyState, KanonisLoadingState, KanonisProgress, KanonisSkeleton, KanonisToast, KanonisToastRegion };

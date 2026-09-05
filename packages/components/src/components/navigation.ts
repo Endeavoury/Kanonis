@@ -1,12 +1,12 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles, mediaMedium } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export interface DsActivateDetail {
+export interface KanonisActivateDetail {
   value: string;
 }
-export class DsSidebarItem extends DsElement {
+export class KanonisSidebarItem extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -109,7 +109,7 @@ export class DsSidebarItem extends DsElement {
       event.preventDefault();
       return;
     }
-    this.emit<DsActivateDetail>('kanonis-activate', { value: this.value });
+    this.emit<KanonisActivateDetail>('kanonis-activate', { value: this.value });
   }
   protected override render() {
     const content = html`<span class="icon"><slot name="icon"></slot></span
@@ -137,7 +137,7 @@ export class DsSidebarItem extends DsElement {
   }
 }
 
-export class DsSidebar extends DsElement {
+export class KanonisSidebar extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -238,7 +238,7 @@ export class DsSidebar extends DsElement {
   }
 }
 
-export class DsAppShell extends DsElement {
+export class KanonisAppShell extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import type { DsTableColumn } from '@endeavoury/kanonis';
+import type { KanonisTableColumn } from '@endeavoury/kanonis';
 const rows = [
   {
     id: '1',
@@ -30,7 +30,7 @@ const rows = [
     balance: 13062.22,
   },
 ];
-const columns: DsTableColumn[] = [
+const columns: KanonisTableColumn[] = [
   { key: 'date', label: 'Booking date', sortable: true, width: '130px' },
   { key: 'counterparty', label: 'Description', sortable: true, rowHeader: true },
   { key: 'category', label: 'Category' },

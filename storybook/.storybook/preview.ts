@@ -9,9 +9,9 @@ const withTheme: Decorator = (story, context) => {
   const brand = String(context.globals['brand'] ?? 'default');
   const direction = String(context.globals['direction'] ?? 'ltr');
   const fullscreen = context.parameters['layout'] === 'fullscreen';
-  document.documentElement.dataset['dsTheme'] = theme;
-  document.documentElement.dataset['dsContrast'] = contrast;
-  document.documentElement.dataset['dsBrand'] = brand;
+  document.documentElement.dataset['kanonisTheme'] = theme;
+  document.documentElement.dataset['kanonisContrast'] = contrast;
+  document.documentElement.dataset['kanonisBrand'] = brand;
   document.documentElement.dir = direction;
   return html`<div
     data-kanonis-theme=${theme}

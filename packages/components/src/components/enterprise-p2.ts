@@ -1,39 +1,39 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
-import { DsDropZone } from './upload.js';
-import { DsProgress } from './feedback.js';
+import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisDropZone } from './upload.js';
+import { KanonisProgress } from './feedback.js';
 
-export interface DsFieldItem {
+export interface KanonisFieldItem {
   id: string;
   label: string;
   value?: string;
 }
-export interface DsStep {
+export interface KanonisStep {
   id: string;
   label: string;
   description?: string;
 }
-export interface DsTask {
+export interface KanonisTask {
   id: string;
   title: string;
   detail?: string;
   completed?: boolean;
 }
-export interface DsTimelineItem {
+export interface KanonisTimelineItem {
   title: string;
   body?: string;
   time?: string;
   tone?: string;
 }
-export interface DsActivityItem {
+export interface KanonisActivityItem {
   id: string;
   actor: string;
   body: string;
   time?: string;
 }
-export interface DsChangeItem {
+export interface KanonisChangeItem {
   field: string;
   before: string;
   after: string;
@@ -83,7 +83,7 @@ const p2Base = css`
   }
 `;
 
-export class DsFormSection extends DsElement {
+export class KanonisFormSection extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -138,7 +138,7 @@ export class DsFormSection extends DsElement {
   }
 }
 
-export class DsFieldArray extends DsElement {
+export class KanonisFieldArray extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -178,20 +178,20 @@ export class DsFieldArray extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) items: DsFieldItem[] = [];
+  @property({ attribute: false }) items: KanonisFieldItem[] = [];
   @property() label = 'Items';
   @property() addLabel = 'Add item';
   private add() {
     this.items = [...this.items, { id: `item-${Date.now()}`, label: '', value: '' }];
-    this.emit<DsFieldItem[]>('kanonis-items-change', this.items);
+    this.emit<KanonisFieldItem[]>('kanonis-items-change', this.items);
   }
   private removeItem(id: string) {
     this.items = this.items.filter((item) => item.id !== id);
-    this.emit<DsFieldItem[]>('kanonis-items-change', this.items);
+    this.emit<KanonisFieldItem[]>('kanonis-items-change', this.items);
   }
   private change(id: string, value: string) {
     this.items = this.items.map((item) => (item.id === id ? { ...item, value } : item));
-    this.emit<DsFieldItem[]>('kanonis-items-change', this.items);
+    this.emit<KanonisFieldItem[]>('kanonis-items-change', this.items);
   }
   protected override render() {
     return html`<section class="array" aria-label=${this.label}>
@@ -219,7 +219,7 @@ export class DsFieldArray extends DsElement {
   }
 }
 
-export class DsDatePicker extends DsElement {
+export class KanonisDatePicker extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -260,7 +260,7 @@ export class DsDatePicker extends DsElement {
   }
 }
 
-export class DsTimePicker extends DsDatePicker {
+export class KanonisTimePicker extends KanonisDatePicker {
   protected override render() {
     return html`<label
       >${this.label}<input
@@ -274,9 +274,9 @@ export class DsTimePicker extends DsDatePicker {
   }
 }
 
-export class DsFileUpload extends DsDropZone {}
+export class KanonisFileUpload extends KanonisDropZone {}
 
-export class DsStepper extends DsElement {
+export class KanonisStepper extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -323,7 +323,7 @@ export class DsStepper extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) steps: DsStep[] = [];
+  @property({ attribute: false }) steps: KanonisStep[] = [];
   @property() value = '';
   private select(id: string) {
     this.value = id;
@@ -345,7 +345,7 @@ export class DsStepper extends DsElement {
   }
 }
 
-export class DsApprovalFlow extends DsElement {
+export class KanonisApprovalFlow extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -390,7 +390,7 @@ export class DsApprovalFlow extends DsElement {
   }
 }
 
-export class DsTaskList extends DsElement {
+export class KanonisTaskList extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -428,12 +428,12 @@ export class DsTaskList extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) tasks: DsTask[] = [];
+  @property({ attribute: false }) tasks: KanonisTask[] = [];
   private toggle(id: string) {
     this.tasks = this.tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task,
     );
-    this.emit<DsTask[]>('kanonis-task-change', this.tasks);
+    this.emit<KanonisTask[]>('kanonis-task-change', this.tasks);
   }
   protected override render() {
     return html`<ul class="surface" aria-label="Tasks">
@@ -455,7 +455,7 @@ export class DsTaskList extends DsElement {
   }
 }
 
-export class DsTimeline extends DsElement {
+export class KanonisTimeline extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -509,7 +509,7 @@ export class DsTimeline extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) items: DsTimelineItem[] = [];
+  @property({ attribute: false }) items: KanonisTimelineItem[] = [];
   protected override render() {
     return html`<ol class="surface">
       ${this.items.map(
@@ -526,7 +526,7 @@ export class DsTimeline extends DsElement {
   }
 }
 
-export class DsActivityFeed extends DsElement {
+export class KanonisActivityFeed extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -556,7 +556,7 @@ export class DsActivityFeed extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) items: DsActivityItem[] = [];
+  @property({ attribute: false }) items: KanonisActivityItem[] = [];
   protected override render() {
     return html`<ul class="surface" aria-label="Activity">
       ${this.items.map(
@@ -571,7 +571,7 @@ export class DsActivityFeed extends DsElement {
   }
 }
 
-export class DsJobStatus extends DsProgress {
+export class KanonisJobStatus extends KanonisProgress {
   @property() status = 'Processing';
   protected override render() {
     return html`<div aria-label=${this.status}>
@@ -580,7 +580,7 @@ export class DsJobStatus extends DsProgress {
   }
 }
 
-export class DsChangeSummary extends DsElement {
+export class KanonisChangeSummary extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p2Base,
@@ -610,7 +610,7 @@ export class DsChangeSummary extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) changes: DsChangeItem[] = [];
+  @property({ attribute: false }) changes: KanonisChangeItem[] = [];
   protected override render() {
     return html`<table class="surface" aria-label="Changes">
       <thead>

@@ -1,15 +1,15 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, query, queryAssignedElements } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export type DsDismissReason = 'button' | 'escape' | 'backdrop' | 'programmatic';
+export type KanonisDismissReason = 'button' | 'escape' | 'backdrop' | 'programmatic';
 
-export interface DsDismissDetail {
-  reason: DsDismissReason;
+export interface KanonisDismissDetail {
+  reason: KanonisDismissReason;
 }
 
-export class DsDialog extends DsElement {
+export class KanonisDialog extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -114,11 +114,11 @@ export class DsDialog extends DsElement {
     this.open = true;
   }
 
-  close(reason: DsDismissReason = 'programmatic') {
+  close(reason: KanonisDismissReason = 'programmatic') {
     if (!this.open && !this.dialog?.open) return;
     this.open = false;
     if (this.dialog?.open) this.dialog.close();
-    this.emit<DsDismissDetail>('kanonis-close', { reason });
+    this.emit<KanonisDismissDetail>('kanonis-close', { reason });
     this.returnFocus?.focus();
     this.returnFocus = null;
   }
@@ -189,9 +189,9 @@ export class DsDialog extends DsElement {
   }
 }
 
-export class DsDrawer extends DsDialog {
+export class KanonisDrawer extends KanonisDialog {
   static override styles: CSSResultGroup = [
-    DsDialog.styles,
+    KanonisDialog.styles,
     css`
       dialog {
         width: min(92vw, var(--kanonis-drawer-width, 26rem));
@@ -220,11 +220,11 @@ export class DsDrawer extends DsDialog {
   @property({ reflect: true }) position: 'start' | 'end' = 'end';
 }
 
-export interface DsMenuSelectDetail {
+export interface KanonisMenuSelectDetail {
   value: string;
 }
 
-export class DsMenuItem extends DsElement {
+export class KanonisMenuItem extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -283,7 +283,7 @@ export class DsMenuItem extends DsElement {
   }
 
   private readonly select = () => {
-    if (!this.disabled) this.emit<DsMenuSelectDetail>('kanonis-menu-select', { value: this.value });
+    if (!this.disabled) this.emit<KanonisMenuSelectDetail>('kanonis-menu-select', { value: this.value });
   };
 
   private readonly keydown = (event: KeyboardEvent) => {
@@ -297,11 +297,11 @@ export class DsMenuItem extends DsElement {
   }
 }
 
-export interface DsMenuToggleDetail {
+export interface KanonisMenuToggleDetail {
   open: boolean;
 }
 
-export class DsMenu extends DsElement {
+export class KanonisMenu extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -359,7 +359,7 @@ export class DsMenu extends DsElement {
   ];
 
   @query('.trigger') private trigger!: HTMLButtonElement;
-  @queryAssignedElements({ selector: 'kanonis-menu-item' }) private items!: DsMenuItem[];
+  @queryAssignedElements({ selector: 'kanonis-menu-item' }) private items!: KanonisMenuItem[];
   @property({ type: Boolean, reflect: true }) open = false;
   @property() label = 'Menu';
   @property({ reflect: true }) placement: 'start' | 'end' = 'end';
@@ -383,7 +383,7 @@ export class DsMenu extends DsElement {
   private setOpen(open: boolean, focusItem = false) {
     if (this.open === open) return;
     this.open = open;
-    this.emit<DsMenuToggleDetail>('kanonis-menu-toggle', { open });
+    this.emit<KanonisMenuToggleDetail>('kanonis-menu-toggle', { open });
     if (open && focusItem)
       void this.updateComplete.then(() => this.items.find((item) => !item.disabled)?.focus());
     if (!open) this.trigger?.focus();
@@ -398,7 +398,7 @@ export class DsMenu extends DsElement {
     }
     if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key) || !enabled.length) return;
     event.preventDefault();
-    const current = enabled.indexOf(this.ownerDocument.activeElement as DsMenuItem);
+    const current = enabled.indexOf(this.ownerDocument.activeElement as KanonisMenuItem);
     const index =
       event.key === 'Home'
         ? 0
@@ -445,7 +445,7 @@ export class DsMenu extends DsElement {
   }
 }
 
-export class DsTooltip extends DsElement {
+export class KanonisTooltip extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

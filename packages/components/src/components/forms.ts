@@ -1,16 +1,16 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, query } from 'lit/decorators.js';
 import { formFoundationStyles, foundationStyles } from '@endeavoury/kanonis-styles';
-import { DsElement, type DsSize } from '../core/ds-element.js';
+import { KanonisElement, type KanonisSize } from '../core/kanonis-element.js';
 
-export interface DsValueChangeDetail {
+export interface KanonisValueChangeDetail {
   value: string;
 }
-export interface DsCheckedChangeDetail {
+export interface KanonisCheckedChangeDetail {
   checked: boolean;
   value: string;
 }
-export interface DsSelectOption {
+export interface KanonisSelectOption {
   label: string;
   value: string;
   disabled?: boolean;
@@ -78,7 +78,7 @@ const fieldSpecificStyles = css`
   }
 `;
 
-export class DsInput extends DsElement {
+export class KanonisInput extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [formFoundationStyles, fieldSpecificStyles];
   readonly internals: ElementInternals;
@@ -96,7 +96,7 @@ export class DsInput extends DsElement {
   @property({ type: Number }) maxlength?: number;
   @property() helpText = '';
   @property() error = '';
-  @property({ reflect: true }) size: DsSize = 'medium';
+  @property({ reflect: true }) size: KanonisSize = 'medium';
   constructor() {
     super();
     this.internals = this.attachInternals();
@@ -131,11 +131,11 @@ export class DsInput extends DsElement {
   private onInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-input', { value: this.value });
   }
   private onChange() {
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value: this.value });
   }
   protected override updated() {
     this.syncForm();
@@ -171,14 +171,14 @@ export class DsInput extends DsElement {
   }
 }
 
-export class DsSearchInput extends DsInput {
+export class KanonisSearchInput extends KanonisInput {
   override type = 'search';
   @property({ attribute: 'clear-label' }) clearLabel = 'Clear search';
   private clear() {
     this.value = '';
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-input', { value: '' });
-    this.emit<DsValueChangeDetail>('kanonis-change', { value: '' });
+    this.emit<KanonisValueChangeDetail>('kanonis-input', { value: '' });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value: '' });
     this.focus();
   }
   protected override render() {
@@ -213,14 +213,14 @@ export class DsSearchInput extends DsInput {
   private onSearchInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-input', { value: this.value });
   }
   private onSearchChange() {
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value: this.value });
   }
   static override styles: CSSResultGroup = [
-    DsInput.styles,
+    KanonisInput.styles,
     css`
       .clear {
         position: absolute;
@@ -246,7 +246,7 @@ export class DsSearchInput extends DsInput {
   ];
 }
 
-export class DsSelect extends DsElement {
+export class KanonisSelect extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     formFoundationStyles,
@@ -270,12 +270,12 @@ export class DsSelect extends DsElement {
   @property() name = '';
   @property() value = '';
   @property() placeholder = '';
-  @property({ attribute: false }) options: DsSelectOption[] = [];
+  @property({ attribute: false }) options: KanonisSelectOption[] = [];
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: Boolean, reflect: true }) required = false;
   @property() helpText = '';
   @property() error = '';
-  @property({ reflect: true }) size: DsSize = 'medium';
+  @property({ reflect: true }) size: KanonisSize = 'medium';
   constructor() {
     super();
     this.internals = this.attachInternals();
@@ -305,7 +305,7 @@ export class DsSelect extends DsElement {
   private changed(event: Event) {
     this.value = (event.target as HTMLSelectElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value: this.value });
   }
   protected override render() {
     return html`<label class="field"
@@ -329,7 +329,7 @@ export class DsSelect extends DsElement {
   }
 }
 
-export class DsCheckbox extends DsElement {
+export class KanonisCheckbox extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     formFoundationStyles,
@@ -412,7 +412,7 @@ export class DsCheckbox extends DsElement {
     this.checked = !this.checked;
     this.indeterminate = false;
     this.syncForm();
-    this.emit<DsCheckedChangeDetail>('kanonis-change', { checked: this.checked, value: this.value });
+    this.emit<KanonisCheckedChangeDetail>('kanonis-change', { checked: this.checked, value: this.value });
   }
   private keydown(event: KeyboardEvent) {
     if (event.key === ' ') {
@@ -453,7 +453,7 @@ export class DsCheckbox extends DsElement {
   }
 }
 
-export class DsFormField extends DsElement {
+export class KanonisFormField extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

@@ -1,9 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
-import type { DsDataTable } from '@endeavoury/kanonis/classes';
+import type { KanonisDataTable } from '@endeavoury/kanonis/classes';
 
 describe('framework-neutral custom element contract', () => {
   it('supports attributes, properties, slots, events, and inherited themes', async () => {
-    document.documentElement.dataset.dsTheme = 'dark';
+    document.documentElement.dataset.kanonisTheme = 'dark';
     const button = document.createElement('kanonis-button');
     button.setAttribute('variant', 'primary');
     const icon = document.createElement('kanonis-icon');
@@ -14,9 +14,9 @@ describe('framework-neutral custom element contract', () => {
     await button.updateComplete;
     expect(button.variant).toBe('primary');
     expect(button.querySelector('[slot=prefix]')).toBe(icon);
-    expect(document.documentElement.dataset.dsTheme).toBe('dark');
+    expect(document.documentElement.dataset.kanonisTheme).toBe('dark');
 
-    const table = document.createElement('kanonis-data-table') as DsDataTable;
+    const table = document.createElement('kanonis-data-table') as KanonisDataTable;
     table.columns = [{ key: 'name', label: 'Name' }];
     table.rows = [{ id: '1', name: 'Current' }];
     table.selectable = true;

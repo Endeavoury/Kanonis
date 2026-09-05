@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export class DsBreadcrumb extends DsElement {
+export class KanonisBreadcrumb extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -62,7 +62,7 @@ export class DsBreadcrumb extends DsElement {
   }
 }
 
-export class DsBreadcrumbs extends DsElement {
+export class KanonisBreadcrumbs extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -92,13 +92,13 @@ export class DsBreadcrumbs extends DsElement {
   }
 }
 
-export interface DsPageChangeDetail {
+export interface KanonisPageChangeDetail {
   page: number;
 }
 
 type PageToken = number | 'ellipsis-start' | 'ellipsis-end';
 
-export class DsPagination extends DsElement {
+export class KanonisPagination extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -180,7 +180,7 @@ export class DsPagination extends DsElement {
     const next = Math.min(Math.max(1, page), Math.max(1, this.pages));
     if (this.disabled || next === this.page) return;
     this.page = next;
-    this.emit<DsPageChangeDetail>('kanonis-page-change', { page: next });
+    this.emit<KanonisPageChangeDetail>('kanonis-page-change', { page: next });
   }
 
   protected override render() {
@@ -221,11 +221,11 @@ export class DsPagination extends DsElement {
   }
 }
 
-export interface DsListActivateDetail {
+export interface KanonisListActivateDetail {
   value: string;
 }
 
-export class DsListItem extends DsElement {
+export class KanonisListItem extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -301,7 +301,7 @@ export class DsListItem extends DsElement {
       event.preventDefault();
       return;
     }
-    this.emit<DsListActivateDetail>('kanonis-list-activate', { value: this.value });
+    this.emit<KanonisListActivateDetail>('kanonis-list-activate', { value: this.value });
   }
 
   protected override render() {
@@ -338,7 +338,7 @@ export class DsListItem extends DsElement {
   }
 }
 
-export class DsList extends DsElement {
+export class KanonisList extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

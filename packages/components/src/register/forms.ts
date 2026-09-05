@@ -1,31 +1,31 @@
-import { defineComponent } from '../core/ds-element.js';
-import { DsCheckbox, DsFormField, DsInput, DsSearchInput, DsSelect } from '../components/forms.js';
+import { defineComponent } from '../core/kanonis-element.js';
+import { KanonisCheckbox, KanonisFormField, KanonisInput, KanonisSearchInput, KanonisSelect } from '../components/forms.js';
 import {
-  DsRadio,
-  DsRadioGroup,
-  DsRange,
-  DsSwitch,
-  DsTextarea,
+  KanonisRadio,
+  KanonisRadioGroup,
+  KanonisRange,
+  KanonisSwitch,
+  KanonisTextarea,
 } from '../components/secondary-forms.js';
-defineComponent('kanonis-input', DsInput);
-defineComponent('kanonis-search-input', DsSearchInput);
-defineComponent('kanonis-select', DsSelect);
-defineComponent('kanonis-checkbox', DsCheckbox);
-defineComponent('kanonis-form-field', DsFormField);
-defineComponent('kanonis-textarea', DsTextarea);
-defineComponent('kanonis-switch', DsSwitch);
-defineComponent('kanonis-range', DsRange);
-defineComponent('kanonis-radio-group', DsRadioGroup);
-defineComponent('kanonis-radio', DsRadio);
+defineComponent('kanonis-input', KanonisInput);
+defineComponent('kanonis-search-input', KanonisSearchInput);
+defineComponent('kanonis-select', KanonisSelect);
+defineComponent('kanonis-checkbox', KanonisCheckbox);
+defineComponent('kanonis-form-field', KanonisFormField);
+defineComponent('kanonis-textarea', KanonisTextarea);
+defineComponent('kanonis-switch', KanonisSwitch);
+defineComponent('kanonis-range', KanonisRange);
+defineComponent('kanonis-radio-group', KanonisRadioGroup);
+defineComponent('kanonis-radio', KanonisRadio);
 export {
-  DsCheckbox,
-  DsFormField,
-  DsInput,
-  DsRadio,
-  DsRadioGroup,
-  DsRange,
-  DsSearchInput,
-  DsSelect,
-  DsSwitch,
-  DsTextarea,
+  KanonisCheckbox,
+  KanonisFormField,
+  KanonisInput,
+  KanonisRadio,
+  KanonisRadioGroup,
+  KanonisRange,
+  KanonisSearchInput,
+  KanonisSelect,
+  KanonisSwitch,
+  KanonisTextarea,
 };

@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import type { DsTableColumn } from '@endeavoury/kanonis';
+import type { KanonisTableColumn } from '@endeavoury/kanonis';
 
 export const productStyles = html`<style>
   .product {
@@ -237,7 +237,7 @@ export const ledgerRows = [
     balance: 12812.22,
   },
 ];
-export const ledgerColumns: DsTableColumn[] = [
+export const ledgerColumns: KanonisTableColumn[] = [
   { key: 'date', label: 'Booking date', sortable: true },
   { key: 'account', label: 'Account' },
   { key: 'description', label: 'Description', sortable: true },

@@ -1,32 +1,32 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export interface DsCommand {
+export interface KanonisCommand {
   id: string;
   label: string;
   description?: string;
   shortcut?: string;
 }
-export interface DsTenant {
+export interface KanonisTenant {
   id: string;
   label: string;
   description?: string;
 }
-export interface DsWorkspaceTab {
+export interface KanonisWorkspaceTab {
   id: string;
   label: string;
   closable?: boolean;
 }
-export interface DsNotification {
+export interface KanonisNotification {
   id: string;
   title: string;
   body?: string;
   read?: boolean;
   time?: string;
 }
-export interface DsDetailItem {
+export interface KanonisDetailItem {
   label: string;
   value: string;
 }
@@ -122,7 +122,7 @@ const overlayStyles = css`
   }
 `;
 
-export class DsCommandPalette extends DsElement {
+export class KanonisCommandPalette extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -181,7 +181,7 @@ export class DsCommandPalette extends DsElement {
     `,
   ];
   @property({ type: Boolean, reflect: true }) open = false;
-  @property({ attribute: false }) commands: DsCommand[] = [];
+  @property({ attribute: false }) commands: KanonisCommand[] = [];
   @property() placeholder = 'Search commands';
   @property() closeLabel = 'Close command palette';
   @state() private query = '';
@@ -209,7 +209,7 @@ export class DsCommandPalette extends DsElement {
       this.select(matches[this.activeIndex]!);
     }
   }
-  private select(command: DsCommand) {
+  private select(command: KanonisCommand) {
     this.emit<{ id: string }>('kanonis-command-select', { id: command.id });
     this.open = false;
   }
@@ -255,7 +255,7 @@ export class DsCommandPalette extends DsElement {
   }
 }
 
-export class DsGlobalSearch extends DsElement {
+export class KanonisGlobalSearch extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -305,7 +305,7 @@ export class DsGlobalSearch extends DsElement {
   }
 }
 
-export class DsTenantSwitcher extends DsElement {
+export class KanonisTenantSwitcher extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -321,7 +321,7 @@ export class DsTenantSwitcher extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) tenants: DsTenant[] = [];
+  @property({ attribute: false }) tenants: KanonisTenant[] = [];
   @property() value = '';
   @property() label = 'Workspace';
   private change(event: Event) {
@@ -338,7 +338,7 @@ export class DsTenantSwitcher extends DsElement {
   }
 }
 
-export class DsUserMenu extends DsElement {
+export class KanonisUserMenu extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -377,7 +377,7 @@ export class DsUserMenu extends DsElement {
   }
 }
 
-export class DsWorkspaceTabs extends DsElement {
+export class KanonisWorkspaceTabs extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -415,7 +415,7 @@ export class DsWorkspaceTabs extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) tabs: DsWorkspaceTab[] = [];
+  @property({ attribute: false }) tabs: KanonisWorkspaceTab[] = [];
   @property() value = '';
   private select(id: string) {
     this.value = id;
@@ -432,7 +432,7 @@ export class DsWorkspaceTabs extends DsElement {
   }
 }
 
-export class DsNavigationGroup extends DsElement {
+export class KanonisNavigationGroup extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -475,7 +475,7 @@ export class DsNavigationGroup extends DsElement {
   }
 }
 
-export class DsContextMenu extends DsElement {
+export class KanonisContextMenu extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -514,7 +514,7 @@ export class DsContextMenu extends DsElement {
   }
 }
 
-export class DsQuickActions extends DsElement {
+export class KanonisQuickActions extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -532,7 +532,7 @@ export class DsQuickActions extends DsElement {
   }
 }
 
-export class DsRecordHeader extends DsElement {
+export class KanonisRecordHeader extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -586,7 +586,7 @@ export class DsRecordHeader extends DsElement {
   }
 }
 
-export class DsDetailList extends DsElement {
+export class KanonisDetailList extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -619,7 +619,7 @@ export class DsDetailList extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) items: DsDetailItem[] = [];
+  @property({ attribute: false }) items: KanonisDetailItem[] = [];
   protected override render() {
     return html`<dl class="surface">
       ${this.items.map(
@@ -631,7 +631,7 @@ export class DsDetailList extends DsElement {
   }
 }
 
-export class DsNotificationCenter extends DsElement {
+export class KanonisNotificationCenter extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,
@@ -671,7 +671,7 @@ export class DsNotificationCenter extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) notifications: DsNotification[] = [];
+  @property({ attribute: false }) notifications: KanonisNotification[] = [];
   @property({ type: Boolean, reflect: true }) open = false;
   @property() label = 'Notifications';
   private markRead(id: string) {
@@ -691,7 +691,7 @@ export class DsNotificationCenter extends DsElement {
   }
 }
 
-export class DsBanner extends DsElement {
+export class KanonisBanner extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p1Surface,

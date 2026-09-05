@@ -1,7 +1,7 @@
-import { defineComponent } from '../core/ds-element.js';
-import { DsDropZone } from '../components/upload.js';
+import { defineComponent } from '../core/kanonis-element.js';
+import { KanonisDropZone } from '../components/upload.js';
 
-defineComponent('kanonis-drop-zone', DsDropZone);
+defineComponent('kanonis-drop-zone', KanonisDropZone);
 
-export { DsDropZone };
-export type { DsFileRejectDetail, DsFilesDetail } from '../components/upload.js';
+export { KanonisDropZone };
+export type { KanonisFileRejectDetail, KanonisFilesDetail } from '../components/upload.js';

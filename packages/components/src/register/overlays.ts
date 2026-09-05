@@ -1,10 +1,10 @@
-import { defineComponent } from '../core/ds-element.js';
-import { DsDialog, DsDrawer, DsMenu, DsMenuItem, DsTooltip } from '../components/overlays.js';
+import { defineComponent } from '../core/kanonis-element.js';
+import { KanonisDialog, KanonisDrawer, KanonisMenu, KanonisMenuItem, KanonisTooltip } from '../components/overlays.js';
 
-defineComponent('kanonis-dialog', DsDialog);
-defineComponent('kanonis-drawer', DsDrawer);
-defineComponent('kanonis-menu', DsMenu);
-defineComponent('kanonis-menu-item', DsMenuItem);
-defineComponent('kanonis-tooltip', DsTooltip);
+defineComponent('kanonis-dialog', KanonisDialog);
+defineComponent('kanonis-drawer', KanonisDrawer);
+defineComponent('kanonis-menu', KanonisMenu);
+defineComponent('kanonis-menu-item', KanonisMenuItem);
+defineComponent('kanonis-tooltip', KanonisTooltip);
 
-export { DsDialog, DsDrawer, DsMenu, DsMenuItem, DsTooltip };
+export { KanonisDialog, KanonisDrawer, KanonisMenu, KanonisMenuItem, KanonisTooltip };

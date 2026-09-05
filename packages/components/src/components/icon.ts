@@ -1,9 +1,9 @@
 import { css, html, nothing, svg, type CSSResultGroup, type TemplateResult } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export type DsIconName =
+export type KanonisIconName =
   | 'plus'
   | 'search'
   | 'refresh'
@@ -33,7 +33,7 @@ export type DsIconName =
   | 'edit'
   | 'trash'
   | 'arrow-right';
-const paths: Record<DsIconName, TemplateResult> = {
+const paths: Record<KanonisIconName, TemplateResult> = {
   plus: svg`<path d="M12 5v14M5 12h14" />`,
   search: svg`<circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" />`,
   refresh: svg`<path d="M20 11a8 8 0 1 0-2 5.5M20 4v7h-7" />`,
@@ -73,7 +73,7 @@ const paths: Record<DsIconName, TemplateResult> = {
   'arrow-right': svg`<path d="M5 12h14m-5-5 5 5-5 5" />`,
 };
 
-export class DsIcon extends DsElement {
+export class KanonisIcon extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -94,7 +94,7 @@ export class DsIcon extends DsElement {
       }
     `,
   ];
-  @property() name: DsIconName = 'info';
+  @property() name: KanonisIconName = 'info';
   @property() label = '';
   protected override render() {
     return html`<svg

@@ -13,11 +13,11 @@ import '@endeavoury/kanonis/styles.css';
 document.querySelector('#app')!.innerHTML =
   '<kanonis-button tone="accent">Save changes</kanonis-button>';`;
 
-const reactCode = `import { DsButton } from '@endeavoury/kanonis-react';
+const reactCode = `import { KanonisButton } from '@endeavoury/kanonis-react';
 import '@endeavoury/kanonis/styles.css';
 
 export function SaveButton() {
-  return <DsButton tone="accent">Save changes</DsButton>;
+  return <KanonisButton tone="accent">Save changes</KanonisButton>;
 }`;
 
 const angularCode = `import { Component } from '@angular/core';

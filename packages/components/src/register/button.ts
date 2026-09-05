@@ -1,8 +1,8 @@
-import { defineComponent } from '../core/ds-element.js';
-import { DsIcon } from '../components/icon.js';
-import { DsButton, DsButtonGroup, DsIconButton } from '../components/button.js';
-defineComponent('kanonis-icon', DsIcon);
-defineComponent('kanonis-button', DsButton);
-defineComponent('kanonis-icon-button', DsIconButton);
-defineComponent('kanonis-button-group', DsButtonGroup);
-export { DsIcon, DsButton, DsIconButton, DsButtonGroup };
+import { defineComponent } from '../core/kanonis-element.js';
+import { KanonisIcon } from '../components/icon.js';
+import { KanonisButton, KanonisButtonGroup, KanonisIconButton } from '../components/button.js';
+defineComponent('kanonis-icon', KanonisIcon);
+defineComponent('kanonis-button', KanonisButton);
+defineComponent('kanonis-icon-button', KanonisIconButton);
+defineComponent('kanonis-button-group', KanonisButtonGroup);
+export { KanonisIcon, KanonisButton, KanonisIconButton, KanonisButtonGroup };

@@ -1,16 +1,16 @@
-import { defineComponent } from '../core/ds-element.js';
+import { defineComponent } from '../core/kanonis-element.js';
 import {
-  DsBreadcrumb,
-  DsBreadcrumbs,
-  DsList,
-  DsListItem,
-  DsPagination,
+  KanonisBreadcrumb,
+  KanonisBreadcrumbs,
+  KanonisList,
+  KanonisListItem,
+  KanonisPagination,
 } from '../components/navigation-extras.js';
 
-defineComponent('kanonis-breadcrumbs', DsBreadcrumbs);
-defineComponent('kanonis-breadcrumb', DsBreadcrumb);
-defineComponent('kanonis-pagination', DsPagination);
-defineComponent('kanonis-list', DsList);
-defineComponent('kanonis-list-item', DsListItem);
+defineComponent('kanonis-breadcrumbs', KanonisBreadcrumbs);
+defineComponent('kanonis-breadcrumb', KanonisBreadcrumb);
+defineComponent('kanonis-pagination', KanonisPagination);
+defineComponent('kanonis-list', KanonisList);
+defineComponent('kanonis-list-item', KanonisListItem);
 
-export { DsBreadcrumb, DsBreadcrumbs, DsList, DsListItem, DsPagination };
+export { KanonisBreadcrumb, KanonisBreadcrumbs, KanonisList, KanonisListItem, KanonisPagination };

@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export interface DsAuditEntry {
+export interface KanonisAuditEntry {
   id: string;
   actor: string;
   action: string;
@@ -11,20 +11,20 @@ export interface DsAuditEntry {
   time?: string;
   detail?: string;
 }
-export interface DsPermissionRole {
+export interface KanonisPermissionRole {
   id: string;
   label: string;
 }
-export interface DsPermission {
+export interface KanonisPermission {
   id: string;
   label: string;
   description?: string;
 }
-export interface DsDiffLine {
+export interface KanonisDiffLine {
   type: 'added' | 'removed' | 'unchanged';
   text: string;
 }
-export interface DsTourStep {
+export interface KanonisTourStep {
   id: string;
   heading: string;
   body: string;
@@ -74,7 +74,7 @@ const p3Base = css`
   }
 `;
 
-export class DsAuditLog extends DsElement {
+export class KanonisAuditLog extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -102,7 +102,7 @@ export class DsAuditLog extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) entries: DsAuditEntry[] = [];
+  @property({ attribute: false }) entries: KanonisAuditEntry[] = [];
   protected override render() {
     return html`<table class="surface" aria-label="Audit log">
       <thead>
@@ -131,7 +131,7 @@ export class DsAuditLog extends DsElement {
   }
 }
 
-export class DsPermissionMatrix extends DsElement {
+export class KanonisPermissionMatrix extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -166,8 +166,8 @@ export class DsPermissionMatrix extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) roles: DsPermissionRole[] = [];
-  @property({ attribute: false }) permissions: DsPermission[] = [];
+  @property({ attribute: false }) roles: KanonisPermissionRole[] = [];
+  @property({ attribute: false }) permissions: KanonisPermission[] = [];
   @property({ attribute: false }) value: Record<string, boolean> = {};
   private toggle(role: string, permission: string, checked: boolean) {
     this.value = { ...this.value, [`${role}:${permission}`]: checked };
@@ -196,7 +196,7 @@ export class DsPermissionMatrix extends DsElement {
   }
 }
 
-export class DsRoleBadge extends DsElement {
+export class KanonisRoleBadge extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -232,7 +232,7 @@ export class DsRoleBadge extends DsElement {
   }
 }
 
-export class DsDiffViewer extends DsElement {
+export class KanonisDiffViewer extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -260,14 +260,14 @@ export class DsDiffViewer extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) lines: DsDiffLine[] = [];
+  @property({ attribute: false }) lines: KanonisDiffLine[] = [];
   protected override render() {
     return html`<pre class="surface" aria-label="Difference">
 ${this.lines.map((line) => html`<span class="line" ?data-added=${line.type === 'added'} ?data-removed=${line.type === 'removed'}>${line.type === 'added' ? '＋' : line.type === 'removed' ? '－' : ' '} ${line.text}</span>`)}</pre>`;
   }
 }
 
-export class DsCodeEditor extends DsElement {
+export class KanonisCodeEditor extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -320,7 +320,7 @@ export class DsCodeEditor extends DsElement {
   }
 }
 
-export class DsJsonEditor extends DsCodeEditor {
+export class KanonisJsonEditor extends KanonisCodeEditor {
   @property() invalidMessage = '';
   protected override render() {
     let invalid = this.invalidMessage;
@@ -333,7 +333,7 @@ export class DsJsonEditor extends DsCodeEditor {
   }
 }
 
-export class DsMaintenanceNotice extends DsElement {
+export class KanonisMaintenanceNotice extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -375,7 +375,7 @@ export class DsMaintenanceNotice extends DsElement {
   }
 }
 
-export class DsHelpPanel extends DsElement {
+export class KanonisHelpPanel extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -410,7 +410,7 @@ export class DsHelpPanel extends DsElement {
   }
 }
 
-export class DsTour extends DsElement {
+export class KanonisTour extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -434,7 +434,7 @@ export class DsTour extends DsElement {
     `,
   ];
   @property({ type: Boolean, reflect: true }) open = false;
-  @property({ attribute: false }) steps: DsTourStep[] = [];
+  @property({ attribute: false }) steps: KanonisTourStep[] = [];
   @property({ type: Number }) index = 0;
   private move(delta: number) {
     this.index = Math.min(Math.max(0, this.index + delta), Math.max(0, this.steps.length - 1));
@@ -466,7 +466,7 @@ export class DsTour extends DsElement {
   }
 }
 
-export class DsCoachmark extends DsElement {
+export class KanonisCoachmark extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,
@@ -509,7 +509,7 @@ export class DsCoachmark extends DsElement {
   }
 }
 
-export class DsCompareView extends DsElement {
+export class KanonisCompareView extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     p3Base,

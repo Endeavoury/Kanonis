@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import type { DsTableColumn } from '@endeavoury/kanonis';
+import type { KanonisTableColumn } from '@endeavoury/kanonis';
 
-const columns: DsTableColumn[] = [
+const columns: KanonisTableColumn[] = [
   { key: 'name', label: 'Name', sortable: true },
   { key: 'team', label: 'Team', sortable: true },
   { key: 'status', label: 'Status' },

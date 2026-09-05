@@ -1,259 +1,259 @@
-import type { DsButton, DsButtonGroup, DsIconButton } from './components/button.js';
-import type { DsIcon } from './components/icon.js';
+import type { KanonisButton, KanonisButtonGroup, KanonisIconButton } from './components/button.js';
+import type { KanonisIcon } from './components/icon.js';
 import type {
-  DsCheckbox,
-  DsFormField,
-  DsInput,
-  DsSearchInput,
-  DsSelect,
+  KanonisCheckbox,
+  KanonisFormField,
+  KanonisInput,
+  KanonisSearchInput,
+  KanonisSelect,
 } from './components/forms.js';
 import type {
-  DsRadio,
-  DsRadioGroup,
-  DsRange,
-  DsSwitch,
-  DsTextarea,
+  KanonisRadio,
+  KanonisRadioGroup,
+  KanonisRange,
+  KanonisSwitch,
+  KanonisTextarea,
 } from './components/secondary-forms.js';
 import type {
-  DsAvatar,
-  DsBadge,
-  DsCard,
-  DsCodeBlock,
-  DsDescriptionList,
-  DsMetric,
-  DsPanel,
-  DsStatusBadge,
+  KanonisAvatar,
+  KanonisBadge,
+  KanonisCard,
+  KanonisCodeBlock,
+  KanonisDescriptionList,
+  KanonisMetric,
+  KanonisPanel,
+  KanonisStatusBadge,
 } from './components/display.js';
 import type {
-  DsAlert,
-  DsEmptyState,
-  DsLoadingState,
-  DsProgress,
-  DsSkeleton,
-  DsToast,
-  DsToastRegion,
+  KanonisAlert,
+  KanonisEmptyState,
+  KanonisLoadingState,
+  KanonisProgress,
+  KanonisSkeleton,
+  KanonisToast,
+  KanonisToastRegion,
 } from './components/feedback.js';
-import type { DsDisclosure, DsTab, DsTabs, DsThemeToggle } from './components/interaction.js';
-import type { DsDialog, DsDrawer, DsMenu, DsMenuItem, DsTooltip } from './components/overlays.js';
-import type { DsDropZone } from './components/upload.js';
-import type { DsDataTable } from './components/data-table.js';
+import type { KanonisDisclosure, KanonisTab, KanonisTabs, KanonisThemeToggle } from './components/interaction.js';
+import type { KanonisDialog, KanonisDrawer, KanonisMenu, KanonisMenuItem, KanonisTooltip } from './components/overlays.js';
+import type { KanonisDropZone } from './components/upload.js';
+import type { KanonisDataTable } from './components/data-table.js';
 import type {
-  DsContainer,
-  DsDetailSidebar,
-  DsGrid,
-  DsInline,
-  DsInspectorPane,
-  DsPane,
-  DsPaneContent,
-  DsPaneGroup,
-  DsPaneStack,
-  DsPaneHeader,
-  DsPaneWindow,
-  DsPageHeader,
-  DsScrollablePane,
-  DsStack,
-  DsWorkspace,
-  DsWorkspaceHeader,
+  KanonisContainer,
+  KanonisDetailSidebar,
+  KanonisGrid,
+  KanonisInline,
+  KanonisInspectorPane,
+  KanonisPane,
+  KanonisPaneContent,
+  KanonisPaneGroup,
+  KanonisPaneStack,
+  KanonisPaneHeader,
+  KanonisPaneWindow,
+  KanonisPageHeader,
+  KanonisScrollablePane,
+  KanonisStack,
+  KanonisWorkspace,
+  KanonisWorkspaceHeader,
 } from './components/layout.js';
-import type { DsAppShell, DsSidebar, DsSidebarItem } from './components/navigation.js';
+import type { KanonisAppShell, KanonisSidebar, KanonisSidebarItem } from './components/navigation.js';
 import type {
-  DsBulkActions,
-  DsColumnManager,
-  DsCombobox,
-  DsDataGrid,
-  DsFilterBuilder,
-  DsSavedView,
-  DsValidationSummary,
-  DsViewToolbar,
+  KanonisBulkActions,
+  KanonisColumnManager,
+  KanonisCombobox,
+  KanonisDataGrid,
+  KanonisFilterBuilder,
+  KanonisSavedView,
+  KanonisValidationSummary,
+  KanonisViewToolbar,
 } from './components/enterprise.js';
 import type {
-  DsBanner,
-  DsCommandPalette,
-  DsContextMenu,
-  DsDetailList,
-  DsGlobalSearch,
-  DsNavigationGroup,
-  DsNotificationCenter,
-  DsQuickActions,
-  DsRecordHeader,
-  DsTenantSwitcher,
-  DsUserMenu,
-  DsWorkspaceTabs,
+  KanonisBanner,
+  KanonisCommandPalette,
+  KanonisContextMenu,
+  KanonisDetailList,
+  KanonisGlobalSearch,
+  KanonisNavigationGroup,
+  KanonisNotificationCenter,
+  KanonisQuickActions,
+  KanonisRecordHeader,
+  KanonisTenantSwitcher,
+  KanonisUserMenu,
+  KanonisWorkspaceTabs,
 } from './components/enterprise-p1.js';
 import type {
-  DsActivityFeed,
-  DsApprovalFlow,
-  DsChangeSummary,
-  DsDatePicker,
-  DsFieldArray,
-  DsFileUpload,
-  DsFormSection,
-  DsJobStatus,
-  DsStepper,
-  DsTaskList,
-  DsTimePicker,
-  DsTimeline,
+  KanonisActivityFeed,
+  KanonisApprovalFlow,
+  KanonisChangeSummary,
+  KanonisDatePicker,
+  KanonisFieldArray,
+  KanonisFileUpload,
+  KanonisFormSection,
+  KanonisJobStatus,
+  KanonisStepper,
+  KanonisTaskList,
+  KanonisTimePicker,
+  KanonisTimeline,
 } from './components/enterprise-p2.js';
 import type {
-  DsAuditLog,
-  DsPermissionMatrix,
-  DsRoleBadge,
-  DsDiffViewer,
-  DsCodeEditor,
-  DsJsonEditor,
-  DsMaintenanceNotice,
-  DsHelpPanel,
-  DsTour,
-  DsCoachmark,
-  DsCompareView,
+  KanonisAuditLog,
+  KanonisPermissionMatrix,
+  KanonisRoleBadge,
+  KanonisDiffViewer,
+  KanonisCodeEditor,
+  KanonisJsonEditor,
+  KanonisMaintenanceNotice,
+  KanonisHelpPanel,
+  KanonisTour,
+  KanonisCoachmark,
+  KanonisCompareView,
 } from './components/enterprise-p3.js';
 import type {
-  DsBreadcrumb,
-  DsBreadcrumbs,
-  DsList,
-  DsListItem,
-  DsPagination,
+  KanonisBreadcrumb,
+  KanonisBreadcrumbs,
+  KanonisList,
+  KanonisListItem,
+  KanonisPagination,
 } from './components/navigation-extras.js';
-import type { DsFilterBar, DsKpiGrid } from './components/patterns.js';
-import type { DsTree, DsTreeItem } from './components/tree.js';
+import type { KanonisFilterBar, KanonisKpiGrid } from './components/patterns.js';
+import type { KanonisTree, KanonisTreeItem } from './components/tree.js';
 import type {
-  DsActionBar,
-  DsBrandMark,
-  DsChip,
-  DsIllustration,
-  DsInputGroup,
-  DsLiveRegion,
-  DsReorderItem,
-  DsReorderList,
-  DsSegment,
-  DsSegmentedControl,
-  DsSplitButton,
+  KanonisActionBar,
+  KanonisBrandMark,
+  KanonisChip,
+  KanonisIllustration,
+  KanonisInputGroup,
+  KanonisLiveRegion,
+  KanonisReorderItem,
+  KanonisReorderList,
+  KanonisSegment,
+  KanonisSegmentedControl,
+  KanonisSplitButton,
 } from './components/enhancements.js';
 
 declare global {
   interface HTMLElementTagNameMap {
-    'kanonis-icon': DsIcon;
-    'kanonis-button': DsButton;
-    'kanonis-icon-button': DsIconButton;
-    'kanonis-button-group': DsButtonGroup;
-    'kanonis-input': DsInput;
-    'kanonis-search-input': DsSearchInput;
-    'kanonis-select': DsSelect;
-    'kanonis-checkbox': DsCheckbox;
-    'kanonis-form-field': DsFormField;
-    'kanonis-textarea': DsTextarea;
-    'kanonis-switch': DsSwitch;
-    'kanonis-range': DsRange;
-    'kanonis-radio-group': DsRadioGroup;
-    'kanonis-radio': DsRadio;
-    'kanonis-badge': DsBadge;
-    'kanonis-status-badge': DsStatusBadge;
-    'kanonis-avatar': DsAvatar;
-    'kanonis-card': DsCard;
-    'kanonis-code-block': DsCodeBlock;
-    'kanonis-description-list': DsDescriptionList;
-    'kanonis-panel': DsPanel;
-    'kanonis-metric': DsMetric;
-    'kanonis-alert': DsAlert;
-    'kanonis-loading-state': DsLoadingState;
-    'kanonis-empty-state': DsEmptyState;
-    'kanonis-progress': DsProgress;
-    'kanonis-skeleton': DsSkeleton;
-    'kanonis-toast': DsToast;
-    'kanonis-toast-region': DsToastRegion;
-    'kanonis-theme-toggle': DsThemeToggle;
-    'kanonis-tabs': DsTabs;
-    'kanonis-tab': DsTab;
-    'kanonis-disclosure': DsDisclosure;
-    'kanonis-dialog': DsDialog;
-    'kanonis-drawer': DsDrawer;
-    'kanonis-menu': DsMenu;
-    'kanonis-menu-item': DsMenuItem;
-    'kanonis-tooltip': DsTooltip;
-    'kanonis-drop-zone': DsDropZone;
-    'kanonis-data-table': DsDataTable;
-    'kanonis-stack': DsStack;
-    'kanonis-inline': DsInline;
-    'kanonis-grid': DsGrid;
-    'kanonis-container': DsContainer;
-    'kanonis-page-header': DsPageHeader;
-    'kanonis-detail-sidebar': DsDetailSidebar;
-    'kanonis-pane-group': DsPaneGroup;
-    'kanonis-pane': DsPane;
-    'kanonis-scrollable-pane': DsScrollablePane;
-    'kanonis-pane-header': DsPaneHeader;
-    'kanonis-pane-content': DsPaneContent;
-    'kanonis-workspace': DsWorkspace;
-    'kanonis-workspace-header': DsWorkspaceHeader;
-    'kanonis-pane-window': DsPaneWindow;
-    'kanonis-pane-stack': DsPaneStack;
-    'kanonis-inspector-pane': DsInspectorPane;
-    'kanonis-app-shell': DsAppShell;
-    'kanonis-sidebar': DsSidebar;
-    'kanonis-sidebar-item': DsSidebarItem;
-    'kanonis-breadcrumbs': DsBreadcrumbs;
-    'kanonis-breadcrumb': DsBreadcrumb;
-    'kanonis-pagination': DsPagination;
-    'kanonis-list': DsList;
-    'kanonis-list-item': DsListItem;
-    'kanonis-filter-bar': DsFilterBar;
-    'kanonis-kpi-grid': DsKpiGrid;
-    'kanonis-tree': DsTree;
-    'kanonis-tree-item': DsTreeItem;
-    'kanonis-data-grid': DsDataGrid;
-    'kanonis-filter-builder': DsFilterBuilder;
-    'kanonis-view-toolbar': DsViewToolbar;
-    'kanonis-column-manager': DsColumnManager;
-    'kanonis-bulk-actions': DsBulkActions;
-    'kanonis-saved-view': DsSavedView;
-    'kanonis-combobox': DsCombobox;
-    'kanonis-validation-summary': DsValidationSummary;
-    'kanonis-command-palette': DsCommandPalette;
-    'kanonis-global-search': DsGlobalSearch;
-    'kanonis-tenant-switcher': DsTenantSwitcher;
-    'kanonis-user-menu': DsUserMenu;
-    'kanonis-workspace-tabs': DsWorkspaceTabs;
-    'kanonis-navigation-group': DsNavigationGroup;
-    'kanonis-context-menu': DsContextMenu;
-    'kanonis-quick-actions': DsQuickActions;
-    'kanonis-record-header': DsRecordHeader;
-    'kanonis-detail-list': DsDetailList;
-    'kanonis-notification-center': DsNotificationCenter;
-    'kanonis-banner': DsBanner;
-    'kanonis-form-section': DsFormSection;
-    'kanonis-field-array': DsFieldArray;
-    'kanonis-date-picker': DsDatePicker;
-    'kanonis-time-picker': DsTimePicker;
-    'kanonis-file-upload': DsFileUpload;
-    'kanonis-stepper': DsStepper;
-    'kanonis-approval-flow': DsApprovalFlow;
-    'kanonis-task-list': DsTaskList;
-    'kanonis-timeline': DsTimeline;
-    'kanonis-activity-feed': DsActivityFeed;
-    'kanonis-job-status': DsJobStatus;
-    'kanonis-change-summary': DsChangeSummary;
-    'kanonis-audit-log': DsAuditLog;
-    'kanonis-permission-matrix': DsPermissionMatrix;
-    'kanonis-role-badge': DsRoleBadge;
-    'kanonis-diff-viewer': DsDiffViewer;
-    'kanonis-code-editor': DsCodeEditor;
-    'kanonis-json-editor': DsJsonEditor;
-    'kanonis-maintenance-notice': DsMaintenanceNotice;
-    'kanonis-help-panel': DsHelpPanel;
-    'kanonis-tour': DsTour;
-    'kanonis-coachmark': DsCoachmark;
-    'kanonis-compare-view': DsCompareView;
-    'kanonis-live-region': DsLiveRegion;
-    'kanonis-segmented-control': DsSegmentedControl;
-    'kanonis-segment': DsSegment;
-    'kanonis-action-bar': DsActionBar;
-    'kanonis-split-button': DsSplitButton;
-    'kanonis-input-group': DsInputGroup;
-    'kanonis-chip': DsChip;
-    'kanonis-illustration': DsIllustration;
-    'kanonis-brand-mark': DsBrandMark;
-    'kanonis-reorder-list': DsReorderList;
-    'kanonis-reorder-item': DsReorderItem;
+    'kanonis-icon': KanonisIcon;
+    'kanonis-button': KanonisButton;
+    'kanonis-icon-button': KanonisIconButton;
+    'kanonis-button-group': KanonisButtonGroup;
+    'kanonis-input': KanonisInput;
+    'kanonis-search-input': KanonisSearchInput;
+    'kanonis-select': KanonisSelect;
+    'kanonis-checkbox': KanonisCheckbox;
+    'kanonis-form-field': KanonisFormField;
+    'kanonis-textarea': KanonisTextarea;
+    'kanonis-switch': KanonisSwitch;
+    'kanonis-range': KanonisRange;
+    'kanonis-radio-group': KanonisRadioGroup;
+    'kanonis-radio': KanonisRadio;
+    'kanonis-badge': KanonisBadge;
+    'kanonis-status-badge': KanonisStatusBadge;
+    'kanonis-avatar': KanonisAvatar;
+    'kanonis-card': KanonisCard;
+    'kanonis-code-block': KanonisCodeBlock;
+    'kanonis-description-list': KanonisDescriptionList;
+    'kanonis-panel': KanonisPanel;
+    'kanonis-metric': KanonisMetric;
+    'kanonis-alert': KanonisAlert;
+    'kanonis-loading-state': KanonisLoadingState;
+    'kanonis-empty-state': KanonisEmptyState;
+    'kanonis-progress': KanonisProgress;
+    'kanonis-skeleton': KanonisSkeleton;
+    'kanonis-toast': KanonisToast;
+    'kanonis-toast-region': KanonisToastRegion;
+    'kanonis-theme-toggle': KanonisThemeToggle;
+    'kanonis-tabs': KanonisTabs;
+    'kanonis-tab': KanonisTab;
+    'kanonis-disclosure': KanonisDisclosure;
+    'kanonis-dialog': KanonisDialog;
+    'kanonis-drawer': KanonisDrawer;
+    'kanonis-menu': KanonisMenu;
+    'kanonis-menu-item': KanonisMenuItem;
+    'kanonis-tooltip': KanonisTooltip;
+    'kanonis-drop-zone': KanonisDropZone;
+    'kanonis-data-table': KanonisDataTable;
+    'kanonis-stack': KanonisStack;
+    'kanonis-inline': KanonisInline;
+    'kanonis-grid': KanonisGrid;
+    'kanonis-container': KanonisContainer;
+    'kanonis-page-header': KanonisPageHeader;
+    'kanonis-detail-sidebar': KanonisDetailSidebar;
+    'kanonis-pane-group': KanonisPaneGroup;
+    'kanonis-pane': KanonisPane;
+    'kanonis-scrollable-pane': KanonisScrollablePane;
+    'kanonis-pane-header': KanonisPaneHeader;
+    'kanonis-pane-content': KanonisPaneContent;
+    'kanonis-workspace': KanonisWorkspace;
+    'kanonis-workspace-header': KanonisWorkspaceHeader;
+    'kanonis-pane-window': KanonisPaneWindow;
+    'kanonis-pane-stack': KanonisPaneStack;
+    'kanonis-inspector-pane': KanonisInspectorPane;
+    'kanonis-app-shell': KanonisAppShell;
+    'kanonis-sidebar': KanonisSidebar;
+    'kanonis-sidebar-item': KanonisSidebarItem;
+    'kanonis-breadcrumbs': KanonisBreadcrumbs;
+    'kanonis-breadcrumb': KanonisBreadcrumb;
+    'kanonis-pagination': KanonisPagination;
+    'kanonis-list': KanonisList;
+    'kanonis-list-item': KanonisListItem;
+    'kanonis-filter-bar': KanonisFilterBar;
+    'kanonis-kpi-grid': KanonisKpiGrid;
+    'kanonis-tree': KanonisTree;
+    'kanonis-tree-item': KanonisTreeItem;
+    'kanonis-data-grid': KanonisDataGrid;
+    'kanonis-filter-builder': KanonisFilterBuilder;
+    'kanonis-view-toolbar': KanonisViewToolbar;
+    'kanonis-column-manager': KanonisColumnManager;
+    'kanonis-bulk-actions': KanonisBulkActions;
+    'kanonis-saved-view': KanonisSavedView;
+    'kanonis-combobox': KanonisCombobox;
+    'kanonis-validation-summary': KanonisValidationSummary;
+    'kanonis-command-palette': KanonisCommandPalette;
+    'kanonis-global-search': KanonisGlobalSearch;
+    'kanonis-tenant-switcher': KanonisTenantSwitcher;
+    'kanonis-user-menu': KanonisUserMenu;
+    'kanonis-workspace-tabs': KanonisWorkspaceTabs;
+    'kanonis-navigation-group': KanonisNavigationGroup;
+    'kanonis-context-menu': KanonisContextMenu;
+    'kanonis-quick-actions': KanonisQuickActions;
+    'kanonis-record-header': KanonisRecordHeader;
+    'kanonis-detail-list': KanonisDetailList;
+    'kanonis-notification-center': KanonisNotificationCenter;
+    'kanonis-banner': KanonisBanner;
+    'kanonis-form-section': KanonisFormSection;
+    'kanonis-field-array': KanonisFieldArray;
+    'kanonis-date-picker': KanonisDatePicker;
+    'kanonis-time-picker': KanonisTimePicker;
+    'kanonis-file-upload': KanonisFileUpload;
+    'kanonis-stepper': KanonisStepper;
+    'kanonis-approval-flow': KanonisApprovalFlow;
+    'kanonis-task-list': KanonisTaskList;
+    'kanonis-timeline': KanonisTimeline;
+    'kanonis-activity-feed': KanonisActivityFeed;
+    'kanonis-job-status': KanonisJobStatus;
+    'kanonis-change-summary': KanonisChangeSummary;
+    'kanonis-audit-log': KanonisAuditLog;
+    'kanonis-permission-matrix': KanonisPermissionMatrix;
+    'kanonis-role-badge': KanonisRoleBadge;
+    'kanonis-diff-viewer': KanonisDiffViewer;
+    'kanonis-code-editor': KanonisCodeEditor;
+    'kanonis-json-editor': KanonisJsonEditor;
+    'kanonis-maintenance-notice': KanonisMaintenanceNotice;
+    'kanonis-help-panel': KanonisHelpPanel;
+    'kanonis-tour': KanonisTour;
+    'kanonis-coachmark': KanonisCoachmark;
+    'kanonis-compare-view': KanonisCompareView;
+    'kanonis-live-region': KanonisLiveRegion;
+    'kanonis-segmented-control': KanonisSegmentedControl;
+    'kanonis-segment': KanonisSegment;
+    'kanonis-action-bar': KanonisActionBar;
+    'kanonis-split-button': KanonisSplitButton;
+    'kanonis-input-group': KanonisInputGroup;
+    'kanonis-chip': KanonisChip;
+    'kanonis-illustration': KanonisIllustration;
+    'kanonis-brand-mark': KanonisBrandMark;
+    'kanonis-reorder-list': KanonisReorderList;
+    'kanonis-reorder-item': KanonisReorderItem;
   }
 }
 

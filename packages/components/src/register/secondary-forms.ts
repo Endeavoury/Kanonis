@@ -1,16 +1,16 @@
-import { defineComponent } from '../core/ds-element.js';
+import { defineComponent } from '../core/kanonis-element.js';
 import {
-  DsRadio,
-  DsRadioGroup,
-  DsRange,
-  DsSwitch,
-  DsTextarea,
+  KanonisRadio,
+  KanonisRadioGroup,
+  KanonisRange,
+  KanonisSwitch,
+  KanonisTextarea,
 } from '../components/secondary-forms.js';
 
-defineComponent('kanonis-textarea', DsTextarea);
-defineComponent('kanonis-switch', DsSwitch);
-defineComponent('kanonis-range', DsRange);
-defineComponent('kanonis-radio-group', DsRadioGroup);
-defineComponent('kanonis-radio', DsRadio);
+defineComponent('kanonis-textarea', KanonisTextarea);
+defineComponent('kanonis-switch', KanonisSwitch);
+defineComponent('kanonis-range', KanonisRange);
+defineComponent('kanonis-radio-group', KanonisRadioGroup);
+defineComponent('kanonis-radio', KanonisRadio);
 
-export { DsRadio, DsRadioGroup, DsRange, DsSwitch, DsTextarea };
+export { KanonisRadio, KanonisRadioGroup, KanonisRange, KanonisSwitch, KanonisTextarea };

@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { a11yStyles, foundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
-import { DsElement, type DsDensity } from '../core/ds-element.js';
+import { KanonisElement, type KanonisDensity } from '../core/kanonis-element.js';
 
-export interface DsTableColumn<Row extends Record<string, unknown> = Record<string, unknown>> {
+export interface KanonisTableColumn<Row extends Record<string, unknown> = Record<string, unknown>> {
   key: keyof Row | string;
   label: string;
   align?: 'start' | 'center' | 'end';
@@ -13,17 +13,17 @@ export interface DsTableColumn<Row extends Record<string, unknown> = Record<stri
   width?: string;
   format?: (value: unknown, row: Row) => unknown;
 }
-export interface DsSortDetail {
+export interface KanonisSortDetail {
   key: string;
   direction: 'ascending' | 'descending';
 }
-export interface DsRowSelectDetail<Row = Record<string, unknown>> {
+export interface KanonisRowSelectDetail<Row = Record<string, unknown>> {
   row: Row;
   index: number;
   key: string;
 }
 
-export class DsDataTable extends DsElement {
+export class KanonisDataTable extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     a11yStyles,
@@ -201,7 +201,7 @@ export class DsDataTable extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) columns: DsTableColumn[] = [];
+  @property({ attribute: false }) columns: KanonisTableColumn[] = [];
   @property({ attribute: false }) rows: Record<string, unknown>[] = [];
   @property() caption = '';
   @property() label = 'Data table';
@@ -217,7 +217,7 @@ export class DsDataTable extends DsElement {
   @property({ type: Number }) page = 1;
   @property({ type: Number, attribute: 'page-size' }) pageSize = 0;
   @property({ type: Number, attribute: 'total-rows' }) totalRows = 0;
-  @property({ reflect: true }) density: DsDensity = 'comfortable';
+  @property({ reflect: true }) density: KanonisDensity = 'comfortable';
   @property({ attribute: 'sort-key' }) sortKey = '';
   @property({ attribute: 'sort-direction' }) sortDirection: 'ascending' | 'descending' =
     'ascending';
@@ -250,14 +250,14 @@ export class DsDataTable extends DsElement {
     this.announcement = '';
     globalThis.setTimeout(() => (this.announcement = message), 20);
   }
-  private sort(column: DsTableColumn) {
+  private sort(column: KanonisTableColumn) {
     if (!column.sortable || this.busy) return;
     const key = String(column.key);
     this.sortDirection =
       this.sortKey === key && this.sortDirection === 'ascending' ? 'descending' : 'ascending';
     this.sortKey = key;
     this.announce(`${column.label} sorted ${this.sortDirection}`);
-    this.emit<DsSortDetail>('kanonis-sort', { key, direction: this.sortDirection });
+    this.emit<KanonisSortDetail>('kanonis-sort', { key, direction: this.sortDirection });
   }
   private sortedRows() {
     const rows = this.rows.map((row, index) => ({ row, index }));
@@ -282,7 +282,7 @@ export class DsDataTable extends DsElement {
     if (!this.selectable || this.busy) return;
     const key = String(row[this.rowKey] ?? index);
     this.selectedKey = key;
-    this.emit<DsRowSelectDetail>('kanonis-row-select', { row, index, key });
+    this.emit<KanonisRowSelectDetail>('kanonis-row-select', { row, index, key });
   }
   private rowKeydown(event: KeyboardEvent, row: Record<string, unknown>, index: number) {
     if (!this.selectable || this.busy || event.target !== event.currentTarget) return;

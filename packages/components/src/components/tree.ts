@@ -1,11 +1,11 @@
 import { css, html, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export interface DsTreeActivateDetail { value: string; }
+export interface KanonisTreeActivateDetail { value: string; }
 
-export class DsTree extends DsElement {
+export class KanonisTree extends KanonisElement {
   static override styles: CSSResultGroup = [foundationStyles, css`
     :host { display: block; }
     [role='tree'] { display: grid; gap: var(--kanonis-space-1); }
@@ -16,7 +16,7 @@ export class DsTree extends DsElement {
   }
 }
 
-export class DsTreeItem extends DsElement {
+export class KanonisTreeItem extends KanonisElement {
   static override styles: CSSResultGroup = [foundationStyles, css`
     :host { display: block; min-width: 0; }
     .row { display: flex; align-items: center; min-height: 2.5rem; border-radius: var(--kanonis-radius-md); }
@@ -50,7 +50,7 @@ export class DsTreeItem extends DsElement {
   private activate(event: Event): void {
     if (this.disabled) { event.preventDefault(); return; }
     if (this.hasChildren && !this.href) this.expanded = !this.expanded;
-    this.emit<DsTreeActivateDetail>('kanonis-tree-activate', { value: this.value });
+    this.emit<KanonisTreeActivateDetail>('kanonis-tree-activate', { value: this.value });
   }
   private keydown(event: KeyboardEvent): void {
     if (event.key === 'ArrowRight' && this.hasChildren && !this.expanded) { event.preventDefault(); this.expanded = true; }

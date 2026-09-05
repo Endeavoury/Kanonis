@@ -16,7 +16,7 @@ describe('React adapter', () => {
         React.createElement(
           React.Fragment,
           null,
-          React.createElement(Input, { label: 'Name', value: 'React value', onDsChange: onChange }),
+          React.createElement(Input, { label: 'Name', value: 'React value', onKanonisChange: onChange }),
           React.createElement(Button, { variant: 'secondary' }, 'Save'),
         ),
       );
@@ -40,7 +40,7 @@ describe('React adapter', () => {
     const onThemeChange = vi.fn();
     await act(async () => {
       root.render(
-        React.createElement(ThemeToggle, { theme: 'dark', onDsThemeChange: onThemeChange }),
+        React.createElement(ThemeToggle, { theme: 'dark', onKanonisThemeChange: onThemeChange }),
       );
     });
     const toggle = container.querySelector('kanonis-theme-toggle')!;
@@ -59,7 +59,7 @@ describe('React adapter', () => {
       root.render(React.createElement(React.Fragment, null,
         React.createElement(DescriptionList, { items: [{ term: 'Node', value: 'Commercial' }] }),
         React.createElement(Tree, { label: 'Systems' },
-          React.createElement(TreeItem, { label: 'Commercial', value: 'commercial', onDsTreeActivate: onActivate })),
+          React.createElement(TreeItem, { label: 'Commercial', value: 'commercial', onKanonisTreeActivate: onActivate })),
       ));
     });
     const descriptions = container.querySelector('kanonis-description-list')!;

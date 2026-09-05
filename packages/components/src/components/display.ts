@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact, surfaceStyles } from '@endeavoury/kanonis-styles';
-import { DsElement, type DsTone } from '../core/ds-element.js';
+import { KanonisElement, type KanonisTone } from '../core/kanonis-element.js';
 
-export class DsBadge extends DsElement {
+export class KanonisBadge extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -48,13 +48,13 @@ export class DsBadge extends DsElement {
       }
     `,
   ];
-  @property({ reflect: true }) tone: DsTone = 'neutral';
+  @property({ reflect: true }) tone: KanonisTone = 'neutral';
   protected override render() {
     return html`<span class="badge" part="badge"><slot></slot></span>`;
   }
 }
 
-export class DsStatusBadge extends DsElement {
+export class KanonisStatusBadge extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -95,7 +95,7 @@ export class DsStatusBadge extends DsElement {
       }
     `,
   ];
-  @property({ reflect: true }) tone: DsTone = 'neutral';
+  @property({ reflect: true }) tone: KanonisTone = 'neutral';
   protected override render() {
     return html`<span class="status" part="status"
       ><span class="dot" part="indicator" aria-hidden="true"></span><slot></slot
@@ -103,7 +103,7 @@ export class DsStatusBadge extends DsElement {
   }
 }
 
-export class DsAvatar extends DsElement {
+export class KanonisAvatar extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -163,7 +163,7 @@ export class DsAvatar extends DsElement {
   }
 }
 
-export class DsCard extends DsElement {
+export class KanonisCard extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -228,7 +228,7 @@ export class DsCard extends DsElement {
   }
 }
 
-export class DsPanel extends DsElement {
+export class KanonisPanel extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -290,7 +290,7 @@ export class DsPanel extends DsElement {
   }
 }
 
-export class DsMetric extends DsElement {
+export class KanonisMetric extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -401,7 +401,7 @@ export class DsMetric extends DsElement {
   @property() label = '';
   @property() value = '';
   @property() detail = '';
-  @property({ reflect: true }) tone: DsTone = 'neutral';
+  @property({ reflect: true }) tone: KanonisTone = 'neutral';
   protected override render() {
     return html`<article class="metric surface" part="metric">
       <span class="label" part="label">${this.label}</span
@@ -411,12 +411,12 @@ export class DsMetric extends DsElement {
   }
 }
 
-export interface DsDescriptionItem {
+export interface KanonisDescriptionItem {
   term: string;
   value: string;
 }
 
-export class DsDescriptionList extends DsElement {
+export class KanonisDescriptionList extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -428,7 +428,7 @@ export class DsDescriptionList extends DsElement {
       @media ${mediaCompact} { dl { grid-template-columns: 1fr; } }
     `,
   ];
-  @property({ attribute: false }) items: DsDescriptionItem[] = [];
+  @property({ attribute: false }) items: KanonisDescriptionItem[] = [];
   @property({ type: Number, reflect: true }) columns = 2;
   protected override render() {
     return html`<dl part="list" style=${`--kanonis-description-columns:${Math.max(1, Math.min(this.columns, 4))}`}>
@@ -437,7 +437,7 @@ export class DsDescriptionList extends DsElement {
   }
 }
 
-export class DsCodeBlock extends DsElement {
+export class KanonisCodeBlock extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

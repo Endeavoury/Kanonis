@@ -1,8 +1,8 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, query, queryAssignedElements, state } from 'lit/decorators.js';
 import { formFoundationStyles, foundationStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
-import type { DsCheckedChangeDetail, DsValueChangeDetail } from './forms.js';
+import { KanonisElement } from '../core/kanonis-element.js';
+import type { KanonisCheckedChangeDetail, KanonisValueChangeDetail } from './forms.js';
 
 const feedback = (error: string, helpText: string) =>
   error
@@ -11,7 +11,7 @@ const feedback = (error: string, helpText: string) =>
       ? html`<p id="help" class="help" part="help">${helpText}</p>`
       : nothing;
 
-export class DsTextarea extends DsElement {
+export class KanonisTextarea extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     formFoundationStyles,
@@ -89,12 +89,12 @@ export class DsTextarea extends DsElement {
   private input(event: Event) {
     this.value = (event.target as HTMLTextAreaElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-input', { value: this.value });
   }
 
   private change() {
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value: this.value });
   }
 
   protected override updated() {
@@ -131,7 +131,7 @@ export class DsTextarea extends DsElement {
   }
 }
 
-export class DsSwitch extends DsElement {
+export class KanonisSwitch extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     formFoundationStyles,
@@ -242,7 +242,7 @@ export class DsSwitch extends DsElement {
   private changed(event: Event) {
     this.checked = (event.target as HTMLInputElement).checked;
     this.syncForm();
-    this.emit<DsCheckedChangeDetail>('kanonis-change', { checked: this.checked, value: this.value });
+    this.emit<KanonisCheckedChangeDetail>('kanonis-change', { checked: this.checked, value: this.value });
   }
 
   protected override updated() {
@@ -267,7 +267,7 @@ export class DsSwitch extends DsElement {
   }
 }
 
-export class DsRange extends DsElement {
+export class KanonisRange extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     formFoundationStyles,
@@ -335,11 +335,11 @@ export class DsRange extends DsElement {
   private input(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-input', { value: this.value });
   }
 
   private change() {
-    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value: this.value });
   }
 
   protected override updated() {
@@ -368,11 +368,11 @@ export class DsRange extends DsElement {
   }
 }
 
-interface DsRadioActivateDetail {
+interface KanonisRadioActivateDetail {
   value: string;
 }
 
-export class DsRadio extends DsElement {
+export class KanonisRadio extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -441,7 +441,7 @@ export class DsRadio extends DsElement {
 
   private readonly activate = () => {
     if (!this.disabled)
-      this.emit<DsRadioActivateDetail>('kanonis-radio-activate', { value: this.value });
+      this.emit<KanonisRadioActivateDetail>('kanonis-radio-activate', { value: this.value });
   };
 
   private readonly keydown = (event: KeyboardEvent) => {
@@ -456,7 +456,7 @@ export class DsRadio extends DsElement {
   }
 }
 
-export class DsRadioGroup extends DsElement {
+export class KanonisRadioGroup extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     formFoundationStyles,
@@ -477,8 +477,8 @@ export class DsRadioGroup extends DsElement {
   ];
 
   readonly internals: ElementInternals;
-  @queryAssignedElements({ selector: 'kanonis-radio' }) private assignedRadios!: DsRadio[];
-  @state() private radios: DsRadio[] = [];
+  @queryAssignedElements({ selector: 'kanonis-radio' }) private assignedRadios!: KanonisRadio[];
+  @state() private radios: KanonisRadio[] = [];
   @property() label = '';
   @property() name = '';
   @property() value = '';
@@ -531,11 +531,11 @@ export class DsRadioGroup extends DsElement {
     if (!radio || radio.disabled || this.disabled || value === this.value) return;
     this.value = value;
     this.sync();
-    this.emit<DsValueChangeDetail>('kanonis-change', { value });
+    this.emit<KanonisValueChangeDetail>('kanonis-change', { value });
     if (focus) radio.focus();
   }
 
-  private activated(event: CustomEvent<DsRadioActivateDetail>) {
+  private activated(event: CustomEvent<KanonisRadioActivateDetail>) {
     this.select(event.detail.value);
   }
 

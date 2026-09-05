@@ -8,9 +8,9 @@ import {
   mediaWide,
   surfaceStyles,
 } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export class DsFilterBar extends DsElement {
+export class KanonisFilterBar extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -71,7 +71,7 @@ export class DsFilterBar extends DsElement {
   }
 }
 
-export class DsKpiGrid extends DsElement {
+export class KanonisKpiGrid extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

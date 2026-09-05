@@ -1,15 +1,15 @@
 import { css, html, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, queryAssignedElements, state } from 'lit/decorators.js';
 import { foundationStyles, surfaceStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export type DsTheme = 'light' | 'dark';
+export type KanonisTheme = 'light' | 'dark';
 
-export interface DsThemeChangeDetail {
-  theme: DsTheme;
+export interface KanonisThemeChangeDetail {
+  theme: KanonisTheme;
 }
 
-export class DsThemeToggle extends DsElement {
+export class KanonisThemeToggle extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -52,7 +52,7 @@ export class DsThemeToggle extends DsElement {
     `,
   ];
 
-  @property({ reflect: true }) theme: DsTheme = 'dark';
+  @property({ reflect: true }) theme: KanonisTheme = 'dark';
   @property({ attribute: 'light-label' }) lightLabel = 'Switch to light theme';
   @property({ attribute: 'dark-label' }) darkLabel = 'Switch to dark theme';
   @property({ attribute: 'storage-key' }) storageKey = '';
@@ -70,7 +70,7 @@ export class DsThemeToggle extends DsElement {
 
   protected override updated(changed: PropertyValues<this>) {
     if (!changed.has('theme') && !changed.has('storageKey')) return;
-    this.ownerDocument.documentElement.dataset['dsTheme'] = this.theme;
+    this.ownerDocument.documentElement.dataset['kanonisTheme'] = this.theme;
     if (!this.storageKey) return;
     try {
       localStorage.setItem(this.storageKey, this.theme);
@@ -81,7 +81,7 @@ export class DsThemeToggle extends DsElement {
 
   private toggle() {
     this.theme = this.theme === 'dark' ? 'light' : 'dark';
-    this.emit<DsThemeChangeDetail>('kanonis-theme-change', { theme: this.theme });
+    this.emit<KanonisThemeChangeDetail>('kanonis-theme-change', { theme: this.theme });
   }
 
   protected override render() {
@@ -98,11 +98,11 @@ export class DsThemeToggle extends DsElement {
   }
 }
 
-export interface DsTabChangeDetail {
+export interface KanonisTabChangeDetail {
   value: string;
 }
 
-export class DsTab extends DsElement {
+export class KanonisTab extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -131,7 +131,7 @@ export class DsTab extends DsElement {
 
 let tabsId = 0;
 
-export class DsTabs extends DsElement {
+export class KanonisTabs extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -184,8 +184,8 @@ export class DsTabs extends DsElement {
 
   @property({ reflect: true }) value = '';
   @property() label = 'Sections';
-  @queryAssignedElements({ selector: 'kanonis-tab' }) private assignedTabs!: DsTab[];
-  @state() private tabs: DsTab[] = [];
+  @queryAssignedElements({ selector: 'kanonis-tab' }) private assignedTabs!: KanonisTab[];
+  @state() private tabs: KanonisTab[] = [];
   private readonly instanceId = `kanonis-tabs-${++tabsId}`;
 
   private syncTabs() {
@@ -205,10 +205,10 @@ export class DsTabs extends DsElement {
     if (changed.has('value')) this.syncTabState();
   }
 
-  private select(tab: DsTab, focus = false) {
+  private select(tab: KanonisTab, focus = false) {
     if (tab.disabled || tab.value === this.value) return;
     this.value = tab.value;
-    this.emit<DsTabChangeDetail>('kanonis-tab-change', { value: tab.value });
+    this.emit<KanonisTabChangeDetail>('kanonis-tab-change', { value: tab.value });
     if (focus)
       void this.updateComplete.then(() =>
         this.shadowRoot
@@ -265,11 +265,11 @@ export class DsTabs extends DsElement {
   }
 }
 
-export interface DsDisclosureChangeDetail {
+export interface KanonisDisclosureChangeDetail {
   open: boolean;
 }
 
-export class DsDisclosure extends DsElement {
+export class KanonisDisclosure extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -334,7 +334,7 @@ export class DsDisclosure extends DsElement {
     const open = (event.currentTarget as HTMLDetailsElement).open;
     if (open === this.open) return;
     this.open = open;
-    this.emit<DsDisclosureChangeDetail>('kanonis-disclosure-change', { open: this.open });
+    this.emit<KanonisDisclosureChangeDetail>('kanonis-disclosure-change', { open: this.open });
   }
 
   protected override render() {

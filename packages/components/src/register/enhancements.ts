@@ -1,45 +1,45 @@
-import { defineComponent } from '../core/ds-element.js';
+import { defineComponent } from '../core/kanonis-element.js';
 import {
-  DsActionBar,
-  DsBrandMark,
-  DsChip,
-  DsIllustration,
-  DsInputGroup,
-  DsLiveRegion,
-  DsReorderItem,
-  DsReorderList,
-  DsSegment,
-  DsSegmentedControl,
-  DsSplitButton,
+  KanonisActionBar,
+  KanonisBrandMark,
+  KanonisChip,
+  KanonisIllustration,
+  KanonisInputGroup,
+  KanonisLiveRegion,
+  KanonisReorderItem,
+  KanonisReorderList,
+  KanonisSegment,
+  KanonisSegmentedControl,
+  KanonisSplitButton,
 } from '../components/enhancements.js';
 
-defineComponent('kanonis-live-region', DsLiveRegion);
-defineComponent('kanonis-segmented-control', DsSegmentedControl);
-defineComponent('kanonis-segment', DsSegment);
-defineComponent('kanonis-action-bar', DsActionBar);
-defineComponent('kanonis-split-button', DsSplitButton);
-defineComponent('kanonis-input-group', DsInputGroup);
-defineComponent('kanonis-chip', DsChip);
-defineComponent('kanonis-illustration', DsIllustration);
-defineComponent('kanonis-brand-mark', DsBrandMark);
-defineComponent('kanonis-reorder-list', DsReorderList);
-defineComponent('kanonis-reorder-item', DsReorderItem);
+defineComponent('kanonis-live-region', KanonisLiveRegion);
+defineComponent('kanonis-segmented-control', KanonisSegmentedControl);
+defineComponent('kanonis-segment', KanonisSegment);
+defineComponent('kanonis-action-bar', KanonisActionBar);
+defineComponent('kanonis-split-button', KanonisSplitButton);
+defineComponent('kanonis-input-group', KanonisInputGroup);
+defineComponent('kanonis-chip', KanonisChip);
+defineComponent('kanonis-illustration', KanonisIllustration);
+defineComponent('kanonis-brand-mark', KanonisBrandMark);
+defineComponent('kanonis-reorder-list', KanonisReorderList);
+defineComponent('kanonis-reorder-item', KanonisReorderItem);
 
 export {
-  DsActionBar,
-  DsBrandMark,
-  DsChip,
-  DsIllustration,
-  DsInputGroup,
-  DsLiveRegion,
-  DsReorderItem,
-  DsReorderList,
-  DsSegment,
-  DsSegmentedControl,
-  DsSplitButton,
+  KanonisActionBar,
+  KanonisBrandMark,
+  KanonisChip,
+  KanonisIllustration,
+  KanonisInputGroup,
+  KanonisLiveRegion,
+  KanonisReorderItem,
+  KanonisReorderList,
+  KanonisSegment,
+  KanonisSegmentedControl,
+  KanonisSplitButton,
 };
 export type {
-  DsDismissValueDetail,
-  DsReorderDetail,
-  DsValueDetail,
+  KanonisDismissValueDetail,
+  KanonisReorderDetail,
+  KanonisValueDetail,
 } from '../components/enhancements.js';

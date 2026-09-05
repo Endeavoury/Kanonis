@@ -1,5 +1,5 @@
-import { defineComponent } from '../core/ds-element.js';
-import { DsFilterBar, DsKpiGrid } from '../components/patterns.js';
-defineComponent('kanonis-filter-bar', DsFilterBar);
-defineComponent('kanonis-kpi-grid', DsKpiGrid);
-export { DsFilterBar, DsKpiGrid };
+import { defineComponent } from '../core/kanonis-element.js';
+import { KanonisFilterBar, KanonisKpiGrid } from '../components/patterns.js';
+defineComponent('kanonis-filter-bar', KanonisFilterBar);
+defineComponent('kanonis-kpi-grid', KanonisKpiGrid);
+export { KanonisFilterBar, KanonisKpiGrid };

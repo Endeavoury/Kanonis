@@ -2,33 +2,33 @@ import { html } from 'lit';
 import { fireEvent } from '@testing-library/dom';
 import { describe, expect, it, vi } from 'vitest';
 import type {
-  DsCheckbox,
-  DsAppShell,
-  DsDataTable,
-  DsInput,
-  DsMenu,
-  DsPagination,
-  DsPane,
-  DsPaneContent,
-  DsPaneGroup,
-  DsPaneStack,
-  DsPaneWindow,
-  DsRadioGroup,
-  DsSelect,
-  DsSidebarItem,
-  DsTabs,
+  KanonisCheckbox,
+  KanonisAppShell,
+  KanonisDataTable,
+  KanonisInput,
+  KanonisMenu,
+  KanonisPagination,
+  KanonisPane,
+  KanonisPaneContent,
+  KanonisPaneGroup,
+  KanonisPaneStack,
+  KanonisPaneWindow,
+  KanonisRadioGroup,
+  KanonisSelect,
+  KanonisSidebarItem,
+  KanonisTabs,
 } from '@endeavoury/kanonis/classes';
-import { DsBulkActions, DsCombobox, DsFilterBuilder } from '@endeavoury/kanonis/classes';
-import type { DsCommandPalette, DsWorkspaceTabs } from '@endeavoury/kanonis/classes';
-import type { DsWorkspace, DsWorkspaceHeader } from '@endeavoury/kanonis/classes';
-import type { DsDatePicker, DsStepper, DsTaskList } from '@endeavoury/kanonis/classes';
-import type { DsPermissionMatrix, DsJsonEditor, DsDiffViewer } from '@endeavoury/kanonis/classes';
+import { KanonisBulkActions, KanonisCombobox, KanonisFilterBuilder } from '@endeavoury/kanonis/classes';
+import type { KanonisCommandPalette, KanonisWorkspaceTabs } from '@endeavoury/kanonis/classes';
+import type { KanonisWorkspace, KanonisWorkspaceHeader } from '@endeavoury/kanonis/classes';
+import type { KanonisDatePicker, KanonisStepper, KanonisTaskList } from '@endeavoury/kanonis/classes';
+import type { KanonisPermissionMatrix, KanonisJsonEditor, KanonisDiffViewer } from '@endeavoury/kanonis/classes';
 import type {
-  DsChip,
-  DsElement,
-  DsReorderList,
-  DsSegmentedControl,
-  DsSplitButton,
+  KanonisChip,
+  KanonisElement,
+  KanonisReorderList,
+  KanonisSegmentedControl,
+  KanonisSplitButton,
 } from '@endeavoury/kanonis/classes';
 
 const mount = async <T extends HTMLElement>(element: T): Promise<T> => {
@@ -84,7 +84,7 @@ describe('actions and forms', () => {
   });
 
   it('emits composed typed input and change events', async () => {
-    const input = (await mount(document.createElement('kanonis-input'))) as DsInput;
+    const input = (await mount(document.createElement('kanonis-input'))) as KanonisInput;
     input.label = 'Account name';
     const inputListener = vi.fn();
     const changeListener = vi.fn();
@@ -105,7 +105,7 @@ describe('actions and forms', () => {
   });
 
   it('binds structured select options through a JavaScript property', async () => {
-    const select = (await mount(document.createElement('kanonis-select'))) as DsSelect;
+    const select = (await mount(document.createElement('kanonis-select'))) as KanonisSelect;
     select.options = [
       { label: 'Personal', value: 'personal' },
       { label: 'Business', value: 'business' },
@@ -118,7 +118,7 @@ describe('actions and forms', () => {
   });
 
   it('toggles a checkbox once from label or keyboard activation', async () => {
-    const checkbox = (await mount(document.createElement('kanonis-checkbox'))) as DsCheckbox;
+    const checkbox = (await mount(document.createElement('kanonis-checkbox'))) as KanonisCheckbox;
     const listener = vi.fn();
     checkbox.addEventListener('kanonis-change', listener);
     await checkbox.updateComplete;
@@ -133,7 +133,7 @@ describe('actions and forms', () => {
 
 describe('data and navigation', () => {
   it('sorts rows and announces sorting through a custom event', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     table.columns = [{ key: 'amount', label: 'Amount', sortable: true }];
     table.rows = [
       { id: 'b', amount: 20 },
@@ -151,7 +151,7 @@ describe('data and navigation', () => {
   });
 
   it('selects rows by pointer and keyboard with the configured key', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     table.columns = [{ key: 'name', label: 'Name' }];
     table.rows = [{ id: 'account-1', name: 'Current' }];
     table.selectable = true;
@@ -164,7 +164,7 @@ describe('data and navigation', () => {
   });
 
   it('sorts signed decimal numbers correctly and keeps missing values last', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     table.columns = [{ key: 'amount', label: 'Amount', sortable: true, numeric: true }];
     table.rows = [3.12, -2, null, 3.5, -10].map((amount) => ({ amount }));
     const values = () =>
@@ -180,7 +180,7 @@ describe('data and navigation', () => {
   });
 
   it('preserves fallback row identity across sorting and pagination', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     table.columns = [{ key: 'name', label: 'Name', sortable: true }];
     table.rows = [{ name: 'Zulu' }, { name: 'Alpha' }, { name: 'Beta' }];
     table.selectable = true;
@@ -201,7 +201,7 @@ describe('data and navigation', () => {
   });
 
   it('clamps pages after filtering and reports the visible range', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     table.columns = [{ key: 'name', label: 'Name' }];
     table.rows = ['A', 'B', 'C', 'D', 'E'].map((name) => ({ name }));
     table.pageSize = 2;
@@ -220,7 +220,7 @@ describe('data and navigation', () => {
   });
 
   it('keeps inline actions independent from row activation and blocks changes while busy', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     const action = vi.fn();
     const selection = vi.fn();
     table.columns = [
@@ -254,7 +254,7 @@ describe('data and navigation', () => {
   });
 
   it('emits navigation activation across the shadow boundary', async () => {
-    const item = (await mount(document.createElement('kanonis-sidebar-item'))) as DsSidebarItem;
+    const item = (await mount(document.createElement('kanonis-sidebar-item'))) as KanonisSidebarItem;
     item.value = 'ledger';
     const listener = vi.fn();
     item.addEventListener('kanonis-activate', listener);
@@ -286,7 +286,7 @@ describe('data and navigation', () => {
 
 describe('display foundations', () => {
   it('provides enterprise workflow primitives with composed events', async () => {
-    const filters = (await mount(document.createElement('kanonis-filter-builder'))) as DsFilterBuilder;
+    const filters = (await mount(document.createElement('kanonis-filter-builder'))) as KanonisFilterBuilder;
     filters.fields = [{ key: 'status', label: 'Status' }];
     const listener = vi.fn();
     filters.addEventListener('kanonis-filter-change', listener);
@@ -295,7 +295,7 @@ describe('display foundations', () => {
     expect(listener).toHaveBeenCalled();
     expect(filters.rules).toHaveLength(1);
 
-    const bulk = (await mount(document.createElement('kanonis-bulk-actions'))) as DsBulkActions;
+    const bulk = (await mount(document.createElement('kanonis-bulk-actions'))) as KanonisBulkActions;
     bulk.count = 3;
     const clear = vi.fn();
     bulk.addEventListener('kanonis-clear-selection', clear);
@@ -303,7 +303,7 @@ describe('display foundations', () => {
     fireEvent.click([...bulk.shadowRoot!.querySelectorAll('button')].at(-1)!);
     expect(clear).toHaveBeenCalledOnce();
 
-    const combo = (await mount(document.createElement('kanonis-combobox'))) as DsCombobox;
+    const combo = (await mount(document.createElement('kanonis-combobox'))) as KanonisCombobox;
     combo.options = [{ label: 'Platform', value: 'platform' }];
     await combo.updateComplete;
     const comboInput = combo.shadowRoot!.querySelector('input')!;
@@ -314,7 +314,7 @@ describe('display foundations', () => {
   });
 
   it('supports P1 command and workspace interactions', async () => {
-    const palette = (await mount(document.createElement('kanonis-command-palette'))) as DsCommandPalette;
+    const palette = (await mount(document.createElement('kanonis-command-palette'))) as KanonisCommandPalette;
     palette.commands = [{ id: 'create', label: 'Create project' }];
     palette.open = true;
     const selected = vi.fn();
@@ -323,7 +323,7 @@ describe('display foundations', () => {
     fireEvent.keyDown(palette.shadowRoot!.querySelector('input')!, { key: 'Enter' });
     expect(selected).toHaveBeenCalledOnce();
 
-    const tabs = (await mount(document.createElement('kanonis-workspace-tabs'))) as DsWorkspaceTabs;
+    const tabs = (await mount(document.createElement('kanonis-workspace-tabs'))) as KanonisWorkspaceTabs;
     tabs.tabs = [{ id: 'one', label: 'One', closable: true }];
     tabs.value = 'one';
     const closed = vi.fn();
@@ -334,7 +334,7 @@ describe('display foundations', () => {
   });
 
   it('supports P2 workflow state changes', async () => {
-    const date = (await mount(document.createElement('kanonis-date-picker'))) as DsDatePicker;
+    const date = (await mount(document.createElement('kanonis-date-picker'))) as KanonisDatePicker;
     const changed = vi.fn();
     date.addEventListener('kanonis-change', changed);
     await date.updateComplete;
@@ -343,7 +343,7 @@ describe('display foundations', () => {
     fireEvent.change(control);
     expect(changed).toHaveBeenCalledOnce();
 
-    const stepper = (await mount(document.createElement('kanonis-stepper'))) as DsStepper;
+    const stepper = (await mount(document.createElement('kanonis-stepper'))) as KanonisStepper;
     stepper.steps = [
       { id: 'one', label: 'One' },
       { id: 'two', label: 'Two' },
@@ -354,7 +354,7 @@ describe('display foundations', () => {
     fireEvent.click(stepper.shadowRoot!.querySelectorAll('button')[1]!);
     expect(stepChanged).toHaveBeenCalledOnce();
 
-    const tasks = (await mount(document.createElement('kanonis-task-list'))) as DsTaskList;
+    const tasks = (await mount(document.createElement('kanonis-task-list'))) as KanonisTaskList;
     tasks.tasks = [{ id: 'task', title: 'Review', completed: false }];
     const taskChanged = vi.fn();
     tasks.addEventListener('kanonis-task-change', taskChanged);
@@ -366,7 +366,7 @@ describe('display foundations', () => {
   it('supports P3 governance and configuration interactions', async () => {
     const matrix = (await mount(
       document.createElement('kanonis-permission-matrix'),
-    )) as DsPermissionMatrix;
+    )) as KanonisPermissionMatrix;
     matrix.roles = [{ id: 'admin', label: 'Admin' }];
     matrix.permissions = [{ id: 'read', label: 'Read' }];
     const permissionChanged = vi.fn();
@@ -375,7 +375,7 @@ describe('display foundations', () => {
     fireEvent.click(matrix.shadowRoot!.querySelector('input')!);
     expect(permissionChanged).toHaveBeenCalledOnce();
 
-    const editor = (await mount(document.createElement('kanonis-json-editor'))) as DsJsonEditor;
+    const editor = (await mount(document.createElement('kanonis-json-editor'))) as KanonisJsonEditor;
     editor.value = '{"valid":true}';
     await editor.updateComplete;
     expect(editor.shadowRoot!.querySelector('[role="alert"]')).toBeNull();
@@ -383,14 +383,14 @@ describe('display foundations', () => {
     await editor.updateComplete;
     expect(editor.shadowRoot!.querySelector('[role="alert"]')).not.toBeNull();
 
-    const diff = (await mount(document.createElement('kanonis-diff-viewer'))) as DsDiffViewer;
+    const diff = (await mount(document.createElement('kanonis-diff-viewer'))) as KanonisDiffViewer;
     diff.lines = [{ type: 'added', text: 'new value' }];
     await diff.updateComplete;
     expect(diff.shadowRoot!.querySelector('[data-added]')).not.toBeNull();
   });
 
   it('keeps shell chrome outside the scrollable workspace and supports pane mode', async () => {
-    const shell = (await mount(document.createElement('kanonis-app-shell'))) as DsAppShell;
+    const shell = (await mount(document.createElement('kanonis-app-shell'))) as KanonisAppShell;
     const sidebar = document.createElement('kanonis-sidebar');
     sidebar.slot = 'sidebar';
     const header = document.createElement('div');
@@ -410,7 +410,7 @@ describe('display foundations', () => {
   });
 
   it('collapses and reopens sidebar navigation with an accessible persistent control', async () => {
-    const shell = (await mount(document.createElement('kanonis-app-shell'))) as DsAppShell;
+    const shell = (await mount(document.createElement('kanonis-app-shell'))) as KanonisAppShell;
     expect(shell.shadowRoot!.querySelector('.sidebar-toggle')).toBeNull();
     shell.innerHTML =
       '<kanonis-sidebar slot="sidebar"><kanonis-sidebar-item>Overview</kanonis-sidebar-item></kanonis-sidebar>';
@@ -440,10 +440,10 @@ describe('display foundations', () => {
   });
 
   it('composes fixed pane groups with explicit positions and scroll ownership', async () => {
-    const group = (await mount(document.createElement('kanonis-pane-group'))) as DsPaneGroup;
-    const left = document.createElement('kanonis-pane') as DsPane;
-    const center = document.createElement('kanonis-pane') as DsPane;
-    const content = document.createElement('kanonis-pane-content') as DsPaneContent;
+    const group = (await mount(document.createElement('kanonis-pane-group'))) as KanonisPaneGroup;
+    const left = document.createElement('kanonis-pane') as KanonisPane;
+    const center = document.createElement('kanonis-pane') as KanonisPane;
+    const content = document.createElement('kanonis-pane-content') as KanonisPaneContent;
     left.position = 'left';
     center.position = 'center';
     content.scrollable = true;
@@ -461,10 +461,10 @@ describe('display foundations', () => {
   });
 
   it('keeps the workspace header outside a bounded pane window and supports pane stacks', async () => {
-    const workspace = (await mount(document.createElement('kanonis-workspace'))) as DsWorkspace;
-    const header = document.createElement('kanonis-workspace-header') as DsWorkspaceHeader;
-    const window = document.createElement('kanonis-pane-window') as DsPaneWindow;
-    const stack = document.createElement('kanonis-pane-stack') as DsPaneStack;
+    const workspace = (await mount(document.createElement('kanonis-workspace'))) as KanonisWorkspace;
+    const header = document.createElement('kanonis-workspace-header') as KanonisWorkspaceHeader;
+    const window = document.createElement('kanonis-pane-window') as KanonisPaneWindow;
+    const stack = document.createElement('kanonis-pane-stack') as KanonisPaneStack;
     header.slot = 'header';
     header.heading = 'Project Alpha';
     header.innerHTML =
@@ -552,7 +552,7 @@ describe('display foundations', () => {
 
 describe('maturity additions', () => {
   it('supports roving segmented selection', async () => {
-    const control = document.createElement('kanonis-segmented-control') as DsSegmentedControl;
+    const control = document.createElement('kanonis-segmented-control') as KanonisSegmentedControl;
     control.value = 'month';
     for (const [value, label] of [
       ['week', 'Week'],
@@ -567,7 +567,7 @@ describe('maturity additions', () => {
     const listener = vi.fn();
     control.addEventListener('kanonis-change', listener);
     await mount(control);
-    await Promise.all([...control.children].map((child) => (child as DsElement).updateComplete));
+    await Promise.all([...control.children].map((child) => (child as KanonisElement).updateComplete));
     const year = control.children[2] as HTMLElement;
     fireEvent.click(year.shadowRoot!.querySelector('button')!);
     expect(control.value).toBe('year');
@@ -577,13 +577,13 @@ describe('maturity additions', () => {
   });
 
   it('exposes split-button and chip intent as composed events', async () => {
-    const split = (await mount(document.createElement('kanonis-split-button'))) as DsSplitButton;
+    const split = (await mount(document.createElement('kanonis-split-button'))) as KanonisSplitButton;
     const activate = vi.fn();
     split.addEventListener('kanonis-activate', activate);
     fireEvent.click(split.shadowRoot!.querySelector('.primary')!);
     expect(activate).toHaveBeenCalledOnce();
 
-    const chip = (await mount(document.createElement('kanonis-chip'))) as DsChip;
+    const chip = (await mount(document.createElement('kanonis-chip'))) as KanonisChip;
     chip.value = 'open';
     chip.label = 'Open';
     chip.dismissible = true;
@@ -599,7 +599,7 @@ describe('maturity additions', () => {
   });
 
   it('offers a keyboard-operable alternative to drag reordering', async () => {
-    const list = document.createElement('kanonis-reorder-list') as DsReorderList;
+    const list = document.createElement('kanonis-reorder-list') as KanonisReorderList;
     for (const value of ['one', 'two', 'three']) {
       const item = document.createElement('kanonis-reorder-item');
       item.value = value;
@@ -610,7 +610,7 @@ describe('maturity additions', () => {
     const listener = vi.fn();
     list.addEventListener('kanonis-reorder', listener);
     await mount(list);
-    await Promise.all([...list.children].map((child) => (child as DsElement).updateComplete));
+    await Promise.all([...list.children].map((child) => (child as KanonisElement).updateComplete));
     const second = list.children[1] as HTMLElement;
     fireEvent.click(second.shadowRoot!.querySelector('button')!);
     expect([...list.children].map((item) => (item as HTMLElement).getAttribute('value'))).toEqual([
@@ -626,7 +626,7 @@ describe('maturity additions', () => {
   });
 
   it('announces data sorting, loading, and paging while retaining table semantics', async () => {
-    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as KanonisDataTable;
     table.label = 'Projects';
     table.description = 'Active projects by owner';
     table.columns = [
@@ -663,12 +663,12 @@ describe('interaction and workflow components', () => {
     await toggle.updateComplete;
 
     expect(toggle.theme).toBe('light');
-    expect(document.documentElement.dataset.dsTheme).toBe('light');
+    expect(document.documentElement.dataset.kanonisTheme).toBe('light');
     expect(listener.mock.calls[0][0].detail).toEqual({ theme: 'light' });
   });
 
   it('provides automatic keyboard navigation for tabs and skips disabled tabs', async () => {
-    const tabs = document.createElement('kanonis-tabs') as DsTabs;
+    const tabs = document.createElement('kanonis-tabs') as KanonisTabs;
     tabs.value = 'activity';
     for (const [value, label, disabled] of [
       ['activity', 'Activity', false],
@@ -786,7 +786,7 @@ describe('expanded component catalog', () => {
   });
 
   it('provides arrow-key radio selection and skips disabled options', async () => {
-    const group = document.createElement('kanonis-radio-group') as DsRadioGroup;
+    const group = document.createElement('kanonis-radio-group') as KanonisRadioGroup;
     group.value = 'monthly';
     for (const [value, disabled] of [
       ['monthly', false],
@@ -830,7 +830,7 @@ describe('expanded component catalog', () => {
   });
 
   it('closes menus after a typed item selection', async () => {
-    const menu = document.createElement('kanonis-menu') as DsMenu;
+    const menu = document.createElement('kanonis-menu') as KanonisMenu;
     const item = document.createElement('kanonis-menu-item');
     item.value = 'export';
     item.textContent = 'Export';
@@ -850,7 +850,7 @@ describe('expanded component catalog', () => {
   });
 
   it('clamps pagination and emits the selected page', async () => {
-    const pagination = (await mount(document.createElement('kanonis-pagination'))) as DsPagination;
+    const pagination = (await mount(document.createElement('kanonis-pagination'))) as KanonisPagination;
     pagination.page = 3;
     pagination.pages = 8;
     const listener = vi.fn();

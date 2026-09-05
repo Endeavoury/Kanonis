@@ -1,6 +1,6 @@
 import { LitElement } from 'lit';
 
-export class DsElement extends LitElement {
+export class KanonisElement extends LitElement {
   protected emit<T>(name: string, detail: T): CustomEvent<T> {
     const event = new CustomEvent<T>(name, { detail, bubbles: true, composed: true });
     this.dispatchEvent(event);
@@ -26,6 +26,6 @@ export function warnDeprecated(
   );
 }
 
-export type DsTone = 'neutral' | 'accent' | 'success' | 'warning' | 'danger' | 'info';
-export type DsSize = 'small' | 'medium' | 'large';
-export type DsDensity = 'compact' | 'comfortable';
+export type KanonisTone = 'neutral' | 'accent' | 'success' | 'warning' | 'danger' | 'info';
+export type KanonisSize = 'small' | 'medium' | 'large';
+export type KanonisDensity = 'compact' | 'comfortable';

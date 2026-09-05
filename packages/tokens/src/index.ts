@@ -875,8 +875,8 @@ export const breakpoints = {
 } as const;
 
 export const themes = ['light', 'dark', 'system'] as const;
-export type DsTheme = (typeof themes)[number];
+export type KanonisTheme = (typeof themes)[number];
 export const contrasts = ['standard', 'more'] as const;
-export type DsContrast = (typeof contrasts)[number];
+export type KanonisContrast = (typeof contrasts)[number];
 export const brands = ['default', 'finance', 'ontology'] as const;
-export type DsBrand = (typeof brands)[number];
+export type KanonisBrand = (typeof brands)[number];

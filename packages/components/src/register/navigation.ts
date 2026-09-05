@@ -1,30 +1,30 @@
-import { defineComponent } from '../core/ds-element.js';
-import { DsIcon } from '../components/icon.js';
-import { DsAppShell, DsSidebar, DsSidebarItem } from '../components/navigation.js';
+import { defineComponent } from '../core/kanonis-element.js';
+import { KanonisIcon } from '../components/icon.js';
+import { KanonisAppShell, KanonisSidebar, KanonisSidebarItem } from '../components/navigation.js';
 import {
-  DsBreadcrumb,
-  DsBreadcrumbs,
-  DsList,
-  DsListItem,
-  DsPagination,
+  KanonisBreadcrumb,
+  KanonisBreadcrumbs,
+  KanonisList,
+  KanonisListItem,
+  KanonisPagination,
 } from '../components/navigation-extras.js';
-defineComponent('kanonis-icon', DsIcon);
-defineComponent('kanonis-app-shell', DsAppShell);
-defineComponent('kanonis-sidebar', DsSidebar);
-defineComponent('kanonis-sidebar-item', DsSidebarItem);
-defineComponent('kanonis-breadcrumbs', DsBreadcrumbs);
-defineComponent('kanonis-breadcrumb', DsBreadcrumb);
-defineComponent('kanonis-pagination', DsPagination);
-defineComponent('kanonis-list', DsList);
-defineComponent('kanonis-list-item', DsListItem);
+defineComponent('kanonis-icon', KanonisIcon);
+defineComponent('kanonis-app-shell', KanonisAppShell);
+defineComponent('kanonis-sidebar', KanonisSidebar);
+defineComponent('kanonis-sidebar-item', KanonisSidebarItem);
+defineComponent('kanonis-breadcrumbs', KanonisBreadcrumbs);
+defineComponent('kanonis-breadcrumb', KanonisBreadcrumb);
+defineComponent('kanonis-pagination', KanonisPagination);
+defineComponent('kanonis-list', KanonisList);
+defineComponent('kanonis-list-item', KanonisListItem);
 export {
-  DsIcon,
-  DsAppShell,
-  DsBreadcrumb,
-  DsBreadcrumbs,
-  DsList,
-  DsListItem,
-  DsPagination,
-  DsSidebar,
-  DsSidebarItem,
+  KanonisIcon,
+  KanonisAppShell,
+  KanonisBreadcrumb,
+  KanonisBreadcrumbs,
+  KanonisList,
+  KanonisListItem,
+  KanonisPagination,
+  KanonisSidebar,
+  KanonisSidebarItem,
 };

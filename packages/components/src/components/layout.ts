@@ -1,7 +1,7 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact, mediaExpanded } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
 const gaps = css`
   :host([gap='0']) {
@@ -62,7 +62,7 @@ const scrollablePane = css`
 `;
 
 /** A viewport-bound page frame with a header above a framed pane canvas. */
-export class DsWorkspace extends DsElement {
+export class KanonisWorkspace extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -102,7 +102,7 @@ export class DsWorkspace extends DsElement {
 }
 
 /** Header content that remains outside the pane window. */
-export class DsWorkspaceHeader extends DsElement {
+export class KanonisWorkspaceHeader extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -169,7 +169,7 @@ export class DsWorkspaceHeader extends DsElement {
 }
 
 /** Framed horizontal canvas. It owns horizontal overflow; pane bodies own vertical overflow. */
-export class DsPaneWindow extends DsElement {
+export class KanonisPaneWindow extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -309,7 +309,7 @@ export class DsPaneWindow extends DsElement {
 }
 
 /** A vertical composition of panes. Set split to 40/60, 60/40, 30/70, or 70/30. */
-export class DsPaneStack extends DsElement {
+export class KanonisPaneStack extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -351,7 +351,7 @@ export class DsPaneStack extends DsElement {
   }
 }
 
-export class DsPaneGroup extends DsElement {
+export class KanonisPaneGroup extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -380,7 +380,7 @@ export class DsPaneGroup extends DsElement {
   }
 }
 
-export class DsPane extends DsElement {
+export class KanonisPane extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -446,7 +446,7 @@ export class DsPane extends DsElement {
   }
 }
 
-export class DsScrollablePane extends DsElement {
+export class KanonisScrollablePane extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -463,7 +463,7 @@ export class DsScrollablePane extends DsElement {
   }
 }
 
-export class DsPaneHeader extends DsElement {
+export class KanonisPaneHeader extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -488,7 +488,7 @@ export class DsPaneHeader extends DsElement {
   }
 }
 
-export class DsPaneContent extends DsElement {
+export class KanonisPaneContent extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -526,7 +526,7 @@ export class DsPaneContent extends DsElement {
   }
 }
 
-export class DsInspectorPane extends DsElement {
+export class KanonisInspectorPane extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     paneFoundation,
@@ -579,7 +579,7 @@ export class DsInspectorPane extends DsElement {
     return html`<slot></slot>`;
   }
 }
-export class DsStack extends DsElement {
+export class KanonisStack extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     gaps,
@@ -609,7 +609,7 @@ export class DsStack extends DsElement {
     return html`<slot></slot>`;
   }
 }
-export class DsInline extends DsElement {
+export class KanonisInline extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     gaps,
@@ -659,7 +659,7 @@ export class DsInline extends DsElement {
     return html`<slot></slot>`;
   }
 }
-export class DsGrid extends DsElement {
+export class KanonisGrid extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     gaps,
@@ -711,7 +711,7 @@ export class DsGrid extends DsElement {
     return html`<slot></slot>`;
   }
 }
-export class DsContainer extends DsElement {
+export class KanonisContainer extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -749,7 +749,7 @@ export class DsContainer extends DsElement {
   }
 }
 
-export class DsPageHeader extends DsElement {
+export class KanonisPageHeader extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -808,7 +808,7 @@ export class DsPageHeader extends DsElement {
   }
 }
 
-export class DsDetailSidebar extends DsElement {
+export class KanonisDetailSidebar extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

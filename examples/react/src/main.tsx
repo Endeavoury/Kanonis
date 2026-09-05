@@ -30,9 +30,9 @@ function App() {
         <Input
           label="Display name"
           value={name}
-          onDsInput={(event) => setName(event.detail.value)}
+          onKanonisInput={(event) => setName(event.detail.value)}
         />
-        <Checkbox checked onDsChange={(event) => console.info('checked', event.detail.checked)}>
+        <Checkbox checked onKanonisChange={(event) => console.info('checked', event.detail.checked)}>
           Enabled
         </Checkbox>
         <Button onClick={() => setName('Saved consumer')}>Save</Button>

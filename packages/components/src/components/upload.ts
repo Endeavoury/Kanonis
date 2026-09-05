@@ -1,17 +1,17 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, query } from 'lit/decorators.js';
 import { foundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export interface DsFilesDetail {
+export interface KanonisFilesDetail {
   files: File[];
 }
 
-export interface DsFileRejectDetail extends DsFilesDetail {
+export interface KanonisFileRejectDetail extends KanonisFilesDetail {
   reason: 'type' | 'limit';
 }
 
-export class DsDropZone extends DsElement {
+export class KanonisDropZone extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     spinnerStyles,
@@ -143,11 +143,11 @@ export class DsDropZone extends DsElement {
     const selected = accepted.slice(0, limit);
     const rejectedLimit = accepted.slice(limit);
     this.files = selected;
-    if (selected.length) this.emit<DsFilesDetail>('kanonis-files', { files: selected });
+    if (selected.length) this.emit<KanonisFilesDetail>('kanonis-files', { files: selected });
     if (rejectedType.length)
-      this.emit<DsFileRejectDetail>('kanonis-file-reject', { files: rejectedType, reason: 'type' });
+      this.emit<KanonisFileRejectDetail>('kanonis-file-reject', { files: rejectedType, reason: 'type' });
     if (rejectedLimit.length)
-      this.emit<DsFileRejectDetail>('kanonis-file-reject', { files: rejectedLimit, reason: 'limit' });
+      this.emit<KanonisFileRejectDetail>('kanonis-file-reject', { files: rejectedLimit, reason: 'limit' });
   }
 
   private changed() {

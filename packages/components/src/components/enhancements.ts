@@ -8,17 +8,17 @@ import {
   surfaceStyles,
 } from '@endeavoury/kanonis-styles';
 import { announce } from '../core/accessibility.js';
-import { DsElement } from '../core/ds-element.js';
+import { KanonisElement } from '../core/kanonis-element.js';
 
-export interface DsValueDetail {
+export interface KanonisValueDetail {
   value: string;
 }
 
-export interface DsDismissValueDetail extends DsValueDetail {
+export interface KanonisDismissValueDetail extends KanonisValueDetail {
   reason: 'button' | 'keyboard';
 }
 
-export class DsLiveRegion extends DsElement {
+export class KanonisLiveRegion extends KanonisElement {
   static override styles: CSSResultGroup = [foundationStyles, a11yStyles];
   @property() message = '';
   @property() politeness: 'polite' | 'assertive' = 'polite';
@@ -33,7 +33,7 @@ export class DsLiveRegion extends DsElement {
   }
 }
 
-export class DsSegment extends DsElement {
+export class KanonisSegment extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -75,7 +75,7 @@ export class DsSegment extends DsElement {
   @property() label = '';
   private requestSelection() {
     if (!this.disabled)
-      this.emit<DsValueDetail>('kanonis-segment-request', {
+      this.emit<KanonisValueDetail>('kanonis-segment-request', {
         value: this.value || this.textContent?.trim() || '',
       });
   }
@@ -93,7 +93,7 @@ export class DsSegment extends DsElement {
   }
 }
 
-export class DsSegmentedControl extends DsElement {
+export class KanonisSegmentedControl extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -115,7 +115,7 @@ export class DsSegmentedControl extends DsElement {
   ];
   @property() value = '';
   @property() label = 'Options';
-  @queryAssignedElements({ selector: 'kanonis-segment' }) private segments!: DsSegment[];
+  @queryAssignedElements({ selector: 'kanonis-segment' }) private segments!: KanonisSegment[];
 
   protected override firstUpdated() {
     this.addEventListener('kanonis-segment-request', this.selectRequested as EventListener);
@@ -125,7 +125,7 @@ export class DsSegmentedControl extends DsElement {
     this.removeEventListener('kanonis-segment-request', this.selectRequested as EventListener);
     super.disconnectedCallback();
   }
-  private selectRequested = (event: CustomEvent<DsValueDetail>) => {
+  private selectRequested = (event: CustomEvent<KanonisValueDetail>) => {
     event.stopPropagation();
     this.select(event.detail.value);
   };
@@ -140,7 +140,7 @@ export class DsSegmentedControl extends DsElement {
     this.value = value;
     this.sync();
     if (focus) segment.shadowRoot?.querySelector<HTMLButtonElement>('button')?.focus();
-    this.emit<DsValueDetail>('kanonis-change', { value });
+    this.emit<KanonisValueDetail>('kanonis-change', { value });
   }
   private keydown(event: KeyboardEvent) {
     const enabled = this.segments.filter((segment) => !segment.disabled);
@@ -172,7 +172,7 @@ export class DsSegmentedControl extends DsElement {
   }
 }
 
-export class DsActionBar extends DsElement {
+export class KanonisActionBar extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -309,7 +309,7 @@ export class DsActionBar extends DsElement {
   }
 }
 
-export class DsSplitButton extends DsElement {
+export class KanonisSplitButton extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -414,7 +414,7 @@ export class DsSplitButton extends DsElement {
   }
 }
 
-export class DsInputGroup extends DsElement {
+export class KanonisInputGroup extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -465,7 +465,7 @@ export class DsInputGroup extends DsElement {
   }
 }
 
-export class DsChip extends DsElement {
+export class KanonisChip extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -517,7 +517,7 @@ export class DsChip extends DsElement {
   private select() {
     if (this.disabled) return;
     this.selected = !this.selected;
-    this.emit<DsValueDetail & { selected: boolean }>('kanonis-change', {
+    this.emit<KanonisValueDetail & { selected: boolean }>('kanonis-change', {
       value: this.value,
       selected: this.selected,
     });
@@ -525,7 +525,7 @@ export class DsChip extends DsElement {
   private dismiss(event: Event) {
     event.stopPropagation();
     if (!this.disabled)
-      this.emit<DsDismissValueDetail>('kanonis-dismiss', { value: this.value, reason: 'button' });
+      this.emit<KanonisDismissValueDetail>('kanonis-dismiss', { value: this.value, reason: 'button' });
   }
   protected override render() {
     return html`<span class="chip">
@@ -555,7 +555,7 @@ export class DsChip extends DsElement {
   }
 }
 
-export class DsIllustration extends DsElement {
+export class KanonisIllustration extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -612,7 +612,7 @@ export class DsIllustration extends DsElement {
   }
 }
 
-export class DsBrandMark extends DsElement {
+export class KanonisBrandMark extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -645,14 +645,14 @@ export class DsBrandMark extends DsElement {
   }
 }
 
-export interface DsReorderDetail {
+export interface KanonisReorderDetail {
   value: string;
   fromIndex: number;
   toIndex: number;
   values: string[];
 }
 
-export class DsReorderItem extends DsElement {
+export class KanonisReorderItem extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -729,7 +729,7 @@ export class DsReorderItem extends DsElement {
   }
 }
 
-export class DsReorderList extends DsElement {
+export class KanonisReorderList extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -744,8 +744,8 @@ export class DsReorderList extends DsElement {
     `,
   ];
   @property() label = 'Reorder items';
-  @queryAssignedElements({ selector: 'kanonis-reorder-item' }) private items!: DsReorderItem[];
-  private dragged?: DsReorderItem;
+  @queryAssignedElements({ selector: 'kanonis-reorder-item' }) private items!: KanonisReorderItem[];
+  private dragged?: KanonisReorderItem;
 
   protected override firstUpdated() {
     this.addEventListener('kanonis-reorder-request', this.request as EventListener);
@@ -797,7 +797,7 @@ export class DsReorderList extends DsElement {
       },
     );
     item.shadowRoot?.querySelector<HTMLButtonElement>('button')?.focus();
-    this.emit<DsReorderDetail>('kanonis-reorder', detail);
+    this.emit<KanonisReorderDetail>('kanonis-reorder', detail);
     this.requestUpdate();
   }
   protected override render() {

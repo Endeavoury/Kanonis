@@ -17,7 +17,7 @@ an `Intl.NumberFormat` formatter owned by the product locale.
 
 | Name                              | Kind     | Type/default                | Purpose                                                                     |
 | --------------------------------- | -------- | --------------------------- | --------------------------------------------------------------------------- |
-| `columns`                         | Property | `DsTableColumn[]`           | Labels, sortability, row identity, numeric alignment, width, and formatting |
+| `columns`                         | Property | `KanonisTableColumn[]`           | Labels, sortability, row identity, numeric alignment, width, and formatting |
 | `rows`                            | Property | `Record<string, unknown>[]` | Current client-side rows or current server page                             |
 | `caption` / `label`               | Property | string                      | Visible caption or fallback accessible name                                 |
 | `description`                     | Property | string                      | Visible and programmatic table context                                      |

@@ -1,20 +1,20 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles, controlStyles } from '@endeavoury/kanonis-styles';
-import { DsElement } from '../core/ds-element.js';
-import { DsDataTable } from './data-table.js';
-import type { DsTableColumn } from './data-table.js';
+import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisDataTable } from './data-table.js';
+import type { KanonisTableColumn } from './data-table.js';
 
 /** Enterprise alias for the accessible, sortable data table foundation. */
-export class DsDataGrid extends DsDataTable {}
+export class KanonisDataGrid extends KanonisDataTable {}
 
-export interface DsFilterRule {
+export interface KanonisFilterRule {
   field: string;
   operator: string;
   value: string;
 }
 
-export interface DsFilterField {
+export interface KanonisFilterField {
   key: string;
   label: string;
 }
@@ -65,10 +65,10 @@ const enterpriseSurface = css`
   }
 `;
 
-export class DsFilterBuilder extends DsElement {
+export class KanonisFilterBuilder extends KanonisElement {
   static override styles: CSSResultGroup = [foundationStyles, controlStyles, enterpriseSurface];
-  @property({ attribute: false }) fields: DsFilterField[] = [];
-  @property({ attribute: false }) rules: DsFilterRule[] = [];
+  @property({ attribute: false }) fields: KanonisFilterField[] = [];
+  @property({ attribute: false }) rules: KanonisFilterRule[] = [];
   @property({ attribute: false }) operators: string[] = [
     'contains',
     'equals',
@@ -79,9 +79,9 @@ export class DsFilterBuilder extends DsElement {
   @property() clearLabel = 'Clear filters';
 
   private emitChange() {
-    this.emit<DsFilterRule[]>('kanonis-filter-change', this.rules);
+    this.emit<KanonisFilterRule[]>('kanonis-filter-change', this.rules);
   }
-  private updateRule(index: number, patch: Partial<DsFilterRule>) {
+  private updateRule(index: number, patch: Partial<KanonisFilterRule>) {
     this.rules = this.rules.map((rule, item) => (item === index ? { ...rule, ...patch } : rule));
     this.emitChange();
   }
@@ -143,7 +143,7 @@ export class DsFilterBuilder extends DsElement {
   }
 }
 
-export class DsViewToolbar extends DsElement {
+export class KanonisViewToolbar extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     enterpriseSurface,
@@ -194,13 +194,13 @@ export class DsViewToolbar extends DsElement {
   }
 }
 
-export interface DsColumnOption {
+export interface KanonisColumnOption {
   key: string;
   label: string;
   visible?: boolean;
 }
 
-export class DsColumnManager extends DsElement {
+export class KanonisColumnManager extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     enterpriseSurface,
@@ -226,13 +226,13 @@ export class DsColumnManager extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) columns: DsColumnOption[] = [];
+  @property({ attribute: false }) columns: KanonisColumnOption[] = [];
   @property() label = 'Columns';
   private toggle(key: string, visible: boolean) {
     this.columns = this.columns.map((column) =>
       column.key === key ? { ...column, visible } : column,
     );
-    this.emit<DsColumnOption[]>('kanonis-columns-change', this.columns);
+    this.emit<KanonisColumnOption[]>('kanonis-columns-change', this.columns);
   }
   protected override render() {
     return html`<section class="surface" aria-label=${this.label}>
@@ -241,7 +241,7 @@ export class DsColumnManager extends DsElement {
   }
 }
 
-export class DsBulkActions extends DsElement {
+export class KanonisBulkActions extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     enterpriseSurface,
@@ -274,12 +274,12 @@ export class DsBulkActions extends DsElement {
   }
 }
 
-export interface DsSavedViewOption {
+export interface KanonisSavedViewOption {
   id: string;
   label: string;
 }
 
-export class DsSavedView extends DsElement {
+export class KanonisSavedView extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     enterpriseSurface,
@@ -298,7 +298,7 @@ export class DsSavedView extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) views: DsSavedViewOption[] = [];
+  @property({ attribute: false }) views: KanonisSavedViewOption[] = [];
   @property() current = '';
   @property() saveLabel = 'Save view';
   @property() deleteLabel = 'Delete view';
@@ -320,13 +320,13 @@ export class DsSavedView extends DsElement {
   }
 }
 
-export interface DsComboOption {
+export interface KanonisComboOption {
   label: string;
   value: string;
   disabled?: boolean;
 }
 
-export class DsCombobox extends DsElement {
+export class KanonisCombobox extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     controlStyles,
@@ -378,7 +378,7 @@ export class DsCombobox extends DsElement {
   @property() label = '';
   @property() value = '';
   @property() placeholder = 'Choose an option';
-  @property({ attribute: false }) options: DsComboOption[] = [];
+  @property({ attribute: false }) options: KanonisComboOption[] = [];
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: Boolean, reflect: true }) open = false;
   @state() private activeIndex = -1;
@@ -413,7 +413,7 @@ export class DsCombobox extends DsElement {
       if (option) this.choose(option);
     }
   }
-  private choose(option: DsComboOption) {
+  private choose(option: KanonisComboOption) {
     if (option.disabled) return;
     this.value = option.label;
     this.open = false;
@@ -439,12 +439,12 @@ export class DsCombobox extends DsElement {
   }
 }
 
-export interface DsValidationError {
+export interface KanonisValidationError {
   id: string;
   message: string;
 }
 
-export class DsValidationSummary extends DsElement {
+export class KanonisValidationSummary extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -469,7 +469,7 @@ export class DsValidationSummary extends DsElement {
       }
     `,
   ];
-  @property({ attribute: false }) errors: DsValidationError[] = [];
+  @property({ attribute: false }) errors: KanonisValidationError[] = [];
   @property() heading = 'Please correct these errors';
   protected override render() {
     return this.errors.length
@@ -483,4 +483,4 @@ export class DsValidationSummary extends DsElement {
   }
 }
 
-export type DsEnterpriseColumn = DsTableColumn;
+export type KanonisEnterpriseColumn = KanonisTableColumn;

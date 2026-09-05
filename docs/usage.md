@@ -104,7 +104,7 @@ The optional React package wraps the existing element classes with `@lit/react`.
 import { Button, Input } from '@endeavoury/kanonis-react';
 
 export function Editor() {
-  return <Input label="Name" onDsChange={(event) => console.log(event.detail.value)} />;
+  return <Input label="Name" onKanonisChange={(event) => console.log(event.detail.value)} />;
 }
 ```
 

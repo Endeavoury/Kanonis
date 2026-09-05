@@ -6,9 +6,9 @@ import {
   spinnerStyles,
   surfaceStyles,
 } from '@endeavoury/kanonis-styles';
-import { DsElement, type DsTone } from '../core/ds-element.js';
+import { KanonisElement, type KanonisTone } from '../core/kanonis-element.js';
 
-export class DsAlert extends DsElement {
+export class KanonisAlert extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -89,7 +89,7 @@ export class DsAlert extends DsElement {
       }
     `,
   ];
-  @property({ reflect: true }) tone: DsTone = 'info';
+  @property({ reflect: true }) tone: KanonisTone = 'info';
   @property() heading = '';
   @property({ type: Boolean }) dismissible = false;
   private dismiss() {
@@ -112,7 +112,7 @@ export class DsAlert extends DsElement {
   }
 }
 
-export class DsLoadingState extends DsElement {
+export class KanonisLoadingState extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -143,7 +143,7 @@ export class DsLoadingState extends DsElement {
   }
 }
 
-export class DsEmptyState extends DsElement {
+export class KanonisEmptyState extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     surfaceStyles,
@@ -199,7 +199,7 @@ export class DsEmptyState extends DsElement {
   }
 }
 
-export class DsProgress extends DsElement {
+export class KanonisProgress extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -304,7 +304,7 @@ export class DsProgress extends DsElement {
   }
 }
 
-export class DsSkeleton extends DsElement {
+export class KanonisSkeleton extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -365,11 +365,11 @@ export class DsSkeleton extends DsElement {
   }
 }
 
-export interface DsToastCloseDetail {
+export interface KanonisToastCloseDetail {
   reason: 'dismiss' | 'timeout' | 'programmatic';
 }
 
-export class DsToast extends DsElement {
+export class KanonisToast extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`
@@ -433,7 +433,7 @@ export class DsToast extends DsElement {
   ];
 
   @property({ type: Boolean, reflect: true }) open = true;
-  @property({ reflect: true }) tone: DsTone = 'info';
+  @property({ reflect: true }) tone: KanonisTone = 'info';
   @property() heading = '';
   @property({ type: Number }) duration = 5000;
   @property({ type: Boolean }) dismissible = true;
@@ -445,11 +445,11 @@ export class DsToast extends DsElement {
     super.disconnectedCallback();
   }
 
-  close(reason: DsToastCloseDetail['reason'] = 'programmatic') {
+  close(reason: KanonisToastCloseDetail['reason'] = 'programmatic') {
     if (!this.open) return;
     this.open = false;
     this.clearTimer();
-    this.emit<DsToastCloseDetail>('kanonis-toast-close', { reason });
+    this.emit<KanonisToastCloseDetail>('kanonis-toast-close', { reason });
   }
 
   private clearTimer() {
@@ -497,7 +497,7 @@ export class DsToast extends DsElement {
   }
 }
 
-export class DsToastRegion extends DsElement {
+export class KanonisToastRegion extends KanonisElement {
   static override styles: CSSResultGroup = [
     foundationStyles,
     css`

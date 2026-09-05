@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { controlFoundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
-import { DsElement, type DsSize } from '../core/ds-element.js';
+import { KanonisElement, type KanonisSize } from '../core/kanonis-element.js';
 
-export type DsButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
+export type KanonisButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
 const activateForm = (
   host: HTMLElement,
   internals: ElementInternals,
@@ -13,7 +13,7 @@ const activateForm = (
   if (type === 'submit') form?.requestSubmit();
   if (type === 'reset') form?.reset();
 };
-export class DsButton extends DsElement {
+export class KanonisButton extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     controlFoundationStyles,
@@ -132,8 +132,8 @@ export class DsButton extends DsElement {
       }
     `,
   ];
-  @property({ reflect: true }) variant: DsButtonVariant = 'primary';
-  @property({ reflect: true }) size: DsSize = 'medium';
+  @property({ reflect: true }) variant: KanonisButtonVariant = 'primary';
+  @property({ reflect: true }) size: KanonisSize = 'medium';
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: Boolean, reflect: true }) loading = false;
   @property({ type: Boolean, attribute: 'full-width', reflect: true }) fullWidth = false;
@@ -181,7 +181,7 @@ export class DsButton extends DsElement {
   }
 }
 
-export class DsIconButton extends DsElement {
+export class KanonisIconButton extends KanonisElement {
   static formAssociated = true;
   static override styles: CSSResultGroup = [
     controlFoundationStyles,
@@ -234,7 +234,7 @@ export class DsIconButton extends DsElement {
       }
     `,
   ];
-  @property({ reflect: true }) size: DsSize = 'medium';
+  @property({ reflect: true }) size: KanonisSize = 'medium';
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property() label = '';
   @property() type: 'button' | 'submit' | 'reset' = 'button';
@@ -262,7 +262,7 @@ export class DsIconButton extends DsElement {
   }
 }
 
-export class DsButtonGroup extends DsElement {
+export class KanonisButtonGroup extends KanonisElement {
   static override styles: CSSResultGroup = [
     controlFoundationStyles,
     css`

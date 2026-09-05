@@ -1,39 +1,39 @@
-import { defineComponent } from '../core/ds-element.js';
+import { defineComponent } from '../core/kanonis-element.js';
 import {
-  DsBulkActions,
-  DsColumnManager,
-  DsCombobox,
-  DsDataGrid,
-  DsFilterBuilder,
-  DsSavedView,
-  DsValidationSummary,
-  DsViewToolbar,
+  KanonisBulkActions,
+  KanonisColumnManager,
+  KanonisCombobox,
+  KanonisDataGrid,
+  KanonisFilterBuilder,
+  KanonisSavedView,
+  KanonisValidationSummary,
+  KanonisViewToolbar,
 } from '../components/enterprise.js';
 
-defineComponent('kanonis-data-grid', DsDataGrid);
-defineComponent('kanonis-filter-builder', DsFilterBuilder);
-defineComponent('kanonis-view-toolbar', DsViewToolbar);
-defineComponent('kanonis-column-manager', DsColumnManager);
-defineComponent('kanonis-bulk-actions', DsBulkActions);
-defineComponent('kanonis-saved-view', DsSavedView);
-defineComponent('kanonis-combobox', DsCombobox);
-defineComponent('kanonis-validation-summary', DsValidationSummary);
+defineComponent('kanonis-data-grid', KanonisDataGrid);
+defineComponent('kanonis-filter-builder', KanonisFilterBuilder);
+defineComponent('kanonis-view-toolbar', KanonisViewToolbar);
+defineComponent('kanonis-column-manager', KanonisColumnManager);
+defineComponent('kanonis-bulk-actions', KanonisBulkActions);
+defineComponent('kanonis-saved-view', KanonisSavedView);
+defineComponent('kanonis-combobox', KanonisCombobox);
+defineComponent('kanonis-validation-summary', KanonisValidationSummary);
 
 export {
-  DsBulkActions,
-  DsColumnManager,
-  DsCombobox,
-  DsDataGrid,
-  DsFilterBuilder,
-  DsSavedView,
-  DsValidationSummary,
-  DsViewToolbar,
+  KanonisBulkActions,
+  KanonisColumnManager,
+  KanonisCombobox,
+  KanonisDataGrid,
+  KanonisFilterBuilder,
+  KanonisSavedView,
+  KanonisValidationSummary,
+  KanonisViewToolbar,
 };
 export type {
-  DsColumnOption,
-  DsComboOption,
-  DsFilterField,
-  DsFilterRule,
-  DsSavedViewOption,
-  DsValidationError,
+  KanonisColumnOption,
+  KanonisComboOption,
+  KanonisFilterField,
+  KanonisFilterRule,
+  KanonisSavedViewOption,
+  KanonisValidationError,
 } from '../components/enterprise.js';

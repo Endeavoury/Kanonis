@@ -1,6 +1,6 @@
 import type {} from './custom-elements.js';
 
-export * from './core/ds-element.js';
+export * from './core/kanonis-element.js';
 export * from './core/accessibility.js';
 export * from './components/icon.js';
 export * from './components/button.js';
