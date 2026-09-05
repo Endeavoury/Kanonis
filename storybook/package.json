@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis-storybook",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,9 +8,9 @@
     "build": "storybook build"
   },
   "dependencies": {
-    "@endeavoury/kanonis": "1.0.14",
-    "@endeavoury/kanonis-styles": "1.0.14",
-    "@endeavoury/kanonis-tokens": "1.0.14",
+    "@endeavoury/kanonis": "1.0.15",
+    "@endeavoury/kanonis-styles": "1.0.15",
+    "@endeavoury/kanonis-tokens": "1.0.15",
     "lit": "3.3.3"
   },
   "devDependencies": {
