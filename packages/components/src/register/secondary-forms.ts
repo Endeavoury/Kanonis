@@ -5,7 +5,7 @@ import {
   KanonisRange,
   KanonisSwitch,
   KanonisTextarea,
-} from '../components/secondary-forms.js';
+} from '../components/secondary-forms/secondary-forms.js';
 
 defineComponent('kanonis-textarea', KanonisTextarea);
 defineComponent('kanonis-switch', KanonisSwitch);

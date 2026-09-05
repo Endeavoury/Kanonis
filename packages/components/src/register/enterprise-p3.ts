@@ -11,7 +11,7 @@ import {
   KanonisTour,
   KanonisCoachmark,
   KanonisCompareView,
-} from '../components/enterprise-p3.js';
+} from '../components/enterprise-p3/enterprise-p3.js';
 defineComponent('kanonis-audit-log', KanonisAuditLog);
 defineComponent('kanonis-permission-matrix', KanonisPermissionMatrix);
 defineComponent('kanonis-role-badge', KanonisRoleBadge);
@@ -42,4 +42,4 @@ export type {
   KanonisPermission,
   KanonisPermissionRole,
   KanonisTourStep,
-} from '../components/enterprise-p3.js';
+} from '../components/enterprise-p3/enterprise-p3.js';

@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
-import { KanonisDropZone } from './upload.js';
-import { KanonisProgress } from './feedback.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
+import { KanonisDropZone } from '../upload/upload.js';
+import { KanonisProgress } from '../feedback/feedback.js';
 
 export interface KanonisFieldItem {
   id: string;

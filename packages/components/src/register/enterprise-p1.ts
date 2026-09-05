@@ -12,7 +12,7 @@ import {
   KanonisTenantSwitcher,
   KanonisUserMenu,
   KanonisWorkspaceTabs,
-} from '../components/enterprise-p1.js';
+} from '../components/enterprise-p1/enterprise-p1.js';
 
 defineComponent('kanonis-command-palette', KanonisCommandPalette);
 defineComponent('kanonis-global-search', KanonisGlobalSearch);
@@ -47,4 +47,4 @@ export type {
   KanonisNotification,
   KanonisTenant,
   KanonisWorkspaceTab,
-} from '../components/enterprise-p1.js';
+} from '../components/enterprise-p1/enterprise-p1.js';

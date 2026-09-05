@@ -1,7 +1,7 @@
 import { css, html, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, queryAssignedElements, state } from 'lit/decorators.js';
 import { foundationStyles, surfaceStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
 
 export type KanonisTheme = 'light' | 'dark';
 

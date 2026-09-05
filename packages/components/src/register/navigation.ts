@@ -1,13 +1,13 @@
 import { defineComponent } from '../core/kanonis-element.js';
-import { KanonisIcon } from '../components/icon.js';
-import { KanonisAppShell, KanonisSidebar, KanonisSidebarItem } from '../components/navigation.js';
+import { KanonisIcon } from '../components/icon/icon.js';
+import { KanonisAppShell, KanonisSidebar, KanonisSidebarItem } from '../components/navigation/navigation.js';
 import {
   KanonisBreadcrumb,
   KanonisBreadcrumbs,
   KanonisList,
   KanonisListItem,
   KanonisPagination,
-} from '../components/navigation-extras.js';
+} from '../components/navigation-extras/navigation-extras.js';
 defineComponent('kanonis-icon', KanonisIcon);
 defineComponent('kanonis-app-shell', KanonisAppShell);
 defineComponent('kanonis-sidebar', KanonisSidebar);

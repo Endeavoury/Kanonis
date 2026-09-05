@@ -1,8 +1,8 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, query, queryAssignedElements, state } from 'lit/decorators.js';
 import { formFoundationStyles, foundationStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
-import type { KanonisCheckedChangeDetail, KanonisValueChangeDetail } from './forms.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
+import type { KanonisCheckedChangeDetail, KanonisValueChangeDetail } from '../forms/forms.js';
 
 const feedback = (error: string, helpText: string) =>
   error

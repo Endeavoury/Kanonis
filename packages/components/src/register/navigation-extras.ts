@@ -5,7 +5,7 @@ import {
   KanonisList,
   KanonisListItem,
   KanonisPagination,
-} from '../components/navigation-extras.js';
+} from '../components/navigation-extras/navigation-extras.js';
 
 defineComponent('kanonis-breadcrumbs', KanonisBreadcrumbs);
 defineComponent('kanonis-breadcrumb', KanonisBreadcrumb);

@@ -8,7 +8,7 @@ import {
   KanonisSavedView,
   KanonisValidationSummary,
   KanonisViewToolbar,
-} from '../components/enterprise.js';
+} from '../components/enterprise/enterprise.js';
 
 defineComponent('kanonis-data-grid', KanonisDataGrid);
 defineComponent('kanonis-filter-builder', KanonisFilterBuilder);
@@ -36,4 +36,4 @@ export type {
   KanonisFilterRule,
   KanonisSavedViewOption,
   KanonisValidationError,
-} from '../components/enterprise.js';
+} from '../components/enterprise/enterprise.js';

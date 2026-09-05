@@ -1,2 +1,2 @@
 // Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisDetailSidebar } from '../layout.js';
+export { KanonisDetailSidebar } from '../layout/layout.js';

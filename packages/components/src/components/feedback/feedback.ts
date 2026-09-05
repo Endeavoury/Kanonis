@@ -6,7 +6,7 @@ import {
   spinnerStyles,
   surfaceStyles,
 } from '@endeavoury/kanonis-styles';
-import { KanonisElement, type KanonisTone } from '../core/kanonis-element.js';
+import { KanonisElement, type KanonisTone } from '../../core/kanonis-element.js';
 
 export class KanonisAlert extends KanonisElement {
   static override styles: CSSResultGroup = [

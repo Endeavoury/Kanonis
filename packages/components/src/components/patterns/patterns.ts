@@ -8,7 +8,7 @@ import {
   mediaWide,
   surfaceStyles,
 } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
 
 export class KanonisFilterBar extends KanonisElement {
   static override styles: CSSResultGroup = [

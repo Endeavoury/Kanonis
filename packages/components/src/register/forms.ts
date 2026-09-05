@@ -1,12 +1,12 @@
 import { defineComponent } from '../core/kanonis-element.js';
-import { KanonisCheckbox, KanonisFormField, KanonisInput, KanonisSearchInput, KanonisSelect } from '../components/forms.js';
+import { KanonisCheckbox, KanonisFormField, KanonisInput, KanonisSearchInput, KanonisSelect } from '../components/forms/forms.js';
 import {
   KanonisRadio,
   KanonisRadioGroup,
   KanonisRange,
   KanonisSwitch,
   KanonisTextarea,
-} from '../components/secondary-forms.js';
+} from '../components/secondary-forms/secondary-forms.js';
 defineComponent('kanonis-input', KanonisInput);
 defineComponent('kanonis-search-input', KanonisSearchInput);
 defineComponent('kanonis-select', KanonisSelect);

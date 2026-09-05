@@ -1,2 +1,2 @@
 // Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisIllustration } from '../enhancements.js';
+export { KanonisIllustration } from '../enhancements/enhancements.js';

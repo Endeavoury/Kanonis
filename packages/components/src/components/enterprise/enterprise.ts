@@ -1,9 +1,9 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles, controlStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
-import { KanonisDataTable } from './data-table.js';
-import type { KanonisTableColumn } from './data-table.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
+import { KanonisDataTable } from '../data-table/data-table.js';
+import type { KanonisTableColumn } from '../data-table/data-table.js';
 
 /** Enterprise alias for the accessible, sortable data table foundation. */
 export class KanonisDataGrid extends KanonisDataTable {}

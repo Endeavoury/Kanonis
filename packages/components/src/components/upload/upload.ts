@@ -1,7 +1,7 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, query } from 'lit/decorators.js';
 import { foundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
 
 export interface KanonisFilesDetail {
   files: File[];

@@ -1,2 +1,2 @@
 // Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisBadge } from '../display.js';
+export { KanonisBadge } from '../display/display.js';

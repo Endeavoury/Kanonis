@@ -7,7 +7,7 @@ import {
   KanonisSkeleton,
   KanonisToast,
   KanonisToastRegion,
-} from '../components/feedback.js';
+} from '../components/feedback/feedback.js';
 defineComponent('kanonis-alert', KanonisAlert);
 defineComponent('kanonis-empty-state', KanonisEmptyState);
 defineComponent('kanonis-loading-state', KanonisLoadingState);

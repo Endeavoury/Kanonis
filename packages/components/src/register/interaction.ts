@@ -1,5 +1,5 @@
 import { defineComponent } from '../core/kanonis-element.js';
-import { KanonisDisclosure, KanonisTab, KanonisTabs, KanonisThemeToggle } from '../components/interaction.js';
+import { KanonisDisclosure, KanonisTab, KanonisTabs, KanonisThemeToggle } from '../components/interaction/interaction.js';
 
 defineComponent('kanonis-theme-toggle', KanonisThemeToggle);
 defineComponent('kanonis-tabs', KanonisTabs);
@@ -12,4 +12,4 @@ export type {
   KanonisTabChangeDetail,
   KanonisTheme,
   KanonisThemeChangeDetail,
-} from '../components/interaction.js';
+} from '../components/interaction/interaction.js';

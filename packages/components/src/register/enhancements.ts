@@ -11,7 +11,7 @@ import {
   KanonisSegment,
   KanonisSegmentedControl,
   KanonisSplitButton,
-} from '../components/enhancements.js';
+} from '../components/enhancements/enhancements.js';
 
 defineComponent('kanonis-live-region', KanonisLiveRegion);
 defineComponent('kanonis-segmented-control', KanonisSegmentedControl);
@@ -42,4 +42,4 @@ export type {
   KanonisDismissValueDetail,
   KanonisReorderDetail,
   KanonisValueDetail,
-} from '../components/enhancements.js';
+} from '../components/enhancements/enhancements.js';

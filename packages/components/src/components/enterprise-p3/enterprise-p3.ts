@@ -1,7 +1,7 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
 
 export interface KanonisAuditEntry {
   id: string;

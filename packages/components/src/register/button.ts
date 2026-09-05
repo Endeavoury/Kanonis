@@ -1,6 +1,6 @@
 import { defineComponent } from '../core/kanonis-element.js';
-import { KanonisIcon } from '../components/icon.js';
-import { KanonisButton, KanonisButtonGroup, KanonisIconButton } from '../components/button.js';
+import { KanonisIcon } from '../components/icon/icon.js';
+import { KanonisButton, KanonisButtonGroup, KanonisIconButton } from '../components/button/button.js';
 defineComponent('kanonis-icon', KanonisIcon);
 defineComponent('kanonis-button', KanonisButton);
 defineComponent('kanonis-icon-button', KanonisIconButton);

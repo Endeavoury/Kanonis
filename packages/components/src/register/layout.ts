@@ -16,7 +16,7 @@ import {
   KanonisPaneWindow,
   KanonisWorkspace,
   KanonisWorkspaceHeader,
-} from '../components/layout.js';
+} from '../components/layout/layout.js';
 defineComponent('kanonis-workspace', KanonisWorkspace);
 defineComponent('kanonis-workspace-header', KanonisWorkspaceHeader);
 defineComponent('kanonis-pane-window', KanonisPaneWindow);

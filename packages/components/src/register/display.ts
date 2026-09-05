@@ -8,7 +8,7 @@ import {
   KanonisMetric,
   KanonisPanel,
   KanonisStatusBadge,
-} from '../components/display.js';
+} from '../components/display/display.js';
 defineComponent('kanonis-badge', KanonisBadge);
 defineComponent('kanonis-status-badge', KanonisStatusBadge);
 defineComponent('kanonis-avatar', KanonisAvatar);

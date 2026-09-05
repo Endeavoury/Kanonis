@@ -1,7 +1,7 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
 import { foundationStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement } from '../core/kanonis-element.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
 
 export class KanonisBreadcrumb extends KanonisElement {
   static override styles: CSSResultGroup = [

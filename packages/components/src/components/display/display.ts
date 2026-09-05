@@ -1,7 +1,7 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { foundationStyles, mediaCompact, surfaceStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement, type KanonisTone } from '../core/kanonis-element.js';
+import { KanonisElement, type KanonisTone } from '../../core/kanonis-element.js';
 
 export class KanonisBadge extends KanonisElement {
   static override styles: CSSResultGroup = [

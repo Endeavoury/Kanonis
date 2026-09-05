@@ -1,2 +1,2 @@
 // Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisContextMenu } from '../enterprise-p1.js';
+export { KanonisContextMenu } from '../enterprise-p1/enterprise-p1.js';

@@ -7,8 +7,8 @@ import {
   responsiveBreakpoints,
   surfaceStyles,
 } from '@endeavoury/kanonis-styles';
-import { announce } from '../core/accessibility.js';
-import { KanonisElement } from '../core/kanonis-element.js';
+import { announce } from '../../core/accessibility.js';
+import { KanonisElement } from '../../core/kanonis-element.js';
 
 export interface KanonisValueDetail {
   value: string;

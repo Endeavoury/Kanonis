@@ -1,7 +1,7 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, query } from 'lit/decorators.js';
 import { formFoundationStyles, foundationStyles } from '@endeavoury/kanonis-styles';
-import { KanonisElement, type KanonisSize } from '../core/kanonis-element.js';
+import { KanonisElement, type KanonisSize } from '../../core/kanonis-element.js';
 
 export interface KanonisValueChangeDetail {
   value: string;

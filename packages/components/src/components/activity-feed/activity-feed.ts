@@ -1,2 +1,2 @@
 // Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisActivityFeed } from '../enterprise-p2.js';
+export { KanonisActivityFeed } from '../enterprise-p2/enterprise-p2.js';
