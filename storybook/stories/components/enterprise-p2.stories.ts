@@ -9,32 +9,32 @@ export default meta;
 export const Operations: StoryObj = {
   render: () =>
     html`<div style="display:grid;gap:1rem;max-width:1000px;margin:auto;padding:1.5rem">
-      <ds-form-section
+      <kanonis-form-section
         heading="Project settings"
         description="Configure ownership and release details"
-        ><ds-input label="Project name" value="Atlas rollout"></ds-input
-        ><ds-date-picker label="Release date" value="2026-09-04"></ds-date-picker
-        ><ds-time-picker label="Release time" value="09:30"></ds-time-picker
-      ></ds-form-section>
-      <ds-field-array
+        ><kanonis-input label="Project name" value="Atlas rollout"></kanonis-input
+        ><kanonis-date-picker label="Release date" value="2026-09-04"></kanonis-date-picker
+        ><kanonis-time-picker label="Release time" value="09:30"></kanonis-time-picker
+      ></kanonis-form-section>
+      <kanonis-field-array
         .items=${[{ id: 'one', label: 'Environment', value: 'Production' }]}
-      ></ds-field-array>
-      <ds-stepper
+      ></kanonis-field-array>
+      <kanonis-stepper
         .steps=${[
           { id: 'configure', label: 'Configure' },
           { id: 'review', label: 'Review' },
           { id: 'deploy', label: 'Deploy' },
         ]}
         value="review"
-      ></ds-stepper>
-      <ds-approval-flow status="pending"></ds-approval-flow>
-      <ds-task-list
+      ></kanonis-stepper>
+      <kanonis-approval-flow status="pending"></kanonis-approval-flow>
+      <kanonis-task-list
         .tasks=${[
           { id: '1', title: 'Review access policy', detail: 'Security team', completed: false },
           { id: '2', title: 'Validate deployment', completed: true },
         ]}
-      ></ds-task-list>
-      <ds-timeline
+      ></kanonis-task-list>
+      <kanonis-timeline
         .items=${[
           {
             title: 'Deployment started',
@@ -43,21 +43,21 @@ export const Operations: StoryObj = {
           },
           { title: 'Configuration approved', time: 'Yesterday' },
         ]}
-      ></ds-timeline>
-      <ds-activity-feed
+      ></kanonis-timeline>
+      <kanonis-activity-feed
         .items=${[{ id: '1', actor: 'Jordan Lee', body: 'Updated the release target.', time: '10 minutes ago' }]}
-      ></ds-activity-feed>
-      <ds-job-status label="Deployment progress" value="68" show-value></ds-job-status>
-      <ds-change-summary
+      ></kanonis-activity-feed>
+      <kanonis-job-status label="Deployment progress" value="68" show-value></kanonis-job-status>
+      <kanonis-change-summary
         .changes=${[
           { field: 'Owner', before: 'Operations', after: 'Platform' },
           { field: 'Region', before: 'EU West', after: 'EU Central' },
         ]}
-      ></ds-change-summary>
-      <ds-file-upload
+      ></kanonis-change-summary>
+      <kanonis-file-upload
         label="Upload release manifest"
         hint="YAML or JSON up to 10 MB"
         accept=".yaml,.json"
-      ></ds-file-upload>
+      ></kanonis-file-upload>
     </div>`,
 };

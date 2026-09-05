@@ -36,10 +36,10 @@ feedback, overlays, data, and finally enterprise extensions. A component remains
 any required evidence is missing; adding a Storybook story or framework adapter alone does not change
 its status.
 
-Overlapping APIs should be resolved before promotion. Prefer `ds-card` for content objects,
-`ds-panel` for structural regions, `ds-pane` inside `ds-pane-window` for persistent work regions,
-`ds-detail-sidebar` for contextual overlays, `ds-data-table` for stable tabular data, and
-`ds-data-grid` only for the experimental editable-grid contract. Deprecate an overlapping API only
+Overlapping APIs should be resolved before promotion. Prefer `kanonis-card` for content objects,
+`kanonis-panel` for structural regions, `kanonis-pane` inside `kanonis-pane-window` for persistent work regions,
+`kanonis-detail-sidebar` for contextual overlays, `kanonis-data-table` for stable tabular data, and
+`kanonis-data-grid` only for the experimental editable-grid contract. Deprecate an overlapping API only
 after a replacement, migration note, warning, and removal release are recorded.
 
 ## Promotion workflow

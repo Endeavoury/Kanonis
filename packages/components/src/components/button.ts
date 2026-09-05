@@ -273,8 +273,8 @@ export class DsButtonGroup extends DsElement {
       div {
         display: flex;
       }
-      ::slotted(ds-button),
-      ::slotted(ds-icon-button) {
+      ::slotted(kanonis-button),
+      ::slotted(kanonis-icon-button) {
         margin-inline-start: -1px;
       }
       ::slotted(:first-child) {

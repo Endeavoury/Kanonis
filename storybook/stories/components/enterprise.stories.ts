@@ -23,42 +23,42 @@ export default meta;
 export const DataWorkflow: StoryObj = {
   render: () =>
     html`<div style="max-width:1100px;margin:auto;padding:1.5rem;display:grid;gap:1rem">
-      <ds-view-toolbar query="" placeholder="Search projects">
-        <ds-button slot="actions" variant="secondary">Export</ds-button>
-        <ds-button slot="actions">New project</ds-button>
-      </ds-view-toolbar>
-      <ds-filter-builder
+      <kanonis-view-toolbar query="" placeholder="Search projects">
+        <kanonis-button slot="actions" variant="secondary">Export</kanonis-button>
+        <kanonis-button slot="actions">New project</kanonis-button>
+      </kanonis-view-toolbar>
+      <kanonis-filter-builder
         .fields=${[
           { key: 'team', label: 'Team' },
           { key: 'status', label: 'Status' },
         ]}
         .rules=${[{ field: 'status', operator: 'equals', value: 'In progress' }]}
-      ></ds-filter-builder>
-      <ds-bulk-actions count="2"
-        ><ds-button variant="secondary">Assign</ds-button
-        ><ds-button variant="danger">Archive</ds-button></ds-bulk-actions
+      ></kanonis-filter-builder>
+      <kanonis-bulk-actions count="2"
+        ><kanonis-button variant="secondary">Assign</kanonis-button
+        ><kanonis-button variant="danger">Archive</kanonis-button></kanonis-bulk-actions
       >
-      <ds-data-grid .columns=${columns} .rows=${rows} selectable caption="Projects"></ds-data-grid>
+      <kanonis-data-grid .columns=${columns} .rows=${rows} selectable caption="Projects"></kanonis-data-grid>
       <div style="display:flex;gap:1rem;align-items:start;flex-wrap:wrap">
-        <ds-column-manager
+        <kanonis-column-manager
           .columns=${columns.map((column) => ({ key: String(column.key), label: column.label, visible: true }))}
-        ></ds-column-manager>
-        <ds-saved-view
+        ></kanonis-column-manager>
+        <kanonis-saved-view
           .views=${[
             { id: 'mine', label: 'My projects' },
             { id: 'review', label: 'Needs review' },
           ]}
-        ></ds-saved-view>
+        ></kanonis-saved-view>
       </div>
-      <ds-combobox
+      <kanonis-combobox
         label="Owner"
         .options=${[
           { label: 'Platform team', value: 'platform' },
           { label: 'Security team', value: 'security' },
         ]}
-      ></ds-combobox>
-      <ds-validation-summary
+      ></kanonis-combobox>
+      <kanonis-validation-summary
         .errors=${[{ id: 'owner', message: 'Choose an owner before saving.' }]}
-      ></ds-validation-summary>
+      ></kanonis-validation-summary>
     </div>`,
 };

@@ -81,7 +81,7 @@ export class DsThemeToggle extends DsElement {
 
   private toggle() {
     this.theme = this.theme === 'dark' ? 'light' : 'dark';
-    this.emit<DsThemeChangeDetail>('ds-theme-change', { theme: this.theme });
+    this.emit<DsThemeChangeDetail>('kanonis-theme-change', { theme: this.theme });
   }
 
   protected override render() {
@@ -184,9 +184,9 @@ export class DsTabs extends DsElement {
 
   @property({ reflect: true }) value = '';
   @property() label = 'Sections';
-  @queryAssignedElements({ selector: 'ds-tab' }) private assignedTabs!: DsTab[];
+  @queryAssignedElements({ selector: 'kanonis-tab' }) private assignedTabs!: DsTab[];
   @state() private tabs: DsTab[] = [];
-  private readonly instanceId = `ds-tabs-${++tabsId}`;
+  private readonly instanceId = `kanonis-tabs-${++tabsId}`;
 
   private syncTabs() {
     this.tabs = [...this.assignedTabs];
@@ -208,7 +208,7 @@ export class DsTabs extends DsElement {
   private select(tab: DsTab, focus = false) {
     if (tab.disabled || tab.value === this.value) return;
     this.value = tab.value;
-    this.emit<DsTabChangeDetail>('ds-tab-change', { value: tab.value });
+    this.emit<DsTabChangeDetail>('kanonis-tab-change', { value: tab.value });
     if (focus)
       void this.updateComplete.then(() =>
         this.shadowRoot
@@ -334,7 +334,7 @@ export class DsDisclosure extends DsElement {
     const open = (event.currentTarget as HTMLDetailsElement).open;
     if (open === this.open) return;
     this.open = open;
-    this.emit<DsDisclosureChangeDetail>('ds-disclosure-change', { open: this.open });
+    this.emit<DsDisclosureChangeDetail>('kanonis-disclosure-change', { open: this.open });
   }
 
   protected override render() {

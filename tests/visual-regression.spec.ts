@@ -82,15 +82,15 @@ for (const width of [390, 1100]) {
   test(`sidebar keyboard collapse and restore at ${width}px`, async ({ page }, testInfo) => {
     await page.setViewportSize({ width, height: 844 });
     await page.goto('/iframe.html?id=components-navigation--collapsible-sidebar&viewMode=story');
-    const toggle = page.locator('ds-app-shell .sidebar-toggle');
+    const toggle = page.locator('kanonis-app-shell .sidebar-toggle');
     await expect(toggle).toBeVisible();
     await toggle.focus();
     await page.keyboard.press('Enter');
     await expect(toggle).toHaveAttribute('aria-expanded', 'true');
     await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toBeVisible();
     await page.screenshot({ path: testInfo.outputPath('sidebar-expanded.png') });
-    const sidebar = await page.locator('ds-sidebar').boundingBox();
-    const content = await page.locator('ds-app-shell .workspace').boundingBox();
+    const sidebar = await page.locator('kanonis-sidebar').boundingBox();
+    const content = await page.locator('kanonis-app-shell .workspace').boundingBox();
     if (width > 768) {
       expect(sidebar!.width).toBeCloseTo(244, 0);
       expect(content!.width).toBeGreaterThan(width / 2);
@@ -104,7 +104,7 @@ for (const width of [390, 1100]) {
     await expect(toggle).toHaveAttribute('aria-expanded', 'false');
     await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toHaveCount(0);
     await expect(toggle).toBeFocused();
-    const workspace = await page.locator('ds-app-shell .workspace').boundingBox();
+    const workspace = await page.locator('kanonis-app-shell .workspace').boundingBox();
     expect(workspace!.width).toBeGreaterThan(width - 2);
   });
 }
@@ -117,8 +117,8 @@ for (const [story, width] of [
   test(`desktop pane workspace fits at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(`/iframe.html?id=${story}&viewMode=story`);
-    const workspace = page.locator('ds-workspace');
-    const window = page.locator('ds-pane-window');
+    const workspace = page.locator('kanonis-workspace');
+    const window = page.locator('kanonis-pane-window');
     await expect(workspace).toBeVisible();
     await expect(window).toBeVisible();
     const viewport = await page.evaluate(() => ({ width: innerWidth, height: innerHeight }));

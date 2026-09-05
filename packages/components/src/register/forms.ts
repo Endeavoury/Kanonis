@@ -7,16 +7,16 @@ import {
   DsSwitch,
   DsTextarea,
 } from '../components/secondary-forms.js';
-defineComponent('ds-input', DsInput);
-defineComponent('ds-search-input', DsSearchInput);
-defineComponent('ds-select', DsSelect);
-defineComponent('ds-checkbox', DsCheckbox);
-defineComponent('ds-form-field', DsFormField);
-defineComponent('ds-textarea', DsTextarea);
-defineComponent('ds-switch', DsSwitch);
-defineComponent('ds-range', DsRange);
-defineComponent('ds-radio-group', DsRadioGroup);
-defineComponent('ds-radio', DsRadio);
+defineComponent('kanonis-input', DsInput);
+defineComponent('kanonis-search-input', DsSearchInput);
+defineComponent('kanonis-select', DsSelect);
+defineComponent('kanonis-checkbox', DsCheckbox);
+defineComponent('kanonis-form-field', DsFormField);
+defineComponent('kanonis-textarea', DsTextarea);
+defineComponent('kanonis-switch', DsSwitch);
+defineComponent('kanonis-range', DsRange);
+defineComponent('kanonis-radio-group', DsRadioGroup);
+defineComponent('kanonis-radio', DsRadio);
 export {
   DsCheckbox,
   DsFormField,

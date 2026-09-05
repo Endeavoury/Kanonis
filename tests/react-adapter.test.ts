@@ -21,13 +21,13 @@ describe('React adapter', () => {
         ),
       );
     });
-    const input = container.querySelector('ds-input')!;
-    const button = container.querySelector('ds-button')!;
+    const input = container.querySelector('kanonis-input')!;
+    const button = container.querySelector('kanonis-button')!;
     await Promise.all([input.updateComplete, button.updateComplete]);
     expect(input.value).toBe('React value');
     expect(button.textContent).toBe('Save');
     input.dispatchEvent(
-      new CustomEvent('ds-change', { detail: { value: 'Updated' }, bubbles: true, composed: true }),
+      new CustomEvent('kanonis-change', { detail: { value: 'Updated' }, bubbles: true, composed: true }),
     );
     expect(onChange.mock.calls[0][0].detail).toEqual({ value: 'Updated' });
     await act(async () => root.unmount());
@@ -43,7 +43,7 @@ describe('React adapter', () => {
         React.createElement(ThemeToggle, { theme: 'dark', onDsThemeChange: onThemeChange }),
       );
     });
-    const toggle = container.querySelector('ds-theme-toggle')!;
+    const toggle = container.querySelector('kanonis-theme-toggle')!;
     await toggle.updateComplete;
     fireEvent.click(toggle.shadowRoot!.querySelector('button')!);
     expect(onThemeChange.mock.calls[0][0].detail).toEqual({ theme: 'light' });
@@ -62,8 +62,8 @@ describe('React adapter', () => {
           React.createElement(TreeItem, { label: 'Commercial', value: 'commercial', onDsTreeActivate: onActivate })),
       ));
     });
-    const descriptions = container.querySelector('ds-description-list')!;
-    const item = container.querySelector('ds-tree-item')!;
+    const descriptions = container.querySelector('kanonis-description-list')!;
+    const item = container.querySelector('kanonis-tree-item')!;
     await Promise.all([descriptions.updateComplete, item.updateComplete]);
     fireEvent.click(item.shadowRoot!.querySelector('button')!);
     expect(descriptions.items[0]).toEqual({ term: 'Node', value: 'Commercial' });

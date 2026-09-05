@@ -8,15 +8,15 @@ import {
   DsListItem,
   DsPagination,
 } from '../components/navigation-extras.js';
-defineComponent('ds-icon', DsIcon);
-defineComponent('ds-app-shell', DsAppShell);
-defineComponent('ds-sidebar', DsSidebar);
-defineComponent('ds-sidebar-item', DsSidebarItem);
-defineComponent('ds-breadcrumbs', DsBreadcrumbs);
-defineComponent('ds-breadcrumb', DsBreadcrumb);
-defineComponent('ds-pagination', DsPagination);
-defineComponent('ds-list', DsList);
-defineComponent('ds-list-item', DsListItem);
+defineComponent('kanonis-icon', DsIcon);
+defineComponent('kanonis-app-shell', DsAppShell);
+defineComponent('kanonis-sidebar', DsSidebar);
+defineComponent('kanonis-sidebar-item', DsSidebarItem);
+defineComponent('kanonis-breadcrumbs', DsBreadcrumbs);
+defineComponent('kanonis-breadcrumb', DsBreadcrumb);
+defineComponent('kanonis-pagination', DsPagination);
+defineComponent('kanonis-list', DsList);
+defineComponent('kanonis-list-item', DsListItem);
 export {
   DsIcon,
   DsAppShell,

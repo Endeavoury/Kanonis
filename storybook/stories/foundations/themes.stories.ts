@@ -14,11 +14,11 @@ export const ThemeComparison: StoryObj = {
             style="padding:20px;border:1px solid var(--ds-color-border-default);border-radius:10px;background:var(--ds-color-bg-canvas);color:var(--ds-color-text-primary)"
           >
             <h2>${theme}</h2>
-            <ds-panel heading="Surface hierarchy"
-              ><ds-inline
-                ><ds-button>Primary</ds-button><ds-button variant="secondary">Secondary</ds-button
-                ><ds-status-badge tone="success">Online</ds-status-badge></ds-inline
-              ></ds-panel
+            <kanonis-panel heading="Surface hierarchy"
+              ><kanonis-inline
+                ><kanonis-button>Primary</kanonis-button><kanonis-button variant="secondary">Secondary</kanonis-button
+                ><kanonis-status-badge tone="success">Online</kanonis-status-badge></kanonis-inline
+              ></kanonis-panel
             >
           </section>`,
       )}
@@ -26,7 +26,7 @@ export const ThemeComparison: StoryObj = {
 };
 export const AccessibilityFoundation: StoryObj = {
   render: () =>
-    html`<ds-panel
+    html`<kanonis-panel
       heading="Accessibility defaults"
       description="WCAG-oriented focus, semantics, motion, and contrast are part of the shared foundation."
       ><ul>
@@ -36,13 +36,13 @@ export const AccessibilityFoundation: StoryObj = {
         <li>Reduced-motion token override and non-motion loading fallback.</li>
         <li>Errors are text plus color; status dots always retain labels.</li>
       </ul>
-      <ds-inline
-        ><ds-button>Tab to inspect focus</ds-button
-        ><ds-input
+      <kanonis-inline
+        ><kanonis-button>Tab to inspect focus</kanonis-button
+        ><kanonis-input
           label="Labeled field"
           helpText="Labels and descriptions remain programmatic"
-        ></ds-input></ds-inline
-    ></ds-panel>`,
+        ></kanonis-input></kanonis-inline
+    ></kanonis-panel>`,
 };
 
 export const ContrastAndBrandMatrix: StoryObj = {
@@ -63,9 +63,9 @@ export const ContrastAndBrandMatrix: StoryObj = {
             data-ds-contrast=${contrast}
             style="padding:var(--ds-space-5);border:1px solid var(--ds-color-border-default);border-radius:var(--ds-shape-surface);background:var(--ds-color-bg-canvas);color:var(--ds-color-text-primary)"
           >
-            <ds-brand-mark name=${brand === 'default' ? 'Kanonis' : brand}></ds-brand-mark>
+            <kanonis-brand-mark name=${brand === 'default' ? 'Kanonis' : brand}></kanonis-brand-mark>
             <p>${brand === 'default' ? 'Kanonis' : brand} · ${contrast}</p>
-            <ds-button>Primary action</ds-button>
+            <kanonis-button>Primary action</kanonis-button>
           </section>`,
       )}
     </div>`,

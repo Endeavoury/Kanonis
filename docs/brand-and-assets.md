@@ -8,7 +8,7 @@ Shape roles are control, surface, and overlay. Use them by intent rather than se
 radius. Expressive shapes are reserved for branded communication and must not reduce density or make
 controls harder to identify.
 
-`ds-brand-mark` supplies the shared Kanonis mark and accessible name behavior. `ds-illustration`
+`kanonis-brand-mark` supplies the shared Kanonis mark and accessible name behavior. `kanonis-illustration`
 provides empty, search, success, and error motifs that inherit the semantic accent palette. Decorative
 illustrations are hidden from assistive technology; meaningful variants require a concise `label`.
 

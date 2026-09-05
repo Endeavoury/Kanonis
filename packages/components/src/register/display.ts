@@ -9,12 +9,12 @@ import {
   DsPanel,
   DsStatusBadge,
 } from '../components/display.js';
-defineComponent('ds-badge', DsBadge);
-defineComponent('ds-status-badge', DsStatusBadge);
-defineComponent('ds-avatar', DsAvatar);
-defineComponent('ds-card', DsCard);
-defineComponent('ds-code-block', DsCodeBlock);
-defineComponent('ds-description-list', DsDescriptionList);
-defineComponent('ds-panel', DsPanel);
-defineComponent('ds-metric', DsMetric);
+defineComponent('kanonis-badge', DsBadge);
+defineComponent('kanonis-status-badge', DsStatusBadge);
+defineComponent('kanonis-avatar', DsAvatar);
+defineComponent('kanonis-card', DsCard);
+defineComponent('kanonis-code-block', DsCodeBlock);
+defineComponent('kanonis-description-list', DsDescriptionList);
+defineComponent('kanonis-panel', DsPanel);
+defineComponent('kanonis-metric', DsMetric);
 export { DsAvatar, DsBadge, DsCard, DsCodeBlock, DsDescriptionList, DsMetric, DsPanel, DsStatusBadge };

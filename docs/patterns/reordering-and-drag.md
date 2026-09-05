@@ -1,7 +1,7 @@
 # Reordering and drag-and-drop
 
-`ds-reorder-list` and `ds-reorder-item` provide pointer dragging plus visible earlier/later controls.
-Consumers receive `ds-reorder` with the moved value, source and destination indexes, and new order.
+`kanonis-reorder-list` and `kanonis-reorder-item` provide pointer dragging plus visible earlier/later controls.
+Consumers receive `kanonis-reorder` with the moved value, source and destination indexes, and new order.
 
 ## Requirements
 

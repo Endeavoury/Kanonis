@@ -17,15 +17,15 @@ export const RadiusAndElevation: StoryObj = {
 };
 export const MotionAndBreakpoints: StoryObj = {
   render: () =>
-    html`<ds-panel
+    html`<kanonis-panel
       heading="Motion and responsive policy"
       description="Fast 140ms feedback, 220ms structural transitions, semantic motion roles, and automatic reduction when requested."
-      ><ds-stack gap="3"
+      ><kanonis-stack gap="3"
         ><code>compact ≤40rem · medium ≤48rem · expanded ≤56.25rem · wide ≤68.75rem</code>
         <p style="color:var(--ds-color-text-secondary)">
           Component responsiveness is container-conscious where possible; application-shell
           structure uses the shared compact, medium, expanded, and wide contract.
-        </p></ds-stack
-      ></ds-panel
+        </p></kanonis-stack
+      ></kanonis-panel
     >`,
 };

@@ -143,11 +143,11 @@ export class DsDropZone extends DsElement {
     const selected = accepted.slice(0, limit);
     const rejectedLimit = accepted.slice(limit);
     this.files = selected;
-    if (selected.length) this.emit<DsFilesDetail>('ds-files', { files: selected });
+    if (selected.length) this.emit<DsFilesDetail>('kanonis-files', { files: selected });
     if (rejectedType.length)
-      this.emit<DsFileRejectDetail>('ds-file-reject', { files: rejectedType, reason: 'type' });
+      this.emit<DsFileRejectDetail>('kanonis-file-reject', { files: rejectedType, reason: 'type' });
     if (rejectedLimit.length)
-      this.emit<DsFileRejectDetail>('ds-file-reject', { files: rejectedLimit, reason: 'limit' });
+      this.emit<DsFileRejectDetail>('kanonis-file-reject', { files: rejectedLimit, reason: 'limit' });
   }
 
   private changed() {

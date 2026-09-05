@@ -5,31 +5,31 @@ import '@endeavoury/kanonis';
   selector: 'app-root',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  template: `<ds-container size="narrow"
-    ><ds-stack gap="6"
-      ><ds-page-header
+  template: `<kanonis-container size="narrow"
+    ><kanonis-stack gap="6"
+      ><kanonis-page-header
         eyebrow="Angular example"
         heading="Native custom elements"
         description="Angular property and event bindings target the same Web Components."
-      ></ds-page-header
-      ><ds-metric
+      ></kanonis-page-header
+      ><kanonis-metric
         label="Current value"
         [value]="name()"
         tone="accent"
-        detail="Updated through ds-input"
-      ></ds-metric
-      ><ds-input
+        detail="Updated through kanonis-input"
+      ></kanonis-metric
+      ><kanonis-input
         label="Display name"
         [value]="name()"
-        (ds-input)="name.set($any($event).detail.value)"
-      ></ds-input
-      ><ds-checkbox [checked]="enabled()" (ds-change)="enabled.set($any($event).detail.checked)"
-        >Enabled</ds-checkbox
-      ><ds-button (click)="name.set('Saved consumer')">Save</ds-button
-      ><ds-alert tone="success" heading="Shared implementation"
-        >No Angular component owns visual behavior.</ds-alert
-      ></ds-stack
-    ></ds-container
+        (kanonis-input)="name.set($any($event).detail.value)"
+      ></kanonis-input
+      ><kanonis-checkbox [checked]="enabled()" (kanonis-change)="enabled.set($any($event).detail.checked)"
+        >Enabled</kanonis-checkbox
+      ><kanonis-button (click)="name.set('Saved consumer')">Save</kanonis-button
+      ><kanonis-alert tone="success" heading="Shared implementation"
+        >No Angular component owns visual behavior.</kanonis-alert
+      ></kanonis-stack
+    ></kanonis-container
   >`,
 })
 class App {

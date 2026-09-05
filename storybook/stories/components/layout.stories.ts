@@ -9,33 +9,33 @@ const box = (label: string) =>
 const meta: Meta = { title: 'Components/Layout', tags: ['autodocs'] };
 export default meta;
 export const Stack: StoryObj = {
-  render: () => html`<ds-stack gap="3">${box('First')}${box('Second')}${box('Third')}</ds-stack>`,
+  render: () => html`<kanonis-stack gap="3">${box('First')}${box('Second')}${box('Third')}</kanonis-stack>`,
 };
 export const Inline: StoryObj = {
   render: () =>
-    html`<ds-inline justify="between"
-      ><ds-inline><ds-badge>Filter one</ds-badge><ds-badge>Filter two</ds-badge></ds-inline
-      ><ds-button size="small">Apply</ds-button></ds-inline
+    html`<kanonis-inline justify="between"
+      ><kanonis-inline><kanonis-badge>Filter one</kanonis-badge><kanonis-badge>Filter two</kanonis-badge></kanonis-inline
+      ><kanonis-button size="small">Apply</kanonis-button></kanonis-inline
     >`,
 };
 export const Grid: StoryObj = {
   render: () =>
-    html`<ds-grid columns="4" responsive>${['One', 'Two', 'Three', 'Four'].map(box)}</ds-grid>`,
+    html`<kanonis-grid columns="4" responsive>${['One', 'Two', 'Three', 'Four'].map(box)}</kanonis-grid>`,
 };
 export const Container: StoryObj = {
   render: () =>
-    html`<ds-container size="narrow">${box('Narrow centered content container')}</ds-container>`,
+    html`<kanonis-container size="narrow">${box('Narrow centered content container')}</kanonis-container>`,
 };
 export const PageHeader: StoryObj = {
   render: () =>
-    html`<ds-page-header
+    html`<kanonis-page-header
       eyebrow="Personal finance"
       heading="Account ledger"
       description="Filter, inspect, and categorize normalized bank entries."
-      ><ds-inline slot="actions"
-        ><ds-icon-button label="Refresh"><ds-icon name="refresh"></ds-icon></ds-icon-button
-        ><ds-button>Import files</ds-button></ds-inline
-      ></ds-page-header
+      ><kanonis-inline slot="actions"
+        ><kanonis-icon-button label="Refresh"><kanonis-icon name="refresh"></kanonis-icon></kanonis-icon-button
+        ><kanonis-button>Import files</kanonis-button></kanonis-inline
+      ></kanonis-page-header
     >`,
 };
 
@@ -43,140 +43,140 @@ export const PaneWorkspace: StoryObj = {
   parameters: { layout: 'fullscreen' },
   render: () =>
     html`<div style="height:100dvh;min-width:0;min-height:0;overflow:hidden">
-      <ds-pane-group>
-        <ds-pane position="left" style="--ds-pane-size:16rem">
-          <ds-pane-header
-            ><strong style="display:block;padding:1rem">Navigation</strong></ds-pane-header
+      <kanonis-pane-group>
+        <kanonis-pane position="left" style="--ds-pane-size:16rem">
+          <kanonis-pane-header
+            ><strong style="display:block;padding:1rem">Navigation</strong></kanonis-pane-header
           >
-          <ds-scrollable-pane style="padding:1rem">
-            <ds-stack gap="2">
+          <kanonis-scrollable-pane style="padding:1rem">
+            <kanonis-stack gap="2">
               ${Array.from({ length: 24 }, (_, index) => box(`Navigation item ${index + 1}`))}
-            </ds-stack>
-          </ds-scrollable-pane>
-        </ds-pane>
-        <ds-pane position="center">
-          <ds-pane-header
-            ><strong style="display:block;padding:1rem">Workspace toolbar</strong></ds-pane-header
+            </kanonis-stack>
+          </kanonis-scrollable-pane>
+        </kanonis-pane>
+        <kanonis-pane position="center">
+          <kanonis-pane-header
+            ><strong style="display:block;padding:1rem">Workspace toolbar</strong></kanonis-pane-header
           >
-          <ds-pane-content scrollable style="padding:1rem">
-            <ds-stack
-              >${Array.from({ length: 30 }, (_, index) => box(`Content row ${index + 1}`))}</ds-stack
+          <kanonis-pane-content scrollable style="padding:1rem">
+            <kanonis-stack
+              >${Array.from({ length: 30 }, (_, index) => box(`Content row ${index + 1}`))}</kanonis-stack
             >
-          </ds-pane-content>
-        </ds-pane>
-        <ds-inspector-pane>
-          <ds-pane-header
-            ><strong style="display:block;padding:1rem">Inspector</strong></ds-pane-header
+          </kanonis-pane-content>
+        </kanonis-pane>
+        <kanonis-inspector-pane>
+          <kanonis-pane-header
+            ><strong style="display:block;padding:1rem">Inspector</strong></kanonis-pane-header
           >
-          <ds-scrollable-pane style="padding:1rem">
+          <kanonis-scrollable-pane style="padding:1rem">
             ${Array.from({ length: 12 }, (_, index) => box(`Property ${index + 1}`))}
-          </ds-scrollable-pane>
-        </ds-inspector-pane>
-      </ds-pane-group>
+          </kanonis-scrollable-pane>
+        </kanonis-inspector-pane>
+      </kanonis-pane-group>
     </div>`,
 };
 
 export const ShellPaneWorkspace: StoryObj = {
   parameters: { layout: 'fullscreen' },
   render: () =>
-    html`<ds-app-shell content-mode="pane">
-      <ds-sidebar slot="sidebar" label="Workspace navigation">
+    html`<kanonis-app-shell content-mode="pane">
+      <kanonis-sidebar slot="sidebar" label="Workspace navigation">
         <strong slot="brand">Pane workspace</strong>
         ${Array.from(
           { length: 28 },
           (_, index) =>
-            html`<ds-sidebar-item value=${`item-${index + 1}`} ?active=${index === 0}>
-              <ds-icon slot="icon" name="table"></ds-icon>Item ${index + 1}
-            </ds-sidebar-item>`,
+            html`<kanonis-sidebar-item value=${`item-${index + 1}`} ?active=${index === 0}>
+              <kanonis-icon slot="icon" name="table"></kanonis-icon>Item ${index + 1}
+            </kanonis-sidebar-item>`,
         )}
-        <ds-status-badge slot="footer" tone="success">Connected</ds-status-badge>
-      </ds-sidebar>
-      <ds-inline slot="header" justify="between" style="height:100%;padding:0 1rem">
+        <kanonis-status-badge slot="footer" tone="success">Connected</kanonis-status-badge>
+      </kanonis-sidebar>
+      <kanonis-inline slot="header" justify="between" style="height:100%;padding:0 1rem">
         <strong>Fixed workspace toolbar</strong>
-        <ds-icon-button label="Open commands"><ds-icon name="search"></ds-icon></ds-icon-button>
-      </ds-inline>
-      <ds-pane-group orientation="vertical">
-        <ds-pane position="top" style="--ds-pane-size:3.25rem">
-          <ds-pane-header
-            ><span style="display:block;padding:1rem">Fixed tabs</span></ds-pane-header
+        <kanonis-icon-button label="Open commands"><kanonis-icon name="search"></kanonis-icon></kanonis-icon-button>
+      </kanonis-inline>
+      <kanonis-pane-group orientation="vertical">
+        <kanonis-pane position="top" style="--ds-pane-size:3.25rem">
+          <kanonis-pane-header
+            ><span style="display:block;padding:1rem">Fixed tabs</span></kanonis-pane-header
           >
-        </ds-pane>
-        <ds-pane position="center">
-          <ds-pane-content scrollable style="padding:1rem">
-            <ds-stack
-              >${Array.from({ length: 32 }, (_, index) => box(`Content row ${index + 1}`))}</ds-stack
+        </kanonis-pane>
+        <kanonis-pane position="center">
+          <kanonis-pane-content scrollable style="padding:1rem">
+            <kanonis-stack
+              >${Array.from({ length: 32 }, (_, index) => box(`Content row ${index + 1}`))}</kanonis-stack
             >
-          </ds-pane-content>
-        </ds-pane>
-        <ds-pane position="bottom" style="--ds-pane-size:3rem">
+          </kanonis-pane-content>
+        </kanonis-pane>
+        <kanonis-pane position="bottom" style="--ds-pane-size:3rem">
           <span style="display:block;padding:.875rem 1rem">Fixed status bar</span>
-        </ds-pane>
-      </ds-pane-group>
-      <ds-inspector-pane slot="inspector">
-        <ds-pane-header
-          ><strong style="display:block;padding:1rem">Inspector</strong></ds-pane-header
+        </kanonis-pane>
+      </kanonis-pane-group>
+      <kanonis-inspector-pane slot="inspector">
+        <kanonis-pane-header
+          ><strong style="display:block;padding:1rem">Inspector</strong></kanonis-pane-header
         >
-        <ds-scrollable-pane style="padding:1rem">
-          <ds-stack gap="2"
-            >${Array.from({ length: 18 }, (_, index) => box(`Property ${index + 1}`))}</ds-stack
+        <kanonis-scrollable-pane style="padding:1rem">
+          <kanonis-stack gap="2"
+            >${Array.from({ length: 18 }, (_, index) => box(`Property ${index + 1}`))}</kanonis-stack
           >
-        </ds-scrollable-pane>
-      </ds-inspector-pane>
-    </ds-app-shell>`,
+        </kanonis-scrollable-pane>
+      </kanonis-inspector-pane>
+    </kanonis-app-shell>`,
 };
 
 export const CollapsedShellPanes: StoryObj = {
   parameters: { layout: 'fullscreen' },
   render: () =>
-    html`<ds-app-shell content-mode="pane" sidebar-collapsed>
-      <ds-sidebar slot="sidebar" collapsed><strong slot="brand">Navigation</strong></ds-sidebar>
-      <ds-pane-group>
-        <ds-pane position="center">
-          <ds-pane-header
-            ><strong style="display:block;padding:1rem">Workspace only</strong></ds-pane-header
+    html`<kanonis-app-shell content-mode="pane" sidebar-collapsed>
+      <kanonis-sidebar slot="sidebar" collapsed><strong slot="brand">Navigation</strong></kanonis-sidebar>
+      <kanonis-pane-group>
+        <kanonis-pane position="center">
+          <kanonis-pane-header
+            ><strong style="display:block;padding:1rem">Workspace only</strong></kanonis-pane-header
           >
-          <ds-pane-content scrollable style="padding:1rem"
-            >${box('Side panes are collapsed')}</ds-pane-content
+          <kanonis-pane-content scrollable style="padding:1rem"
+            >${box('Side panes are collapsed')}</kanonis-pane-content
           >
-        </ds-pane>
-      </ds-pane-group>
-      <ds-inspector-pane slot="inspector" collapsed></ds-inspector-pane>
-    </ds-app-shell>`,
+        </kanonis-pane>
+      </kanonis-pane-group>
+      <kanonis-inspector-pane slot="inspector" collapsed></kanonis-inspector-pane>
+    </kanonis-app-shell>`,
 };
 
 const workspacePane = (heading: string, body: string) =>
-  html`<ds-pane>
-    <ds-pane-header
-      ><strong style="display:block;padding:var(--ds-space-4)">${heading}</strong></ds-pane-header
+  html`<kanonis-pane>
+    <kanonis-pane-header
+      ><strong style="display:block;padding:var(--ds-space-4)">${heading}</strong></kanonis-pane-header
     >
-    <ds-pane-content scrollable style="padding:var(--ds-space-4)"
+    <kanonis-pane-content scrollable style="padding:var(--ds-space-4)"
       ><p>${body}</p>
-      ${Array.from({ length: 5 }, (_, i) => box(`${heading} detail ${i + 1}`))}</ds-pane-content
+      ${Array.from({ length: 5 }, (_, i) => box(`${heading} detail ${i + 1}`))}</kanonis-pane-content
     >
-  </ds-pane>`;
+  </kanonis-pane>`;
 
 export const DesktopWorkspace: StoryObj = {
   parameters: { layout: 'fullscreen' },
   render: () =>
     html`<div style="height:100dvh;min-height:560px">
-      <ds-workspace>
-        <ds-workspace-header slot="header" heading="Project Alpha">
-          <ds-breadcrumbs slot="breadcrumb" label="Project location">
-            <ds-breadcrumb href="#customers">Customers</ds-breadcrumb>
-            <ds-breadcrumb current>Acme Corporation</ds-breadcrumb>
-          </ds-breadcrumbs>
-          <ds-status-badge slot="status" tone="success">Synced</ds-status-badge>
-          <ds-button slot="actions" variant="secondary">Share</ds-button>
-          <ds-icon-button slot="actions" label="More actions"
-            ><ds-icon name="more-horizontal"></ds-icon
-          ></ds-icon-button>
-        </ds-workspace-header>
-        <ds-pane-window aria-label="Project panes">
+      <kanonis-workspace>
+        <kanonis-workspace-header slot="header" heading="Project Alpha">
+          <kanonis-breadcrumbs slot="breadcrumb" label="Project location">
+            <kanonis-breadcrumb href="#customers">Customers</kanonis-breadcrumb>
+            <kanonis-breadcrumb current>Acme Corporation</kanonis-breadcrumb>
+          </kanonis-breadcrumbs>
+          <kanonis-status-badge slot="status" tone="success">Synced</kanonis-status-badge>
+          <kanonis-button slot="actions" variant="secondary">Share</kanonis-button>
+          <kanonis-icon-button slot="actions" label="More actions"
+            ><kanonis-icon name="more-horizontal"></kanonis-icon
+          ></kanonis-icon-button>
+        </kanonis-workspace-header>
+        <kanonis-pane-window aria-label="Project panes">
           ${workspacePane('Overview', 'The overview stays visible beside the detail panes.')}
           ${workspacePane('Activity', 'Recent project activity and approvals.')}
           ${workspacePane('Properties', 'Canonical values for the selected project.')}
-        </ds-pane-window>
-      </ds-workspace>
+        </kanonis-pane-window>
+      </kanonis-workspace>
     </div>`,
 };
 
@@ -184,23 +184,23 @@ export const DesktopWorkspaceStacks: StoryObj = {
   parameters: { layout: 'fullscreen' },
   render: () =>
     html`<div style="height:100dvh;min-height:560px">
-      <ds-workspace>
-        <ds-workspace-header slot="header" heading="Customer workspace">
-          <ds-breadcrumbs slot="breadcrumb" label="Customer location"
-            ><ds-breadcrumb current>Customers / Acme</ds-breadcrumb></ds-breadcrumbs
+      <kanonis-workspace>
+        <kanonis-workspace-header slot="header" heading="Customer workspace">
+          <kanonis-breadcrumbs slot="breadcrumb" label="Customer location"
+            ><kanonis-breadcrumb current>Customers / Acme</kanonis-breadcrumb></kanonis-breadcrumbs
           >
-          <ds-status-badge slot="status" tone="info">In review</ds-status-badge>
-          <ds-button slot="actions">Publish</ds-button>
-        </ds-workspace-header>
-        <ds-pane-window aria-label="Customer workspace panes">
+          <kanonis-status-badge slot="status" tone="info">In review</kanonis-status-badge>
+          <kanonis-button slot="actions">Publish</kanonis-button>
+        </kanonis-workspace-header>
+        <kanonis-pane-window aria-label="Customer workspace panes">
           ${workspacePane('Customer', 'The primary record occupies the full height.')}
-          <ds-pane-stack split="40/60">
+          <kanonis-pane-stack split="40/60">
             ${workspacePane('Contacts', 'People connected to this customer.')}
             ${workspacePane('Audit trail', 'Changes remain independently scrollable.')}
-          </ds-pane-stack>
+          </kanonis-pane-stack>
           ${workspacePane('Related orders', 'Orders and fulfillment context.')}
-        </ds-pane-window>
-      </ds-workspace>
+        </kanonis-pane-window>
+      </kanonis-workspace>
     </div>`,
 };
 
@@ -208,65 +208,65 @@ export const DesktopWorkspaceFourPaneGrid: StoryObj = {
   parameters: { layout: 'fullscreen' },
   render: () =>
     html`<div style="height:100dvh;min-height:560px">
-      <ds-workspace>
-        <ds-workspace-header slot="header" heading="Four pane comparison">
-          <ds-breadcrumbs slot="breadcrumb" label="Workspace location"
-            ><ds-breadcrumb current>Operations / Comparison</ds-breadcrumb></ds-breadcrumbs
+      <kanonis-workspace>
+        <kanonis-workspace-header slot="header" heading="Four pane comparison">
+          <kanonis-breadcrumbs slot="breadcrumb" label="Workspace location"
+            ><kanonis-breadcrumb current>Operations / Comparison</kanonis-breadcrumb></kanonis-breadcrumbs
           >
-          <ds-status-badge slot="status" tone="success">Live</ds-status-badge>
-        </ds-workspace-header>
-        <ds-pane-window aria-label="Four pane comparison">
-          <ds-pane-stack split="50/50"
-            >${workspacePane('Pane A', 'Primary records.')}${workspacePane('Pane B', 'Selected record.')}</ds-pane-stack
+          <kanonis-status-badge slot="status" tone="success">Live</kanonis-status-badge>
+        </kanonis-workspace-header>
+        <kanonis-pane-window aria-label="Four pane comparison">
+          <kanonis-pane-stack split="50/50"
+            >${workspacePane('Pane A', 'Primary records.')}${workspacePane('Pane B', 'Selected record.')}</kanonis-pane-stack
           >
-          <ds-pane-stack split="50/50"
-            >${workspacePane('Pane C', 'Relationships.')}${workspacePane('Pane D', 'History.')}</ds-pane-stack
+          <kanonis-pane-stack split="50/50"
+            >${workspacePane('Pane C', 'Relationships.')}${workspacePane('Pane D', 'History.')}</kanonis-pane-stack
           >
-        </ds-pane-window>
-      </ds-workspace>
+        </kanonis-pane-window>
+      </kanonis-workspace>
     </div>`,
 };
 
 export const DetailSidebar: StoryObj = {
   render: () =>
     html`<div style="min-height:42rem;padding:2rem">
-      <ds-page-header
+      <kanonis-page-header
         eyebrow="Dashboard"
         heading="Financial overview"
         description="Select an insight to inspect its matching ledger entries."
-      ></ds-page-header>
-      <ds-detail-sidebar open heading="Groceries" close-label="Close insight details">
-        <ds-stack slot="summary" gap="2">
+      ></kanonis-page-header>
+      <kanonis-detail-sidebar open heading="Groceries" close-label="Close insight details">
+        <kanonis-stack slot="summary" gap="2">
           <span style="color:var(--ds-color-text-muted)">Selected insight</span>
           <strong style="font-size:1.75rem">€842.31</strong>
           <span>Food · 14 transactions</span>
-        </ds-stack>
-        <ds-stack gap="3">
+        </kanonis-stack>
+        <kanonis-stack gap="3">
           <strong>Ledger entries</strong>
           ${['Market Square', 'Fresh Foods', 'Corner Shop'].map(
             (name, index) =>
-              html`<ds-card>
-                <ds-inline justify="between" wrap="false">
+              html`<kanonis-card>
+                <kanonis-inline justify="between" wrap="false">
                   <span
                     ><strong>${name}</strong><br /><small>August ${18 - index}, 2026</small></span
                   >
                   <strong>−€${[64.23, 42.9, 18.75][index]}</strong>
-                </ds-inline>
-              </ds-card>`,
+                </kanonis-inline>
+              </kanonis-card>`,
           )}
-        </ds-stack>
-        <ds-button slot="footer" variant="secondary" full-width>View full ledger</ds-button>
-      </ds-detail-sidebar>
+        </kanonis-stack>
+        <kanonis-button slot="footer" variant="secondary" full-width>View full ledger</kanonis-button>
+      </kanonis-detail-sidebar>
     </div>`,
 };
 
 export const ModalDetailSidebar: StoryObj = {
   render: () =>
     html`<div style="min-height:42rem;padding:2rem">
-      <ds-page-header heading="Account ledger"></ds-page-header>
-      <ds-detail-sidebar open modal heading="Transaction details">
+      <kanonis-page-header heading="Account ledger"></kanonis-page-header>
+      <kanonis-detail-sidebar open modal heading="Transaction details">
         <p slot="summary">A modal drawer blocks interaction with the page until it is closed.</p>
         <p>Use this variant for focused tasks instead of persistent dashboard context.</p>
-      </ds-detail-sidebar>
+      </kanonis-detail-sidebar>
     </div>`,
 };

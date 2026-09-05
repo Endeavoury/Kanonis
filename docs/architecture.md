@@ -5,7 +5,7 @@
 The architecture has three layers with a one-way dependency direction:
 
 1. **Design system in Penpot** defines the visual language, semantic tokens, component anatomy, states, responsive behavior, and accessibility intent.
-2. **Web Components** implement that contract once as standards-based `ds-*` custom elements. This is the only visual implementation.
+2. **Web Components** implement that contract once as standards-based `kanonis-*` custom elements. This is the only visual implementation.
 3. **Framework integrations** expose the same elements to Vanilla JavaScript, React, and Angular without duplicating markup, behavior, or styling.
 
 The design system is an independent npm workspace in its own `Kanonis` repository. It has no application imports and its build does not read application source. Oikonomis, Ontarchon, and Nomopsis consume the same published packages in deployments and the same sibling workspace packages during local development; product screens are used only as inspiration for mock Storybook compositions.
@@ -30,7 +30,7 @@ flowchart TB
   subgraph L2["2. Web Component implementation"]
     tokens["@endeavoury/kanonis-tokens"]
     styles["@endeavoury/kanonis-styles"]
-    elements["@endeavoury/kanonis\nLit + ds-* custom elements"]
+    elements["@endeavoury/kanonis\nLit + kanonis-* custom elements"]
   end
 
   subgraph L3["3. Consumer integrations"]
@@ -58,7 +58,7 @@ Penpot is the design and collaboration surface. It owns what a component should 
 
 - **Foundations:** primitive palettes and scales for color, typography, spacing, radius, elevation, motion, breakpoints, icons, and density.
 - **Semantic tokens:** purpose-based names such as `color.bg.surface` and `color.text.primary`, with light and dark theme values. These map to code variables such as `--ds-color-bg-surface` and `--ds-color-text-primary`.
-- **Components:** reusable Penpot components with variants and states matching the public `ds-*` elements.
+- **Components:** reusable Penpot components with variants and states matching the public `kanonis-*` elements.
 - **Patterns and screens:** compositions used to validate workflows and responsive behavior; these do not become a separate component implementation.
 - **Specifications:** anatomy, content guidance, keyboard behavior, accessibility annotations, and responsive rules used during implementation and review.
 
@@ -72,7 +72,7 @@ This layer owns:
 
 - token assets and theme values;
 - component markup, behavior, accessibility, and responsive styling;
-- stable `ds-*` tags and `ds-*` custom events;
+- stable `kanonis-*` tags and `kanonis-*` custom events;
 - grouped registration entrypoints and class-only imports;
 - the Storybook reference implementation and component tests.
 
@@ -83,7 +83,7 @@ It does not own product data, routing, API calls, authentication, or framework-s
 All consumers use the exact same registered custom elements:
 
 - **Vanilla HTML/JavaScript** is the baseline integration. It imports a registration entrypoint, sets attributes or properties, and listens for DOM events.
-- **React** uses optional typed `@lit/react` wrappers. The wrappers improve JSX property and custom-event ergonomics but render the same `ds-*` elements.
+- **React** uses optional typed `@lit/react` wrappers. The wrappers improve JSX property and custom-event ergonomics but render the same `kanonis-*` elements.
 - **Angular** uses a registration helper plus `CUSTOM_ELEMENTS_SCHEMA`. Angular property and event bindings target the native element contract directly.
 
 Framework adapters may translate framework conventions into the custom-element API. They may not fork styles, markup, validation, or interaction behavior. A missing capability is first added to the Web Component and then exposed through each adapter that needs additional typing or binding support.
@@ -102,7 +102,7 @@ sequenceDiagram
 
   Designer->>Penpot: Create or change foundation, component, or pattern
   Penpot->>Contract: Specify semantic tokens, states, behavior, and a11y
-  Contract->>WC: Implement tokens and the ds-* public API
+  Contract->>WC: Implement tokens and the kanonis-* public API
   WC->>Storybook: Render real components in all states and themes
   Storybook-->>Designer: Visual and interaction review
   Designer-->>WC: Approve or request adjustments
@@ -119,7 +119,7 @@ flowchart LR
   app["Product application"]
   framework["Framework state and routing"]
   adapter["Optional framework adapter"]
-  wc["ds-* custom element"]
+  wc["kanonis-* custom element"]
   shadow["Shadow DOM + native controls"]
   theme["Semantic CSS custom properties"]
 
@@ -129,7 +129,7 @@ flowchart LR
   framework -->|"Vanilla or direct element use"| wc
   theme -->|"inherited through host"| wc
   wc --> shadow
-  wc -->|"composed ds-* events"| framework
+  wc -->|"composed kanonis-* events"| framework
 ```
 
 At runtime, product applications own data and orchestration. Components receive values through attributes and properties, accept content through slots, and send user intent back through composed events. Semantic CSS custom properties carry themes across the Shadow DOM boundary.
@@ -157,15 +157,15 @@ design-system/
 └── docs/             architecture, audit, usage, contribution, publishing
 ```
 
-Each workspace can build independently. Public packages use the `@endeavoury/kanonis*` family and one synchronized semantic version. Package identity does not affect the stable `ds-*` custom-element names.
+Each workspace can build independently. Public packages use the `@endeavoury/kanonis*` family and one synchronized semantic version. Package identity does not affect the stable `kanonis-*` custom-element names.
 
 Penpot remains outside the npm workspace because it is a design-authoring service rather than a runtime package. Links, exports, and handoff conventions can be recorded in repository documentation without coupling package builds to Penpot availability.
 
 ## Component and Shadow DOM strategy
 
-- Every visual component is a custom element with a `ds-` prefix and open Shadow DOM.
+- Every visual component is a custom element with a `kanonis-` prefix and open Shadow DOM.
 - Attributes represent strings, booleans, numbers, and enumerated values. Arrays and objects are JavaScript properties.
-- Events use `ds-*`, bubble, cross the shadow boundary (`composed: true`), and publish typed `detail` objects.
+- Events use `kanonis-*`, bubble, cross the shadow boundary (`composed: true`), and publish typed `detail` objects.
 - Native slots provide composition. Stable internals only are exposed through `::part()`; private structure stays private.
 - Theme values cross Shadow DOM through inheritable semantic custom properties.
 - Form controls use `ElementInternals` when available for form value, validity, reset, labels, and disabled state. Their internal native control remains the keyboard and accessibility implementation.
@@ -190,7 +190,7 @@ Penpot remains outside the npm workspace because it is a design-authoring servic
 
 ## Storybook architecture
 
-- Dedicated Storybook 10 Web Components + Vite project; stories render the actual registered `ds-*` elements with Lit templates.
+- Dedicated Storybook 10 Web Components + Vite project; stories render the actual registered `kanonis-*` elements with Lit templates.
 - Global Light, Dark, and System toolbar writes `data-ds-theme` on the preview root.
 - Viewports cover mobile (390), tablet (768), laptop (1280), desktop (1440), and wide (1920).
 - Foundations, components, patterns, and current-product mock screens have separate navigation groups.

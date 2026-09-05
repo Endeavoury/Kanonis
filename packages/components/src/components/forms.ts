@@ -131,11 +131,11 @@ export class DsInput extends DsElement {
   private onInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-input', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
   }
   private onChange() {
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-change', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
   }
   protected override updated() {
     this.syncForm();
@@ -177,8 +177,8 @@ export class DsSearchInput extends DsInput {
   private clear() {
     this.value = '';
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-input', { value: '' });
-    this.emit<DsValueChangeDetail>('ds-change', { value: '' });
+    this.emit<DsValueChangeDetail>('kanonis-input', { value: '' });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value: '' });
     this.focus();
   }
   protected override render() {
@@ -213,11 +213,11 @@ export class DsSearchInput extends DsInput {
   private onSearchInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-input', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
   }
   private onSearchChange() {
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-change', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
   }
   static override styles: CSSResultGroup = [
     DsInput.styles,
@@ -305,7 +305,7 @@ export class DsSelect extends DsElement {
   private changed(event: Event) {
     this.value = (event.target as HTMLSelectElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-change', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
   }
   protected override render() {
     return html`<label class="field"
@@ -412,7 +412,7 @@ export class DsCheckbox extends DsElement {
     this.checked = !this.checked;
     this.indeterminate = false;
     this.syncForm();
-    this.emit<DsCheckedChangeDetail>('ds-change', { checked: this.checked, value: this.value });
+    this.emit<DsCheckedChangeDetail>('kanonis-change', { checked: this.checked, value: this.value });
   }
   private keydown(event: KeyboardEvent) {
     if (event.key === ' ') {
@@ -484,7 +484,7 @@ export class DsFormField extends DsElement {
   private focusControl() {
     (
       this.querySelector(
-        'ds-input,ds-select,ds-checkbox,input,select,textarea',
+        'kanonis-input,kanonis-select,kanonis-checkbox,input,select,textarea',
       ) as HTMLElement | null
     )?.focus();
   }

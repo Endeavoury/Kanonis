@@ -109,7 +109,7 @@ export class DsSidebarItem extends DsElement {
       event.preventDefault();
       return;
     }
-    this.emit<DsActivateDetail>('ds-activate', { value: this.value });
+    this.emit<DsActivateDetail>('kanonis-activate', { value: this.value });
   }
   protected override render() {
     const content = html`<span class="icon"><slot name="icon"></slot></span
@@ -221,7 +221,7 @@ export class DsSidebar extends DsElement {
         nav::-webkit-scrollbar {
           display: none;
         }
-        ::slotted(ds-sidebar-item) {
+        ::slotted(kanonis-sidebar-item) {
           flex: 1;
           min-width: 0;
           max-width: 6rem;
@@ -443,7 +443,7 @@ export class DsAppShell extends DsElement {
 
   private toggleSidebar() {
     this.sidebarCollapsed = !this.sidebarCollapsed;
-    this.emit<{ collapsed: boolean }>('ds-sidebar-toggle', { collapsed: this.sidebarCollapsed });
+    this.emit<{ collapsed: boolean }>('kanonis-sidebar-toggle', { collapsed: this.sidebarCollapsed });
   }
 
   private handleHeaderSlot(event: Event) {

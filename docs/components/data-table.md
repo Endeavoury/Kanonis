@@ -1,6 +1,6 @@
 # Data table and data grid
 
-`ds-data-table` is the stable tabular-data primitive. `ds-data-grid` is its experimental enterprise
+`kanonis-data-table` is the stable tabular-data primitive. `kanonis-data-grid` is its experimental enterprise
 alias while editable-grid requirements are validated. Use a table when people compare structured
 values across rows and columns; use a list for single-axis content and a chart for trends.
 
@@ -26,9 +26,9 @@ an `Intl.NumberFormat` formatter owned by the product locale.
 | `focusableOverflow`               | Property | true                        | Lets keyboard users reach and scroll a clipped table                        |
 | `sortKey` / `sortDirection`       | Property | string / ascending          | Controlled sort state                                                       |
 | `page` / `pageSize` / `totalRows` | Property | 1 / 0 / 0                   | Client or server pagination contract                                        |
-| `ds-sort`                         | Event    | `{ key, direction }`        | Requests sorted data and announces the change                               |
-| `ds-row-select`                   | Event    | `{ row, index, key }`       | Reports keyboard or pointer row activation                                  |
-| `ds-page-change`                  | Event    | `{ page }`                  | Requests a page and announces the destination                               |
+| `kanonis-sort`                         | Event    | `{ key, direction }`        | Requests sorted data and announces the change                               |
+| `kanonis-row-select`                   | Event    | `{ row, index, key }`       | Reports keyboard or pointer row activation                                  |
+| `kanonis-page-change`                  | Event    | `{ page }`                  | Requests a page and announces the destination                               |
 | `frame` / `table`                 | CSS part | —                           | Supported surface customization points                                      |
 
 ## Sorting, identity, and pagination
@@ -39,14 +39,14 @@ not mutate the supplied rows. Supply raw numbers and use `format` for display-on
 
 Provide a unique `rowKey` when rows can be replaced or fetched from a server. Without a key, selection
 falls back to the index in the supplied `rows` array, preserved across local sorting and pagination.
-The `ds-row-select` index refers to that source array, not the visible page. Inline buttons, links,
+The `kanonis-row-select` index refers to that source array, not the visible page. Inline buttons, links,
 and form controls keep their own pointer and keyboard behavior without activating the row.
 
 With `pageSize > 0`, the footer shows the visible row range and page controls. Pages clamp to the
 available range when rows change, so filtering does not leave a blank out-of-range page. This
 normalization does not emit a page request. When `totalRows > rows.length`, supply the current server
-page and handle `ds-page-change`; the component does not slice the supplied rows. Sorts still apply
-to the supplied page, so handle `ds-sort` to fetch globally sorted server results. Set `busy` during
+page and handle `kanonis-page-change`; the component does not slice the supplied rows. Sorts still apply
+to the supplied page, so handle `kanonis-sort` to fetch globally sorted server results. Set `busy` during
 requests to disable sorting, row activation, and page controls.
 
 ## State and interaction matrix
@@ -58,7 +58,7 @@ requests to disable sorting, row activation, and page controls.
 | Selectable | Hover/focus/selected cues and stable key                   | Click, Enter, or Space on a row          |
 | Loading    | `aria-busy`, delayed polite “Loading” message, visual veil | Existing content remains contextual      |
 | Empty      | One full-width empty message                               | Consumer provides a useful recovery cue  |
-| Paged      | Previous/next controls and page status                     | Buttons emit `ds-page-change`            |
+| Paged      | Previous/next controls and page status                     | Buttons emit `kanonis-page-change`            |
 | Overflow   | Focus-visible scroll frame                                 | Tab, then browser horizontal-scroll keys |
 
 ## Responsive, preferences, and accessibility ownership
@@ -79,5 +79,5 @@ contract applies; do not put the table in a second horizontal scrolling containe
 - Behavior and accessibility: `tests/components.test.ts` and `tests/accessibility.test.ts`.
 - Visual matrix: `tests/visual-regression.spec.ts`.
 - Vanilla: `@endeavoury/kanonis/data-table`; React: `DataTable`; Angular: registered custom element.
-- Migration: no deprecated table APIs. Treat `ds-data-grid` as experimental until editable-grid
+- Migration: no deprecated table APIs. Treat `kanonis-data-grid` as experimental until editable-grid
   keyboard and selection models are specified.

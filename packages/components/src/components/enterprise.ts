@@ -79,7 +79,7 @@ export class DsFilterBuilder extends DsElement {
   @property() clearLabel = 'Clear filters';
 
   private emitChange() {
-    this.emit<DsFilterRule[]>('ds-filter-change', this.rules);
+    this.emit<DsFilterRule[]>('kanonis-filter-change', this.rules);
   }
   private updateRule(index: number, patch: Partial<DsFilterRule>) {
     this.rules = this.rules.map((rule, item) => (item === index ? { ...rule, ...patch } : rule));
@@ -177,12 +177,12 @@ export class DsViewToolbar extends DsElement {
   @property() label = 'View toolbar';
   private updateQuery(event: Event) {
     this.query = (event.target as HTMLInputElement).value;
-    this.emit<{ query: string }>('ds-query-change', { query: this.query });
+    this.emit<{ query: string }>('kanonis-query-change', { query: this.query });
   }
   protected override render() {
     return html`<section class="surface" aria-label=${this.label}>
       <label class="query"
-        ><span class="ds-visually-hidden">${this.placeholder}</span
+        ><span class="kanonis-visually-hidden">${this.placeholder}</span
         ><input
           type="search"
           .value=${this.query}
@@ -232,7 +232,7 @@ export class DsColumnManager extends DsElement {
     this.columns = this.columns.map((column) =>
       column.key === key ? { ...column, visible } : column,
     );
-    this.emit<DsColumnOption[]>('ds-columns-change', this.columns);
+    this.emit<DsColumnOption[]>('kanonis-columns-change', this.columns);
   }
   protected override render() {
     return html`<section class="surface" aria-label=${this.label}>
@@ -266,7 +266,7 @@ export class DsBulkActions extends DsElement {
       <strong>${this.count} ${this.selectedLabel}</strong>
       <div class="actions">
         <slot></slot
-        ><button type="button" @click=${() => this.emit<void>('ds-clear-selection', undefined)}>
+        ><button type="button" @click=${() => this.emit<void>('kanonis-clear-selection', undefined)}>
           ${this.clearLabel}
         </button>
       </div>
@@ -304,7 +304,7 @@ export class DsSavedView extends DsElement {
   @property() deleteLabel = 'Delete view';
   private select(event: Event) {
     this.current = (event.target as HTMLSelectElement).value;
-    this.emit<{ id: string }>('ds-view-change', { id: this.current });
+    this.emit<{ id: string }>('kanonis-view-change', { id: this.current });
   }
   protected override render() {
     return html`<section class="surface" aria-label="Saved views">
@@ -312,10 +312,10 @@ export class DsSavedView extends DsElement {
         <option value="">Choose a view</option>
         ${this.views.map((view) => html`<option value=${view.id}>${view.label}</option>`)}
       </select>
-      <button type="button" @click=${() => this.emit<void>('ds-view-save', undefined)}>
+      <button type="button" @click=${() => this.emit<void>('kanonis-view-save', undefined)}>
         ${this.saveLabel}
       </button>
-      ${this.current ? html`<button type="button" @click=${() => this.emit<{ id: string }>('ds-view-delete', { id: this.current })}>${this.deleteLabel}</button>` : nothing}
+      ${this.current ? html`<button type="button" @click=${() => this.emit<{ id: string }>('kanonis-view-delete', { id: this.current })}>${this.deleteLabel}</button>` : nothing}
     </section>`;
   }
 }
@@ -392,7 +392,7 @@ export class DsCombobox extends DsElement {
     this.value = (event.target as HTMLInputElement).value;
     this.open = true;
     this.activeIndex = this.filtered().length ? 0 : -1;
-    this.emit<{ value: string }>('ds-combobox-input', { value: this.value });
+    this.emit<{ value: string }>('kanonis-combobox-input', { value: this.value });
   }
   private keydown(event: KeyboardEvent) {
     const options = this.filtered();
@@ -417,7 +417,7 @@ export class DsCombobox extends DsElement {
     if (option.disabled) return;
     this.value = option.label;
     this.open = false;
-    this.emit<{ value: string }>('ds-change', { value: option.value });
+    this.emit<{ value: string }>('kanonis-change', { value: option.value });
   }
   protected override render() {
     const options = this.filtered();

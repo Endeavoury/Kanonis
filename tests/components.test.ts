@@ -39,7 +39,7 @@ const mount = async <T extends HTMLElement>(element: T): Promise<T> => {
 
 describe('actions and forms', () => {
   it('renders button content and forwards native activation', async () => {
-    const button = await mount(document.createElement('ds-button'));
+    const button = await mount(document.createElement('kanonis-button'));
     button.textContent = 'Save';
     const listener = vi.fn();
     button.addEventListener('click', listener);
@@ -56,7 +56,7 @@ describe('actions and forms', () => {
 
   it('submits its containing native form when configured as submit', async () => {
     const form = document.createElement('form');
-    const button = document.createElement('ds-button');
+    const button = document.createElement('kanonis-button');
     button.type = 'submit';
     button.textContent = 'Save';
     form.append(button);
@@ -69,7 +69,7 @@ describe('actions and forms', () => {
   });
 
   it('renders navigation actions as safe, accessible links', async () => {
-    const button = await mount(document.createElement('ds-button'));
+    const button = await mount(document.createElement('kanonis-button'));
     button.href = '/documentation';
     button.target = '_blank';
     button.textContent = 'Documentation';
@@ -84,12 +84,12 @@ describe('actions and forms', () => {
   });
 
   it('emits composed typed input and change events', async () => {
-    const input = (await mount(document.createElement('ds-input'))) as DsInput;
+    const input = (await mount(document.createElement('kanonis-input'))) as DsInput;
     input.label = 'Account name';
     const inputListener = vi.fn();
     const changeListener = vi.fn();
-    input.addEventListener('ds-input', inputListener);
-    input.addEventListener('ds-change', changeListener);
+    input.addEventListener('kanonis-input', inputListener);
+    input.addEventListener('kanonis-change', changeListener);
     await input.updateComplete;
     const native = input.shadowRoot!.querySelector('input')!;
     native.value = 'Savings';
@@ -105,7 +105,7 @@ describe('actions and forms', () => {
   });
 
   it('binds structured select options through a JavaScript property', async () => {
-    const select = (await mount(document.createElement('ds-select'))) as DsSelect;
+    const select = (await mount(document.createElement('kanonis-select'))) as DsSelect;
     select.options = [
       { label: 'Personal', value: 'personal' },
       { label: 'Business', value: 'business' },
@@ -118,9 +118,9 @@ describe('actions and forms', () => {
   });
 
   it('toggles a checkbox once from label or keyboard activation', async () => {
-    const checkbox = (await mount(document.createElement('ds-checkbox'))) as DsCheckbox;
+    const checkbox = (await mount(document.createElement('kanonis-checkbox'))) as DsCheckbox;
     const listener = vi.fn();
-    checkbox.addEventListener('ds-change', listener);
+    checkbox.addEventListener('kanonis-change', listener);
     await checkbox.updateComplete;
     fireEvent.click(checkbox.shadowRoot!.querySelector('label')!);
     expect(checkbox.checked).toBe(true);
@@ -133,14 +133,14 @@ describe('actions and forms', () => {
 
 describe('data and navigation', () => {
   it('sorts rows and announces sorting through a custom event', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     table.columns = [{ key: 'amount', label: 'Amount', sortable: true }];
     table.rows = [
       { id: 'b', amount: 20 },
       { id: 'a', amount: 10 },
     ];
     const listener = vi.fn();
-    table.addEventListener('ds-sort', listener);
+    table.addEventListener('kanonis-sort', listener);
     await table.updateComplete;
     fireEvent.click(table.shadowRoot!.querySelector('.sort')!);
     await table.updateComplete;
@@ -151,12 +151,12 @@ describe('data and navigation', () => {
   });
 
   it('selects rows by pointer and keyboard with the configured key', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     table.columns = [{ key: 'name', label: 'Name' }];
     table.rows = [{ id: 'account-1', name: 'Current' }];
     table.selectable = true;
     const listener = vi.fn();
-    table.addEventListener('ds-row-select', listener);
+    table.addEventListener('kanonis-row-select', listener);
     await table.updateComplete;
     fireEvent.keyDown(table.shadowRoot!.querySelector('tbody tr')!, { key: 'Enter' });
     expect(table.selectedKey).toBe('account-1');
@@ -164,7 +164,7 @@ describe('data and navigation', () => {
   });
 
   it('sorts signed decimal numbers correctly and keeps missing values last', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     table.columns = [{ key: 'amount', label: 'Amount', sortable: true, numeric: true }];
     table.rows = [3.12, -2, null, 3.5, -10].map((amount) => ({ amount }));
     const values = () =>
@@ -180,13 +180,13 @@ describe('data and navigation', () => {
   });
 
   it('preserves fallback row identity across sorting and pagination', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     table.columns = [{ key: 'name', label: 'Name', sortable: true }];
     table.rows = [{ name: 'Zulu' }, { name: 'Alpha' }, { name: 'Beta' }];
     table.selectable = true;
     table.pageSize = 1;
     const listener = vi.fn();
-    table.addEventListener('ds-row-select', listener);
+    table.addEventListener('kanonis-row-select', listener);
     await table.updateComplete;
     fireEvent.click(table.shadowRoot!.querySelector('tbody tr')!);
     expect(table.selectedKey).toBe('0');
@@ -201,7 +201,7 @@ describe('data and navigation', () => {
   });
 
   it('clamps pages after filtering and reports the visible range', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     table.columns = [{ key: 'name', label: 'Name' }];
     table.rows = ['A', 'B', 'C', 'D', 'E'].map((name) => ({ name }));
     table.pageSize = 2;
@@ -220,7 +220,7 @@ describe('data and navigation', () => {
   });
 
   it('keeps inline actions independent from row activation and blocks changes while busy', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     const action = vi.fn();
     const selection = vi.fn();
     table.columns = [
@@ -234,7 +234,7 @@ describe('data and navigation', () => {
     table.rows = [{ name: 'Alpha' }, { name: 'Beta' }];
     table.selectable = true;
     table.pageSize = 1;
-    table.addEventListener('ds-row-select', selection);
+    table.addEventListener('kanonis-row-select', selection);
     await table.updateComplete;
     const button = table.shadowRoot!.querySelector('tbody button')!;
     fireEvent.click(button);
@@ -254,10 +254,10 @@ describe('data and navigation', () => {
   });
 
   it('emits navigation activation across the shadow boundary', async () => {
-    const item = (await mount(document.createElement('ds-sidebar-item'))) as DsSidebarItem;
+    const item = (await mount(document.createElement('kanonis-sidebar-item'))) as DsSidebarItem;
     item.value = 'ledger';
     const listener = vi.fn();
-    item.addEventListener('ds-activate', listener);
+    item.addEventListener('kanonis-activate', listener);
     await item.updateComplete;
     fireEvent.click(item.shadowRoot!.querySelector('button,a')!);
     expect(listener.mock.calls[0][0]).toMatchObject({
@@ -268,11 +268,11 @@ describe('data and navigation', () => {
   });
 
   it('closes a detail sidebar from its button and the Escape key', async () => {
-    const sidebar = await mount(document.createElement('ds-detail-sidebar'));
+    const sidebar = await mount(document.createElement('kanonis-detail-sidebar'));
     sidebar.open = true;
     sidebar.heading = 'Selected insight';
     const listener = vi.fn();
-    sidebar.addEventListener('ds-close', listener);
+    sidebar.addEventListener('kanonis-close', listener);
     await sidebar.updateComplete;
 
     expect(sidebar.shadowRoot!.querySelector('aside')?.getAttribute('aria-labelledby')).toBe(
@@ -286,24 +286,24 @@ describe('data and navigation', () => {
 
 describe('display foundations', () => {
   it('provides enterprise workflow primitives with composed events', async () => {
-    const filters = (await mount(document.createElement('ds-filter-builder'))) as DsFilterBuilder;
+    const filters = (await mount(document.createElement('kanonis-filter-builder'))) as DsFilterBuilder;
     filters.fields = [{ key: 'status', label: 'Status' }];
     const listener = vi.fn();
-    filters.addEventListener('ds-filter-change', listener);
+    filters.addEventListener('kanonis-filter-change', listener);
     await filters.updateComplete;
     fireEvent.click(filters.shadowRoot!.querySelector('button')!);
     expect(listener).toHaveBeenCalled();
     expect(filters.rules).toHaveLength(1);
 
-    const bulk = (await mount(document.createElement('ds-bulk-actions'))) as DsBulkActions;
+    const bulk = (await mount(document.createElement('kanonis-bulk-actions'))) as DsBulkActions;
     bulk.count = 3;
     const clear = vi.fn();
-    bulk.addEventListener('ds-clear-selection', clear);
+    bulk.addEventListener('kanonis-clear-selection', clear);
     await bulk.updateComplete;
     fireEvent.click([...bulk.shadowRoot!.querySelectorAll('button')].at(-1)!);
     expect(clear).toHaveBeenCalledOnce();
 
-    const combo = (await mount(document.createElement('ds-combobox'))) as DsCombobox;
+    const combo = (await mount(document.createElement('kanonis-combobox'))) as DsCombobox;
     combo.options = [{ label: 'Platform', value: 'platform' }];
     await combo.updateComplete;
     const comboInput = combo.shadowRoot!.querySelector('input')!;
@@ -314,50 +314,50 @@ describe('display foundations', () => {
   });
 
   it('supports P1 command and workspace interactions', async () => {
-    const palette = (await mount(document.createElement('ds-command-palette'))) as DsCommandPalette;
+    const palette = (await mount(document.createElement('kanonis-command-palette'))) as DsCommandPalette;
     palette.commands = [{ id: 'create', label: 'Create project' }];
     palette.open = true;
     const selected = vi.fn();
-    palette.addEventListener('ds-command-select', selected);
+    palette.addEventListener('kanonis-command-select', selected);
     await palette.updateComplete;
     fireEvent.keyDown(palette.shadowRoot!.querySelector('input')!, { key: 'Enter' });
     expect(selected).toHaveBeenCalledOnce();
 
-    const tabs = (await mount(document.createElement('ds-workspace-tabs'))) as DsWorkspaceTabs;
+    const tabs = (await mount(document.createElement('kanonis-workspace-tabs'))) as DsWorkspaceTabs;
     tabs.tabs = [{ id: 'one', label: 'One', closable: true }];
     tabs.value = 'one';
     const closed = vi.fn();
-    tabs.addEventListener('ds-tab-close', closed);
+    tabs.addEventListener('kanonis-tab-close', closed);
     await tabs.updateComplete;
     fireEvent.click(tabs.shadowRoot!.querySelector('.close')!);
     expect(closed).toHaveBeenCalledOnce();
   });
 
   it('supports P2 workflow state changes', async () => {
-    const date = (await mount(document.createElement('ds-date-picker'))) as DsDatePicker;
+    const date = (await mount(document.createElement('kanonis-date-picker'))) as DsDatePicker;
     const changed = vi.fn();
-    date.addEventListener('ds-change', changed);
+    date.addEventListener('kanonis-change', changed);
     await date.updateComplete;
     const control = date.shadowRoot!.querySelector('input')!;
     control.value = '2026-09-04';
     fireEvent.change(control);
     expect(changed).toHaveBeenCalledOnce();
 
-    const stepper = (await mount(document.createElement('ds-stepper'))) as DsStepper;
+    const stepper = (await mount(document.createElement('kanonis-stepper'))) as DsStepper;
     stepper.steps = [
       { id: 'one', label: 'One' },
       { id: 'two', label: 'Two' },
     ];
     const stepChanged = vi.fn();
-    stepper.addEventListener('ds-step-change', stepChanged);
+    stepper.addEventListener('kanonis-step-change', stepChanged);
     await stepper.updateComplete;
     fireEvent.click(stepper.shadowRoot!.querySelectorAll('button')[1]!);
     expect(stepChanged).toHaveBeenCalledOnce();
 
-    const tasks = (await mount(document.createElement('ds-task-list'))) as DsTaskList;
+    const tasks = (await mount(document.createElement('kanonis-task-list'))) as DsTaskList;
     tasks.tasks = [{ id: 'task', title: 'Review', completed: false }];
     const taskChanged = vi.fn();
-    tasks.addEventListener('ds-task-change', taskChanged);
+    tasks.addEventListener('kanonis-task-change', taskChanged);
     await tasks.updateComplete;
     fireEvent.click(tasks.shadowRoot!.querySelector('input')!);
     expect(taskChanged).toHaveBeenCalledOnce();
@@ -365,17 +365,17 @@ describe('display foundations', () => {
 
   it('supports P3 governance and configuration interactions', async () => {
     const matrix = (await mount(
-      document.createElement('ds-permission-matrix'),
+      document.createElement('kanonis-permission-matrix'),
     )) as DsPermissionMatrix;
     matrix.roles = [{ id: 'admin', label: 'Admin' }];
     matrix.permissions = [{ id: 'read', label: 'Read' }];
     const permissionChanged = vi.fn();
-    matrix.addEventListener('ds-permission-change', permissionChanged);
+    matrix.addEventListener('kanonis-permission-change', permissionChanged);
     await matrix.updateComplete;
     fireEvent.click(matrix.shadowRoot!.querySelector('input')!);
     expect(permissionChanged).toHaveBeenCalledOnce();
 
-    const editor = (await mount(document.createElement('ds-json-editor'))) as DsJsonEditor;
+    const editor = (await mount(document.createElement('kanonis-json-editor'))) as DsJsonEditor;
     editor.value = '{"valid":true}';
     await editor.updateComplete;
     expect(editor.shadowRoot!.querySelector('[role="alert"]')).toBeNull();
@@ -383,19 +383,19 @@ describe('display foundations', () => {
     await editor.updateComplete;
     expect(editor.shadowRoot!.querySelector('[role="alert"]')).not.toBeNull();
 
-    const diff = (await mount(document.createElement('ds-diff-viewer'))) as DsDiffViewer;
+    const diff = (await mount(document.createElement('kanonis-diff-viewer'))) as DsDiffViewer;
     diff.lines = [{ type: 'added', text: 'new value' }];
     await diff.updateComplete;
     expect(diff.shadowRoot!.querySelector('[data-added]')).not.toBeNull();
   });
 
   it('keeps shell chrome outside the scrollable workspace and supports pane mode', async () => {
-    const shell = (await mount(document.createElement('ds-app-shell'))) as DsAppShell;
-    const sidebar = document.createElement('ds-sidebar');
+    const shell = (await mount(document.createElement('kanonis-app-shell'))) as DsAppShell;
+    const sidebar = document.createElement('kanonis-sidebar');
     sidebar.slot = 'sidebar';
     const header = document.createElement('div');
     header.slot = 'header';
-    const inspector = document.createElement('ds-inspector-pane');
+    const inspector = document.createElement('kanonis-inspector-pane');
     inspector.slot = 'inspector';
     shell.append(sidebar, header, inspector);
     shell.contentMode = 'pane';
@@ -410,15 +410,15 @@ describe('display foundations', () => {
   });
 
   it('collapses and reopens sidebar navigation with an accessible persistent control', async () => {
-    const shell = (await mount(document.createElement('ds-app-shell'))) as DsAppShell;
+    const shell = (await mount(document.createElement('kanonis-app-shell'))) as DsAppShell;
     expect(shell.shadowRoot!.querySelector('.sidebar-toggle')).toBeNull();
     shell.innerHTML =
-      '<ds-sidebar slot="sidebar"><ds-sidebar-item>Overview</ds-sidebar-item></ds-sidebar>';
+      '<kanonis-sidebar slot="sidebar"><kanonis-sidebar-item>Overview</kanonis-sidebar-item></kanonis-sidebar>';
     shell.shadowRoot!.querySelector('slot[name="sidebar"]')!.dispatchEvent(new Event('slotchange'));
     await shell.updateComplete;
     const toggle = shell.shadowRoot!.querySelector<HTMLButtonElement>('.sidebar-toggle')!;
     const listener = vi.fn();
-    shell.addEventListener('ds-sidebar-toggle', listener);
+    shell.addEventListener('kanonis-sidebar-toggle', listener);
     expect(toggle.getAttribute('aria-expanded')).toBe('true');
     fireEvent.click(toggle);
     await shell.updateComplete;
@@ -440,10 +440,10 @@ describe('display foundations', () => {
   });
 
   it('composes fixed pane groups with explicit positions and scroll ownership', async () => {
-    const group = (await mount(document.createElement('ds-pane-group'))) as DsPaneGroup;
-    const left = document.createElement('ds-pane') as DsPane;
-    const center = document.createElement('ds-pane') as DsPane;
-    const content = document.createElement('ds-pane-content') as DsPaneContent;
+    const group = (await mount(document.createElement('kanonis-pane-group'))) as DsPaneGroup;
+    const left = document.createElement('kanonis-pane') as DsPane;
+    const center = document.createElement('kanonis-pane') as DsPane;
+    const content = document.createElement('kanonis-pane-content') as DsPaneContent;
     left.position = 'left';
     center.position = 'center';
     content.scrollable = true;
@@ -461,17 +461,17 @@ describe('display foundations', () => {
   });
 
   it('keeps the workspace header outside a bounded pane window and supports pane stacks', async () => {
-    const workspace = (await mount(document.createElement('ds-workspace'))) as DsWorkspace;
-    const header = document.createElement('ds-workspace-header') as DsWorkspaceHeader;
-    const window = document.createElement('ds-pane-window') as DsPaneWindow;
-    const stack = document.createElement('ds-pane-stack') as DsPaneStack;
+    const workspace = (await mount(document.createElement('kanonis-workspace'))) as DsWorkspace;
+    const header = document.createElement('kanonis-workspace-header') as DsWorkspaceHeader;
+    const window = document.createElement('kanonis-pane-window') as DsPaneWindow;
+    const stack = document.createElement('kanonis-pane-stack') as DsPaneStack;
     header.slot = 'header';
     header.heading = 'Project Alpha';
     header.innerHTML =
       '<span slot="breadcrumb">Customers / Acme</span><span slot="status">Synced</span>';
     stack.split = '40/60';
-    stack.append(document.createElement('ds-pane'), document.createElement('ds-pane'));
-    window.append(document.createElement('ds-pane'), stack, document.createElement('ds-pane'));
+    stack.append(document.createElement('kanonis-pane'), document.createElement('kanonis-pane'));
+    window.append(document.createElement('kanonis-pane'), stack, document.createElement('kanonis-pane'));
     workspace.append(header, window);
     await Promise.all([
       workspace.updateComplete,
@@ -493,20 +493,20 @@ describe('display foundations', () => {
   });
 
   it('creates icon geometry in the SVG namespace', async () => {
-    const icon = await mount(document.createElement('ds-icon'));
+    const icon = await mount(document.createElement('kanonis-icon'));
     icon.name = 'refresh';
     await icon.updateComplete;
     expect(icon.shadowRoot!.querySelector('path')?.namespaceURI).toBe('http://www.w3.org/2000/svg');
   });
 
   it('renders structured descriptions and labeled code', async () => {
-    const descriptions = await mount(document.createElement('ds-description-list'));
+    const descriptions = await mount(document.createElement('kanonis-description-list'));
     descriptions.items = [{ term: 'Schema', value: 'Customer 2.0' }];
     await descriptions.updateComplete;
     expect(descriptions.shadowRoot!.querySelector('dt')?.textContent).toBe('Schema');
     expect(descriptions.shadowRoot!.querySelector('dd')?.textContent).toBe('Customer 2.0');
 
-    const code = await mount(document.createElement('ds-code-block'));
+    const code = await mount(document.createElement('kanonis-code-block'));
     code.label = 'OpenAPI';
     code.language = 'JSON';
     code.textContent = '{ "openapi": "3.1.0" }';
@@ -515,8 +515,8 @@ describe('display foundations', () => {
   });
 
   it('expands tree navigation and emits the selected value', async () => {
-    const tree = document.createElement('ds-tree');
-    const item = document.createElement('ds-tree-item');
+    const tree = document.createElement('kanonis-tree');
+    const item = document.createElement('kanonis-tree-item');
     item.label = 'Commercial Node';
     item.value = 'commercial';
     item.append(document.createElement('a'));
@@ -526,14 +526,14 @@ describe('display foundations', () => {
     fireEvent(item.shadowRoot!.querySelector('slot:not([name])')!, new Event('slotchange'));
     await item.updateComplete;
     const listener = vi.fn();
-    item.addEventListener('ds-tree-activate', listener);
+    item.addEventListener('kanonis-tree-activate', listener);
     fireEvent.click(item.shadowRoot!.querySelector('button')!);
     expect(item.expanded).toBe(true);
     expect(listener.mock.calls[0][0].detail).toEqual({ value: 'commercial' });
   });
 
   it('only exposes card regions that have assigned content', async () => {
-    const card = await mount(document.createElement('ds-card'));
+    const card = await mount(document.createElement('kanonis-card'));
     const headerRegion = card.shadowRoot!.querySelector<HTMLElement>('.header')!;
     const footerRegion = card.shadowRoot!.querySelector<HTMLElement>('.footer')!;
     expect(headerRegion.hidden).toBe(true);
@@ -552,20 +552,20 @@ describe('display foundations', () => {
 
 describe('maturity additions', () => {
   it('supports roving segmented selection', async () => {
-    const control = document.createElement('ds-segmented-control') as DsSegmentedControl;
+    const control = document.createElement('kanonis-segmented-control') as DsSegmentedControl;
     control.value = 'month';
     for (const [value, label] of [
       ['week', 'Week'],
       ['month', 'Month'],
       ['year', 'Year'],
     ]) {
-      const segment = document.createElement('ds-segment');
+      const segment = document.createElement('kanonis-segment');
       segment.value = value;
       segment.textContent = label;
       control.append(segment);
     }
     const listener = vi.fn();
-    control.addEventListener('ds-change', listener);
+    control.addEventListener('kanonis-change', listener);
     await mount(control);
     await Promise.all([...control.children].map((child) => (child as DsElement).updateComplete));
     const year = control.children[2] as HTMLElement;
@@ -577,21 +577,21 @@ describe('maturity additions', () => {
   });
 
   it('exposes split-button and chip intent as composed events', async () => {
-    const split = (await mount(document.createElement('ds-split-button'))) as DsSplitButton;
+    const split = (await mount(document.createElement('kanonis-split-button'))) as DsSplitButton;
     const activate = vi.fn();
-    split.addEventListener('ds-activate', activate);
+    split.addEventListener('kanonis-activate', activate);
     fireEvent.click(split.shadowRoot!.querySelector('.primary')!);
     expect(activate).toHaveBeenCalledOnce();
 
-    const chip = (await mount(document.createElement('ds-chip'))) as DsChip;
+    const chip = (await mount(document.createElement('kanonis-chip'))) as DsChip;
     chip.value = 'open';
     chip.label = 'Open';
     chip.dismissible = true;
     await chip.updateComplete;
     const changed = vi.fn();
     const dismissed = vi.fn();
-    chip.addEventListener('ds-change', changed);
-    chip.addEventListener('ds-dismiss', dismissed);
+    chip.addEventListener('kanonis-change', changed);
+    chip.addEventListener('kanonis-dismiss', dismissed);
     fireEvent.click(chip.shadowRoot!.querySelector('.select')!);
     fireEvent.click(chip.shadowRoot!.querySelector('.dismiss')!);
     expect(changed.mock.calls[0][0].detail).toEqual({ value: 'open', selected: true });
@@ -599,16 +599,16 @@ describe('maturity additions', () => {
   });
 
   it('offers a keyboard-operable alternative to drag reordering', async () => {
-    const list = document.createElement('ds-reorder-list') as DsReorderList;
+    const list = document.createElement('kanonis-reorder-list') as DsReorderList;
     for (const value of ['one', 'two', 'three']) {
-      const item = document.createElement('ds-reorder-item');
+      const item = document.createElement('kanonis-reorder-item');
       item.value = value;
       item.label = value;
       item.textContent = value;
       list.append(item);
     }
     const listener = vi.fn();
-    list.addEventListener('ds-reorder', listener);
+    list.addEventListener('kanonis-reorder', listener);
     await mount(list);
     await Promise.all([...list.children].map((child) => (child as DsElement).updateComplete));
     const second = list.children[1] as HTMLElement;
@@ -626,7 +626,7 @@ describe('maturity additions', () => {
   });
 
   it('announces data sorting, loading, and paging while retaining table semantics', async () => {
-    const table = (await mount(document.createElement('ds-data-table'))) as DsDataTable;
+    const table = (await mount(document.createElement('kanonis-data-table'))) as DsDataTable;
     table.label = 'Projects';
     table.description = 'Active projects by owner';
     table.columns = [
@@ -653,10 +653,10 @@ describe('maturity additions', () => {
 
 describe('interaction and workflow components', () => {
   it('switches the document theme and emits the new value', async () => {
-    const toggle = await mount(document.createElement('ds-theme-toggle'));
+    const toggle = await mount(document.createElement('kanonis-theme-toggle'));
     toggle.theme = 'dark';
     const listener = vi.fn();
-    toggle.addEventListener('ds-theme-change', listener);
+    toggle.addEventListener('kanonis-theme-change', listener);
     await toggle.updateComplete;
 
     fireEvent.click(toggle.shadowRoot!.querySelector('button')!);
@@ -668,14 +668,14 @@ describe('interaction and workflow components', () => {
   });
 
   it('provides automatic keyboard navigation for tabs and skips disabled tabs', async () => {
-    const tabs = document.createElement('ds-tabs') as DsTabs;
+    const tabs = document.createElement('kanonis-tabs') as DsTabs;
     tabs.value = 'activity';
     for (const [value, label, disabled] of [
       ['activity', 'Activity', false],
       ['disabled', 'Disabled', true],
       ['details', 'Details', false],
     ] as const) {
-      const tab = document.createElement('ds-tab');
+      const tab = document.createElement('kanonis-tab');
       tab.value = value;
       tab.label = label;
       tab.disabled = disabled;
@@ -683,7 +683,7 @@ describe('interaction and workflow components', () => {
       tabs.append(tab);
     }
     const listener = vi.fn();
-    tabs.addEventListener('ds-tab-change', listener);
+    tabs.addEventListener('kanonis-tab-change', listener);
     await mount(tabs);
     fireEvent(tabs.shadowRoot!.querySelector('slot')!, new Event('slotchange'));
     await tabs.updateComplete;
@@ -694,15 +694,15 @@ describe('interaction and workflow components', () => {
     expect(tabs.value).toBe('details');
     expect(listener.mock.calls[0][0].detail).toEqual({ value: 'details' });
     expect(
-      [...tabs.querySelectorAll('ds-tab')].find((tab) => tab.value === 'details')!.active,
+      [...tabs.querySelectorAll('kanonis-tab')].find((tab) => tab.value === 'details')!.active,
     ).toBe(true);
   });
 
   it('reports disclosure state changes', async () => {
-    const disclosure = await mount(document.createElement('ds-disclosure'));
+    const disclosure = await mount(document.createElement('kanonis-disclosure'));
     disclosure.summary = 'Details';
     const listener = vi.fn();
-    disclosure.addEventListener('ds-disclosure-change', listener);
+    disclosure.addEventListener('kanonis-disclosure-change', listener);
     await disclosure.updateComplete;
     const details = disclosure.shadowRoot!.querySelector('details')!;
     details.open = true;
@@ -713,12 +713,12 @@ describe('interaction and workflow components', () => {
   });
 
   it('accepts matching dropped files and rejects unsupported types', async () => {
-    const zone = await mount(document.createElement('ds-drop-zone'));
+    const zone = await mount(document.createElement('kanonis-drop-zone'));
     zone.accept = '.xml';
     const accepted = vi.fn();
     const rejected = vi.fn();
-    zone.addEventListener('ds-files', accepted);
-    zone.addEventListener('ds-file-reject', rejected);
+    zone.addEventListener('kanonis-files', accepted);
+    zone.addEventListener('kanonis-file-reject', rejected);
     await zone.updateComplete;
     const drop = new Event('drop', { bubbles: true, cancelable: true });
     Object.defineProperty(drop, 'dataTransfer', {
@@ -736,7 +736,7 @@ describe('interaction and workflow components', () => {
   });
 
   it('renders determinate and indeterminate progress semantics', async () => {
-    const progress = await mount(document.createElement('ds-progress'));
+    const progress = await mount(document.createElement('kanonis-progress'));
     progress.label = 'Importing';
     progress.value = 25;
     progress.max = 50;
@@ -755,10 +755,10 @@ describe('interaction and workflow components', () => {
 
 describe('expanded component catalog', () => {
   it('supports textarea, switch, and range form events', async () => {
-    const textarea = await mount(document.createElement('ds-textarea'));
+    const textarea = await mount(document.createElement('kanonis-textarea'));
     textarea.label = 'Note';
     const textChange = vi.fn();
-    textarea.addEventListener('ds-input', textChange);
+    textarea.addEventListener('kanonis-input', textChange);
     await textarea.updateComplete;
     const nativeTextarea = textarea.shadowRoot!.querySelector('textarea')!;
     nativeTextarea.value = 'Reviewed';
@@ -766,17 +766,17 @@ describe('expanded component catalog', () => {
     expect(textarea.value).toBe('Reviewed');
     expect(textChange.mock.calls[0][0].detail).toEqual({ value: 'Reviewed' });
 
-    const toggle = await mount(document.createElement('ds-switch'));
+    const toggle = await mount(document.createElement('kanonis-switch'));
     const switchChange = vi.fn();
-    toggle.addEventListener('ds-change', switchChange);
+    toggle.addEventListener('kanonis-change', switchChange);
     await toggle.updateComplete;
     fireEvent.click(toggle.shadowRoot!.querySelector('input')!);
     expect(toggle.checked).toBe(true);
     expect(switchChange.mock.calls[0][0].detail.checked).toBe(true);
 
-    const range = await mount(document.createElement('ds-range'));
+    const range = await mount(document.createElement('kanonis-range'));
     const rangeInput = vi.fn();
-    range.addEventListener('ds-input', rangeInput);
+    range.addEventListener('kanonis-input', rangeInput);
     await range.updateComplete;
     const nativeRange = range.shadowRoot!.querySelector('input')!;
     nativeRange.value = '48';
@@ -786,21 +786,21 @@ describe('expanded component catalog', () => {
   });
 
   it('provides arrow-key radio selection and skips disabled options', async () => {
-    const group = document.createElement('ds-radio-group') as DsRadioGroup;
+    const group = document.createElement('kanonis-radio-group') as DsRadioGroup;
     group.value = 'monthly';
     for (const [value, disabled] of [
       ['monthly', false],
       ['quarterly', true],
       ['yearly', false],
     ] as const) {
-      const radio = document.createElement('ds-radio');
+      const radio = document.createElement('kanonis-radio');
       radio.value = value;
       radio.disabled = disabled;
       radio.textContent = value;
       group.append(radio);
     }
     const listener = vi.fn();
-    group.addEventListener('ds-change', listener);
+    group.addEventListener('kanonis-change', listener);
     await mount(group);
     fireEvent(group.shadowRoot!.querySelector('slot')!, new Event('slotchange'));
     await group.updateComplete;
@@ -813,11 +813,11 @@ describe('expanded component catalog', () => {
   });
 
   it('dismisses modal surfaces with an explicit reason', async () => {
-    const dialog = await mount(document.createElement('ds-dialog'));
+    const dialog = await mount(document.createElement('kanonis-dialog'));
     dialog.heading = 'Confirm action';
     dialog.open = true;
     const listener = vi.fn();
-    dialog.addEventListener('ds-close', listener);
+    dialog.addEventListener('kanonis-close', listener);
     await dialog.updateComplete;
 
     fireEvent(
@@ -830,13 +830,13 @@ describe('expanded component catalog', () => {
   });
 
   it('closes menus after a typed item selection', async () => {
-    const menu = document.createElement('ds-menu') as DsMenu;
-    const item = document.createElement('ds-menu-item');
+    const menu = document.createElement('kanonis-menu') as DsMenu;
+    const item = document.createElement('kanonis-menu-item');
     item.value = 'export';
     item.textContent = 'Export';
     menu.append(item);
     const listener = vi.fn();
-    item.addEventListener('ds-menu-select', listener);
+    item.addEventListener('kanonis-menu-select', listener);
     await mount(menu);
 
     fireEvent.click(menu.shadowRoot!.querySelector('.trigger')!);
@@ -850,11 +850,11 @@ describe('expanded component catalog', () => {
   });
 
   it('clamps pagination and emits the selected page', async () => {
-    const pagination = (await mount(document.createElement('ds-pagination'))) as DsPagination;
+    const pagination = (await mount(document.createElement('kanonis-pagination'))) as DsPagination;
     pagination.page = 3;
     pagination.pages = 8;
     const listener = vi.fn();
-    pagination.addEventListener('ds-page-change', listener);
+    pagination.addEventListener('kanonis-page-change', listener);
     await pagination.updateComplete;
     fireEvent.click(pagination.shadowRoot!.querySelector('[part=next]')!);
 
@@ -863,11 +863,11 @@ describe('expanded component catalog', () => {
   });
 
   it('dismisses persistent toast notifications', async () => {
-    const toast = await mount(document.createElement('ds-toast'));
+    const toast = await mount(document.createElement('kanonis-toast'));
     toast.duration = 0;
     toast.heading = 'Saved';
     const listener = vi.fn();
-    toast.addEventListener('ds-toast-close', listener);
+    toast.addEventListener('kanonis-toast-close', listener);
     await toast.updateComplete;
     fireEvent.click(toast.shadowRoot!.querySelector('button')!);
 

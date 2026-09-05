@@ -6,16 +6,16 @@ export default meta;
 
 export const NodeNavigation: StoryObj = {
   render: () => html`<div style="max-width: 20rem">
-    <ds-tree label="Master data systems">
-      <ds-tree-item label="Commercial Node" value="commercial" expanded>
+    <kanonis-tree label="Master data systems">
+      <kanonis-tree-item label="Commercial Node" value="commercial" expanded>
         <a href="#overview">Overview</a>
         <a href="#topology">Topology</a>
         <a href="#definitions">Definitions</a>
-      </ds-tree-item>
-      <ds-tree-item label="Reference Node" value="reference">
+      </kanonis-tree-item>
+      <kanonis-tree-item label="Reference Node" value="reference">
         <a href="#overview">Overview</a>
         <a href="#ontology">Ontology</a>
-      </ds-tree-item>
-    </ds-tree>
+      </kanonis-tree-item>
+    </kanonis-tree>
   </div>`,
 };

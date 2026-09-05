@@ -10,14 +10,14 @@ import {
   DsViewToolbar,
 } from '../components/enterprise.js';
 
-defineComponent('ds-data-grid', DsDataGrid);
-defineComponent('ds-filter-builder', DsFilterBuilder);
-defineComponent('ds-view-toolbar', DsViewToolbar);
-defineComponent('ds-column-manager', DsColumnManager);
-defineComponent('ds-bulk-actions', DsBulkActions);
-defineComponent('ds-saved-view', DsSavedView);
-defineComponent('ds-combobox', DsCombobox);
-defineComponent('ds-validation-summary', DsValidationSummary);
+defineComponent('kanonis-data-grid', DsDataGrid);
+defineComponent('kanonis-filter-builder', DsFilterBuilder);
+defineComponent('kanonis-view-toolbar', DsViewToolbar);
+defineComponent('kanonis-column-manager', DsColumnManager);
+defineComponent('kanonis-bulk-actions', DsBulkActions);
+defineComponent('kanonis-saved-view', DsSavedView);
+defineComponent('kanonis-combobox', DsCombobox);
+defineComponent('kanonis-validation-summary', DsValidationSummary);
 
 export {
   DsBulkActions,

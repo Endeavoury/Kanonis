@@ -4,9 +4,9 @@ import type { DsDataTable } from '@endeavoury/kanonis/classes';
 describe('framework-neutral custom element contract', () => {
   it('supports attributes, properties, slots, events, and inherited themes', async () => {
     document.documentElement.dataset.dsTheme = 'dark';
-    const button = document.createElement('ds-button');
+    const button = document.createElement('kanonis-button');
     button.setAttribute('variant', 'primary');
-    const icon = document.createElement('ds-icon');
+    const icon = document.createElement('kanonis-icon');
     icon.slot = 'prefix';
     icon.setAttribute('name', 'plus');
     button.append(icon, 'Add account');
@@ -16,12 +16,12 @@ describe('framework-neutral custom element contract', () => {
     expect(button.querySelector('[slot=prefix]')).toBe(icon);
     expect(document.documentElement.dataset.dsTheme).toBe('dark');
 
-    const table = document.createElement('ds-data-table') as DsDataTable;
+    const table = document.createElement('kanonis-data-table') as DsDataTable;
     table.columns = [{ key: 'name', label: 'Name' }];
     table.rows = [{ id: '1', name: 'Current' }];
     table.selectable = true;
     const event = vi.fn();
-    table.addEventListener('ds-row-select', event);
+    table.addEventListener('kanonis-row-select', event);
     document.body.append(table);
     await table.updateComplete;
     table.shadowRoot!.querySelector<HTMLTableRowElement>('tbody tr')!.click();

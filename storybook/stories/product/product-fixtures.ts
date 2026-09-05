@@ -159,35 +159,35 @@ export const productStyles = html`<style>
 </style>`;
 
 export const productSidebar = () =>
-  html`<ds-sidebar slot="sidebar"
+  html`<kanonis-sidebar slot="sidebar"
     ><div slot="brand" class="brand"><span class="brandmark">O</span><span>Oikonomis</span></div>
-    <ds-sidebar-item value="overview" active
-      ><ds-icon slot="icon" name="home"></ds-icon>Overview</ds-sidebar-item
-    ><ds-sidebar-item value="monthly"
-      ><ds-icon slot="icon" name="calendar"></ds-icon>Monthly overview</ds-sidebar-item
-    ><ds-sidebar-item value="year"
-      ><ds-icon slot="icon" name="chart"></ds-icon>Year overview</ds-sidebar-item
-    ><ds-sidebar-item value="ledger"
-      ><ds-icon slot="icon" name="table"></ds-icon>Ledger</ds-sidebar-item
-    ><ds-sidebar-item value="settings"
-      ><ds-icon slot="icon" name="settings"></ds-icon>Accounts</ds-sidebar-item
-    ><ds-status-badge slot="footer" tone="success">System online</ds-status-badge></ds-sidebar
+    <kanonis-sidebar-item value="overview" active
+      ><kanonis-icon slot="icon" name="home"></kanonis-icon>Overview</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="monthly"
+      ><kanonis-icon slot="icon" name="calendar"></kanonis-icon>Monthly overview</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="year"
+      ><kanonis-icon slot="icon" name="chart"></kanonis-icon>Year overview</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="ledger"
+      ><kanonis-icon slot="icon" name="table"></kanonis-icon>Ledger</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="settings"
+      ><kanonis-icon slot="icon" name="settings"></kanonis-icon>Accounts</kanonis-sidebar-item
+    ><kanonis-status-badge slot="footer" tone="success">System online</kanonis-status-badge></kanonis-sidebar
   >`;
 export const productHeader = (title: string) =>
-  html`<ds-inline slot="header" class="topbar" justify="between"
+  html`<kanonis-inline slot="header" class="topbar" justify="between"
     ><div>
       <span
         style="display:block;color:var(--ds-color-text-muted);font-size:11px;letter-spacing:.12em"
         >PERSONAL FINANCE</span
       ><strong>${title}</strong>
     </div>
-    <ds-inline
-      ><ds-icon-button label="Refresh"><ds-icon name="refresh"></ds-icon></ds-icon-button
-      ><ds-avatar name="Roy Gerritse"></ds-avatar
-      ><ds-button size="small"
-        ><ds-icon slot="prefix" name="plus"></ds-icon>Import files</ds-button
-      ></ds-inline
-    ></ds-inline
+    <kanonis-inline
+      ><kanonis-icon-button label="Refresh"><kanonis-icon name="refresh"></kanonis-icon></kanonis-icon-button
+      ><kanonis-avatar name="Roy Gerritse"></kanonis-avatar
+      ><kanonis-button size="small"
+        ><kanonis-icon slot="prefix" name="plus"></kanonis-icon>Import files</kanonis-button
+      ></kanonis-inline
+    ></kanonis-inline
   >`;
 export const money = (value: number) =>
   new Intl.NumberFormat('en-NL', { style: 'currency', currency: 'EUR' }).format(value);

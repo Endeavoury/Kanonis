@@ -8,52 +8,52 @@ const meta: Meta = {
 };
 export default meta;
 
-const paneContent = (heading: string, description: string) => html`<ds-pane-header>
+const paneContent = (heading: string, description: string) => html`<kanonis-pane-header>
     <div style="padding:var(--ds-space-4)"><strong>${heading}</strong></div>
-  </ds-pane-header>
-  <ds-pane-content scrollable>
+  </kanonis-pane-header>
+  <kanonis-pane-content scrollable>
     <div style="padding:var(--ds-space-4)"><p>${description}</p><slot></slot></div>
-  </ds-pane-content>`;
+  </kanonis-pane-content>`;
 
 export const ListDetail: StoryObj = {
   render: () => html`<div style="height:36rem;max-height:80vh">
-    <ds-pane-group>
-      <ds-pane position="left" style="--ds-pane-size:19rem">
+    <kanonis-pane-group>
+      <kanonis-pane position="left" style="--ds-pane-size:19rem">
         ${paneContent('Records', 'Choose a record to inspect.')}
-        <ds-list label="Records">
-          <ds-list-item value="one" selected>Commercial Node</ds-list-item>
-          <ds-list-item value="two">Research Node</ds-list-item>
-        </ds-list>
-      </ds-pane>
-      <ds-pane position="center">
+        <kanonis-list label="Records">
+          <kanonis-list-item value="one" selected>Commercial Node</kanonis-list-item>
+          <kanonis-list-item value="two">Research Node</kanonis-list-item>
+        </kanonis-list>
+      </kanonis-pane>
+      <kanonis-pane position="center">
         ${paneContent(
           'Commercial Node',
           'The detail region keeps reading and keyboard order after the list.',
         )}
-      </ds-pane>
-    </ds-pane-group>
+      </kanonis-pane>
+    </kanonis-pane-group>
   </div>`,
 };
 
 export const SupportingPane: StoryObj = {
   render: () => html`<div style="height:36rem;max-height:80vh">
-    <ds-pane-group>
-      <ds-pane position="center">
+    <kanonis-pane-group>
+      <kanonis-pane position="center">
         ${paneContent('Canonical model', 'The primary work remains available at every width.')}
-      </ds-pane>
-      <ds-inspector-pane>
+      </kanonis-pane>
+      <kanonis-inspector-pane>
         ${paneContent('Properties', 'Supporting detail becomes an overlay below expanded width.')}
-      </ds-inspector-pane>
-    </ds-pane-group>
+      </kanonis-inspector-pane>
+    </kanonis-pane-group>
   </div>`,
 };
 
 export const Feed: StoryObj = {
-  render: () => html`<ds-container>
-    <ds-grid columns="3" responsive>
+  render: () => html`<kanonis-container>
+    <kanonis-grid columns="3" responsive>
       ${['Summary', 'Activity', 'Approvals', 'Jobs', 'Audit', 'Changes'].map(
-        (heading) => html`<ds-card heading=${heading}>Responsive feed content</ds-card>`,
+        (heading) => html`<kanonis-card heading=${heading}>Responsive feed content</kanonis-card>`,
       )}
-    </ds-grid>
-  </ds-container>`,
+    </kanonis-grid>
+  </kanonis-container>`,
 };

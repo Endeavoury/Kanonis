@@ -50,7 +50,7 @@ export class DsTreeItem extends DsElement {
   private activate(event: Event): void {
     if (this.disabled) { event.preventDefault(); return; }
     if (this.hasChildren && !this.href) this.expanded = !this.expanded;
-    this.emit<DsTreeActivateDetail>('ds-tree-activate', { value: this.value });
+    this.emit<DsTreeActivateDetail>('kanonis-tree-activate', { value: this.value });
   }
   private keydown(event: KeyboardEvent): void {
     if (event.key === 'ArrowRight' && this.hasChildren && !this.expanded) { event.preventDefault(); this.expanded = true; }

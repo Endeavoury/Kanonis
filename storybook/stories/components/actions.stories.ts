@@ -14,42 +14,42 @@ export default meta;
 export const ButtonPlayground: StoryObj = {
   args: { variant: 'primary', size: 'medium', disabled: false, loading: false },
   render: (args) =>
-    html`<ds-button
+    html`<kanonis-button
       variant=${args['variant']}
       size=${args['size']}
       ?disabled=${args['disabled']}
       ?loading=${args['loading']}
-      ><ds-icon slot="prefix" name="plus"></ds-icon>Add transaction</ds-button
+      ><kanonis-icon slot="prefix" name="plus"></kanonis-icon>Add transaction</kanonis-button
     >`,
 };
 export const VariantsAndSizes: StoryObj = {
   render: () =>
-    html`<ds-stack
-      >${['small', 'medium', 'large'].map((size) => html`<ds-inline>${['primary', 'secondary', 'ghost', 'danger'].map((variant) => html`<ds-button variant=${variant} size=${size}>${variant}</ds-button>`)}</ds-inline>`)}</ds-stack
+    html`<kanonis-stack
+      >${['small', 'medium', 'large'].map((size) => html`<kanonis-inline>${['primary', 'secondary', 'ghost', 'danger'].map((variant) => html`<kanonis-button variant=${variant} size=${size}>${variant}</kanonis-button>`)}</kanonis-inline>`)}</kanonis-stack
     >`,
 };
 export const LoadingDisabledAndWidth: StoryObj = {
   render: () =>
-    html`<ds-stack
-      ><ds-inline
-        ><ds-button loading>Saving</ds-button><ds-button disabled>Unavailable</ds-button></ds-inline
-      ><ds-button full-width>Full-width action</ds-button></ds-stack
+    html`<kanonis-stack
+      ><kanonis-inline
+        ><kanonis-button loading>Saving</kanonis-button><kanonis-button disabled>Unavailable</kanonis-button></kanonis-inline
+      ><kanonis-button full-width>Full-width action</kanonis-button></kanonis-stack
     >`,
 };
 export const LinkButton: StoryObj = {
   render: () =>
-    html`<ds-button href="/documentation" variant="secondary" target="_blank"
-      ><ds-icon slot="prefix" name="book"></ds-icon>Open documentation</ds-button
+    html`<kanonis-button href="/documentation" variant="secondary" target="_blank"
+      ><kanonis-icon slot="prefix" name="book"></kanonis-icon>Open documentation</kanonis-button
     >`,
 };
 export const IconButtonAndGroup: StoryObj = {
   render: () =>
-    html`<ds-inline
-      ><ds-icon-button label="Refresh"><ds-icon name="refresh"></ds-icon></ds-icon-button
-      ><ds-button-group label="Period navigation"
-        ><ds-icon-button label="Previous"><ds-icon name="chevron-left"></ds-icon></ds-icon-button
-        ><ds-button variant="secondary">August 2026</ds-button
-        ><ds-icon-button label="Next"
-          ><ds-icon name="chevron-right"></ds-icon></ds-icon-button></ds-button-group
-    ></ds-inline>`,
+    html`<kanonis-inline
+      ><kanonis-icon-button label="Refresh"><kanonis-icon name="refresh"></kanonis-icon></kanonis-icon-button
+      ><kanonis-button-group label="Period navigation"
+        ><kanonis-icon-button label="Previous"><kanonis-icon name="chevron-left"></kanonis-icon></kanonis-icon-button
+        ><kanonis-button variant="secondary">August 2026</kanonis-button
+        ><kanonis-icon-button label="Next"
+          ><kanonis-icon name="chevron-right"></kanonis-icon></kanonis-icon-button></kanonis-button-group
+    ></kanonis-inline>`,
 };

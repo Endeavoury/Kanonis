@@ -84,7 +84,7 @@ export class DsWorkspace extends DsElement {
       ::slotted([slot='header']) {
         min-width: 0;
       }
-      ::slotted(ds-pane-window) {
+      ::slotted(kanonis-pane-window) {
         width: 100%;
         height: 100%;
       }
@@ -247,8 +247,8 @@ export class DsPaneWindow extends DsElement {
         transform: translateX(-120%);
         animation: pane-window-sweep var(--ds-motion-pane) both;
       }
-      ::slotted(ds-pane),
-      ::slotted(ds-pane-stack) {
+      ::slotted(kanonis-pane),
+      ::slotted(kanonis-pane-stack) {
         flex: 1 1 var(--pane-preferred-width);
         width: clamp(
           var(--pane-min-width),
@@ -264,7 +264,7 @@ export class DsPaneWindow extends DsElement {
           opacity var(--ds-duration-fast) var(--ds-ease-standard),
           transform var(--ds-duration-normal) var(--ds-ease-emphasized);
       }
-      ::slotted(ds-pane-stack) {
+      ::slotted(kanonis-pane-stack) {
         display: grid;
       }
       @media ${mediaCompact} {
@@ -328,7 +328,7 @@ export class DsPaneStack extends DsElement {
         min-width: 0;
         min-height: 0;
       }
-      ::slotted(ds-pane:not(:last-child)) {
+      ::slotted(kanonis-pane:not(:last-child)) {
         border-bottom: 1px solid var(--ds-color-border-subtle);
       }
       :host([split='40/60']) {
@@ -957,7 +957,7 @@ export class DsDetailSidebar extends DsElement {
   }
 
   private close() {
-    this.emit<void>('ds-close', undefined);
+    this.emit<void>('kanonis-close', undefined);
   }
 
   private handleKeydown(event: KeyboardEvent) {
@@ -968,7 +968,7 @@ export class DsDetailSidebar extends DsElement {
     }
     if (event.key !== 'Tab' || !this.modal) return;
     const selector =
-      'button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),textarea:not(:disabled),[tabindex]:not([tabindex="-1"]),ds-button:not([disabled]),ds-icon-button:not([disabled]),ds-input:not([disabled]),ds-select:not([disabled]),ds-checkbox:not([disabled])';
+      'button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),textarea:not(:disabled),[tabindex]:not([tabindex="-1"]),kanonis-button:not([disabled]),kanonis-icon-button:not([disabled]),kanonis-input:not([disabled]),kanonis-select:not([disabled]),kanonis-checkbox:not([disabled])';
     const focusable = [
       ...this.shadowRoot!.querySelectorAll<HTMLElement>('.close'),
       ...this.querySelectorAll<HTMLElement>(selector),

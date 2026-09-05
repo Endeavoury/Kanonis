@@ -20,21 +20,21 @@ Kanonis deliberately keeps one semantic, accessible Web Component API instead of
 
 | Product capability     | Kanonis                                                                                   | Material / Bootstrap analogue                             | Status                      |
 | ---------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------- |
-| Actions                | `ds-button`, `ds-icon-button`, `ds-button-group`                                          | Buttons, icon buttons, FAB, button groups                 | Covered                     |
-| Text entry             | `ds-input`, `ds-search-input`, `ds-textarea`                                              | Text fields, search, form controls                        | Covered                     |
-| Choice controls        | `ds-select`, `ds-checkbox`, `ds-switch`, `ds-radio-group`, `ds-radio`, `ds-range`         | Select, checkbox, switch, radio, slider/range             | Covered                     |
-| Form composition       | `ds-form-field`, validation APIs, native form association                                 | Form field, input group, validation, layout               | Covered through composition |
-| Navigation             | `ds-sidebar`, `ds-sidebar-item`, `ds-tabs`, `ds-breadcrumbs`, `ds-pagination`             | Navigation rail/drawer, tabs, breadcrumb, pagination      | Covered                     |
-| Menus and lists        | `ds-menu`, `ds-menu-item`, `ds-list`, `ds-list-item`                                      | Menus/dropdowns and lists/list groups                     | Covered                     |
-| Surfaces and summaries | `ds-card`, `ds-panel`, `ds-metric`, `ds-kpi-grid`                                         | Cards and elevated/outlined containers                    | Covered                     |
-| Status and identity    | `ds-badge`, `ds-status-badge`, `ds-avatar`                                                | Badges/chips and avatars                                  | Covered                     |
-| Feedback               | `ds-alert`, `ds-toast`, `ds-toast-region`, `ds-progress`, `ds-skeleton`, state components | Alerts/snackbars/toasts, progress, placeholders, spinners | Covered                     |
-| Expand/collapse        | `ds-disclosure`                                                                           | Accordion/collapse                                        | Covered                     |
-| Overlays               | `ds-dialog`, `ds-drawer`                                                                  | Dialog/modal and drawer/offcanvas                         | Covered                     |
-| Supplemental help      | `ds-tooltip`                                                                              | Tooltip                                                   | Covered                     |
-| File input             | `ds-drop-zone`                                                                            | File input plus application drop behavior                 | Covered                     |
-| Data display           | `ds-data-table`, `ds-list`, layout primitives                                             | Tables and list groups                                    | Covered                     |
-| Application structure  | `ds-app-shell`, `ds-page-header`, `ds-filter-bar`, layout primitives                      | Navbar/sidebar, containers, grid, stacks                  | Covered                     |
+| Actions                | `kanonis-button`, `kanonis-icon-button`, `kanonis-button-group`                                          | Buttons, icon buttons, FAB, button groups                 | Covered                     |
+| Text entry             | `kanonis-input`, `kanonis-search-input`, `kanonis-textarea`                                              | Text fields, search, form controls                        | Covered                     |
+| Choice controls        | `kanonis-select`, `kanonis-checkbox`, `kanonis-switch`, `kanonis-radio-group`, `kanonis-radio`, `kanonis-range`         | Select, checkbox, switch, radio, slider/range             | Covered                     |
+| Form composition       | `kanonis-form-field`, validation APIs, native form association                                 | Form field, input group, validation, layout               | Covered through composition |
+| Navigation             | `kanonis-sidebar`, `kanonis-sidebar-item`, `kanonis-tabs`, `kanonis-breadcrumbs`, `kanonis-pagination`             | Navigation rail/drawer, tabs, breadcrumb, pagination      | Covered                     |
+| Menus and lists        | `kanonis-menu`, `kanonis-menu-item`, `kanonis-list`, `kanonis-list-item`                                      | Menus/dropdowns and lists/list groups                     | Covered                     |
+| Surfaces and summaries | `kanonis-card`, `kanonis-panel`, `kanonis-metric`, `kanonis-kpi-grid`                                         | Cards and elevated/outlined containers                    | Covered                     |
+| Status and identity    | `kanonis-badge`, `kanonis-status-badge`, `kanonis-avatar`                                                | Badges/chips and avatars                                  | Covered                     |
+| Feedback               | `kanonis-alert`, `kanonis-toast`, `kanonis-toast-region`, `kanonis-progress`, `kanonis-skeleton`, state components | Alerts/snackbars/toasts, progress, placeholders, spinners | Covered                     |
+| Expand/collapse        | `kanonis-disclosure`                                                                           | Accordion/collapse                                        | Covered                     |
+| Overlays               | `kanonis-dialog`, `kanonis-drawer`                                                                  | Dialog/modal and drawer/offcanvas                         | Covered                     |
+| Supplemental help      | `kanonis-tooltip`                                                                              | Tooltip                                                   | Covered                     |
+| File input             | `kanonis-drop-zone`                                                                            | File input plus application drop behavior                 | Covered                     |
+| Data display           | `kanonis-data-table`, `kanonis-list`, layout primitives                                             | Tables and list groups                                    | Covered                     |
+| Application structure  | `kanonis-app-shell`, `kanonis-page-header`, `kanonis-filter-bar`, layout primitives                      | Navbar/sidebar, containers, grid, stacks                  | Covered                     |
 
 The complete package currently registers 122 custom elements. Storybook is required to contain every registered element, so the catalog cannot silently grow without a reviewable example. Presence is a discoverability check; it is not by itself evidence that every state is production-ready.
 
@@ -42,7 +42,7 @@ The complete package currently registers 122 custom elements. Storybook is requi
 
 - Carousel and scrollspy are content-site patterns, not current financial-product primitives. They remain outside the core package.
 - Popovers are represented by the composable menu, tooltip, dialog, and drawer primitives. A generic unconstrained popover will only be added with a concrete accessible interaction model.
-- CSS utilities are not reproduced wholesale. `ds-stack`, `ds-inline`, `ds-grid`, and `ds-container` provide stable layout contracts without leaking hundreds of global classes.
+- CSS utilities are not reproduced wholesale. `kanonis-stack`, `kanonis-inline`, `kanonis-grid`, and `kanonis-container` provide stable layout contracts without leaking hundreds of global classes.
 - Date/time pickers, autocomplete/combobox, and the richer data-grid layer are present, but they still
   need deeper internationalization, interaction, large-data, and accessibility evidence before being
   treated as mature solely on the strength of component parity.

@@ -19,7 +19,7 @@ function App() {
         <PageHeader
           eyebrow="React example"
           heading="Thin typed adapters"
-          description="React renders the same ds-* Web Components."
+          description="React renders the same kanonis-* Web Components."
         />
         <Metric
           label="Current value"

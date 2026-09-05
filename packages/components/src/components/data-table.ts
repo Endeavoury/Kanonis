@@ -257,7 +257,7 @@ export class DsDataTable extends DsElement {
       this.sortKey === key && this.sortDirection === 'ascending' ? 'descending' : 'ascending';
     this.sortKey = key;
     this.announce(`${column.label} sorted ${this.sortDirection}`);
-    this.emit<DsSortDetail>('ds-sort', { key, direction: this.sortDirection });
+    this.emit<DsSortDetail>('kanonis-sort', { key, direction: this.sortDirection });
   }
   private sortedRows() {
     const rows = this.rows.map((row, index) => ({ row, index }));
@@ -282,7 +282,7 @@ export class DsDataTable extends DsElement {
     if (!this.selectable || this.busy) return;
     const key = String(row[this.rowKey] ?? index);
     this.selectedKey = key;
-    this.emit<DsRowSelectDetail>('ds-row-select', { row, index, key });
+    this.emit<DsRowSelectDetail>('kanonis-row-select', { row, index, key });
   }
   private rowKeydown(event: KeyboardEvent, row: Record<string, unknown>, index: number) {
     if (!this.selectable || this.busy || event.target !== event.currentTarget) return;
@@ -319,7 +319,7 @@ export class DsDataTable extends DsElement {
     if (next === this.page) return;
     this.page = next;
     this.announce(`${this.label}, page ${next} of ${this.pageCount()}`);
-    this.emit<{ page: number }>('ds-page-change', { page: next });
+    this.emit<{ page: number }>('kanonis-page-change', { page: next });
   }
   protected override render() {
     const rows = this.visibleRows(this.sortedRows());

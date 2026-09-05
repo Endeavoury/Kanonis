@@ -93,7 +93,7 @@ export class DsAlert extends DsElement {
   @property() heading = '';
   @property({ type: Boolean }) dismissible = false;
   private dismiss() {
-    this.emit('ds-dismiss', {});
+    this.emit('kanonis-dismiss', {});
     this.remove();
   }
   protected override render() {
@@ -258,9 +258,9 @@ export class DsProgress extends DsElement {
           var(--ds-color-bg-sunken) 75% 100%
         );
         background-size: 220% 100%;
-        animation: ds-progress var(--ds-duration-progress) linear infinite;
+        animation: kanonis-progress var(--ds-duration-progress) linear infinite;
       }
-      @keyframes ds-progress {
+      @keyframes kanonis-progress {
         to {
           background-position: -220% 0;
         }
@@ -325,7 +325,7 @@ export class DsSkeleton extends DsElement {
           var(--ds-color-bg-sunken) 56%
         );
         background-size: 220% 100%;
-        animation: ds-skeleton var(--ds-duration-skeleton) var(--ds-ease-standard) infinite;
+        animation: kanonis-skeleton var(--ds-duration-skeleton) var(--ds-ease-standard) infinite;
       }
       :host([shape='circle']) {
         width: var(--skeleton-width, 2.5rem);
@@ -337,7 +337,7 @@ export class DsSkeleton extends DsElement {
       :host([shape='rectangle']) .skeleton {
         border-radius: var(--ds-radius-lg);
       }
-      @keyframes ds-skeleton {
+      @keyframes kanonis-skeleton {
         to {
           background-position: -220% 0;
         }
@@ -449,7 +449,7 @@ export class DsToast extends DsElement {
     if (!this.open) return;
     this.open = false;
     this.clearTimer();
-    this.emit<DsToastCloseDetail>('ds-toast-close', { reason });
+    this.emit<DsToastCloseDetail>('kanonis-toast-close', { reason });
   }
 
   private clearTimer() {
@@ -512,7 +512,7 @@ export class DsToastRegion extends DsElement {
         overflow: auto;
         pointer-events: none;
       }
-      ::slotted(ds-toast) {
+      ::slotted(kanonis-toast) {
         pointer-events: auto;
       }
       :host([position='top-start']) {

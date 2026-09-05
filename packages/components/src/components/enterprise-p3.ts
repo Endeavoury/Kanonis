@@ -171,7 +171,7 @@ export class DsPermissionMatrix extends DsElement {
   @property({ attribute: false }) value: Record<string, boolean> = {};
   private toggle(role: string, permission: string, checked: boolean) {
     this.value = { ...this.value, [`${role}:${permission}`]: checked };
-    this.emit<Record<string, boolean>>('ds-permission-change', this.value);
+    this.emit<Record<string, boolean>>('kanonis-permission-change', this.value);
   }
   protected override render() {
     return html`<div class="frame surface">
@@ -301,7 +301,7 @@ export class DsCodeEditor extends DsElement {
   @property() language = 'text';
   private input(event: Event) {
     this.value = (event.target as HTMLTextAreaElement).value;
-    this.emit<{ value: string }>('ds-input', { value: this.value });
+    this.emit<{ value: string }>('kanonis-input', { value: this.value });
   }
   protected override render() {
     return html`<label
@@ -438,7 +438,7 @@ export class DsTour extends DsElement {
   @property({ type: Number }) index = 0;
   private move(delta: number) {
     this.index = Math.min(Math.max(0, this.index + delta), Math.max(0, this.steps.length - 1));
-    this.emit<{ index: number }>('ds-tour-change', { index: this.index });
+    this.emit<{ index: number }>('kanonis-tour-change', { index: this.index });
   }
   protected override render() {
     const step = this.steps[this.index];

@@ -12,50 +12,50 @@ export const Desktop: StoryObj = {
   render: () =>
     html`${productStyles}
       <div class="product">
-        <ds-app-shell
-          >${productSidebar()}${productHeader('Overview')}<ds-page-header
+        <kanonis-app-shell
+          >${productSidebar()}${productHeader('Overview')}<kanonis-page-header
             eyebrow="Financial overview"
             heading="Your finances, clearly mapped."
             description="Based on 2,634 imported transactions · Updated just now"
-            ><ds-button-group slot="actions"
-              ><ds-button size="small" variant="secondary">This month</ds-button
-              ><ds-button size="small" variant="ghost">3 months</ds-button
-              ><ds-button size="small" variant="ghost">This year</ds-button></ds-button-group
-            ></ds-page-header
+            ><kanonis-button-group slot="actions"
+              ><kanonis-button size="small" variant="secondary">This month</kanonis-button
+              ><kanonis-button size="small" variant="ghost">3 months</kanonis-button
+              ><kanonis-button size="small" variant="ghost">This year</kanonis-button></kanonis-button-group
+            ></kanonis-page-header
           >
           <div class="content">
-            <ds-kpi-grid columns="4"
-              ><ds-metric
+            <kanonis-kpi-grid columns="4"
+              ><kanonis-metric
                 label="Current balance"
                 value="€24,839.32"
                 detail="Across 8 active accounts"
                 tone="accent"
-              ></ds-metric
-              ><ds-metric
+              ></kanonis-metric
+              ><kanonis-metric
                 label="Income"
                 value="€6,200.00"
                 detail="Cash inflow"
                 tone="success"
-              ></ds-metric
-              ><ds-metric
+              ></kanonis-metric
+              ><kanonis-metric
                 label="Expenses"
                 value="€3,441.00"
                 detail="€111 average per day"
                 tone="danger"
-              ></ds-metric
-              ><ds-metric
+              ></kanonis-metric
+              ><kanonis-metric
                 label="Savings"
                 value="+€2,759.00"
                 detail="44.5% savings rate"
                 tone="warning"
-              ></ds-metric
-            ></ds-kpi-grid>
+              ></kanonis-metric
+            ></kanonis-kpi-grid>
             <div class="split">
-              <ds-panel eyebrow="Cash flow" heading="Income vs expenses"
+              <kanonis-panel eyebrow="Cash flow" heading="Income vs expenses"
                 ><div class="chart">
                   ${[65, 72, 68, 81, 73, 88, 78, 92, 82, 75, 90, 86].map((height, index) => html`<div class="chart-group"><i class="bar" style=${`height:${height}%`}></i><i class="bar out" style=${`height:${35 + (index % 4) * 9}%`}></i></div>`)}
-                </div></ds-panel
-              ><ds-panel eyebrow="Spending" heading="By category"
+                </div></kanonis-panel
+              ><kanonis-panel eyebrow="Spending" heading="By category"
                 ><div class="category-list">
                   ${[
                     ['Housing', '€1,650', '72%'],
@@ -70,14 +70,14 @@ export const Desktop: StoryObj = {
                         <b>${row[1]}</b>
                       </div>`,
                   )}
-                </div></ds-panel
+                </div></kanonis-panel
               >
             </div>
-            <ds-alert tone="info" heading="Data availability"
+            <kanonis-alert tone="info" heading="Data availability"
               >Some forecasts require more transaction history. Current calculations use imported
-              CAMT records only.</ds-alert
+              CAMT records only.</kanonis-alert
             >
-          </div></ds-app-shell
+          </div></kanonis-app-shell
         >
       </div>`,
 };

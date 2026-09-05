@@ -5,15 +5,15 @@ Their Storybook examples are the canonical do/don't and responsive demonstration
 
 | Component | Use | Main contract and state | Consumer responsibility |
 | --- | --- | --- | --- |
-| `ds-segmented-control` + `ds-segment` | One selection among a small peer set | `value`, `label`, `ds-change`; radio semantics, selected/disabled, arrows, Home, End | Keep labels short; use tabs when selection changes navigation context |
-| `ds-action-bar` | Prioritized page or record actions | `label`, `collapse-at-compact`; automatic overflow plus `data-priority="primary"` and `data-overflow` hints | Put one primary action first; localize and test labels at narrow widths |
-| `ds-split-button` | Frequent default action with related alternatives | `label`, `menu-label`, `open`, `disabled`, `ds-activate`, `ds-menu-toggle`, `menu` slot | Alternatives must be valid menu items; avoid for unrelated actions |
-| `ds-input-group` | One input with meaningful prefix/suffix context | `label`, default/prefix/suffix slots | Keep the nested field's own accessible label; do not use decoration as its label |
-| `ds-chip` | Compact selectable or dismissible value | `value`, `label`, `selected`, `dismissible`, `disabled`, `ds-change`, `ds-dismiss` | Explain destructive removal when dismissal has wider effects |
-| `ds-live-region` | Declarative async announcement | `message`, `politeness` | Announce outcomes, not every intermediate render; prefer polite unless urgent |
-| `ds-reorder-list` + `ds-reorder-item` | Reorder a short list | `value`, `label`, `ds-reorder`; drag, visible move buttons, live outcome, focus restoration | Persist the returned order, report failure, and retain the user's focus |
-| `ds-illustration` | Shared empty/search/success/error visual | `variant`, `label` | Omit `label` when decorative; do not convey status only through artwork |
-| `ds-brand-mark` | Approved product/system identifier | `name`, `symbolOnly` | Use the named asset; don't redraw or recolor internal SVG paths |
+| `kanonis-segmented-control` + `kanonis-segment` | One selection among a small peer set | `value`, `label`, `kanonis-change`; radio semantics, selected/disabled, arrows, Home, End | Keep labels short; use tabs when selection changes navigation context |
+| `kanonis-action-bar` | Prioritized page or record actions | `label`, `collapse-at-compact`; automatic overflow plus `data-priority="primary"` and `data-overflow` hints | Put one primary action first; localize and test labels at narrow widths |
+| `kanonis-split-button` | Frequent default action with related alternatives | `label`, `menu-label`, `open`, `disabled`, `kanonis-activate`, `kanonis-menu-toggle`, `menu` slot | Alternatives must be valid menu items; avoid for unrelated actions |
+| `kanonis-input-group` | One input with meaningful prefix/suffix context | `label`, default/prefix/suffix slots | Keep the nested field's own accessible label; do not use decoration as its label |
+| `kanonis-chip` | Compact selectable or dismissible value | `value`, `label`, `selected`, `dismissible`, `disabled`, `kanonis-change`, `kanonis-dismiss` | Explain destructive removal when dismissal has wider effects |
+| `kanonis-live-region` | Declarative async announcement | `message`, `politeness` | Announce outcomes, not every intermediate render; prefer polite unless urgent |
+| `kanonis-reorder-list` + `kanonis-reorder-item` | Reorder a short list | `value`, `label`, `kanonis-reorder`; drag, visible move buttons, live outcome, focus restoration | Persist the returned order, report failure, and retain the user's focus |
+| `kanonis-illustration` | Shared empty/search/success/error visual | `variant`, `label` | Omit `label` when decorative; do not convey status only through artwork |
+| `kanonis-brand-mark` | Approved product/system identifier | `name`, `symbolOnly` | Use the named asset; don't redraw or recolor internal SVG paths |
 
 All controls use semantic shape, motion, elevation, focus, target-size, contrast, forced-color, and
 reduced-motion foundations. Logical properties support RTL. The visual matrix exercises compact and

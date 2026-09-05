@@ -160,9 +160,9 @@ export const spinnerStyles = css`
     border-top-color: var(--ds-spinner-color, var(--ds-color-accent-primary));
     border-right-color: var(--ds-spinner-gap, transparent);
     border-radius: 50%;
-    animation: ds-spin var(--ds-duration-progress) linear infinite;
+    animation: kanonis-spin var(--ds-duration-progress) linear infinite;
   }
-  @keyframes ds-spin {
+  @keyframes kanonis-spin {
     to {
       transform: rotate(360deg);
     }

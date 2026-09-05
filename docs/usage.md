@@ -18,82 +18,82 @@ Use attributes for simple serializable values and properties for structured valu
 ```ts
 import '@endeavoury/kanonis/data-table';
 
-const table = document.querySelector('ds-data-table');
+const table = document.querySelector('kanonis-data-table');
 table.columns = [{ key: 'name', label: 'Name', sortable: true }];
 table.rows = [{ id: '1', name: 'Main account' }];
-table.addEventListener('ds-sort', (event) => console.log(event.detail));
+table.addEventListener('kanonis-sort', (event) => console.log(event.detail));
 ```
 
-All design-system custom events use the `ds-` prefix, bubble, cross Shadow DOM boundaries (`composed: true`), and expose a typed `detail`. Native slots are preferred for composable content. Stable styling hooks are selectively exposed through `::part`; internal DOM is not an API.
+All design-system custom events use the `kanonis-` prefix, bubble, cross Shadow DOM boundaries (`composed: true`), and expose a typed `detail`. Native slots are preferred for composable content. Stable styling hooks are selectively exposed through `::part`; internal DOM is not an API.
 
 ## Forms
 
-`ds-input`, `ds-search-input`, `ds-textarea`, `ds-select`, `ds-checkbox`, `ds-switch`, `ds-range`, and `ds-radio-group` use `ElementInternals` and participate in native forms. They support `name`, value/checked state, disabled state, required validation where appropriate, reset, labels, keyboard interaction, and `FormData` submission.
+`kanonis-input`, `kanonis-search-input`, `kanonis-textarea`, `kanonis-select`, `kanonis-checkbox`, `kanonis-switch`, `kanonis-range`, and `kanonis-radio-group` use `ElementInternals` and participate in native forms. They support `name`, value/checked state, disabled state, required validation where appropriate, reset, labels, keyboard interaction, and `FormData` submission.
 
 ```html
 <form id="profile">
-  <ds-input label="Name" name="name" required></ds-input>
-  <ds-checkbox name="active" value="yes">Active</ds-checkbox>
+  <kanonis-input label="Name" name="name" required></kanonis-input>
+  <kanonis-checkbox name="active" value="yes">Active</kanonis-checkbox>
 </form>
 ```
 
-`ds-drop-zone` accepts files through its native picker or drag and drop. It emits accepted files through `ds-files` and rejected files through `ds-file-reject` with a `type` or `limit` reason. File processing and uploads remain application concerns.
+`kanonis-drop-zone` accepts files through its native picker or drag and drop. It emits accepted files through `kanonis-files` and rejected files through `kanonis-file-reject` with a `type` or `limit` reason. File processing and uploads remain application concerns.
 
 ```html
-<ds-drop-zone
+<kanonis-drop-zone
   label="Choose or drop statements"
   hint="CAMT XML or ZIP"
   accept=".xml,.zip,application/xml,application/zip"
   max-files="10"
   multiple
-></ds-drop-zone>
+></kanonis-drop-zone>
 ```
 
 ## Theme and interaction
 
-`ds-theme-toggle` writes `data-ds-theme` to the document root. Set `storage-key` to persist the preference. Applications should still apply the stored value in the document head to avoid a theme flash before components load.
+`kanonis-theme-toggle` writes `data-ds-theme` to the document root. Set `storage-key` to persist the preference. Applications should still apply the stored value in the document head to avoid a theme flash before components load.
 
 ```html
-<ds-theme-toggle theme="dark" storage-key="product-theme"></ds-theme-toggle>
+<kanonis-theme-toggle theme="dark" storage-key="product-theme"></kanonis-theme-toggle>
 ```
 
 Tabs use a parent value and slotted panels. Arrow keys, Home, and End move selection while disabled tabs are skipped.
 
 ```html
-<ds-tabs label="Account views" value="activity">
-  <ds-tab value="activity" label="Activity">Recent activity</ds-tab>
-  <ds-tab value="details" label="Details">Account details</ds-tab>
-</ds-tabs>
+<kanonis-tabs label="Account views" value="activity">
+  <kanonis-tab value="activity" label="Activity">Recent activity</kanonis-tab>
+  <kanonis-tab value="details" label="Details">Account details</kanonis-tab>
+</kanonis-tabs>
 ```
 
-Use `ds-disclosure` for expandable inline content, `ds-progress` for task progress, and `ds-skeleton` for layout-preserving loading placeholders.
+Use `kanonis-disclosure` for expandable inline content, `kanonis-progress` for task progress, and `kanonis-skeleton` for layout-preserving loading placeholders.
 
 ## Overlays and transient feedback
 
-`ds-dialog` uses the native dialog top layer and returns focus when it closes. `ds-drawer` shares the same API with a start/end side-panel presentation. Both emit `ds-close` with a `button`, `escape`, `backdrop`, or `programmatic` reason.
+`kanonis-dialog` uses the native dialog top layer and returns focus when it closes. `kanonis-drawer` shares the same API with a start/end side-panel presentation. Both emit `kanonis-close` with a `button`, `escape`, `backdrop`, or `programmatic` reason.
 
 ```html
-<ds-dialog heading="Delete connection?" description="This cannot be undone.">
+<kanonis-dialog heading="Delete connection?" description="This cannot be undone.">
   Imported records remain available.
-  <ds-inline slot="footer">
-    <ds-button variant="secondary">Cancel</ds-button>
-    <ds-button variant="danger">Delete</ds-button>
-  </ds-inline>
-</ds-dialog>
+  <kanonis-inline slot="footer">
+    <kanonis-button variant="secondary">Cancel</kanonis-button>
+    <kanonis-button variant="danger">Delete</kanonis-button>
+  </kanonis-inline>
+</kanonis-dialog>
 ```
 
-Use `ds-menu`/`ds-menu-item` for action menus, `ds-tooltip` only for supplemental information, and `ds-toast-region`/`ds-toast` for transient notifications. Set a toast duration of `0` for persistent messages.
+Use `kanonis-menu`/`kanonis-menu-item` for action menus, `kanonis-tooltip` only for supplemental information, and `kanonis-toast-region`/`kanonis-toast` for transient notifications. Set a toast duration of `0` for persistent messages.
 
 ## Navigation and collections
 
-Breadcrumbs, pagination, and list items use controlled values and typed events. Pagination emits `ds-page-change`; interactive list items emit `ds-list-activate`.
+Breadcrumbs, pagination, and list items use controlled values and typed events. Pagination emits `kanonis-page-change`; interactive list items emit `kanonis-list-activate`.
 
 ```html
-<ds-breadcrumbs label="Current location">
-  <ds-breadcrumb href="/accounts">Accounts</ds-breadcrumb>
-  <ds-breadcrumb current>Daily account</ds-breadcrumb>
-</ds-breadcrumbs>
-<ds-pagination page="3" pages="18"></ds-pagination>
+<kanonis-breadcrumbs label="Current location">
+  <kanonis-breadcrumb href="/accounts">Accounts</kanonis-breadcrumb>
+  <kanonis-breadcrumb current>Daily account</kanonis-breadcrumb>
+</kanonis-breadcrumbs>
+<kanonis-pagination page="3" pages="18"></kanonis-pagination>
 ```
 
 ## React
@@ -119,12 +119,12 @@ import { KANONIS_CUSTOM_ELEMENTS_SCHEMA } from '@endeavoury/kanonis-angular';
 @Component({
   standalone: true,
   schemas: [KANONIS_CUSTOM_ELEMENTS_SCHEMA],
-  template: `<ds-button (ds-activate)="handle($event)">Save</ds-button>`,
+  template: `<kanonis-button (kanonis-activate)="handle($event)">Save</kanonis-button>`,
 })
 export class ExampleComponent {}
 ```
 
-Use property binding for objects: `<ds-data-table [columns]="columns" [rows]="rows" />`. Native forms work directly; Angular form-control adapters can be introduced later as thin ControlValueAccessor directives without moving behavior or styles out of the Web Components.
+Use property binding for objects: `<kanonis-data-table [columns]="columns" [rows]="rows" />`. Native forms work directly; Angular form-control adapters can be introduced later as thin ControlValueAccessor directives without moving behavior or styles out of the Web Components.
 
 ## Vanilla JavaScript
 

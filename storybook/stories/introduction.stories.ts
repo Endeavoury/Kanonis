@@ -11,7 +11,7 @@ const vanillaCode = `import '@endeavoury/kanonis';
 import '@endeavoury/kanonis/styles.css';
 
 document.querySelector('#app')!.innerHTML =
-  '<ds-button tone="accent">Save changes</ds-button>';`;
+  '<kanonis-button tone="accent">Save changes</kanonis-button>';`;
 
 const reactCode = `import { DsButton } from '@endeavoury/kanonis-react';
 import '@endeavoury/kanonis/styles.css';
@@ -29,7 +29,7 @@ registerDesignSystem();
   selector: 'app-save',
   standalone: true,
   schemas: [...DESIGN_SYSTEM_SCHEMAS],
-  template: '<ds-button tone="accent">Save changes</ds-button>',
+  template: '<kanonis-button tone="accent">Save changes</kanonis-button>',
 })
 export class SaveComponent {}`;
 
@@ -191,31 +191,31 @@ export const Welcome: StoryObj = {
           </div>
         </section>
         <div style="margin-top:32px">
-          <ds-kpi-grid columns="3"
-            ><ds-metric
+          <kanonis-kpi-grid columns="3"
+            ><kanonis-metric
               label="Source of truth"
               value="Web Components"
               tone="accent"
               detail="Standards-native"
-            ></ds-metric
-            ><ds-metric
+            ></kanonis-metric
+            ><kanonis-metric
               label="Themes"
               value="Light · Dark"
               tone="success"
               detail="System aware"
-            ></ds-metric
-            ><ds-metric
+            ></kanonis-metric
+            ><kanonis-metric
               label="Initial release"
               value="P0"
               tone="warning"
               detail="Current workflows"
-            ></ds-metric
-          ></ds-kpi-grid>
+            ></kanonis-metric
+          ></kanonis-kpi-grid>
         </div>
         <div style="margin-top:24px">
-          <ds-alert heading="Independent by design"
+          <kanonis-alert heading="Independent by design"
             >This Storybook uses mock data and has no runtime dependency on the Oikonomis
-            application or APIs.</ds-alert
+            application or APIs.</kanonis-alert
           >
         </div>
         <section class="section" aria-labelledby="install-heading">
@@ -235,7 +235,7 @@ export const Welcome: StoryObj = {
               Configure the <code>@endeavoury</code> registry and authenticate with GitHub Packages.
             </li>
             <li>Install the core runtime and stylesheet, then add your framework adapter.</li>
-            <li>Import registration before rendering your first <code>ds-*</code> element.</li>
+            <li>Import registration before rendering your first <code>kanonis-*</code> element.</li>
           </ol>
           <div class="package-list" aria-label="Kanonis package map">
             <div>
@@ -259,7 +259,7 @@ export const Welcome: StoryObj = {
         <section class="section" aria-labelledby="usage-heading">
           <h2 id="usage-heading">Choose your integration</h2>
           <p class="section-copy">
-            Import the registration entry point before rendering a <code>ds-*</code> element. The
+            Import the registration entry point before rendering a <code>kanonis-*</code> element. The
             global stylesheet installs tokens, themes, typography, and accessible defaults.
           </p>
           <div class="frameworks">

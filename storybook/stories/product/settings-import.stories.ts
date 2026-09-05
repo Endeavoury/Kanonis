@@ -17,41 +17,41 @@ export const AccountSettings: StoryObj = {
   render: () =>
     html`${productStyles}
       <div class="product">
-        <ds-app-shell
-          >${productSidebar()}${productHeader('Accounts')}<ds-page-header
+        <kanonis-app-shell
+          >${productSidebar()}${productHeader('Accounts')}<kanonis-page-header
             eyebrow="Account settings"
             heading="Name and organize accounts"
             description="Custom names and account types are stored separately from bank source data."
-          ></ds-page-header>
+          ></kanonis-page-header>
           <div class="content settings">
             ${[
               ['Daily account', 'NL91 •••• 4300', '€12,840.22', 'current'],
               ['Rainy day fund', 'NL38 •••• 9308', '€9,200.00', 'savings'],
             ].map(
               (account) =>
-                html`<ds-card
-                  ><ds-inline slot="header" justify="between"
-                    ><ds-inline
-                      ><ds-icon name="wallet"></ds-icon>
+                html`<kanonis-card
+                  ><kanonis-inline slot="header" justify="between"
+                    ><kanonis-inline
+                      ><kanonis-icon name="wallet"></kanonis-icon>
                       <div>
                         <strong>${account[0]}</strong
                         ><small style="display:block;color:var(--ds-color-text-muted)"
                           >${account[1]}</small
                         >
-                      </div></ds-inline
-                    ><strong>${account[2]}</strong></ds-inline
-                  ><ds-stack
-                    ><ds-input label="Custom account name" value=${account[0]}></ds-input
-                    ><ds-select
+                      </div></kanonis-inline
+                    ><strong>${account[2]}</strong></kanonis-inline
+                  ><kanonis-stack
+                    ><kanonis-input label="Custom account name" value=${account[0]}></kanonis-input
+                    ><kanonis-select
                       label="Account type"
                       value=${account[3]}
                       .options=${types}
-                    ></ds-select
-                    ><ds-button>Save account</ds-button></ds-stack
-                  ></ds-card
+                    ></kanonis-select
+                    ><kanonis-button>Save account</kanonis-button></kanonis-stack
+                  ></kanonis-card
                 >`,
             )}
-          </div></ds-app-shell
+          </div></kanonis-app-shell
         >
       </div>`,
 };
@@ -60,29 +60,29 @@ export const ImportWorkflow: StoryObj = {
   render: () =>
     html`${productStyles}
       <div class="product">
-        <ds-app-shell
-          >${productSidebar()}${productHeader('Upload CAMT')}<ds-page-header
+        <kanonis-app-shell
+          >${productSidebar()}${productHeader('Upload CAMT')}<kanonis-page-header
             eyebrow="Data ingestion"
             heading="Import bank statements"
             description="Upload one CAMT XML file or a ZIP archive."
-          ></ds-page-header>
+          ></kanonis-page-header>
           <div class="content">
-            <ds-panel heading="New import"
+            <kanonis-panel heading="New import"
               ><label class="drop"
                 ><div>
-                  <ds-icon
+                  <kanonis-icon
                     name="upload"
                     style="font-size:32px;color:var(--ds-color-accent-primary)"
-                  ></ds-icon>
+                  ></kanonis-icon>
                   <h3>Choose or drop an XML / ZIP file</h3>
                   <p style="color:var(--ds-color-text-muted)">Maximum ZIP size 2 GiB</p>
-                  <ds-button variant="secondary">Choose file</ds-button>
+                  <kanonis-button variant="secondary">Choose file</kanonis-button>
                 </div></label
-              ></ds-panel
-            ><ds-alert tone="success" heading="Import queued"
-              >The statement is ready for background processing.</ds-alert
+              ></kanonis-panel
+            ><kanonis-alert tone="success" heading="Import queued"
+              >The statement is ready for background processing.</kanonis-alert
             >
-          </div></ds-app-shell
+          </div></kanonis-app-shell
         >
       </div>`,
 };

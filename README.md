@@ -29,7 +29,7 @@ The design system follows a three-layer architecture: Penpot defines the design 
 ```mermaid
 flowchart LR
   penpot["1. Penpot\nfoundations · tokens · components"]
-  webcomponents["2. Web Components\nLit · ds-* elements · Storybook"]
+  webcomponents["2. Web Components\nLit · kanonis-* elements · Storybook"]
   vanilla["3. Vanilla"]
   react["3. React"]
   angular["3. Angular"]
@@ -77,7 +77,7 @@ Products without a JavaScript bundler can use the self-contained browser build:
 npm run build:browser
 ```
 
-This emits `packages/components/dist/browser/design-system.js` alongside the shared stylesheet in `packages/components/dist/styles.css`. It contains the same registered `ds-*` elements used by Angular and React consumers.
+This emits `packages/components/dist/browser/design-system.js` alongside the shared stylesheet in `packages/components/dist/styles.css`. It contains the same registered `kanonis-*` elements used by Angular and React consumers.
 
 ## Releases
 
@@ -120,7 +120,7 @@ Nomopsis/  → legal / legislation visualization
 
 Consumer applications can use the same packages from Vanilla, React, or
 Angular. The `@endeavoury/kanonis` package family provides the shared runtime;
-product names do not change the stable `ds-*` element contracts.
+product names do not change the stable `kanonis-*` element contracts.
 
 ## Packages
 
@@ -152,9 +152,9 @@ import '@endeavoury/kanonis/styles.css';
 ```
 
 ```html
-<ds-button variant="primary">Save</ds-button>
-<ds-input label="Device name" name="deviceName"></ds-input>
-<ds-status-badge tone="success">Online</ds-status-badge>
+<kanonis-button variant="primary">Save</kanonis-button>
+<kanonis-input label="Device name" name="deviceName"></kanonis-input>
+<kanonis-status-badge tone="success">Online</kanonis-status-badge>
 ```
 
 Register only a group when bundle size matters:

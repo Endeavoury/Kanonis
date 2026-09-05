@@ -2,33 +2,33 @@
 
 Product-neutral Lit Web Components for Kanonis. Import the package root to register all elements, a grouped entry point such as `/button`, `/forms`, `/interaction`, `/overlays`, `/navigation`, `/tree`, or `/enterprise` for selective registration, and `/styles.css` for the optional global foundation.
 
-The first enterprise workflow release is the P0 data-management set: `ds-data-grid`, `ds-filter-builder`, `ds-view-toolbar`, `ds-column-manager`, `ds-bulk-actions`, `ds-saved-view`, `ds-combobox`, and `ds-validation-summary`.
+The first enterprise workflow release is the P0 data-management set: `kanonis-data-grid`, `kanonis-filter-builder`, `kanonis-view-toolbar`, `kanonis-column-manager`, `kanonis-bulk-actions`, `kanonis-saved-view`, `kanonis-combobox`, and `kanonis-validation-summary`.
 
-The P1 productivity set adds `ds-command-palette`, `ds-global-search`, `ds-tenant-switcher`, `ds-user-menu`, `ds-workspace-tabs`, `ds-navigation-group`, `ds-context-menu`, `ds-quick-actions`, `ds-record-header`, `ds-detail-list`, `ds-notification-center`, and `ds-banner`.
+The P1 productivity set adds `kanonis-command-palette`, `kanonis-global-search`, `kanonis-tenant-switcher`, `kanonis-user-menu`, `kanonis-workspace-tabs`, `kanonis-navigation-group`, `kanonis-context-menu`, `kanonis-quick-actions`, `kanonis-record-header`, `kanonis-detail-list`, `kanonis-notification-center`, and `kanonis-banner`.
 
-The P2 operations set adds `ds-form-section`, `ds-field-array`, `ds-date-picker`, `ds-time-picker`, `ds-file-upload`, `ds-stepper`, `ds-approval-flow`, `ds-task-list`, `ds-timeline`, `ds-activity-feed`, `ds-job-status`, and `ds-change-summary`.
+The P2 operations set adds `kanonis-form-section`, `kanonis-field-array`, `kanonis-date-picker`, `kanonis-time-picker`, `kanonis-file-upload`, `kanonis-stepper`, `kanonis-approval-flow`, `kanonis-task-list`, `kanonis-timeline`, `kanonis-activity-feed`, `kanonis-job-status`, and `kanonis-change-summary`.
 
-The P3 governance set adds `ds-audit-log`, `ds-permission-matrix`, `ds-role-badge`, `ds-diff-viewer`, `ds-code-editor`, `ds-json-editor`, `ds-maintenance-notice`, `ds-help-panel`, `ds-tour`, `ds-coachmark`, and `ds-compare-view`.
+The P3 governance set adds `kanonis-audit-log`, `kanonis-permission-matrix`, `kanonis-role-badge`, `kanonis-diff-viewer`, `kanonis-code-editor`, `kanonis-json-editor`, `kanonis-maintenance-notice`, `kanonis-help-panel`, `kanonis-tour`, `kanonis-coachmark`, and `kanonis-compare-view`.
 
 ## Fixed application layouts
 
-`ds-app-shell` owns the viewport and keeps its `sidebar` and optional `header` outside the main scroll area. Its default content is independently scrollable. Use `content-mode="pane"` when composing a nested workspace from `ds-pane-group`, `ds-pane`, `ds-pane-header`, `ds-pane-content`, `ds-scrollable-pane`, and `ds-inspector-pane`.
+`kanonis-app-shell` owns the viewport and keeps its `sidebar` and optional `header` outside the main scroll area. Its default content is independently scrollable. Use `content-mode="pane"` when composing a nested workspace from `kanonis-pane-group`, `kanonis-pane`, `kanonis-pane-header`, `kanonis-pane-content`, `kanonis-scrollable-pane`, and `kanonis-inspector-pane`.
 
 ```html
-<ds-app-shell content-mode="pane">
-  <ds-sidebar slot="sidebar">...</ds-sidebar>
+<kanonis-app-shell content-mode="pane">
+  <kanonis-sidebar slot="sidebar">...</kanonis-sidebar>
   <div slot="header">...</div>
-  <ds-pane-group>
-    <ds-pane position="center">
-      <ds-pane-header>...</ds-pane-header>
-      <ds-pane-content scrollable>...</ds-pane-content>
-    </ds-pane>
-  </ds-pane-group>
-  <ds-inspector-pane slot="inspector">...</ds-inspector-pane>
-</ds-app-shell>
+  <kanonis-pane-group>
+    <kanonis-pane position="center">
+      <kanonis-pane-header>...</kanonis-pane-header>
+      <kanonis-pane-content scrollable>...</kanonis-pane-content>
+    </kanonis-pane>
+  </kanonis-pane-group>
+  <kanonis-inspector-pane slot="inspector">...</kanonis-inspector-pane>
+</kanonis-app-shell>
 ```
 
-Nest a vertical `ds-pane-group orientation="vertical"` inside a horizontal group to combine top/bottom panes with left/center/right panes. Set `sidebar-collapsed` on the shell and `collapsed` on side panes to remove them from the desktop layout. Below 800px inspector panes become overlay drawers; below 680px the primary sidebar becomes a bottom navigation pane. The global stylesheet locks document scrolling only while a `ds-app-shell` is present (or when `.ds-application` is applied explicitly).
+Nest a vertical `kanonis-pane-group orientation="vertical"` inside a horizontal group to combine top/bottom panes with left/center/right panes. Set `sidebar-collapsed` on the shell and `collapsed` on side panes to remove them from the desktop layout. Below 800px inspector panes become overlay drawers; below 680px the primary sidebar becomes a bottom navigation pane. The global stylesheet locks document scrolling only while a `kanonis-app-shell` is present (or when `.kanonis-application` is applied explicitly).
 
 ## Component authoring
 

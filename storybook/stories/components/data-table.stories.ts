@@ -66,58 +66,58 @@ export default meta;
 export const Playground: StoryObj = {
   args: { density: 'comfortable', busy: false, selectable: true },
   render: (args) =>
-    html`<ds-data-table
+    html`<kanonis-data-table
       caption="Ledger entries"
       density=${args['density']}
       ?busy=${args['busy']}
       ?selectable=${args['selectable']}
       .columns=${columns}
       .rows=${rows}
-    ></ds-data-table>`,
+    ></kanonis-data-table>`,
 };
 export const CompactDenseData: StoryObj = {
   render: () =>
-    html`<ds-data-table
+    html`<kanonis-data-table
       density="compact"
       .columns=${columns}
       .rows=${[...rows, ...rows.map((row, index) => ({ ...row, id: `copy-${index}`, date: `2026-08-${18 - index}` }))]}
-    ></ds-data-table>`,
+    ></kanonis-data-table>`,
 };
 export const EmptyAndLoading: StoryObj = {
   render: () =>
-    html`<ds-stack
-      ><ds-data-table
+    html`<kanonis-stack
+      ><kanonis-data-table
         emptyMessage="No ledger entries match these filters"
         .columns=${columns}
         .rows=${[]}
-      ></ds-data-table
-      ><ds-data-table busy .columns=${columns} .rows=${rows}></ds-data-table
-    ></ds-stack>`,
+      ></kanonis-data-table
+      ><kanonis-data-table busy .columns=${columns} .rows=${rows}></kanonis-data-table
+    ></kanonis-stack>`,
 };
 export const LongContentAndOverflow: StoryObj = {
   render: () =>
     html`<div style="max-width:520px">
-      <ds-data-table
+      <kanonis-data-table
         .columns=${columns}
         .rows=${[{ ...rows[0], counterparty: 'A very long international counterparty name that should remain contained in the horizontally scrollable table', category: 'Shopping · Household Items and related supplies' }]}
-      ></ds-data-table>
+      ></kanonis-data-table>
     </div>`,
 };
 
 export const Pagination: StoryObj = {
   render: () =>
-    html`<ds-data-table
+    html`<kanonis-data-table
       caption="Ledger entries"
       description="Review bookings and select a row to inspect its details."
       selectable
       page-size="2"
       .columns=${columns}
       .rows=${rows}
-    ></ds-data-table>`,
+    ></kanonis-data-table>`,
 };
 export const InlineActions: StoryObj = {
   render: () =>
-    html`<ds-data-table
+    html`<kanonis-data-table
       caption="Ledger entries"
       description="Links remain independently accessible within selectable rows."
       selectable
@@ -133,5 +133,5 @@ export const InlineActions: StoryObj = {
         },
       ]}
       .rows=${rows}
-    ></ds-data-table>`,
+    ></kanonis-data-table>`,
 };

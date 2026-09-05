@@ -26,7 +26,7 @@ export const InputPlayground: StoryObj = {
     size: 'medium',
   },
   render: (args) =>
-    html`<ds-input
+    html`<kanonis-input
       label=${args['label']}
       placeholder=${args['placeholder']}
       helpText=${args['helpText']}
@@ -34,57 +34,57 @@ export const InputPlayground: StoryObj = {
       ?disabled=${args['disabled']}
       ?required=${args['required']}
       size=${args['size']}
-    ></ds-input>`,
+    ></kanonis-input>`,
 };
 export const InputStates: StoryObj = {
   render: () =>
     html`<div
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px"
     >
-      <ds-input label="Default" placeholder="Value"></ds-input
-      ><ds-input label="Required" required value="Finance gateway"></ds-input
-      ><ds-input label="Error" value="x" error="Use at least three characters"></ds-input
-      ><ds-input label="Disabled" value="Managed by policy" disabled></ds-input
-      ><ds-input
+      <kanonis-input label="Default" placeholder="Value"></kanonis-input
+      ><kanonis-input label="Required" required value="Finance gateway"></kanonis-input
+      ><kanonis-input label="Error" value="x" error="Use at least three characters"></kanonis-input
+      ><kanonis-input label="Disabled" value="Managed by policy" disabled></kanonis-input
+      ><kanonis-input
         label="Long content"
         value="A deliberately long value that demonstrates horizontal control behavior"
-      ></ds-input>
+      ></kanonis-input>
     </div>`,
 };
 export const SearchInput: StoryObj = {
   render: () =>
-    html`<ds-search-input
+    html`<kanonis-search-input
       label="Search ledger"
       placeholder="Counterparty, IBAN, reference or description"
       value="Albert"
-    ></ds-search-input>`,
+    ></kanonis-search-input>`,
 };
 export const Select: StoryObj = {
   render: () =>
-    html`<ds-select
+    html`<kanonis-select
       label="Account"
       value="daily"
       .options=${accountOptions}
       helpText="Choose the account scope"
-    ></ds-select>`,
+    ></kanonis-select>`,
 };
 export const Checkbox: StoryObj = {
   render: () =>
-    html`<ds-stack
-      ><ds-checkbox checked>Apply to future matching entries</ds-checkbox
-      ><ds-checkbox required helpText="This choice is required">Accept policy</ds-checkbox
-      ><ds-checkbox disabled>Unavailable option</ds-checkbox></ds-stack
+    html`<kanonis-stack
+      ><kanonis-checkbox checked>Apply to future matching entries</kanonis-checkbox
+      ><kanonis-checkbox required helpText="This choice is required">Accept policy</kanonis-checkbox
+      ><kanonis-checkbox disabled>Unavailable option</kanonis-checkbox></kanonis-stack
     >`,
 };
 export const FormFieldComposition: StoryObj = {
   render: () =>
-    html`<ds-form-field
+    html`<kanonis-form-field
       label="Composed field"
       helpText="Form field can arrange a custom or native control"
       ><input
         style="height:40px;border:1px solid var(--ds-color-border-default);border-radius:7px;background:var(--ds-color-bg-surface);color:var(--ds-color-text-primary);padding:0 12px"
         value="Native consumer control"
-    /></ds-form-field>`,
+    /></kanonis-form-field>`,
 };
 export const NativeFormSubmission: StoryObj = {
   render: () =>
@@ -95,69 +95,69 @@ export const NativeFormSubmission: StoryObj = {
         alert(JSON.stringify(Object.fromEntries(data)));
       }}
     >
-      <ds-stack
-        ><ds-input name="name" label="Name" value="Gateway" required></ds-input
-        ><ds-select
+      <kanonis-stack
+        ><kanonis-input name="name" label="Name" value="Gateway" required></kanonis-input
+        ><kanonis-select
           name="account"
           label="Account"
           value="daily"
           .options=${accountOptions}
-        ></ds-select
-        ><ds-checkbox name="enabled" checked>Enabled</ds-checkbox
-        ><ds-button type="submit">Submit native form</ds-button></ds-stack
+        ></kanonis-select
+        ><kanonis-checkbox name="enabled" checked>Enabled</kanonis-checkbox
+        ><kanonis-button type="submit">Submit native form</kanonis-button></kanonis-stack
       >
     </form>`,
 };
 
 export const DropZone: StoryObj = {
   render: () =>
-    html`<ds-drop-zone
+    html`<kanonis-drop-zone
       label="Choose or drop CAMT files"
       hint="XML or ZIP · up to 10 files"
       accept=".xml,.zip,application/xml,application/zip"
       max-files="10"
       multiple
-      ><ds-icon slot="icon" name="upload"></ds-icon
-    ></ds-drop-zone>`,
+      ><kanonis-icon slot="icon" name="upload"></kanonis-icon
+    ></kanonis-drop-zone>`,
 };
 
 export const Textarea: StoryObj = {
   render: () =>
-    html`<ds-textarea
+    html`<kanonis-textarea
       label="Internal note"
       placeholder="Add context for this transaction"
       helpText="Visible only to your finance team"
       maxlength="500"
-    ></ds-textarea>`,
+    ></kanonis-textarea>`,
 };
 
 export const Switch: StoryObj = {
   render: () =>
-    html`<ds-stack>
-      <ds-switch checked helpText="Receive an email after every successful import"
-        >Import notifications</ds-switch
+    html`<kanonis-stack>
+      <kanonis-switch checked helpText="Receive an email after every successful import"
+        >Import notifications</kanonis-switch
       >
-      <ds-switch disabled>Managed by your organization</ds-switch>
-    </ds-stack>`,
+      <kanonis-switch disabled>Managed by your organization</kanonis-switch>
+    </kanonis-stack>`,
 };
 
 export const Range: StoryObj = {
   render: () =>
-    html`<ds-range
+    html`<kanonis-range
       label="Forecast confidence"
       value="72"
       min="0"
       max="100"
       show-value
       helpText="Adjust the confidence threshold"
-    ></ds-range>`,
+    ></kanonis-range>`,
 };
 
 export const RadioGroup: StoryObj = {
   render: () =>
-    html`<ds-radio-group label="Export format" value="csv" required>
-      <ds-radio value="csv">CSV spreadsheet</ds-radio>
-      <ds-radio value="camt">CAMT XML</ds-radio>
-      <ds-radio value="pdf" disabled>PDF report (coming soon)</ds-radio>
-    </ds-radio-group>`,
+    html`<kanonis-radio-group label="Export format" value="csv" required>
+      <kanonis-radio value="csv">CSV spreadsheet</kanonis-radio>
+      <kanonis-radio value="camt">CAMT XML</kanonis-radio>
+      <kanonis-radio value="pdf" disabled>PDF report (coming soon)</kanonis-radio>
+    </kanonis-radio-group>`,
 };

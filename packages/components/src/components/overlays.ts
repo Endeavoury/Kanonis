@@ -118,7 +118,7 @@ export class DsDialog extends DsElement {
     if (!this.open && !this.dialog?.open) return;
     this.open = false;
     if (this.dialog?.open) this.dialog.close();
-    this.emit<DsDismissDetail>('ds-close', { reason });
+    this.emit<DsDismissDetail>('kanonis-close', { reason });
     this.returnFocus?.focus();
     this.returnFocus = null;
   }
@@ -283,7 +283,7 @@ export class DsMenuItem extends DsElement {
   }
 
   private readonly select = () => {
-    if (!this.disabled) this.emit<DsMenuSelectDetail>('ds-menu-select', { value: this.value });
+    if (!this.disabled) this.emit<DsMenuSelectDetail>('kanonis-menu-select', { value: this.value });
   };
 
   private readonly keydown = (event: KeyboardEvent) => {
@@ -359,7 +359,7 @@ export class DsMenu extends DsElement {
   ];
 
   @query('.trigger') private trigger!: HTMLButtonElement;
-  @queryAssignedElements({ selector: 'ds-menu-item' }) private items!: DsMenuItem[];
+  @queryAssignedElements({ selector: 'kanonis-menu-item' }) private items!: DsMenuItem[];
   @property({ type: Boolean, reflect: true }) open = false;
   @property() label = 'Menu';
   @property({ reflect: true }) placement: 'start' | 'end' = 'end';
@@ -367,12 +367,12 @@ export class DsMenu extends DsElement {
   override connectedCallback() {
     super.connectedCallback();
     this.ownerDocument.addEventListener('pointerdown', this.outside);
-    this.addEventListener('ds-menu-select', this.selected);
+    this.addEventListener('kanonis-menu-select', this.selected);
   }
 
   override disconnectedCallback() {
     this.ownerDocument.removeEventListener('pointerdown', this.outside);
-    this.removeEventListener('ds-menu-select', this.selected);
+    this.removeEventListener('kanonis-menu-select', this.selected);
     super.disconnectedCallback();
   }
 
@@ -383,7 +383,7 @@ export class DsMenu extends DsElement {
   private setOpen(open: boolean, focusItem = false) {
     if (this.open === open) return;
     this.open = open;
-    this.emit<DsMenuToggleDetail>('ds-menu-toggle', { open });
+    this.emit<DsMenuToggleDetail>('kanonis-menu-toggle', { open });
     if (open && focusItem)
       void this.updateComplete.then(() => this.items.find((item) => !item.disabled)?.focus());
     if (!open) this.trigger?.focus();

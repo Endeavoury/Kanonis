@@ -75,7 +75,7 @@ export class DsSegment extends DsElement {
   @property() label = '';
   private requestSelection() {
     if (!this.disabled)
-      this.emit<DsValueDetail>('ds-segment-request', {
+      this.emit<DsValueDetail>('kanonis-segment-request', {
         value: this.value || this.textContent?.trim() || '',
       });
   }
@@ -115,14 +115,14 @@ export class DsSegmentedControl extends DsElement {
   ];
   @property() value = '';
   @property() label = 'Options';
-  @queryAssignedElements({ selector: 'ds-segment' }) private segments!: DsSegment[];
+  @queryAssignedElements({ selector: 'kanonis-segment' }) private segments!: DsSegment[];
 
   protected override firstUpdated() {
-    this.addEventListener('ds-segment-request', this.selectRequested as EventListener);
+    this.addEventListener('kanonis-segment-request', this.selectRequested as EventListener);
     this.sync();
   }
   override disconnectedCallback() {
-    this.removeEventListener('ds-segment-request', this.selectRequested as EventListener);
+    this.removeEventListener('kanonis-segment-request', this.selectRequested as EventListener);
     super.disconnectedCallback();
   }
   private selectRequested = (event: CustomEvent<DsValueDetail>) => {
@@ -140,7 +140,7 @@ export class DsSegmentedControl extends DsElement {
     this.value = value;
     this.sync();
     if (focus) segment.shadowRoot?.querySelector<HTMLButtonElement>('button')?.focus();
-    this.emit<DsValueDetail>('ds-change', { value });
+    this.emit<DsValueDetail>('kanonis-change', { value });
   }
   private keydown(event: KeyboardEvent) {
     const enabled = this.segments.filter((segment) => !segment.disabled);
@@ -368,12 +368,12 @@ export class DsSplitButton extends DsElement {
   @property({ type: Boolean, reflect: true }) open = false;
   @property({ type: Boolean, reflect: true }) disabled = false;
   private primary() {
-    if (!this.disabled) this.emit<void>('ds-activate', undefined);
+    if (!this.disabled) this.emit<void>('kanonis-activate', undefined);
   }
   private toggle() {
     if (this.disabled) return;
     this.open = !this.open;
-    this.emit<{ open: boolean }>('ds-menu-toggle', { open: this.open });
+    this.emit<{ open: boolean }>('kanonis-menu-toggle', { open: this.open });
   }
   private keydown(event: KeyboardEvent) {
     if (event.key === 'Escape' && this.open) {
@@ -517,7 +517,7 @@ export class DsChip extends DsElement {
   private select() {
     if (this.disabled) return;
     this.selected = !this.selected;
-    this.emit<DsValueDetail & { selected: boolean }>('ds-change', {
+    this.emit<DsValueDetail & { selected: boolean }>('kanonis-change', {
       value: this.value,
       selected: this.selected,
     });
@@ -525,7 +525,7 @@ export class DsChip extends DsElement {
   private dismiss(event: Event) {
     event.stopPropagation();
     if (!this.disabled)
-      this.emit<DsDismissValueDetail>('ds-dismiss', { value: this.value, reason: 'button' });
+      this.emit<DsDismissValueDetail>('kanonis-dismiss', { value: this.value, reason: 'button' });
   }
   protected override render() {
     return html`<span class="chip">
@@ -700,7 +700,7 @@ export class DsReorderItem extends DsElement {
     if (!this.hasAttribute('role')) this.setAttribute('role', 'listitem');
   }
   private move(direction: -1 | 1) {
-    this.emit<{ value: string; direction: -1 | 1 }>('ds-reorder-request', {
+    this.emit<{ value: string; direction: -1 | 1 }>('kanonis-reorder-request', {
       value: this.value,
       direction,
     });
@@ -744,15 +744,15 @@ export class DsReorderList extends DsElement {
     `,
   ];
   @property() label = 'Reorder items';
-  @queryAssignedElements({ selector: 'ds-reorder-item' }) private items!: DsReorderItem[];
+  @queryAssignedElements({ selector: 'kanonis-reorder-item' }) private items!: DsReorderItem[];
   private dragged?: DsReorderItem;
 
   protected override firstUpdated() {
-    this.addEventListener('ds-reorder-request', this.request as EventListener);
+    this.addEventListener('kanonis-reorder-request', this.request as EventListener);
     this.configure();
   }
   override disconnectedCallback() {
-    this.removeEventListener('ds-reorder-request', this.request as EventListener);
+    this.removeEventListener('kanonis-reorder-request', this.request as EventListener);
     super.disconnectedCallback();
   }
   private configure() {
@@ -797,7 +797,7 @@ export class DsReorderList extends DsElement {
       },
     );
     item.shadowRoot?.querySelector<HTMLButtonElement>('button')?.focus();
-    this.emit<DsReorderDetail>('ds-reorder', detail);
+    this.emit<DsReorderDetail>('kanonis-reorder', detail);
     this.requestUpdate();
   }
   protected override render() {

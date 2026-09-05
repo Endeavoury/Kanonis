@@ -180,7 +180,7 @@ export class DsPagination extends DsElement {
     const next = Math.min(Math.max(1, page), Math.max(1, this.pages));
     if (this.disabled || next === this.page) return;
     this.page = next;
-    this.emit<DsPageChangeDetail>('ds-page-change', { page: next });
+    this.emit<DsPageChangeDetail>('kanonis-page-change', { page: next });
   }
 
   protected override render() {
@@ -301,7 +301,7 @@ export class DsListItem extends DsElement {
       event.preventDefault();
       return;
     }
-    this.emit<DsListActivateDetail>('ds-list-activate', { value: this.value });
+    this.emit<DsListActivateDetail>('kanonis-list-activate', { value: this.value });
   }
 
   protected override render() {
@@ -351,7 +351,7 @@ export class DsList extends DsElement {
         background: var(--ds-gradient-surface, var(--ds-color-bg-surface));
         box-shadow: var(--ds-shadow-sm);
       }
-      :host([divided]) ::slotted(ds-list-item:not(:last-child)) {
+      :host([divided]) ::slotted(kanonis-list-item:not(:last-child)) {
         border-bottom: 1px solid var(--ds-color-border-subtle);
       }
     `,

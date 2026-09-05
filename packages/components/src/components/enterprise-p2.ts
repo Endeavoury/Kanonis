@@ -183,15 +183,15 @@ export class DsFieldArray extends DsElement {
   @property() addLabel = 'Add item';
   private add() {
     this.items = [...this.items, { id: `item-${Date.now()}`, label: '', value: '' }];
-    this.emit<DsFieldItem[]>('ds-items-change', this.items);
+    this.emit<DsFieldItem[]>('kanonis-items-change', this.items);
   }
   private removeItem(id: string) {
     this.items = this.items.filter((item) => item.id !== id);
-    this.emit<DsFieldItem[]>('ds-items-change', this.items);
+    this.emit<DsFieldItem[]>('kanonis-items-change', this.items);
   }
   private change(id: string, value: string) {
     this.items = this.items.map((item) => (item.id === id ? { ...item, value } : item));
-    this.emit<DsFieldItem[]>('ds-items-change', this.items);
+    this.emit<DsFieldItem[]>('kanonis-items-change', this.items);
   }
   protected override render() {
     return html`<section class="array" aria-label=${this.label}>
@@ -246,7 +246,7 @@ export class DsDatePicker extends DsElement {
   @property() max = '';
   private change(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
-    this.emit<{ value: string }>('ds-change', { value: this.value });
+    this.emit<{ value: string }>('kanonis-change', { value: this.value });
   }
   protected override render() {
     return html`<label
@@ -268,7 +268,7 @@ export class DsTimePicker extends DsDatePicker {
         .value=${this.value}
         @change=${(event: Event) => {
           this.value = (event.target as HTMLInputElement).value;
-          this.emit<{ value: string }>('ds-change', { value: this.value });
+          this.emit<{ value: string }>('kanonis-change', { value: this.value });
         }}
     /></label>`;
   }
@@ -327,7 +327,7 @@ export class DsStepper extends DsElement {
   @property() value = '';
   private select(id: string) {
     this.value = id;
-    this.emit<{ id: string }>('ds-step-change', { id });
+    this.emit<{ id: string }>('kanonis-step-change', { id });
   }
   protected override render() {
     return html`<nav aria-label="Progress">
@@ -433,7 +433,7 @@ export class DsTaskList extends DsElement {
     this.tasks = this.tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task,
     );
-    this.emit<DsTask[]>('ds-task-change', this.tasks);
+    this.emit<DsTask[]>('kanonis-task-change', this.tasks);
   }
   protected override render() {
     return html`<ul class="surface" aria-label="Tasks">

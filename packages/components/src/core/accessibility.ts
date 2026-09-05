@@ -5,10 +5,10 @@ const focusableSelector = [
   'select:not(:disabled)',
   'textarea:not(:disabled)',
   '[tabindex]:not([tabindex="-1"])',
-  'ds-button:not([disabled])',
-  'ds-icon-button:not([disabled])',
-  'ds-input:not([disabled])',
-  'ds-select:not([disabled])',
+  'kanonis-button:not([disabled])',
+  'kanonis-icon-button:not([disabled])',
+  'kanonis-input:not([disabled])',
+  'kanonis-select:not([disabled])',
 ].join(',');
 
 export function getFocusableElements(root: ParentNode): HTMLElement[] {
@@ -31,7 +31,7 @@ export function announce(
 ): void {
   const document = options.document ?? globalThis.document;
   if (!document?.body) return;
-  const id = options.assertive ? 'ds-assertive-announcer' : 'ds-polite-announcer';
+  const id = options.assertive ? 'kanonis-assertive-announcer' : 'kanonis-polite-announcer';
   let region = document.getElementById(id);
   if (!region) {
     region = document.createElement('div');

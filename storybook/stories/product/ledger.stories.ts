@@ -18,46 +18,46 @@ export const FilteredLedger: StoryObj = {
   render: () =>
     html`${productStyles}
       <div class="product">
-        <ds-app-shell
-          >${productSidebar()}${productHeader('Ledger')}<ds-page-header
+        <kanonis-app-shell
+          >${productSidebar()}${productHeader('Ledger')}<kanonis-page-header
             eyebrow="Account ledger"
             heading="Filter, inspect, and categorize"
             description="Balances are calculated independently per account and statement."
-            ><ds-badge slot="actions" tone="accent">2,634 entries</ds-badge></ds-page-header
+            ><kanonis-badge slot="actions" tone="accent">2,634 entries</kanonis-badge></kanonis-page-header
           >
           <div class="content">
-            <ds-filter-bar columns="4"
-              ><ds-select
+            <kanonis-filter-bar columns="4"
+              ><kanonis-select
                 label="Account"
                 .options=${[
                   { label: 'All accounts', value: '' },
                   { label: 'Daily · 4300', value: 'daily' },
                 ]}
-              ></ds-select
-              ><ds-select
+              ></kanonis-select
+              ><kanonis-select
                 label="Category"
                 .options=${[
                   { label: 'All categories', value: '' },
                   { label: 'Food', value: 'food' },
                 ]}
-              ></ds-select
-              ><ds-input type="date" label="From" value="2026-08-01"></ds-input
-              ><ds-input type="date" label="To" value="2026-08-31"></ds-input
-              ><ds-search-input
+              ></kanonis-select
+              ><kanonis-input type="date" label="From" value="2026-08-01"></kanonis-input
+              ><kanonis-input type="date" label="To" value="2026-08-31"></kanonis-input
+              ><kanonis-search-input
                 label="Search"
                 placeholder="Counterparty or reference"
-              ></ds-search-input
-              ><ds-button slot="actions" variant="secondary">Clear</ds-button
-              ><ds-button slot="actions">Apply filters</ds-button></ds-filter-bar
-            ><ds-alert tone="info" heading="Balance after transaction"
+              ></kanonis-search-input
+              ><kanonis-button slot="actions" variant="secondary">Clear</kanonis-button
+              ><kanonis-button slot="actions">Apply filters</kanonis-button></kanonis-filter-bar
+            ><kanonis-alert tone="info" heading="Balance after transaction"
               >Calculated within each account and statement, anchored to bank-reported
-              balances.</ds-alert
-            ><ds-data-table
+              balances.</kanonis-alert
+            ><kanonis-data-table
               density="compact"
               selectable
               .columns=${ledgerColumns}
               .rows=${ledgerRows}
-            ></ds-data-table></div
-        ></ds-app-shell>
+            ></kanonis-data-table></div
+        ></kanonis-app-shell>
       </div>`,
 };

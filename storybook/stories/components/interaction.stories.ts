@@ -10,41 +10,41 @@ export default meta;
 
 export const ThemeToggle: StoryObj = {
   render: () =>
-    html`<ds-inline>
-      <ds-theme-toggle theme="light"></ds-theme-toggle>
+    html`<kanonis-inline>
+      <kanonis-theme-toggle theme="light"></kanonis-theme-toggle>
       <span>Switches and persists the document theme when configured with a storage key.</span>
-    </ds-inline>`,
+    </kanonis-inline>`,
 };
 
 export const Tabs: StoryObj = {
   render: () =>
-    html`<ds-tabs label="Account views" value="activity">
-      <ds-tab value="activity" label="Activity">
-        <ds-panel
+    html`<kanonis-tabs label="Account views" value="activity">
+      <kanonis-tab value="activity" label="Activity">
+        <kanonis-panel
           ><strong>Recent account activity</strong>
-          <p>Arrow keys move between tabs.</p></ds-panel
+          <p>Arrow keys move between tabs.</p></kanonis-panel
         >
-      </ds-tab>
-      <ds-tab value="details" label="Details">
-        <ds-panel
+      </kanonis-tab>
+      <kanonis-tab value="details" label="Details">
+        <kanonis-panel
           ><strong>Account details</strong>
-          <p>Panels preserve native slotted content.</p></ds-panel
+          <p>Panels preserve native slotted content.</p></kanonis-panel
         >
-      </ds-tab>
-      <ds-tab value="audit" label="Audit log" disabled>
-        <ds-panel>This panel is unavailable.</ds-panel>
-      </ds-tab>
-    </ds-tabs>`,
+      </kanonis-tab>
+      <kanonis-tab value="audit" label="Audit log" disabled>
+        <kanonis-panel>This panel is unavailable.</kanonis-panel>
+      </kanonis-tab>
+    </kanonis-tabs>`,
 };
 
 export const Disclosure: StoryObj = {
   render: () =>
-    html`<ds-stack>
-      <ds-disclosure summary="How balances are calculated" open>
+    html`<kanonis-stack>
+      <kanonis-disclosure summary="How balances are calculated" open>
         Balances are calculated independently for every account and statement.
-      </ds-disclosure>
-      <ds-disclosure summary="Unavailable section" disabled>
+      </kanonis-disclosure>
+      <kanonis-disclosure summary="Unavailable section" disabled>
         This content cannot currently be expanded.
-      </ds-disclosure>
-    </ds-stack>`,
+      </kanonis-disclosure>
+    </kanonis-stack>`,
 };

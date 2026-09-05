@@ -24,7 +24,7 @@ Importing `@endeavoury/kanonis/styles.css` is optional (the same file is also av
 - design-system token variables and `color-scheme`;
 - `box-sizing` for the consuming document;
 - the `body` font, margin, text color, and canvas background;
-- explicit `.ds-visually-hidden`, `.ds-page-flow`, and `.ds-content-width` helpers.
+- explicit `.kanonis-visually-hidden`, `.kanonis-page-flow`, and `.kanonis-content-width` helpers.
 
 It deliberately does not normalize native controls or typography elements globally.
 
@@ -42,7 +42,7 @@ Prefer semantic custom properties for theme-level customization:
 Use stable parts only when a local adjustment is needed:
 
 ```css
-ds-input::part(control) {
+kanonis-input::part(control) {
   min-width: 18rem;
 }
 ```

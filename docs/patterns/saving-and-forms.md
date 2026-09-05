@@ -13,7 +13,7 @@ failure next to the control and restore the prior value.
 ## Request lifecycle
 
 1. Keep values and focus stable while validating.
-2. Move focus to `ds-validation-summary` only after a failed explicit submit when doing so helps the
+2. Move focus to `kanonis-validation-summary` only after a failed explicit submit when doing so helps the
    user find multiple errors.
 3. Disable duplicate submission, but do not make the form unreadable.
 4. Preserve all input on server failure and use the messaging pattern appropriate to its scope.
@@ -23,5 +23,5 @@ failure next to the control and restore the prior value.
 Destructive actions use a clear verb, confirmation proportional to risk, and an undo path whenever
 the operation is technically reversible. Avoid confirmations for low-risk reversible changes.
 
-Settings pages should use `ds-form-section`, `ds-form-field`, form-associated controls,
-`ds-validation-summary`, and an `ds-action-bar` placed consistently after the form.
+Settings pages should use `kanonis-form-section`, `kanonis-form-field`, form-associated controls,
+`kanonis-validation-summary`, and an `kanonis-action-bar` placed consistently after the form.

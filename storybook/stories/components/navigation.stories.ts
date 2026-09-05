@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 const sidebar = () =>
-  html`<ds-sidebar slot="sidebar"
+  html`<kanonis-sidebar slot="sidebar"
     ><strong slot="brand" style="font-size:15px">◈ &nbsp;Kanonis</strong
-    ><ds-sidebar-item value="overview" active
-      ><ds-icon slot="icon" name="home"></ds-icon>Overview</ds-sidebar-item
-    ><ds-sidebar-item value="monthly"
-      ><ds-icon slot="icon" name="calendar"></ds-icon>Monthly</ds-sidebar-item
-    ><ds-sidebar-item value="ledger"
-      ><ds-icon slot="icon" name="table"></ds-icon>Ledger</ds-sidebar-item
-    ><ds-sidebar-item value="settings"
-      ><ds-icon slot="icon" name="settings"></ds-icon>Settings</ds-sidebar-item
-    ><ds-status-badge slot="footer" tone="success">System online</ds-status-badge></ds-sidebar
+    ><kanonis-sidebar-item value="overview" active
+      ><kanonis-icon slot="icon" name="home"></kanonis-icon>Overview</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="monthly"
+      ><kanonis-icon slot="icon" name="calendar"></kanonis-icon>Monthly</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="ledger"
+      ><kanonis-icon slot="icon" name="table"></kanonis-icon>Ledger</kanonis-sidebar-item
+    ><kanonis-sidebar-item value="settings"
+      ><kanonis-icon slot="icon" name="settings"></kanonis-icon>Settings</kanonis-sidebar-item
+    ><kanonis-status-badge slot="footer" tone="success">System online</kanonis-status-badge></kanonis-sidebar
   >`;
 const meta: Meta = {
   title: 'Components/Navigation',
@@ -24,66 +24,66 @@ export const SidebarItems: StoryObj = {
 };
 export const ApplicationShell: StoryObj = {
   render: () =>
-    html`<ds-app-shell
-      >${sidebar()}<ds-inline slot="header" justify="between" style="height:72px;padding:0 24px"
+    html`<kanonis-app-shell
+      >${sidebar()}<kanonis-inline slot="header" justify="between" style="height:72px;padding:0 24px"
         ><strong>Overview</strong
-        ><ds-inline
-          ><ds-icon-button label="Refresh"><ds-icon name="refresh"></ds-icon></ds-icon-button
-          ><ds-avatar name="Design Preview"></ds-avatar></ds-inline></ds-inline
-      ><ds-page-header
+        ><kanonis-inline
+          ><kanonis-icon-button label="Refresh"><kanonis-icon name="refresh"></kanonis-icon></kanonis-icon-button
+          ><kanonis-avatar name="Design Preview"></kanonis-avatar></kanonis-inline></kanonis-inline
+      ><kanonis-page-header
         eyebrow="Operations"
         heading="System overview"
         description="Responsive shell built entirely from custom elements."
-      ></ds-page-header>
+      ></kanonis-page-header>
       <div style="margin-top:16px">
-        <ds-kpi-grid
-          ><ds-metric label="Online" value="24" tone="success"></ds-metric
-          ><ds-metric label="Warnings" value="2" tone="warning"></ds-metric
-          ><ds-metric label="Offline" value="1" tone="danger"></ds-metric
-          ><ds-metric label="Updates" value="6" tone="accent"></ds-metric
-        ></ds-kpi-grid></div
-    ></ds-app-shell>`,
+        <kanonis-kpi-grid
+          ><kanonis-metric label="Online" value="24" tone="success"></kanonis-metric
+          ><kanonis-metric label="Warnings" value="2" tone="warning"></kanonis-metric
+          ><kanonis-metric label="Offline" value="1" tone="danger"></kanonis-metric
+          ><kanonis-metric label="Updates" value="6" tone="accent"></kanonis-metric
+        ></kanonis-kpi-grid></div
+    ></kanonis-app-shell>`,
 };
 
 export const Breadcrumbs: StoryObj = {
   render: () =>
-    html`<ds-breadcrumbs label="Current location">
-      <ds-breadcrumb href="#dashboard">Dashboard</ds-breadcrumb>
-      <ds-breadcrumb href="#accounts">Accounts</ds-breadcrumb>
-      <ds-breadcrumb current>Daily account</ds-breadcrumb>
-    </ds-breadcrumbs>`,
+    html`<kanonis-breadcrumbs label="Current location">
+      <kanonis-breadcrumb href="#dashboard">Dashboard</kanonis-breadcrumb>
+      <kanonis-breadcrumb href="#accounts">Accounts</kanonis-breadcrumb>
+      <kanonis-breadcrumb current>Daily account</kanonis-breadcrumb>
+    </kanonis-breadcrumbs>`,
 };
 
 export const Pagination: StoryObj = {
-  render: () => html`<ds-pagination page="6" pages="24"></ds-pagination>`,
+  render: () => html`<kanonis-pagination page="6" pages="24"></kanonis-pagination>`,
 };
 
 export const List: StoryObj = {
   render: () =>
-    html`<ds-list label="Connected accounts" divided>
-      <ds-list-item value="daily" supporting-text="NL12 BANK 3456 7890 12" selected>
-        <ds-avatar slot="leading" initials="DA" size="small"></ds-avatar>
+    html`<kanonis-list label="Connected accounts" divided>
+      <kanonis-list-item value="daily" supporting-text="NL12 BANK 3456 7890 12" selected>
+        <kanonis-avatar slot="leading" initials="DA" size="small"></kanonis-avatar>
         Daily account
-        <ds-badge slot="trailing">€ 4,285</ds-badge>
-      </ds-list-item>
-      <ds-list-item value="savings" supporting-text="NL98 BANK 7654 3210 98">
-        <ds-avatar slot="leading" initials="SA" size="small"></ds-avatar>
+        <kanonis-badge slot="trailing">€ 4,285</kanonis-badge>
+      </kanonis-list-item>
+      <kanonis-list-item value="savings" supporting-text="NL98 BANK 7654 3210 98">
+        <kanonis-avatar slot="leading" initials="SA" size="small"></kanonis-avatar>
         Savings
-        <ds-badge slot="trailing">€ 12,940</ds-badge>
-      </ds-list-item>
-    </ds-list>`,
+        <kanonis-badge slot="trailing">€ 12,940</kanonis-badge>
+      </kanonis-list-item>
+    </kanonis-list>`,
 };
 
 export const CollapsibleSidebar: StoryObj = {
   render: () =>
-    html`<ds-app-shell sidebar-collapsed>
+    html`<kanonis-app-shell sidebar-collapsed>
       ${sidebar()}
-      <ds-inline slot="header" style="padding:0 24px"
-        ><strong>Collapsible navigation</strong></ds-inline
+      <kanonis-inline slot="header" style="padding:0 24px"
+        ><strong>Collapsible navigation</strong></kanonis-inline
       >
-      <ds-page-header
+      <kanonis-page-header
         heading="More room for your work"
         description="Use the sidebar button in the header to show or hide navigation. The same control works on compact screens."
-      ></ds-page-header>
-    </ds-app-shell>`,
+      ></kanonis-page-header>
+    </kanonis-app-shell>`,
 };

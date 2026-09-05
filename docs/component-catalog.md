@@ -13,60 +13,60 @@ manifest keeps catalog-only entries experimental rather than overstating their r
 
 ## Layout and navigation
 
-`ds-app-shell`, `ds-pane-group`, `ds-pane`, `ds-scrollable-pane`, `ds-sidebar`, `ds-inspector-pane`, `ds-pane-header`, `ds-pane-content`, `ds-navigation-group`, `ds-workspace-tabs` — [layout and productivity stories](../storybook/stories/components/enterprise-p1.stories.ts)
+`kanonis-app-shell`, `kanonis-pane-group`, `kanonis-pane`, `kanonis-scrollable-pane`, `kanonis-sidebar`, `kanonis-inspector-pane`, `kanonis-pane-header`, `kanonis-pane-content`, `kanonis-navigation-group`, `kanonis-workspace-tabs` — [layout and productivity stories](../storybook/stories/components/enterprise-p1.stories.ts)
 
 ## Data, forms, and workflows
 
-`ds-data-grid`, `ds-data-table`, `ds-filter-builder`, `ds-filter-bar`, `ds-view-toolbar`, `ds-column-manager`, `ds-bulk-actions`, `ds-saved-view`, `ds-combobox`, `ds-validation-summary`, `ds-form-section`, `ds-field-array`, `ds-date-picker`, `ds-time-picker`, `ds-file-upload`, `ds-drop-zone`, `ds-stepper`, `ds-approval-flow`, `ds-task-list`, `ds-detail-list`, `ds-detail-sidebar`, `ds-record-header`, `ds-change-summary` — [productivity stories](../storybook/stories/components/enterprise.stories.ts), [workflow stories](../storybook/stories/components/enterprise-p2.stories.ts)
+`kanonis-data-grid`, `kanonis-data-table`, `kanonis-filter-builder`, `kanonis-filter-bar`, `kanonis-view-toolbar`, `kanonis-column-manager`, `kanonis-bulk-actions`, `kanonis-saved-view`, `kanonis-combobox`, `kanonis-validation-summary`, `kanonis-form-section`, `kanonis-field-array`, `kanonis-date-picker`, `kanonis-time-picker`, `kanonis-file-upload`, `kanonis-drop-zone`, `kanonis-stepper`, `kanonis-approval-flow`, `kanonis-task-list`, `kanonis-detail-list`, `kanonis-detail-sidebar`, `kanonis-record-header`, `kanonis-change-summary` — [productivity stories](../storybook/stories/components/enterprise.stories.ts), [workflow stories](../storybook/stories/components/enterprise-p2.stories.ts)
 
 ## Search, commands, and notifications
 
-`ds-command-palette`, `ds-global-search`, `ds-tenant-switcher`, `ds-user-menu`, `ds-context-menu`, `ds-quick-actions`, `ds-notification-center`, `ds-banner`, `ds-maintenance-notice`, `ds-help-panel`, `ds-tour`, `ds-coachmark` — [productivity stories](../storybook/stories/components/enterprise-p1.stories.ts), [governance stories](../storybook/stories/components/enterprise-p3.stories.ts)
+`kanonis-command-palette`, `kanonis-global-search`, `kanonis-tenant-switcher`, `kanonis-user-menu`, `kanonis-context-menu`, `kanonis-quick-actions`, `kanonis-notification-center`, `kanonis-banner`, `kanonis-maintenance-notice`, `kanonis-help-panel`, `kanonis-tour`, `kanonis-coachmark` — [productivity stories](../storybook/stories/components/enterprise-p1.stories.ts), [governance stories](../storybook/stories/components/enterprise-p3.stories.ts)
 
 ## Audit, security, and developer tools
 
-`ds-audit-log`, `ds-permission-matrix`, `ds-role-badge`, `ds-diff-viewer`, `ds-code-editor`, `ds-json-editor`, `ds-compare-view`, `ds-job-status`, `ds-timeline`, `ds-activity-feed` — [P2 stories](../storybook/stories/components/enterprise-p2.stories.ts), [P3 stories](../storybook/stories/components/enterprise-p3.stories.ts)
+`kanonis-audit-log`, `kanonis-permission-matrix`, `kanonis-role-badge`, `kanonis-diff-viewer`, `kanonis-code-editor`, `kanonis-json-editor`, `kanonis-compare-view`, `kanonis-job-status`, `kanonis-timeline`, `kanonis-activity-feed` — [P2 stories](../storybook/stories/components/enterprise-p2.stories.ts), [P3 stories](../storybook/stories/components/enterprise-p3.stories.ts)
 
 ## Foundations and controls
 
-`ds-alert`, `ds-avatar`, `ds-badge`, `ds-breadcrumb`, `ds-breadcrumbs`, `ds-button`, `ds-button-group`, `ds-card`, `ds-checkbox`, `ds-code-block`, `ds-container`, `ds-description-list`, `ds-dialog`, `ds-disclosure`, `ds-drawer`, `ds-empty-state`, `ds-form-field`, `ds-grid`, `ds-icon`, `ds-icon-button`, `ds-inline`, `ds-input`, `ds-kpi-grid`, `ds-list`, `ds-list-item`, `ds-loading-state`, `ds-menu`, `ds-menu-item`, `ds-metric`, `ds-page-header`, `ds-pagination`, `ds-panel`, `ds-progress`, `ds-radio`, `ds-radio-group`, `ds-range`, `ds-search-input`, `ds-select`, `ds-sidebar-item`, `ds-skeleton`, `ds-stack`, `ds-status-badge`, `ds-switch`, `ds-tab`, `ds-tabs`, `ds-textarea`, `ds-theme-toggle`, `ds-toast`, `ds-toast-region`, `ds-tooltip`, `ds-tree`, `ds-tree-item` — [component stories](../storybook/stories/components)
+`kanonis-alert`, `kanonis-avatar`, `kanonis-badge`, `kanonis-breadcrumb`, `kanonis-breadcrumbs`, `kanonis-button`, `kanonis-button-group`, `kanonis-card`, `kanonis-checkbox`, `kanonis-code-block`, `kanonis-container`, `kanonis-description-list`, `kanonis-dialog`, `kanonis-disclosure`, `kanonis-drawer`, `kanonis-empty-state`, `kanonis-form-field`, `kanonis-grid`, `kanonis-icon`, `kanonis-icon-button`, `kanonis-inline`, `kanonis-input`, `kanonis-kpi-grid`, `kanonis-list`, `kanonis-list-item`, `kanonis-loading-state`, `kanonis-menu`, `kanonis-menu-item`, `kanonis-metric`, `kanonis-page-header`, `kanonis-pagination`, `kanonis-panel`, `kanonis-progress`, `kanonis-radio`, `kanonis-radio-group`, `kanonis-range`, `kanonis-search-input`, `kanonis-select`, `kanonis-sidebar-item`, `kanonis-skeleton`, `kanonis-stack`, `kanonis-status-badge`, `kanonis-switch`, `kanonis-tab`, `kanonis-tabs`, `kanonis-textarea`, `kanonis-theme-toggle`, `kanonis-toast`, `kanonis-toast-region`, `kanonis-tooltip`, `kanonis-tree`, `kanonis-tree-item` — [component stories](../storybook/stories/components)
 
 ## Action, accessibility, asset, and reordering additions
 
-`ds-live-region`, `ds-segmented-control`, `ds-segment`, `ds-action-bar`, `ds-split-button`,
-`ds-input-group`, `ds-chip`, `ds-illustration`, `ds-brand-mark`, `ds-reorder-list`,
-`ds-reorder-item` — [maturity addition stories](../storybook/stories/components/enhancements.stories.ts)
+`kanonis-live-region`, `kanonis-segmented-control`, `kanonis-segment`, `kanonis-action-bar`, `kanonis-split-button`,
+`kanonis-input-group`, `kanonis-chip`, `kanonis-illustration`, `kanonis-brand-mark`, `kanonis-reorder-list`,
+`kanonis-reorder-item` — [maturity addition stories](../storybook/stories/components/enhancements.stories.ts)
 
-`ds-workspace`, `ds-workspace-header`, `ds-pane-window`, `ds-pane-stack` — [desktop pane workspace
+`kanonis-workspace`, `kanonis-workspace-header`, `kanonis-pane-window`, `kanonis-pane-stack` — [desktop pane workspace
 stories](../storybook/stories/components/layout.stories.ts)
 
 The full desktop composition is documented in [Desktop pane workspace](patterns/desktop-pane-workspace.md).
 
 ## Choosing between overlapping primitives
 
-Use `ds-card` for a self-contained content object and `ds-panel` for a structural region with
-header/body/footer slots. Use `ds-pane` inside a `ds-pane-window` for persistent multi-region work;
-use `ds-detail-sidebar` for contextual detail that overlays or complements the current page. Use
-`ds-pane-content scrollable` for pane-local scrolling; `ds-scrollable-pane` remains available for
+Use `kanonis-card` for a self-contained content object and `kanonis-panel` for a structural region with
+header/body/footer slots. Use `kanonis-pane` inside a `kanonis-pane-window` for persistent multi-region work;
+use `kanonis-detail-sidebar` for contextual detail that overlays or complements the current page. Use
+`kanonis-pane-content scrollable` for pane-local scrolling; `kanonis-scrollable-pane` remains available for
 legacy compositions.
 
-Use `ds-status-badge` when a tone communicates state and `ds-badge` for neutral metadata. Use
-`ds-data-table` for stable tabular data; `ds-data-grid` remains experimental until its editing and
-keyboard model is finalized. Use `ds-page-header` for a normal page heading and `ds-workspace-header`
+Use `kanonis-status-badge` when a tone communicates state and `kanonis-badge` for neutral metadata. Use
+`kanonis-data-table` for stable tabular data; `kanonis-data-grid` remains experimental until its editing and
+keyboard model is finalized. Use `kanonis-page-header` for a normal page heading and `kanonis-workspace-header`
 when the heading belongs above a framed pane workspace.
 
 When a component gains a dedicated story family, update its link here; the tag itself must remain present so `npm run verify:components` can enforce coverage.
 
 ## Collapsible application sidebar
 
-`ds-app-shell` automatically displays a header toggle when content is assigned to its `sidebar`
+`kanonis-app-shell` automatically displays a header toggle when content is assigned to its `sidebar`
 slot. It works with mouse, Enter, and Space, and stays available when navigation is hidden.
 `sidebar-collapsed` (or the `sidebarCollapsed` property) controls the initial and programmatic state.
 Hidden navigation is inert and excluded from the accessibility tree. Collapsing navigation that
 contains focus moves focus to the toggle. On compact screens the toggle hides and restores the
 bottom navigation, reclaiming its content space.
 
-Listen for `ds-sidebar-toggle` with detail `{ collapsed: boolean }` to persist user preferences.
+Listen for `kanonis-sidebar-toggle` with detail `{ collapsed: boolean }` to persist user preferences.
 Use `collapse-sidebar-label` and `expand-sidebar-label` for localized button labels, and the
-`sidebar-toggle` CSS part to customize its appearance. Keep the nested `ds-sidebar` expanded;
+`sidebar-toggle` CSS part to customize its appearance. Keep the nested `kanonis-sidebar` expanded;
 the shell owns visibility, so its toggle can always restore navigation.

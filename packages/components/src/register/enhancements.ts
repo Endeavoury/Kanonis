@@ -13,17 +13,17 @@ import {
   DsSplitButton,
 } from '../components/enhancements.js';
 
-defineComponent('ds-live-region', DsLiveRegion);
-defineComponent('ds-segmented-control', DsSegmentedControl);
-defineComponent('ds-segment', DsSegment);
-defineComponent('ds-action-bar', DsActionBar);
-defineComponent('ds-split-button', DsSplitButton);
-defineComponent('ds-input-group', DsInputGroup);
-defineComponent('ds-chip', DsChip);
-defineComponent('ds-illustration', DsIllustration);
-defineComponent('ds-brand-mark', DsBrandMark);
-defineComponent('ds-reorder-list', DsReorderList);
-defineComponent('ds-reorder-item', DsReorderItem);
+defineComponent('kanonis-live-region', DsLiveRegion);
+defineComponent('kanonis-segmented-control', DsSegmentedControl);
+defineComponent('kanonis-segment', DsSegment);
+defineComponent('kanonis-action-bar', DsActionBar);
+defineComponent('kanonis-split-button', DsSplitButton);
+defineComponent('kanonis-input-group', DsInputGroup);
+defineComponent('kanonis-chip', DsChip);
+defineComponent('kanonis-illustration', DsIllustration);
+defineComponent('kanonis-brand-mark', DsBrandMark);
+defineComponent('kanonis-reorder-list', DsReorderList);
+defineComponent('kanonis-reorder-item', DsReorderItem);
 
 export {
   DsActionBar,

@@ -7,10 +7,10 @@ import {
   DsTextarea,
 } from '../components/secondary-forms.js';
 
-defineComponent('ds-textarea', DsTextarea);
-defineComponent('ds-switch', DsSwitch);
-defineComponent('ds-range', DsRange);
-defineComponent('ds-radio-group', DsRadioGroup);
-defineComponent('ds-radio', DsRadio);
+defineComponent('kanonis-textarea', DsTextarea);
+defineComponent('kanonis-switch', DsSwitch);
+defineComponent('kanonis-range', DsRange);
+defineComponent('kanonis-radio-group', DsRadioGroup);
+defineComponent('kanonis-radio', DsRadio);
 
 export { DsRadio, DsRadioGroup, DsRange, DsSwitch, DsTextarea };

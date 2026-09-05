@@ -89,12 +89,12 @@ export class DsTextarea extends DsElement {
   private input(event: Event) {
     this.value = (event.target as HTMLTextAreaElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-input', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
   }
 
   private change() {
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-change', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
   }
 
   protected override updated() {
@@ -242,7 +242,7 @@ export class DsSwitch extends DsElement {
   private changed(event: Event) {
     this.checked = (event.target as HTMLInputElement).checked;
     this.syncForm();
-    this.emit<DsCheckedChangeDetail>('ds-change', { checked: this.checked, value: this.value });
+    this.emit<DsCheckedChangeDetail>('kanonis-change', { checked: this.checked, value: this.value });
   }
 
   protected override updated() {
@@ -335,11 +335,11 @@ export class DsRange extends DsElement {
   private input(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.syncForm();
-    this.emit<DsValueChangeDetail>('ds-input', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-input', { value: this.value });
   }
 
   private change() {
-    this.emit<DsValueChangeDetail>('ds-change', { value: this.value });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value: this.value });
   }
 
   protected override updated() {
@@ -441,7 +441,7 @@ export class DsRadio extends DsElement {
 
   private readonly activate = () => {
     if (!this.disabled)
-      this.emit<DsRadioActivateDetail>('ds-radio-activate', { value: this.value });
+      this.emit<DsRadioActivateDetail>('kanonis-radio-activate', { value: this.value });
   };
 
   private readonly keydown = (event: KeyboardEvent) => {
@@ -477,7 +477,7 @@ export class DsRadioGroup extends DsElement {
   ];
 
   readonly internals: ElementInternals;
-  @queryAssignedElements({ selector: 'ds-radio' }) private assignedRadios!: DsRadio[];
+  @queryAssignedElements({ selector: 'kanonis-radio' }) private assignedRadios!: DsRadio[];
   @state() private radios: DsRadio[] = [];
   @property() label = '';
   @property() name = '';
@@ -531,7 +531,7 @@ export class DsRadioGroup extends DsElement {
     if (!radio || radio.disabled || this.disabled || value === this.value) return;
     this.value = value;
     this.sync();
-    this.emit<DsValueChangeDetail>('ds-change', { value });
+    this.emit<DsValueChangeDetail>('kanonis-change', { value });
     if (focus) radio.focus();
   }
 
@@ -570,7 +570,7 @@ export class DsRadioGroup extends DsElement {
         aria-labelledby="label"
         aria-invalid=${this.error ? 'true' : 'false'}
         aria-disabled=${String(this.disabled)}
-        @ds-radio-activate=${this.activated}
+        @kanonis-radio-activate=${this.activated}
         @keydown=${this.keydown}
       >
         <slot @slotchange=${this.syncRadios}></slot>

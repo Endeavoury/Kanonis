@@ -210,7 +210,7 @@ export class DsCommandPalette extends DsElement {
     }
   }
   private select(command: DsCommand) {
-    this.emit<{ id: string }>('ds-command-select', { id: command.id });
+    this.emit<{ id: string }>('kanonis-command-select', { id: command.id });
     this.open = false;
   }
   protected override render() {
@@ -284,7 +284,7 @@ export class DsGlobalSearch extends DsElement {
   @property() placeholder = 'Search everything';
   @property() label = 'Global search';
   private submit() {
-    this.emit<{ query: string }>('ds-search-submit', { query: this.query });
+    this.emit<{ query: string }>('kanonis-search-submit', { query: this.query });
   }
   protected override render() {
     return html`<form
@@ -326,7 +326,7 @@ export class DsTenantSwitcher extends DsElement {
   @property() label = 'Workspace';
   private change(event: Event) {
     this.value = (event.target as HTMLSelectElement).value;
-    this.emit<{ id: string }>('ds-tenant-change', { id: this.value });
+    this.emit<{ id: string }>('kanonis-tenant-change', { id: this.value });
   }
   protected override render() {
     return html`<label class="surface" style="display:grid;gap:.25rem;padding:.5rem .75rem"
@@ -419,11 +419,11 @@ export class DsWorkspaceTabs extends DsElement {
   @property() value = '';
   private select(id: string) {
     this.value = id;
-    this.emit<{ id: string }>('ds-tab-change', { id });
+    this.emit<{ id: string }>('kanonis-tab-change', { id });
   }
   private close(id: string, event: Event) {
     event.stopPropagation();
-    this.emit<{ id: string }>('ds-tab-close', { id });
+    this.emit<{ id: string }>('kanonis-tab-close', { id });
   }
   protected override render() {
     return html`<nav class="surface" role="tablist" aria-label="Workspace tabs">
@@ -675,7 +675,7 @@ export class DsNotificationCenter extends DsElement {
   @property({ type: Boolean, reflect: true }) open = false;
   @property() label = 'Notifications';
   private markRead(id: string) {
-    this.emit<{ id: string }>('ds-notification-read', { id });
+    this.emit<{ id: string }>('kanonis-notification-read', { id });
   }
   protected override render() {
     const unread = this.notifications.filter((notification) => !notification.read).length;
@@ -717,7 +717,7 @@ export class DsBanner extends DsElement {
   @property() heading = '';
   @property({ type: Boolean, reflect: true }) dismissible = false;
   private close() {
-    this.emit<void>('ds-dismiss', undefined);
+    this.emit<void>('kanonis-dismiss', undefined);
   }
   protected override render() {
     return html`<aside class="banner surface" role="status">

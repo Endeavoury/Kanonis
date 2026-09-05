@@ -17,22 +17,22 @@ import {
   DsWorkspace,
   DsWorkspaceHeader,
 } from '../components/layout.js';
-defineComponent('ds-workspace', DsWorkspace);
-defineComponent('ds-workspace-header', DsWorkspaceHeader);
-defineComponent('ds-pane-window', DsPaneWindow);
-defineComponent('ds-pane-stack', DsPaneStack);
-defineComponent('ds-stack', DsStack);
-defineComponent('ds-inline', DsInline);
-defineComponent('ds-grid', DsGrid);
-defineComponent('ds-container', DsContainer);
-defineComponent('ds-page-header', DsPageHeader);
-defineComponent('ds-detail-sidebar', DsDetailSidebar);
-defineComponent('ds-pane-group', DsPaneGroup);
-defineComponent('ds-pane', DsPane);
-defineComponent('ds-scrollable-pane', DsScrollablePane);
-defineComponent('ds-pane-header', DsPaneHeader);
-defineComponent('ds-pane-content', DsPaneContent);
-defineComponent('ds-inspector-pane', DsInspectorPane);
+defineComponent('kanonis-workspace', DsWorkspace);
+defineComponent('kanonis-workspace-header', DsWorkspaceHeader);
+defineComponent('kanonis-pane-window', DsPaneWindow);
+defineComponent('kanonis-pane-stack', DsPaneStack);
+defineComponent('kanonis-stack', DsStack);
+defineComponent('kanonis-inline', DsInline);
+defineComponent('kanonis-grid', DsGrid);
+defineComponent('kanonis-container', DsContainer);
+defineComponent('kanonis-page-header', DsPageHeader);
+defineComponent('kanonis-detail-sidebar', DsDetailSidebar);
+defineComponent('kanonis-pane-group', DsPaneGroup);
+defineComponent('kanonis-pane', DsPane);
+defineComponent('kanonis-scrollable-pane', DsScrollablePane);
+defineComponent('kanonis-pane-header', DsPaneHeader);
+defineComponent('kanonis-pane-content', DsPaneContent);
+defineComponent('kanonis-inspector-pane', DsInspectorPane);
 export {
   DsContainer,
   DsDetailSidebar,
