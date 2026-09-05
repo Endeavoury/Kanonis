@@ -110,6 +110,55 @@ export const Welcome: StoryObj = {
           padding: 14px;
           font-size: 0.78rem;
         }
+        .steps {
+          display: grid;
+          gap: 12px;
+          margin: 20px 0 0;
+          padding: 0;
+          list-style: none;
+          counter-reset: step;
+        }
+        .steps li {
+          display: grid;
+          grid-template-columns: 2rem 1fr;
+          gap: 12px;
+          align-items: start;
+          color: var(--ds-color-text-secondary);
+          line-height: 1.55;
+        }
+        .steps li::before {
+          display: grid;
+          place-items: center;
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid var(--ds-color-border-subtle);
+          border-radius: 999px;
+          color: var(--ds-color-accent-primary);
+          font-weight: 700;
+          content: counter(step);
+          counter-increment: step;
+        }
+        .package-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 12px;
+          margin: 20px 0 0;
+        }
+        .package-list div {
+          padding: 16px;
+          border-left: 2px solid var(--ds-color-accent-primary);
+          background: var(--ds-color-bg-surface);
+        }
+        .package-list code {
+          display: block;
+          margin-bottom: 6px;
+          color: var(--ds-color-text-primary);
+          font-size: 0.82rem;
+        }
+        .package-list span {
+          color: var(--ds-color-text-secondary);
+          font-size: 0.875rem;
+        }
       </style>
       <main class="intro">
         <p class="eyebrow">Cross-framework Web Components</p>
@@ -159,6 +208,31 @@ export const Welcome: StoryObj = {
             Add the framework adapter only when you want typed component props and events. The
             visual implementation remains the same native element in every framework.
           </p>
+          <ol class="steps">
+            <li>
+              Configure the <code>@endeavoury</code> registry and authenticate with GitHub Packages.
+            </li>
+            <li>Install the core runtime and stylesheet, then add your framework adapter.</li>
+            <li>Import registration before rendering your first <code>ds-*</code> element.</li>
+          </ol>
+          <div class="package-list" aria-label="Kanosis package map">
+            <div>
+              <code>@endeavoury/kanosis</code
+              ><span>Web Components and grouped registration entry points.</span>
+            </div>
+            <div>
+              <code>@endeavoury/kanosis-styles</code
+              ><span>Optional global tokens, themes, and typography.</span>
+            </div>
+            <div>
+              <code>@endeavoury/kanosis-react</code
+              ><span>Typed React adapters and custom event mappings.</span>
+            </div>
+            <div>
+              <code>@endeavoury/kanosis-angular</code
+              ><span>Angular registration and schema helpers.</span>
+            </div>
+          </div>
         </section>
         <section class="section" aria-labelledby="usage-heading">
           <h2 id="usage-heading">Choose your integration</h2>
