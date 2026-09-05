@@ -2,7 +2,7 @@
 
 Use `data-ds-brand="finance"` or `data-ds-brand="ontology"` on the application root or a subtree.
 Brand themes change semantic accent roles; light, dark, contrast, and forced-color behavior continue
-to use the same component contracts. The default brand remains neutral.
+to use the same component contracts. Kanonis is the default brand and provides the neutral baseline.
 
 Shape roles are control, surface, and overlay. Use them by intent rather than selecting an arbitrary
 radius. Expressive shapes are reserved for branded communication and must not reduce density or make

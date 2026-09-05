@@ -56,12 +56,12 @@ const preview: Preview = {
       },
     },
     brand: {
-      description: 'Semantic brand theme',
+      description: 'Semantic brand theme (Kanonis is the default)',
       defaultValue: 'default',
       toolbar: {
         icon: 'component',
         items: [
-          { value: 'default', title: 'Default brand' },
+          { value: 'default', title: 'Kanonis (default)' },
           { value: 'finance', title: 'Finance brand' },
           { value: 'ontology', title: 'Ontology brand' },
         ],

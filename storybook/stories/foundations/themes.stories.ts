@@ -51,22 +51,22 @@ export const ContrastAndBrandMatrix: StoryObj = {
       style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--ds-space-4)"
     >
       ${[
-      { brand: 'default', contrast: 'standard' },
-      { brand: 'finance', contrast: 'standard' },
-      { brand: 'ontology', contrast: 'standard' },
-      { brand: 'default', contrast: 'more' },
-    ].map(
-      ({ brand, contrast }) =>
-        html`<section
-          data-ds-theme="light"
-          data-ds-brand=${brand}
-          data-ds-contrast=${contrast}
-          style="padding:var(--ds-space-5);border:1px solid var(--ds-color-border-default);border-radius:var(--ds-shape-surface);background:var(--ds-color-bg-canvas);color:var(--ds-color-text-primary)"
-        >
-          <ds-brand-mark name=${brand === 'default' ? 'Kanonis' : brand}></ds-brand-mark>
-          <p>${brand} · ${contrast}</p>
-          <ds-button>Primary action</ds-button>
-        </section>`,
-    )}
+        { brand: 'default', contrast: 'standard' },
+        { brand: 'finance', contrast: 'standard' },
+        { brand: 'ontology', contrast: 'standard' },
+        { brand: 'default', contrast: 'more' },
+      ].map(
+        ({ brand, contrast }) =>
+          html`<section
+            data-ds-theme="light"
+            data-ds-brand=${brand}
+            data-ds-contrast=${contrast}
+            style="padding:var(--ds-space-5);border:1px solid var(--ds-color-border-default);border-radius:var(--ds-shape-surface);background:var(--ds-color-bg-canvas);color:var(--ds-color-text-primary)"
+          >
+            <ds-brand-mark name=${brand === 'default' ? 'Kanonis' : brand}></ds-brand-mark>
+            <p>${brand === 'default' ? 'Kanonis' : brand} · ${contrast}</p>
+            <ds-button>Primary action</ds-button>
+          </section>`,
+      )}
     </div>`,
 };

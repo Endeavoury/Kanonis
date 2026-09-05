@@ -8,7 +8,7 @@ Set `data-ds-theme="light"` or `data-ds-theme="dark"` on `html` or any applicati
 
 Set `data-ds-contrast="more"` for an explicit high-contrast palette; otherwise
 `prefers-contrast: more` is honored automatically. Forced-colors mode maps semantic roles to system
-colors. Set `data-ds-brand="finance"` or `data-ds-brand="ontology"` to change semantic accent roles
+colors. Kanonis is the default brand. Set `data-ds-brand="finance"` or `data-ds-brand="ontology"` to change semantic accent roles
 without forking component styles.
 
 ## Shared Shadow DOM styles
