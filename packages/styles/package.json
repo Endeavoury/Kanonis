@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis-styles",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Shared styling foundations and opt-in global styles for Kanonis.",
   "license": "MIT",
   "repository": {
@@ -27,7 +27,7 @@
     "build": "tsc -b && cp src/global.css dist/global.css"
   },
   "dependencies": {
-    "@endeavoury/kanonis-tokens": "1.0.13",
+    "@endeavoury/kanonis-tokens": "1.0.14",
     "lit": "3.3.3"
   },
   "publishConfig": {
