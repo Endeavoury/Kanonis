@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Framework-independent Kanonis Web Components built with Lit.",
   "license": "MIT",
   "repository": {
@@ -108,8 +108,8 @@
     "build": "tsc -b && cp ../styles/src/global.css dist/styles.css"
   },
   "dependencies": {
-    "@endeavoury/kanonis-styles": "1.0.19",
-    "@endeavoury/kanonis-tokens": "1.0.19",
+    "@endeavoury/kanonis-styles": "1.0.20",
+    "@endeavoury/kanonis-tokens": "1.0.20",
     "lit": "3.3.3",
     "tslib": "2.8.1"
   },
