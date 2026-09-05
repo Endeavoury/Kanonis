@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis-example-vanilla",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@endeavoury/kanonis": "1.0.11",
-    "@endeavoury/kanonis-styles": "1.0.11"
+    "@endeavoury/kanonis": "1.0.12",
+    "@endeavoury/kanonis-styles": "1.0.12"
   },
   "devDependencies": {
     "typescript": "6.0.3",
