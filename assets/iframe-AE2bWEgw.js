@@ -1,0 +1,1 @@
+import{t as e}from"./iframe-CiWg_R4b.js";e();
