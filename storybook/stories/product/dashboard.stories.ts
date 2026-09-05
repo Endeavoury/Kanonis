@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 import { productHeader, productSidebar, productStyles } from './product-fixtures.js';
 const meta: Meta = {
-  title: 'Patterns/Product/Dashboard',
+  title: 'Patterns/Dashboard',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };

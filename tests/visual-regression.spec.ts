@@ -47,7 +47,7 @@ const cases = [
   },
   {
     name: 'data-table-zoom-reflow',
-    story: 'patterns-product-data-table--long-content-and-overflow',
+    story: 'components-data-data-table--long-content-and-overflow',
     width: 390,
     height: 844,
     globals: 'theme:light;contrast:more;brand:finance;direction:ltr',

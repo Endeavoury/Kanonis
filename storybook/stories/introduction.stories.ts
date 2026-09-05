@@ -276,8 +276,8 @@ ${angularCode}</code></pre>
           </p>
           <p class="section-copy">
             Browse Foundation for tokens and accessibility preferences, Components for individual
-            elements, and Patterns/Product for complete workflows such as dashboards, ledgers, and
-            the Data Table.
+            elements, and Patterns for complete workflows such as dashboards, ledgers, and the Data
+            Table.
           </p>
         </section>
       </main>`,
