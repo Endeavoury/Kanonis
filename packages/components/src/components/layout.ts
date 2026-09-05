@@ -1,10 +1,6 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, query } from 'lit/decorators.js';
-import {
-  foundationStyles,
-  mediaCompact,
-  mediaExpanded,
-} from '@endeavoury/kanosis-styles';
+import { foundationStyles, mediaCompact, mediaExpanded } from '@endeavoury/kanosis-styles';
 import { DsElement } from '../core/ds-element.js';
 
 const gaps = css`
@@ -64,6 +60,232 @@ const scrollablePane = css`
     background-clip: padding-box;
   }
 `;
+
+/** A viewport-bound page frame with a header above a framed pane canvas. */
+export class DsWorkspace extends DsElement {
+  static override styles: CSSResultGroup = [
+    foundationStyles,
+    css`
+      :host {
+        --workspace-pane-margin: clamp(var(--ds-space-4), 1.25vw, var(--ds-space-8));
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+      }
+      .pane-area {
+        min-width: 0;
+        min-height: 0;
+        padding: var(--workspace-pane-margin);
+      }
+      ::slotted([slot='header']) {
+        min-width: 0;
+      }
+      ::slotted(ds-pane-window) {
+        width: 100%;
+        height: 100%;
+      }
+      @media ${mediaCompact} {
+        :host {
+          --workspace-pane-margin: var(--ds-space-4);
+        }
+      }
+    `,
+  ];
+  protected override render() {
+    return html`<slot name="header"></slot>
+      <div class="pane-area"><slot></slot></div>`;
+  }
+}
+
+/** Header content that remains outside the pane window. */
+export class DsWorkspaceHeader extends DsElement {
+  static override styles: CSSResultGroup = [
+    foundationStyles,
+    css`
+      :host {
+        display: block;
+        min-width: 0;
+        padding: var(--ds-space-5) var(--workspace-pane-margin, var(--ds-space-6)) var(--ds-space-2);
+      }
+      .header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: var(--ds-space-5);
+      }
+      .copy,
+      .meta {
+        min-width: 0;
+      }
+      .meta {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--ds-space-3);
+        flex-wrap: wrap;
+      }
+      .breadcrumb {
+        margin-bottom: var(--ds-space-2);
+        color: var(--ds-color-text-muted);
+        font-size: var(--ds-font-size-sm);
+      }
+      h1 {
+        margin: 0;
+        color: var(--ds-color-text-primary);
+        font-size: clamp(var(--ds-font-size-xl), 1.8vw, var(--ds-font-size-2xl));
+        font-weight: var(--ds-font-weight-semibold);
+        letter-spacing: var(--ds-letter-spacing-tight);
+        line-height: var(--ds-line-height-tight);
+      }
+      @media ${mediaCompact} {
+        :host {
+          padding-top: var(--ds-space-4);
+        }
+        .header {
+          grid-template-columns: 1fr;
+          align-items: start;
+          gap: var(--ds-space-3);
+        }
+        .meta {
+          justify-content: flex-start;
+        }
+      }
+    `,
+  ];
+  @property() heading = '';
+  protected override render() {
+    return html`<header class="header" part="header">
+      <div class="copy">
+        <div class="breadcrumb" part="breadcrumb"><slot name="breadcrumb"></slot></div>
+        <h1 part="heading">${this.heading}<slot name="title"></slot></h1>
+      </div>
+      <div class="meta" part="meta"><slot name="status"></slot><slot name="actions"></slot></div>
+    </header>`;
+  }
+}
+
+/** Framed horizontal canvas. It owns horizontal overflow; pane bodies own vertical overflow. */
+export class DsPaneWindow extends DsElement {
+  static override styles: CSSResultGroup = [
+    foundationStyles,
+    paneFoundation,
+    css`
+      :host {
+        --pane-min-width: 22.5rem;
+        --pane-preferred-width: 30rem;
+        --pane-max-width: 40rem;
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: 1px solid var(--ds-color-border-default);
+        border-radius: var(--ds-radius-lg);
+        background: var(--ds-color-bg-surface);
+        box-shadow: var(--ds-shadow-panel);
+        scrollbar-width: thin;
+        scrollbar-color: var(--ds-color-border-strong) transparent;
+        overscroll-behavior-inline: contain;
+      }
+      :host::-webkit-scrollbar {
+        height: var(--ds-scrollbar-size);
+      }
+      :host::-webkit-scrollbar-thumb {
+        border: 0.1875rem solid transparent;
+        border-radius: var(--ds-radius-round);
+        background: var(--ds-color-border-strong);
+        background-clip: padding-box;
+      }
+      :host(:focus-visible) {
+        outline: 2px solid var(--ds-color-focus);
+        outline-offset: 2px;
+      }
+      .track {
+        display: flex;
+        width: max-content;
+        min-width: 100%;
+        height: 100%;
+        min-height: 0;
+      }
+      ::slotted(ds-pane),
+      ::slotted(ds-pane-stack) {
+        flex: 1 1 var(--pane-preferred-width);
+        width: clamp(
+          var(--pane-min-width),
+          var(--pane-preferred-width),
+          var(--pane-max-width)
+        ) !important;
+        min-width: var(--pane-min-width);
+        max-width: var(--pane-max-width);
+        height: 100%;
+      }
+      ::slotted(ds-pane-stack) {
+        display: grid;
+      }
+      @media ${mediaCompact} {
+        :host {
+          --pane-min-width: min(22.5rem, 86vw);
+          --pane-preferred-width: min(30rem, 86vw);
+        }
+      }
+    `,
+  ];
+  @property({ type: Boolean, attribute: 'focusable-overflow' }) focusableOverflow = true;
+  protected override updated() {
+    this.tabIndex = this.focusableOverflow ? 0 : -1;
+  }
+  protected override render() {
+    return html`<div class="track" part="track"><slot></slot></div>`;
+  }
+}
+
+/** A vertical composition of panes. Set split to 40/60, 60/40, 30/70, or 70/30. */
+export class DsPaneStack extends DsElement {
+  static override styles: CSSResultGroup = [
+    foundationStyles,
+    paneFoundation,
+    css`
+      :host {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+      }
+      ::slotted(*) {
+        min-width: 0;
+        min-height: 0;
+      }
+      ::slotted(ds-pane:not(:last-child)) {
+        border-bottom: 1px solid var(--ds-color-border-subtle);
+      }
+      :host([split='40/60']) {
+        grid-template-rows: 40fr 60fr;
+      }
+      :host([split='60/40']) {
+        grid-template-rows: 60fr 40fr;
+      }
+      :host([split='30/70']) {
+        grid-template-rows: 30fr 70fr;
+      }
+      :host([split='70/30']) {
+        grid-template-rows: 70fr 30fr;
+      }
+    `,
+  ];
+  @property({ reflect: true }) split: '50/50' | '40/60' | '60/40' | '30/70' | '70/30' = '50/50';
+  protected override render() {
+    return html`<slot></slot>`;
+  }
+}
 
 export class DsPaneGroup extends DsElement {
   static override styles: CSSResultGroup = [
@@ -180,8 +402,13 @@ export class DsPaneHeader extends DsElement {
         border-bottom: 1px solid var(--ds-color-border-subtle);
         background: var(--ds-color-bg-surface-subtle);
       }
+      :host([sticky]) {
+        position: sticky;
+        top: 0;
+      }
     `,
   ];
+  @property({ type: Boolean, reflect: true }) sticky = false;
   protected override render() {
     return html`<slot></slot>`;
   }

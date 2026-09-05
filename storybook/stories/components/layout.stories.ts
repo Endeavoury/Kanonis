@@ -83,12 +83,12 @@ export const ShellPaneWorkspace: StoryObj = {
       <ds-sidebar slot="sidebar" label="Workspace navigation">
         <strong slot="brand">Pane workspace</strong>
         ${Array.from(
-        { length: 28 },
-        (_, index) =>
-          html`<ds-sidebar-item value=${`item-${index + 1}`} ?active=${index === 0}>
-            <ds-icon slot="icon" name="table"></ds-icon>Item ${index + 1}
-          </ds-sidebar-item>`,
-      )}
+          { length: 28 },
+          (_, index) =>
+            html`<ds-sidebar-item value=${`item-${index + 1}`} ?active=${index === 0}>
+              <ds-icon slot="icon" name="table"></ds-icon>Item ${index + 1}
+            </ds-sidebar-item>`,
+        )}
         <ds-status-badge slot="footer" tone="success">Connected</ds-status-badge>
       </ds-sidebar>
       <ds-inline slot="header" justify="between" style="height:100%;padding:0 1rem">
@@ -142,6 +142,89 @@ export const CollapsedShellPanes: StoryObj = {
       </ds-pane-group>
       <ds-inspector-pane slot="inspector" collapsed></ds-inspector-pane>
     </ds-app-shell>`,
+};
+
+const workspacePane = (heading: string, body: string) =>
+  html`<ds-pane>
+    <ds-pane-header
+      ><strong style="display:block;padding:var(--ds-space-4)">${heading}</strong></ds-pane-header
+    >
+    <ds-pane-content scrollable style="padding:var(--ds-space-4)"
+      ><p>${body}</p>
+      ${Array.from({ length: 5 }, (_, i) => box(`${heading} detail ${i + 1}`))}</ds-pane-content
+    >
+  </ds-pane>`;
+
+export const DesktopWorkspace: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () =>
+    html`<div style="height:100dvh;min-height:560px">
+      <ds-workspace>
+        <ds-workspace-header slot="header" heading="Project Alpha">
+          <ds-breadcrumbs slot="breadcrumb" label="Project location">
+            <ds-breadcrumb href="#customers">Customers</ds-breadcrumb>
+            <ds-breadcrumb current>Acme Corporation</ds-breadcrumb>
+          </ds-breadcrumbs>
+          <ds-status-badge slot="status" tone="success">Synced</ds-status-badge>
+          <ds-button slot="actions" variant="secondary">Share</ds-button>
+          <ds-icon-button slot="actions" label="More actions"
+            ><ds-icon name="more-horizontal"></ds-icon
+          ></ds-icon-button>
+        </ds-workspace-header>
+        <ds-pane-window aria-label="Project panes">
+          ${workspacePane('Overview', 'The overview stays visible beside the detail panes.')}
+          ${workspacePane('Activity', 'Recent project activity and approvals.')}
+          ${workspacePane('Properties', 'Canonical values for the selected project.')}
+        </ds-pane-window>
+      </ds-workspace>
+    </div>`,
+};
+
+export const DesktopWorkspaceStacks: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () =>
+    html`<div style="height:100dvh;min-height:560px">
+      <ds-workspace>
+        <ds-workspace-header slot="header" heading="Customer workspace">
+          <ds-breadcrumbs slot="breadcrumb" label="Customer location"
+            ><ds-breadcrumb current>Customers / Acme</ds-breadcrumb></ds-breadcrumbs
+          >
+          <ds-status-badge slot="status" tone="info">In review</ds-status-badge>
+          <ds-button slot="actions">Publish</ds-button>
+        </ds-workspace-header>
+        <ds-pane-window aria-label="Customer workspace panes">
+          ${workspacePane('Customer', 'The primary record occupies the full height.')}
+          <ds-pane-stack split="40/60">
+            ${workspacePane('Contacts', 'People connected to this customer.')}
+            ${workspacePane('Audit trail', 'Changes remain independently scrollable.')}
+          </ds-pane-stack>
+          ${workspacePane('Related orders', 'Orders and fulfillment context.')}
+        </ds-pane-window>
+      </ds-workspace>
+    </div>`,
+};
+
+export const DesktopWorkspaceFourPaneGrid: StoryObj = {
+  parameters: { layout: 'fullscreen' },
+  render: () =>
+    html`<div style="height:100dvh;min-height:560px">
+      <ds-workspace>
+        <ds-workspace-header slot="header" heading="Four pane comparison">
+          <ds-breadcrumbs slot="breadcrumb" label="Workspace location"
+            ><ds-breadcrumb current>Operations / Comparison</ds-breadcrumb></ds-breadcrumbs
+          >
+          <ds-status-badge slot="status" tone="success">Live</ds-status-badge>
+        </ds-workspace-header>
+        <ds-pane-window aria-label="Four pane comparison">
+          <ds-pane-stack split="50/50"
+            >${workspacePane('Pane A', 'Primary records.')}${workspacePane('Pane B', 'Selected record.')}</ds-pane-stack
+          >
+          <ds-pane-stack split="50/50"
+            >${workspacePane('Pane C', 'Relationships.')}${workspacePane('Pane D', 'History.')}</ds-pane-stack
+          >
+        </ds-pane-window>
+      </ds-workspace>
+    </div>`,
 };
 
 export const DetailSidebar: StoryObj = {

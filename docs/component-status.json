@@ -407,6 +407,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
       },
@@ -417,6 +418,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
       },
@@ -443,6 +445,7 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
+          "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
       },
@@ -453,6 +456,7 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
+          "storybook/stories/components/layout.stories.ts",
           "storybook/stories/components/navigation.stories.ts"
         ]
       },
@@ -2768,7 +2772,7 @@
           "storybook/stories/product/settings-import.stories.ts"
         ]
       },
-      "accessibilityReview": "pending-component-matrix",
+      "accessibilityReview": "automated-composition",
       "behaviorReview": "automated",
       "visualReview": "pending-component-matrix",
       "documentation": {
@@ -2789,14 +2793,14 @@
       "stateCoverage": {
         "default": "storybook",
         "interaction": "automated",
-        "semantics": "pending-component-matrix",
+        "semantics": "automated-composition",
         "preferences": "pending-component-matrix"
       },
       "readiness": {
         "productUseCase": "shared-catalog",
         "documentation": "catalog-and-story-only",
         "behavior": "automated",
-        "accessibility": "pending-component-matrix",
+        "accessibility": "automated-composition",
         "visualPreferences": "pending-component-matrix"
       },
       "stability": "Breaking changes allowed before beta"
@@ -2813,7 +2817,7 @@
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
-      "accessibilityReview": "pending-component-matrix",
+      "accessibilityReview": "automated-composition",
       "behaviorReview": "automated",
       "visualReview": "pending-component-matrix",
       "documentation": {
@@ -2827,14 +2831,14 @@
       "stateCoverage": {
         "default": "storybook",
         "interaction": "automated",
-        "semantics": "pending-component-matrix",
+        "semantics": "automated-composition",
         "preferences": "pending-component-matrix"
       },
       "readiness": {
         "productUseCase": "shared-catalog",
         "documentation": "catalog-and-story-only",
         "behavior": "automated",
-        "accessibility": "pending-component-matrix",
+        "accessibility": "automated-composition",
         "visualPreferences": "pending-component-matrix"
       },
       "stability": "Breaking changes allowed before beta"
@@ -2889,7 +2893,7 @@
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
-      "accessibilityReview": "pending-component-matrix",
+      "accessibilityReview": "automated-composition",
       "behaviorReview": "pending-component-matrix",
       "visualReview": "pending-component-matrix",
       "documentation": {
@@ -2903,14 +2907,86 @@
       "stateCoverage": {
         "default": "storybook",
         "interaction": "pending-component-matrix",
-        "semantics": "pending-component-matrix",
+        "semantics": "automated-composition",
         "preferences": "pending-component-matrix"
       },
       "readiness": {
         "productUseCase": "shared-catalog",
         "documentation": "catalog-and-story-only",
         "behavior": "pending-component-matrix",
-        "accessibility": "pending-component-matrix",
+        "accessibility": "automated-composition",
+        "visualPreferences": "pending-component-matrix"
+      },
+      "stability": "Breaking changes allowed before beta"
+    },
+    {
+      "tag": "ds-pane-stack",
+      "family": "layout",
+      "status": "experimental",
+      "owner": "Kanosis design system",
+      "adoption": {
+        "state": "shared-catalog",
+        "evidence": [
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "accessibilityReview": "automated-composition",
+      "behaviorReview": "automated",
+      "visualReview": "pending-component-matrix",
+      "documentation": {
+        "catalog": "docs/component-catalog.md",
+        "guide": "docs/patterns/desktop-pane-workspace.md",
+        "stories": [
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "stateCoverage": {
+        "default": "storybook",
+        "interaction": "automated",
+        "semantics": "automated-composition",
+        "preferences": "pending-component-matrix"
+      },
+      "readiness": {
+        "productUseCase": "shared-catalog",
+        "documentation": "complete-template",
+        "behavior": "automated",
+        "accessibility": "automated-composition",
+        "visualPreferences": "pending-component-matrix"
+      },
+      "stability": "Breaking changes allowed before beta"
+    },
+    {
+      "tag": "ds-pane-window",
+      "family": "layout",
+      "status": "experimental",
+      "owner": "Kanosis design system",
+      "adoption": {
+        "state": "shared-catalog",
+        "evidence": [
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "accessibilityReview": "automated-composition",
+      "behaviorReview": "automated",
+      "visualReview": "pending-component-matrix",
+      "documentation": {
+        "catalog": "docs/component-catalog.md",
+        "guide": "docs/patterns/desktop-pane-workspace.md",
+        "stories": [
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "stateCoverage": {
+        "default": "storybook",
+        "interaction": "automated",
+        "semantics": "automated-composition",
+        "preferences": "pending-component-matrix"
+      },
+      "readiness": {
+        "productUseCase": "shared-catalog",
+        "documentation": "complete-template",
+        "behavior": "automated",
+        "accessibility": "automated-composition",
         "visualPreferences": "pending-component-matrix"
       },
       "stability": "Breaking changes allowed before beta"
@@ -3771,7 +3847,7 @@
           "storybook/stories/foundations/themes.stories.ts"
         ]
       },
-      "accessibilityReview": "pending-component-matrix",
+      "accessibilityReview": "automated-composition",
       "behaviorReview": "pending-component-matrix",
       "visualReview": "pending-component-matrix",
       "documentation": {
@@ -3787,14 +3863,14 @@
       "stateCoverage": {
         "default": "storybook",
         "interaction": "pending-component-matrix",
-        "semantics": "pending-component-matrix",
+        "semantics": "automated-composition",
         "preferences": "pending-component-matrix"
       },
       "readiness": {
         "productUseCase": "shared-catalog",
         "documentation": "catalog-and-story-only",
         "behavior": "pending-component-matrix",
-        "accessibility": "pending-component-matrix",
+        "accessibility": "automated-composition",
         "visualPreferences": "pending-component-matrix"
       },
       "stability": "Breaking changes allowed before beta"
@@ -4483,6 +4559,80 @@
         "documentation": "catalog-and-story-only",
         "behavior": "pending-component-matrix",
         "accessibility": "pending-component-matrix",
+        "visualPreferences": "pending-component-matrix"
+      },
+      "stability": "Breaking changes allowed before beta"
+    },
+    {
+      "tag": "ds-workspace",
+      "family": "layout",
+      "status": "experimental",
+      "owner": "Kanosis design system",
+      "adoption": {
+        "state": "shared-catalog",
+        "evidence": [
+          "storybook/stories/components/enterprise-p1.stories.ts",
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "accessibilityReview": "automated-composition",
+      "behaviorReview": "automated",
+      "visualReview": "pending-component-matrix",
+      "documentation": {
+        "catalog": "docs/component-catalog.md",
+        "guide": "docs/patterns/desktop-pane-workspace.md",
+        "stories": [
+          "storybook/stories/components/enterprise-p1.stories.ts",
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "stateCoverage": {
+        "default": "storybook",
+        "interaction": "automated",
+        "semantics": "automated-composition",
+        "preferences": "pending-component-matrix"
+      },
+      "readiness": {
+        "productUseCase": "shared-catalog",
+        "documentation": "complete-template",
+        "behavior": "automated",
+        "accessibility": "automated-composition",
+        "visualPreferences": "pending-component-matrix"
+      },
+      "stability": "Breaking changes allowed before beta"
+    },
+    {
+      "tag": "ds-workspace-header",
+      "family": "layout",
+      "status": "experimental",
+      "owner": "Kanosis design system",
+      "adoption": {
+        "state": "shared-catalog",
+        "evidence": [
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "accessibilityReview": "automated-composition",
+      "behaviorReview": "automated",
+      "visualReview": "pending-component-matrix",
+      "documentation": {
+        "catalog": "docs/component-catalog.md",
+        "guide": "docs/patterns/desktop-pane-workspace.md",
+        "stories": [
+          "storybook/stories/components/layout.stories.ts"
+        ]
+      },
+      "stateCoverage": {
+        "default": "storybook",
+        "interaction": "automated",
+        "semantics": "automated-composition",
+        "preferences": "pending-component-matrix"
+      },
+      "readiness": {
+        "productUseCase": "shared-catalog",
+        "documentation": "complete-template",
+        "behavior": "automated",
+        "accessibility": "automated-composition",
         "visualPreferences": "pending-component-matrix"
       },
       "stability": "Breaking changes allowed before beta"

@@ -58,6 +58,8 @@ import {
   DsTenantSwitcher,
   DsUserMenu,
   DsWorkspaceTabs,
+  DsWorkspace,
+  DsWorkspaceHeader,
   DsActivityFeed,
   DsApprovalFlow,
   DsChangeSummary,
@@ -85,6 +87,8 @@ import {
   DsPaneContent,
   DsPaneGroup,
   DsPaneHeader,
+  DsPaneStack,
+  DsPaneWindow,
   DsPanel,
   DsPagination,
   DsRadio,
@@ -370,6 +374,10 @@ export const Pane = component('ds-pane', DsPane);
 export const ScrollablePane = component('ds-scrollable-pane', DsScrollablePane);
 export const PaneHeader = component('ds-pane-header', DsPaneHeader);
 export const PaneContent = component('ds-pane-content', DsPaneContent);
+export const PaneStack = component('ds-pane-stack', DsPaneStack);
+export const PaneWindow = component('ds-pane-window', DsPaneWindow);
+export const Workspace = component('ds-workspace', DsWorkspace);
+export const WorkspaceHeader = component('ds-workspace-header', DsWorkspaceHeader);
 export const InspectorPane = component('ds-inspector-pane', DsInspectorPane);
 export const DetailSidebar = createComponent({
   tagName: 'ds-detail-sidebar',

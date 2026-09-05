@@ -37,6 +37,11 @@ manifest keeps catalog-only entries experimental rather than overstating their r
 `ds-input-group`, `ds-chip`, `ds-illustration`, `ds-brand-mark`, `ds-reorder-list`,
 `ds-reorder-item` — [maturity addition stories](../storybook/stories/components/enhancements.stories.ts)
 
+`ds-workspace`, `ds-workspace-header`, `ds-pane-window`, `ds-pane-stack` — [desktop pane workspace
+stories](../storybook/stories/components/layout.stories.ts)
+
+The full desktop composition is documented in [Desktop pane workspace](patterns/desktop-pane-workspace.md).
+
 When a component gains a dedicated story family, update its link here; the tag itself must remain present so `npm run verify:components` can enforce coverage.
 
 ## Collapsible application sidebar

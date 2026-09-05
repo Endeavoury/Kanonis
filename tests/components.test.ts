@@ -11,6 +11,8 @@ import type {
   DsPane,
   DsPaneContent,
   DsPaneGroup,
+  DsPaneStack,
+  DsPaneWindow,
   DsRadioGroup,
   DsSelect,
   DsSidebarItem,
@@ -18,6 +20,7 @@ import type {
 } from '@endeavoury/kanosis/classes';
 import { DsBulkActions, DsCombobox, DsFilterBuilder } from '@endeavoury/kanosis/classes';
 import type { DsCommandPalette, DsWorkspaceTabs } from '@endeavoury/kanosis/classes';
+import type { DsWorkspace, DsWorkspaceHeader } from '@endeavoury/kanosis/classes';
 import type { DsDatePicker, DsStepper, DsTaskList } from '@endeavoury/kanosis/classes';
 import type { DsPermissionMatrix, DsJsonEditor, DsDiffViewer } from '@endeavoury/kanosis/classes';
 import type {
@@ -455,6 +458,32 @@ describe('display foundations', () => {
     left.collapsed = true;
     await left.updateComplete;
     expect(left.hasAttribute('collapsed')).toBe(true);
+  });
+
+  it('keeps the workspace header outside a bounded pane window and supports pane stacks', async () => {
+    const workspace = (await mount(document.createElement('ds-workspace'))) as DsWorkspace;
+    const header = document.createElement('ds-workspace-header') as DsWorkspaceHeader;
+    const window = document.createElement('ds-pane-window') as DsPaneWindow;
+    const stack = document.createElement('ds-pane-stack') as DsPaneStack;
+    header.slot = 'header';
+    header.heading = 'Project Alpha';
+    header.innerHTML =
+      '<span slot="breadcrumb">Customers / Acme</span><span slot="status">Synced</span>';
+    stack.split = '40/60';
+    stack.append(document.createElement('ds-pane'), document.createElement('ds-pane'));
+    window.append(document.createElement('ds-pane'), stack, document.createElement('ds-pane'));
+    workspace.append(header, window);
+    await Promise.all([
+      workspace.updateComplete,
+      header.updateComplete,
+      window.updateComplete,
+      stack.updateComplete,
+    ]);
+    expect(workspace.shadowRoot!.querySelector('slot[name="header"]')).not.toBeNull();
+    expect(workspace.shadowRoot!.querySelector('.pane-area')).not.toBeNull();
+    expect(window.shadowRoot!.querySelector('.track')).not.toBeNull();
+    expect(stack.getAttribute('split')).toBe('40/60');
+    expect(window.shadowRoot!.querySelector('.track')?.querySelector('slot')).not.toBeNull();
   });
 
   it('creates icon geometry in the SVG namespace', async () => {

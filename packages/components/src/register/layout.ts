@@ -12,7 +12,15 @@ import {
   DsPageHeader,
   DsScrollablePane,
   DsStack,
+  DsPaneStack,
+  DsPaneWindow,
+  DsWorkspace,
+  DsWorkspaceHeader,
 } from '../components/layout.js';
+defineComponent('ds-workspace', DsWorkspace);
+defineComponent('ds-workspace-header', DsWorkspaceHeader);
+defineComponent('ds-pane-window', DsPaneWindow);
+defineComponent('ds-pane-stack', DsPaneStack);
 defineComponent('ds-stack', DsStack);
 defineComponent('ds-inline', DsInline);
 defineComponent('ds-grid', DsGrid);
@@ -38,4 +46,8 @@ export {
   DsPageHeader,
   DsScrollablePane,
   DsStack,
+  DsPaneStack,
+  DsPaneWindow,
+  DsWorkspace,
+  DsWorkspaceHeader,
 };

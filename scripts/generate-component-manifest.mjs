@@ -10,6 +10,10 @@ for await (const storyPath of glob('storybook/stories/**/*.stories.ts'))
   storySources.push({ path: storyPath, source: await readFile(storyPath, 'utf8') });
 const entries = new Map();
 const dedicatedGuides = new Map([
+  ['ds-workspace', 'docs/patterns/desktop-pane-workspace.md'],
+  ['ds-workspace-header', 'docs/patterns/desktop-pane-workspace.md'],
+  ['ds-pane-window', 'docs/patterns/desktop-pane-workspace.md'],
+  ['ds-pane-stack', 'docs/patterns/desktop-pane-workspace.md'],
   ['ds-data-table', 'docs/components/data-table.md'],
   ['ds-data-grid', 'docs/components/data-table.md'],
   ['ds-action-bar', 'docs/components/maturity-additions.md'],
@@ -52,19 +56,29 @@ for await (const path of glob('packages/components/src/register/*.ts')) {
     const behaviorReview = behaviorTests.includes(`'${tag}'`)
       ? 'automated'
       : 'pending-component-matrix';
-    const visualReview = visualMatrixTags.has(tag) && visualTests.includes('toHaveScreenshot')
-      ? 'automated-preference-matrix'
-      : 'pending-component-matrix';
+    const visualReview =
+      visualMatrixTags.has(tag) && visualTests.includes('toHaveScreenshot')
+        ? 'automated-preference-matrix'
+        : 'pending-component-matrix';
     const guide = dedicatedGuides.get(tag) ?? null;
     const readiness = {
-      productUseCase: family.startsWith('enterprise') || family === 'enhancements' ? 'validation-required' : 'shared-catalog',
+      productUseCase:
+        family.startsWith('enterprise') || family === 'enhancements'
+          ? 'validation-required'
+          : 'shared-catalog',
       documentation: guide ? 'complete-template' : 'catalog-and-story-only',
       behavior: behaviorReview,
       accessibility: accessibilityReview,
       visualPreferences: visualReview,
     };
     const ready = Object.values(readiness).every((value) =>
-      ['shared-catalog', 'complete-template', 'automated', 'automated-composition', 'automated-preference-matrix'].includes(value),
+      [
+        'shared-catalog',
+        'complete-template',
+        'automated',
+        'automated-composition',
+        'automated-preference-matrix',
+      ].includes(value),
     );
     entries.set(tag, {
       tag,

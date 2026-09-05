@@ -79,7 +79,7 @@ for (const entry of cases) {
 }
 
 for (const width of [390, 1100]) {
-  test(`sidebar keyboard collapse and restore at ${width}px`, async ({ page }) => {
+  test(`sidebar keyboard collapse and restore at ${width}px`, async ({ page }, testInfo) => {
     await page.setViewportSize({ width, height: 844 });
     await page.goto('/iframe.html?id=components-navigation--collapsible-sidebar&viewMode=story');
     const toggle = page.locator('ds-app-shell .sidebar-toggle');
@@ -88,11 +88,48 @@ for (const width of [390, 1100]) {
     await page.keyboard.press('Enter');
     await expect(toggle).toHaveAttribute('aria-expanded', 'true');
     await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toBeVisible();
+    await page.screenshot({ path: testInfo.outputPath('sidebar-expanded.png') });
+    const sidebar = await page.locator('ds-sidebar').boundingBox();
+    const content = await page.locator('ds-app-shell .workspace').boundingBox();
+    if (width > 768) {
+      expect(sidebar!.width).toBeCloseTo(244, 0);
+      expect(content!.width).toBeGreaterThan(width / 2);
+      expect(content!.x).toBeGreaterThanOrEqual(sidebar!.x + sidebar!.width);
+    } else {
+      expect(sidebar!.height).toBeLessThan(120);
+      expect(content!.width).toBeGreaterThan(width - 2);
+    }
+
     await page.keyboard.press('Space');
     await expect(toggle).toHaveAttribute('aria-expanded', 'false');
     await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toHaveCount(0);
     await expect(toggle).toBeFocused();
     const workspace = await page.locator('ds-app-shell .workspace').boundingBox();
     expect(workspace!.width).toBeGreaterThan(width - 2);
+  });
+}
+
+for (const [story, width] of [
+  ['components-layout--desktop-workspace', 1920],
+  ['components-layout--desktop-workspace-stacks', 1440],
+  ['components-layout--desktop-workspace-four-pane-grid', 3440],
+] as const) {
+  test(`desktop pane workspace fits at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(`/iframe.html?id=${story}&viewMode=story`);
+    const workspace = page.locator('ds-workspace');
+    const window = page.locator('ds-pane-window');
+    await expect(workspace).toBeVisible();
+    await expect(window).toBeVisible();
+    const viewport = await page.evaluate(() => ({ width: innerWidth, height: innerHeight }));
+    const bounds = await window.boundingBox();
+    expect(bounds!.y).toBeGreaterThan(0);
+    expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(viewport.height);
+    expect(await window.evaluate((element) => element.scrollWidth >= element.clientWidth)).toBe(
+      true,
+    );
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      viewport.width,
+    );
   });
 }

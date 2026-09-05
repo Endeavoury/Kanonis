@@ -46,10 +46,14 @@ import type {
   DsPane,
   DsPaneContent,
   DsPaneGroup,
+  DsPaneStack,
   DsPaneHeader,
+  DsPaneWindow,
   DsPageHeader,
   DsScrollablePane,
   DsStack,
+  DsWorkspace,
+  DsWorkspaceHeader,
 } from './components/layout.js';
 import type { DsAppShell, DsSidebar, DsSidebarItem } from './components/navigation.js';
 import type {
@@ -179,6 +183,10 @@ declare global {
     'ds-scrollable-pane': DsScrollablePane;
     'ds-pane-header': DsPaneHeader;
     'ds-pane-content': DsPaneContent;
+    'ds-workspace': DsWorkspace;
+    'ds-workspace-header': DsWorkspaceHeader;
+    'ds-pane-window': DsPaneWindow;
+    'ds-pane-stack': DsPaneStack;
     'ds-inspector-pane': DsInspectorPane;
     'ds-app-shell': DsAppShell;
     'ds-sidebar': DsSidebar;

@@ -244,4 +244,31 @@ describe('representative accessibility compositions', () => {
     const result = await axe.run(document.body, { rules: { region: { enabled: false } } });
     expect(result.violations).toEqual([]);
   });
+
+  it('has no detectable violations in a desktop pane workspace composition', async () => {
+    document.body.innerHTML = `<main>
+      <ds-workspace style="height:720px">
+        <ds-workspace-header slot="header" heading="Project Alpha">
+          <ds-breadcrumbs slot="breadcrumb" label="Project location"><ds-breadcrumb current>Customers / Acme</ds-breadcrumb></ds-breadcrumbs>
+          <ds-status-badge slot="status" tone="success">Synced</ds-status-badge>
+          <ds-button slot="actions">Share</ds-button>
+        </ds-workspace-header>
+        <ds-pane-window aria-label="Project panes">
+          <ds-pane><ds-pane-header><h2>Overview</h2></ds-pane-header><ds-pane-content scrollable>Summary</ds-pane-content></ds-pane>
+          <ds-pane-stack split="40/60">
+            <ds-pane><ds-pane-header><h2>Activity</h2></ds-pane-header><ds-pane-content scrollable>Recent activity</ds-pane-content></ds-pane>
+            <ds-pane><ds-pane-header><h2>Audit</h2></ds-pane-header><ds-pane-content scrollable>Audit events</ds-pane-content></ds-pane>
+          </ds-pane-stack>
+        </ds-pane-window>
+      </ds-workspace>
+    </main>`;
+    const elements = [
+      ...document.querySelectorAll<HTMLElement & { updateComplete: Promise<unknown> }>(
+        'ds-workspace,ds-workspace-header,ds-pane-window,ds-pane-stack,ds-pane,ds-pane-header,ds-pane-content,ds-breadcrumbs,ds-breadcrumb,ds-status-badge,ds-button',
+      ),
+    ];
+    await Promise.all(elements.map((element) => element.updateComplete));
+    const result = await axe.run(document.body, { rules: { region: { enabled: false } } });
+    expect(result.violations).toEqual([]);
+  });
 });
