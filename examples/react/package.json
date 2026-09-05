@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis-example-react",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "tsc -b && vite build"
   },
   "dependencies": {
-    "@endeavoury/kanonis-react": "1.0.15",
-    "@endeavoury/kanonis-styles": "1.0.15",
+    "@endeavoury/kanonis-react": "1.0.16",
+    "@endeavoury/kanonis-styles": "1.0.16",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
