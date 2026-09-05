@@ -13,15 +13,15 @@ manifest keeps catalog-only entries experimental rather than overstating their r
 
 ## Layout and navigation
 
-`ds-app-shell`, `ds-pane-group`, `ds-pane`, `ds-scrollable-pane`, `ds-sidebar`, `ds-inspector-pane`, `ds-pane-header`, `ds-pane-content`, `ds-navigation-group`, `ds-workspace-tabs` — [layout and enterprise stories](../storybook/stories/components/enterprise-p1.stories.ts)
+`ds-app-shell`, `ds-pane-group`, `ds-pane`, `ds-scrollable-pane`, `ds-sidebar`, `ds-inspector-pane`, `ds-pane-header`, `ds-pane-content`, `ds-navigation-group`, `ds-workspace-tabs` — [layout and productivity stories](../storybook/stories/components/enterprise-p1.stories.ts)
 
 ## Data, forms, and workflows
 
-`ds-data-grid`, `ds-data-table`, `ds-filter-builder`, `ds-filter-bar`, `ds-view-toolbar`, `ds-column-manager`, `ds-bulk-actions`, `ds-saved-view`, `ds-combobox`, `ds-validation-summary`, `ds-form-section`, `ds-field-array`, `ds-date-picker`, `ds-time-picker`, `ds-file-upload`, `ds-drop-zone`, `ds-stepper`, `ds-approval-flow`, `ds-task-list`, `ds-detail-list`, `ds-detail-sidebar`, `ds-record-header`, `ds-change-summary` — [enterprise stories](../storybook/stories/components/enterprise.stories.ts), [workflow stories](../storybook/stories/components/enterprise-p2.stories.ts)
+`ds-data-grid`, `ds-data-table`, `ds-filter-builder`, `ds-filter-bar`, `ds-view-toolbar`, `ds-column-manager`, `ds-bulk-actions`, `ds-saved-view`, `ds-combobox`, `ds-validation-summary`, `ds-form-section`, `ds-field-array`, `ds-date-picker`, `ds-time-picker`, `ds-file-upload`, `ds-drop-zone`, `ds-stepper`, `ds-approval-flow`, `ds-task-list`, `ds-detail-list`, `ds-detail-sidebar`, `ds-record-header`, `ds-change-summary` — [productivity stories](../storybook/stories/components/enterprise.stories.ts), [workflow stories](../storybook/stories/components/enterprise-p2.stories.ts)
 
 ## Search, commands, and notifications
 
-`ds-command-palette`, `ds-global-search`, `ds-tenant-switcher`, `ds-user-menu`, `ds-context-menu`, `ds-quick-actions`, `ds-notification-center`, `ds-banner`, `ds-maintenance-notice`, `ds-help-panel`, `ds-tour`, `ds-coachmark` — [enterprise stories](../storybook/stories/components/enterprise-p1.stories.ts), [P3 stories](../storybook/stories/components/enterprise-p3.stories.ts)
+`ds-command-palette`, `ds-global-search`, `ds-tenant-switcher`, `ds-user-menu`, `ds-context-menu`, `ds-quick-actions`, `ds-notification-center`, `ds-banner`, `ds-maintenance-notice`, `ds-help-panel`, `ds-tour`, `ds-coachmark` — [productivity stories](../storybook/stories/components/enterprise-p1.stories.ts), [governance stories](../storybook/stories/components/enterprise-p3.stories.ts)
 
 ## Audit, security, and developer tools
 

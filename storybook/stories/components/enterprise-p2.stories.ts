@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 const meta: Meta = {
-  title: 'Components/Enterprise operations',
+  title: 'Patterns/Productivity/Operations',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };
@@ -21,24 +21,28 @@ export const Operations: StoryObj = {
       ></ds-field-array>
       <ds-stepper
         .steps=${[
-      { id: 'configure', label: 'Configure' },
-      { id: 'review', label: 'Review' },
-      { id: 'deploy', label: 'Deploy' },
-    ]}
+          { id: 'configure', label: 'Configure' },
+          { id: 'review', label: 'Review' },
+          { id: 'deploy', label: 'Deploy' },
+        ]}
         value="review"
       ></ds-stepper>
       <ds-approval-flow status="pending"></ds-approval-flow>
       <ds-task-list
         .tasks=${[
-      { id: '1', title: 'Review access policy', detail: 'Security team', completed: false },
-      { id: '2', title: 'Validate deployment', completed: true },
-    ]}
+          { id: '1', title: 'Review access policy', detail: 'Security team', completed: false },
+          { id: '2', title: 'Validate deployment', completed: true },
+        ]}
       ></ds-task-list>
       <ds-timeline
         .items=${[
-      { title: 'Deployment started', body: 'Release 2.4.0 entered the pipeline.', time: '09:42' },
-      { title: 'Configuration approved', time: 'Yesterday' },
-    ]}
+          {
+            title: 'Deployment started',
+            body: 'Release 2.4.0 entered the pipeline.',
+            time: '09:42',
+          },
+          { title: 'Configuration approved', time: 'Yesterday' },
+        ]}
       ></ds-timeline>
       <ds-activity-feed
         .items=${[{ id: '1', actor: 'Jordan Lee', body: 'Updated the release target.', time: '10 minutes ago' }]}
@@ -46,9 +50,9 @@ export const Operations: StoryObj = {
       <ds-job-status label="Deployment progress" value="68" show-value></ds-job-status>
       <ds-change-summary
         .changes=${[
-      { field: 'Owner', before: 'Operations', after: 'Platform' },
-      { field: 'Region', before: 'EU West', after: 'EU Central' },
-    ]}
+          { field: 'Owner', before: 'Operations', after: 'Platform' },
+          { field: 'Region', before: 'EU West', after: 'EU Central' },
+        ]}
       ></ds-change-summary>
       <ds-file-upload
         label="Upload release manifest"

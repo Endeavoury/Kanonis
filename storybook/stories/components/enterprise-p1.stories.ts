@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 
 const meta: Meta = {
-  title: 'Components/Enterprise productivity',
+  title: 'Patterns/Productivity/Productivity',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };
@@ -17,17 +17,17 @@ export const WorkspaceChrome: StoryObj = {
       <div style="display:flex;gap:1rem;align-items:start;flex-wrap:wrap">
         <ds-tenant-switcher
           .tenants=${[
-        { id: 'acme', label: 'Acme Corporation' },
-        { id: 'globex', label: 'Globex' },
-      ]}
+            { id: 'acme', label: 'Acme Corporation' },
+            { id: 'globex', label: 'Globex' },
+          ]}
           value="acme"
         ></ds-tenant-switcher>
         <ds-global-search></ds-global-search>
         <ds-notification-center
           .notifications=${[
-        { id: '1', title: 'Access review due', time: '10m ago' },
-        { id: '2', title: 'Deployment completed', read: true },
-      ]}
+            { id: '1', title: 'Access review due', time: '10m ago' },
+            { id: '2', title: 'Deployment completed', read: true },
+          ]}
         ></ds-notification-center>
         <ds-user-menu name="Jordan Lee"
           ><button role="menuitem">Profile</button
@@ -40,9 +40,9 @@ export const WorkspaceChrome: StoryObj = {
       >
       <ds-workspace-tabs
         .tabs=${[
-      { id: 'overview', label: 'Overview' },
-      { id: 'settings', label: 'Settings', closable: true },
-    ]}
+          { id: 'overview', label: 'Overview' },
+          { id: 'settings', label: 'Settings', closable: true },
+        ]}
         value="overview"
       ></ds-workspace-tabs>
       <ds-record-header
@@ -57,10 +57,10 @@ export const WorkspaceChrome: StoryObj = {
       >
       <ds-detail-list
         .items=${[
-      { label: 'Owner', value: 'Platform team' },
-      { label: 'Environment', value: 'Production' },
-      { label: 'Last deployment', value: 'Today, 09:42 UTC' },
-    ]}
+          { label: 'Owner', value: 'Platform team' },
+          { label: 'Environment', value: 'Production' },
+          { label: 'Last deployment', value: 'Today, 09:42 UTC' },
+        ]}
       ></ds-detail-list>
       <ds-quick-actions
         ><ds-button>Deploy</ds-button
@@ -69,9 +69,9 @@ export const WorkspaceChrome: StoryObj = {
       <ds-command-palette
         open
         .commands=${[
-      { id: 'new', label: 'Create project', shortcut: '⌘ N' },
-      { id: 'search', label: 'Search records', description: 'Find projects and people' },
-    ]}
+          { id: 'new', label: 'Create project', shortcut: '⌘ N' },
+          { id: 'search', label: 'Search records', description: 'Find projects and people' },
+        ]}
       ></ds-command-palette>
     </div>`,
 };

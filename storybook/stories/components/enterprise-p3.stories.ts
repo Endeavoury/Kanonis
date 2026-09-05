@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 const meta: Meta = {
-  title: 'Components/Enterprise governance',
+  title: 'Patterns/Productivity/Governance',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };
@@ -17,33 +17,33 @@ export const Governance: StoryObj = {
       <ds-role-badge label="Administrator" tone="admin"></ds-role-badge>
       <ds-permission-matrix
         .roles=${[
-      { id: 'admin', label: 'Admin' },
-      { id: 'viewer', label: 'Viewer' },
-    ]}
+          { id: 'admin', label: 'Admin' },
+          { id: 'viewer', label: 'Viewer' },
+        ]}
         .permissions=${[
-      { id: 'read', label: 'Read records' },
-      { id: 'write', label: 'Edit records' },
-      { id: 'deploy', label: 'Deploy changes' },
-    ]}
+          { id: 'read', label: 'Read records' },
+          { id: 'write', label: 'Edit records' },
+          { id: 'deploy', label: 'Deploy changes' },
+        ]}
       ></ds-permission-matrix>
       <ds-audit-log
         .entries=${[
-      {
-        id: '1',
-        actor: 'Jordan Lee',
-        action: 'Updated access policy',
-        target: 'Production',
-        time: '10:42 UTC',
-      },
-      { id: '2', actor: 'System', action: 'Deployment completed', time: '09:30 UTC' },
-    ]}
+          {
+            id: '1',
+            actor: 'Jordan Lee',
+            action: 'Updated access policy',
+            target: 'Production',
+            time: '10:42 UTC',
+          },
+          { id: '2', actor: 'System', action: 'Deployment completed', time: '09:30 UTC' },
+        ]}
       ></ds-audit-log>
       <ds-diff-viewer
         .lines=${[
-      { type: 'unchanged', text: 'name: atlas' },
-      { type: 'removed', text: 'region: eu-west' },
-      { type: 'added', text: 'region: eu-central' },
-    ]}
+          { type: 'unchanged', text: 'name: atlas' },
+          { type: 'removed', text: 'region: eu-west' },
+          { type: 'added', text: 'region: eu-central' },
+        ]}
       ></ds-diff-viewer>
       <ds-json-editor
         label="Configuration"
@@ -67,9 +67,9 @@ export const Governance: StoryObj = {
         ><ds-tour
           open
           .steps=${[
-      { id: 'one', heading: 'Welcome', body: 'This workspace keeps your team aligned.' },
-      { id: 'two', heading: 'Finish', body: 'You are ready to get started.' },
-    ]}
+            { id: 'one', heading: 'Welcome', body: 'This workspace keeps your team aligned.' },
+            { id: 'two', heading: 'Finish', body: 'You are ready to get started.' },
+          ]}
         ></ds-tour>
       </div>
       <ds-compare-view left-label="Current" right-label="Proposed">
