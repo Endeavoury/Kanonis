@@ -6,7 +6,7 @@
 
 All adapters expose the same custom-element implementation. Ontarchon Studio
 and Nexus consume the vanilla custom-element contract directly from Angular;
-Finance-Inzicht does the same; the public website consumes the generated browser
+Oikonomis does the same; the public website consumes the generated browser
 bundle. React wrappers map the same properties and composed events without
 forking markup or styles.
 
@@ -14,11 +14,11 @@ forking markup or styles.
 
 This catalog is benchmarked against the application-facing component families in [Material Design 3](https://m3.material.io/components) and [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/components/). The objective is comparable product-building capability, not one-to-one naming or cloning either system's visual language.
 
-Kanosis deliberately keeps one semantic, accessible Web Component API instead of combining a CSS utility framework with a separate JavaScript plugin layer. Every component uses the same tokens, light/dark behavior, event naming, registration model, and framework adapters.
+Kanonis deliberately keeps one semantic, accessible Web Component API instead of combining a CSS utility framework with a separate JavaScript plugin layer. Every component uses the same tokens, light/dark behavior, event naming, registration model, and framework adapters.
 
 ## Coverage matrix
 
-| Product capability     | Kanosis                                                                                   | Material / Bootstrap analogue                             | Status                      |
+| Product capability     | Kanonis                                                                                   | Material / Bootstrap analogue                             | Status                      |
 | ---------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------- |
 | Actions                | `ds-button`, `ds-icon-button`, `ds-button-group`                                          | Buttons, icon buttons, FAB, button groups                 | Covered                     |
 | Text entry             | `ds-input`, `ds-search-input`, `ds-textarea`                                              | Text fields, search, form controls                        | Covered                     |
@@ -46,7 +46,7 @@ The complete package currently registers 122 custom elements. Storybook is requi
 - Date/time pickers, autocomplete/combobox, and the richer data-grid layer are present, but they still
   need deeper internationalization, interaction, large-data, and accessibility evidence before being
   treated as mature solely on the strength of component parity.
-- Components retain the Kanosis visual language. Material and Bootstrap are capability benchmarks, not styling dependencies.
+- Components retain the Kanonis visual language. Material and Bootstrap are capability benchmarks, not styling dependencies.
 
 ## Catalog quality contract
 

@@ -160,9 +160,7 @@ export const productStyles = html`<style>
 
 export const productSidebar = () =>
   html`<ds-sidebar slot="sidebar"
-    ><div slot="brand" class="brand">
-      <span class="brandmark">F</span><span>Finance Inzicht</span>
-    </div>
+    ><div slot="brand" class="brand"><span class="brandmark">O</span><span>Oikonomis</span></div>
     <ds-sidebar-item value="overview" active
       ><ds-icon slot="icon" name="home"></ds-icon>Overview</ds-sidebar-item
     ><ds-sidebar-item value="monthly"

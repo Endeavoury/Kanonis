@@ -1,17 +1,26 @@
 # Kanonis
 
-A standalone, framework-independent design system shared by Finance-Inzicht and Ontarchon. Lit Web Components are the only component implementation; Vanilla JavaScript, React, and Angular consume those same custom elements. Kanonis packages use the `@endeavoury/kanosis*` package family, while the component contracts and semantic tokens remain product-neutral.
+A standalone, framework-independent design system shared across the Kanonis product family. Lit Web Components are the only component implementation; Vanilla JavaScript, React, and Angular consume those same custom elements. Kanonis packages use the `@endeavoury/kanosis*` package family, while the component contracts and semantic tokens remain product-neutral.
 
-![Finance Inzicht application and design-system example](docs/images/finance-workspace-example.png)
+![Oikonomis financial insights example](docs/images/finance-workspace-example.png)
 
 This repository is independent of both product applications. It has no application imports, API clients, authentication, financial business logic, or MDM domain logic.
 
-## Why Kanosis?
+## Why Kanonis?
 
 Kanonis is the name we chose for our shared design system. It is inspired by the
 Greek word _kanōn_, meaning a rule, standard, measure, or guiding principle. The
 name reflects the system's purpose: defining the visual and interaction rules
 shared across multiple products.
+
+## Kanonis product family
+
+| Brand         | Focus                             |
+| ------------- | --------------------------------- |
+| **Kanonis**   | Shared Design System              |
+| **Ontarchon** | Master Data Management            |
+| **Oikonomis** | Financial Insights                |
+| **Nomopsis**  | Legal / legislation visualization |
 
 ## Architecture at a glance
 
@@ -40,7 +49,7 @@ npm install
 npm run storybook
 ```
 
-Storybook is the primary review environment. It contains foundations, every production component, reusable patterns, and representative Finance Inzicht screens using mock data.
+Storybook is the primary review environment. It contains foundations, every production component, reusable patterns, and representative Oikonomis screens using mock data.
 
 Build and run the standalone Storybook with Docker Compose:
 
@@ -89,7 +98,7 @@ token setup, release procedure, image tags, and artifact verification.
 
 ## Product integrations
 
-Finance-Inzicht and Ontarchon consume this repository as a sibling checkout. Package history, releases, CI, and working trees remain fully independent while a shared parent directory lets local tools inspect all codebases. Ontarchon additionally passes this checkout as the named `design_system` Docker build context so its images remain reproducible without copying component source.
+Ontarchon, Oikonomis, and Nomopsis consume this repository as a sibling checkout. Package history, releases, CI, and working trees remain fully independent while a shared parent directory lets local tools inspect all codebases. Ontarchon additionally passes this checkout as the named `design_system` Docker build context so its images remain reproducible without copying component source.
 
 ```text
 Finance-Inzicht/

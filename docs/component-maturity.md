@@ -6,11 +6,11 @@ the manifest generator adds family, owner, adoption, accessibility-review, and s
 
 ## Statuses
 
-| Status | Meaning | Allowed use |
-| --- | --- | --- |
-| Experimental | The use case and API exist, but one or more readiness checks are incomplete | Product trials with an explicit owner; breaking changes are allowed |
-| Ready | The public contract and quality evidence meet the readiness checklist | Recommended for production; semantic versioning protects the contract |
-| Deprecated | A supported replacement and removal plan exist | Existing use may migrate; new use is rejected |
+| Status       | Meaning                                                                     | Allowed use                                                           |
+| ------------ | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Experimental | The use case and API exist, but one or more readiness checks are incomplete | Product trials with an explicit owner; breaking changes are allowed   |
+| Ready        | The public contract and quality evidence meet the readiness checklist       | Recommended for production; semantic versioning protects the contract |
+| Deprecated   | A supported replacement and removal plan exist                              | Existing use may migrate; new use is rejected                         |
 
 ## Ready checklist
 
@@ -56,7 +56,7 @@ Component implementation.
 
 ## Ownership and review
 
-The Kanosis maintainers own ready components. Experimental components must also name the product
+The Kanonis maintainers own ready components. Experimental components must also name the product
 team validating them in an issue or release note. Review the manifest before every minor or major
 release and every six months. `npm run verify:components` fails if registered tags and the generated
 manifest diverge.

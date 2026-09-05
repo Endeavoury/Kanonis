@@ -177,6 +177,19 @@ export const Welcome: StoryObj = {
             multiple products.
           </p>
         </section>
+        <section class="section" aria-labelledby="family-heading" style="margin-top:32px">
+          <h2 id="family-heading">One system, four product identities</h2>
+          <p class="section-copy">
+            Kanonis provides the shared visual and interaction rules for a focused product family.
+            Each product keeps its own domain language while remaining consistent and familiar.
+          </p>
+          <div class="package-list" aria-label="Kanonis product family">
+            <div><code>Kanonis</code><span>Shared Design System</span></div>
+            <div><code>Ontarchon</code><span>Master Data Management</span></div>
+            <div><code>Oikonomis</code><span>Financial Insights</span></div>
+            <div><code>Nomopsis</code><span>Legal / legislation visualization</span></div>
+          </div>
+        </section>
         <div style="margin-top:32px">
           <ds-kpi-grid columns="3"
             ><ds-metric
@@ -201,7 +214,7 @@ export const Welcome: StoryObj = {
         </div>
         <div style="margin-top:24px">
           <ds-alert heading="Independent by design"
-            >This Storybook uses mock data and has no runtime dependency on the Finance Inzicht
+            >This Storybook uses mock data and has no runtime dependency on the Oikonomis
             application or APIs.</ds-alert
           >
         </div>
@@ -224,7 +237,7 @@ export const Welcome: StoryObj = {
             <li>Install the core runtime and stylesheet, then add your framework adapter.</li>
             <li>Import registration before rendering your first <code>ds-*</code> element.</li>
           </ol>
-          <div class="package-list" aria-label="Kanosis package map">
+          <div class="package-list" aria-label="Kanonis package map">
             <div>
               <code>@endeavoury/kanosis</code
               ><span>Web Components and grouped registration entry points.</span>
@@ -276,7 +289,7 @@ ${angularCode}</code></pre>
           </div>
         </section>
         <section class="section" aria-labelledby="principles-heading">
-          <h2 id="principles-heading">How to work with Kanosis</h2>
+          <h2 id="principles-heading">How to work with Kanonis</h2>
           <p class="section-copy">
             Start with semantic components and compose them into layouts documented in the Patterns
             section. Prefer design tokens over one-off values, keep content in the light DOM, and
