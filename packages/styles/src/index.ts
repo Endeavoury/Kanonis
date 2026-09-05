@@ -1,4 +1,4 @@
-import { breakpoints } from '@endeavoury/kanosis-tokens';
+import { breakpoints } from '@endeavoury/kanonis-tokens';
 import { css, unsafeCSS, type CSSResultGroup } from 'lit';
 
 export const responsiveBreakpoints = breakpoints;

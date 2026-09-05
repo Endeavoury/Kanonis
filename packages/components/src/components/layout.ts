@@ -1,6 +1,6 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
-import { foundationStyles, mediaCompact, mediaExpanded } from '@endeavoury/kanosis-styles';
+import { foundationStyles, mediaCompact, mediaExpanded } from '@endeavoury/kanonis-styles';
 import { DsElement } from '../core/ds-element.js';
 
 const gaps = css`

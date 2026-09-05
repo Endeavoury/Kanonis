@@ -1,6 +1,6 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property, state } from 'lit/decorators.js';
-import { foundationStyles, controlStyles } from '@endeavoury/kanosis-styles';
+import { foundationStyles, controlStyles } from '@endeavoury/kanonis-styles';
 import { DsElement } from '../core/ds-element.js';
 import { DsDataTable } from './data-table.js';
 import type { DsTableColumn } from './data-table.js';

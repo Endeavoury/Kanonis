@@ -1,6 +1,6 @@
 import { css, html, nothing, svg, type CSSResultGroup, type TemplateResult } from 'lit';
 import { property } from 'lit/decorators.js';
-import { foundationStyles } from '@endeavoury/kanosis-styles';
+import { foundationStyles } from '@endeavoury/kanonis-styles';
 import { DsElement } from '../core/ds-element.js';
 
 export type DsIconName =

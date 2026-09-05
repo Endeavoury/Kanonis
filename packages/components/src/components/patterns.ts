@@ -7,7 +7,7 @@ import {
   mediaMedium,
   mediaWide,
   surfaceStyles,
-} from '@endeavoury/kanosis-styles';
+} from '@endeavoury/kanonis-styles';
 import { DsElement } from '../core/ds-element.js';
 
 export class DsFilterBar extends DsElement {

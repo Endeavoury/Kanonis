@@ -1,6 +1,6 @@
 # AI component guide
 
-This is the shortest path for an agent (Codex, Copilot, or another code-generation tool) to understand and use Kanosis components.
+This is the shortest path for an agent (Codex, Copilot, or another code-generation tool) to understand and use Kanonis components.
 
 ## Discover the complete catalog
 
@@ -19,16 +19,16 @@ For API details, open the implementation path from the index and inspect the exp
 Use the package root when an application needs the complete catalog:
 
 ```ts
-import '@endeavoury/kanosis';
+import '@endeavoury/kanonis';
 ```
 
 Prefer a narrow registration entry point when only a family is needed:
 
 ```ts
-import '@endeavoury/kanosis/enterprise-p2';
+import '@endeavoury/kanonis/enterprise-p2';
 ```
 
-The index output is authoritative for available entry points. Class-only consumers can import from `@endeavoury/kanosis/classes` without registering custom elements.
+The index output is authoritative for available entry points. Class-only consumers can import from `@endeavoury/kanonis/classes` without registering custom elements.
 
 ## Use a component safely
 

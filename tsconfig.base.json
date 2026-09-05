@@ -18,10 +18,10 @@
     "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "@endeavoury/kanosis-tokens": ["packages/tokens/src/index.ts"],
-      "@endeavoury/kanosis-styles": ["packages/styles/src/index.ts"],
-      "@endeavoury/kanosis": ["packages/components/src/index.ts"],
-      "@endeavoury/kanosis/*": ["packages/components/src/*.ts"]
+      "@endeavoury/kanonis-tokens": ["packages/tokens/src/index.ts"],
+      "@endeavoury/kanonis-styles": ["packages/styles/src/index.ts"],
+      "@endeavoury/kanonis": ["packages/components/src/index.ts"],
+      "@endeavoury/kanonis/*": ["packages/components/src/*.ts"]
     }
   }
 }

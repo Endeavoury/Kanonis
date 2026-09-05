@@ -2,26 +2,26 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 
 const installCode = `npm config set @endeavoury:registry https://npm.pkg.github.com
-npm install @endeavoury/kanosis @endeavoury/kanosis-styles`;
+npm install @endeavoury/kanonis @endeavoury/kanonis-styles`;
 
-const reactInstallCode = 'npm install @endeavoury/kanosis-react react';
-const angularInstallCode = 'npm install @endeavoury/kanosis-angular @angular/core';
+const reactInstallCode = 'npm install @endeavoury/kanonis-react react';
+const angularInstallCode = 'npm install @endeavoury/kanonis-angular @angular/core';
 
-const vanillaCode = `import '@endeavoury/kanosis';
-import '@endeavoury/kanosis/styles.css';
+const vanillaCode = `import '@endeavoury/kanonis';
+import '@endeavoury/kanonis/styles.css';
 
 document.querySelector('#app')!.innerHTML =
   '<ds-button tone="accent">Save changes</ds-button>';`;
 
-const reactCode = `import { DsButton } from '@endeavoury/kanosis-react';
-import '@endeavoury/kanosis/styles.css';
+const reactCode = `import { DsButton } from '@endeavoury/kanonis-react';
+import '@endeavoury/kanonis/styles.css';
 
 export function SaveButton() {
   return <DsButton tone="accent">Save changes</DsButton>;
 }`;
 
 const angularCode = `import { Component } from '@angular/core';
-import { DESIGN_SYSTEM_SCHEMAS, registerDesignSystem } from '@endeavoury/kanosis-angular';
+import { DESIGN_SYSTEM_SCHEMAS, registerDesignSystem } from '@endeavoury/kanonis-angular';
 
 registerDesignSystem();
 
@@ -34,7 +34,7 @@ registerDesignSystem();
 export class SaveComponent {}`;
 
 const meta: Meta = {
-  title: 'Introduction/Kanosis',
+  title: 'Introduction/Kanonis',
   parameters: { layout: 'fullscreen' },
   tags: ['autodocs'],
 };
@@ -239,19 +239,19 @@ export const Welcome: StoryObj = {
           </ol>
           <div class="package-list" aria-label="Kanonis package map">
             <div>
-              <code>@endeavoury/kanosis</code
+              <code>@endeavoury/kanonis</code
               ><span>Web Components and grouped registration entry points.</span>
             </div>
             <div>
-              <code>@endeavoury/kanosis-styles</code
+              <code>@endeavoury/kanonis-styles</code
               ><span>Optional global tokens, themes, and typography.</span>
             </div>
             <div>
-              <code>@endeavoury/kanosis-react</code
+              <code>@endeavoury/kanonis-react</code
               ><span>Typed React adapters and custom event mappings.</span>
             </div>
             <div>
-              <code>@endeavoury/kanosis-angular</code
+              <code>@endeavoury/kanonis-angular</code
               ><span>Angular registration and schema helpers.</span>
             </div>
           </div>

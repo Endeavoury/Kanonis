@@ -1,6 +1,6 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
-import { foundationStyles, mediaCompact } from '@endeavoury/kanosis-styles';
+import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
 import { DsElement } from '../core/ds-element.js';
 import { DsDropZone } from './upload.js';
 import { DsProgress } from './feedback.js';

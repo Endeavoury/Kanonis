@@ -5,18 +5,18 @@
 The full entry point registers all custom elements:
 
 ```ts
-import '@endeavoury/kanosis';
-import '@endeavoury/kanosis/styles.css';
+import '@endeavoury/kanonis';
+import '@endeavoury/kanonis/styles.css';
 ```
 
-Group entry points (`button`, `forms`, `secondary-forms`, `display`, `feedback`, `interaction`, `overlays`, `upload`, `data-table`, `layout`, `navigation`, `navigation-extras`, and `patterns`) register related elements. The broad `forms` and `navigation` entries include their secondary components; the narrower entries support fine-grained loading. `@endeavoury/kanosis/classes` exports the classes without registering them, which is useful for controlled registries and testing.
+Group entry points (`button`, `forms`, `secondary-forms`, `display`, `feedback`, `interaction`, `overlays`, `upload`, `data-table`, `layout`, `navigation`, `navigation-extras`, and `patterns`) register related elements. The broad `forms` and `navigation` entries include their secondary components; the narrower entries support fine-grained loading. `@endeavoury/kanonis/classes` exports the classes without registering them, which is useful for controlled registries and testing.
 
 ## Attributes, properties, slots, and events
 
 Use attributes for simple serializable values and properties for structured values:
 
 ```ts
-import '@endeavoury/kanosis/data-table';
+import '@endeavoury/kanonis/data-table';
 
 const table = document.querySelector('ds-data-table');
 table.columns = [{ key: 'name', label: 'Name', sortable: true }];
@@ -101,7 +101,7 @@ Breadcrumbs, pagination, and list items use controlled values and typed events. 
 The optional React package wraps the existing element classes with `@lit/react`. It adds JSX property and typed custom-event ergonomics; it does not render a second implementation.
 
 ```tsx
-import { Button, Input } from '@endeavoury/kanosis-react';
+import { Button, Input } from '@endeavoury/kanonis-react';
 
 export function Editor() {
   return <Input label="Name" onDsChange={(event) => console.log(event.detail.value)} />;
@@ -113,8 +113,8 @@ export function Editor() {
 Import the design-system registration once and add the exported schema to a standalone component or NgModule that uses the elements:
 
 ```ts
-import '@endeavoury/kanosis';
-import { KANOSIS_CUSTOM_ELEMENTS_SCHEMA } from '@endeavoury/kanosis-angular';
+import '@endeavoury/kanonis';
+import { KANOSIS_CUSTOM_ELEMENTS_SCHEMA } from '@endeavoury/kanonis-angular';
 
 @Component({
   standalone: true,

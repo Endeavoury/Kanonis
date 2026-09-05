@@ -31,7 +31,7 @@ for (const component of registrations.values()) {
   }
   component.stories = matchingStories;
   component.documentation = 'docs/component-catalog.md';
-  component.package = '@endeavoury/kanosis';
+  component.package = '@endeavoury/kanonis';
 }
 
 const output = [...registrations.values()].sort((a, b) => a.tag.localeCompare(b.tag));

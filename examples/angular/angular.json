@@ -11,7 +11,7 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "styles": ["@endeavoury/kanosis/styles.css"],
+            "styles": ["@endeavoury/kanonis/styles.css"],
             "outputPath": "dist"
           }
         },

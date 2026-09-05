@@ -1,4 +1,4 @@
-name: Release Kanosis
+name: Release Kanonis
 
 on:
   push:
@@ -25,12 +25,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: kanosis-release
+  group: kanonis-release
   cancel-in-progress: false
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ghcr.io/endeavoury/kanosis-storybook
+  IMAGE_NAME: ghcr.io/endeavoury/kanonis-storybook
 
 jobs:
   release:
@@ -122,17 +122,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package.json package-lock.json packages/*/package.json storybook/package.json examples/*/package.json
           git commit -m "chore(release): $RELEASE_TAG [skip release]"
-          git tag -a "$RELEASE_TAG" -m "Kanosis $RELEASE_VERSION"
+          git tag -a "$RELEASE_TAG" -m "Kanonis $RELEASE_VERSION"
           git push --atomic origin "HEAD:$GITHUB_REF_NAME" "$RELEASE_TAG"
 
       - name: Pack npm release assets
         run: |
           mkdir -p release-assets
-          npm pack --workspace @endeavoury/kanosis-tokens --pack-destination release-assets
-          npm pack --workspace @endeavoury/kanosis-styles --pack-destination release-assets
-          npm pack --workspace @endeavoury/kanosis --pack-destination release-assets
-          npm pack --workspace @endeavoury/kanosis-react --pack-destination release-assets
-          npm pack --workspace @endeavoury/kanosis-angular --pack-destination release-assets
+          npm pack --workspace @endeavoury/kanonis-tokens --pack-destination release-assets
+          npm pack --workspace @endeavoury/kanonis-styles --pack-destination release-assets
+          npm pack --workspace @endeavoury/kanonis --pack-destination release-assets
+          npm pack --workspace @endeavoury/kanonis-react --pack-destination release-assets
+          npm pack --workspace @endeavoury/kanonis-angular --pack-destination release-assets
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f
@@ -156,8 +156,8 @@ jobs:
             type=sha,prefix=sha-
             type=raw,value=latest
           labels: |
-            org.opencontainers.image.title=Kanosis Storybook
-            org.opencontainers.image.description=Standalone Storybook for the Kanosis Web Component system
+            org.opencontainers.image.title=Kanonis Storybook
+            org.opencontainers.image.description=Standalone Storybook for the Kanonis Web Component system
 
       - name: Build and publish Storybook image
         id: image
@@ -182,9 +182,9 @@ jobs:
         run: |
           docker pull "${IMAGE_NAME}:${{ steps.version.outputs.version }}"
           docker save "${IMAGE_NAME}:${{ steps.version.outputs.version }}" \
-            | gzip -9 > "release-assets/kanosis-storybook-${{ steps.version.outputs.version }}-linux-amd64.tar.gz"
+            | gzip -9 > "release-assets/kanonis-storybook-${{ steps.version.outputs.version }}-linux-amd64.tar.gz"
           printf '%s\n' '${{ steps.image.outputs.digest }}' \
-            > "release-assets/kanosis-storybook-${{ steps.version.outputs.version }}.digest"
+            > "release-assets/kanonis-storybook-${{ steps.version.outputs.version }}.digest"
 
       - name: Generate release notes and manifest
         run: >-
@@ -230,11 +230,11 @@ jobs:
           if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
             gh release upload "$RELEASE_TAG" "${assets[@]}" --clobber
             gh release edit "$RELEASE_TAG" \
-              --title "Kanosis ${{ steps.version.outputs.version }}" \
+              --title "Kanonis ${{ steps.version.outputs.version }}" \
               --notes-file release-assets/release-notes.md
           else
             gh release create "$RELEASE_TAG" "${assets[@]}" \
               --verify-tag \
-              --title "Kanosis ${{ steps.version.outputs.version }}" \
+              --title "Kanonis ${{ steps.version.outputs.version }}" \
               --notes-file release-assets/release-notes.md
           fi

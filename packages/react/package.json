@@ -1,11 +1,11 @@
 {
-  "name": "@endeavoury/kanosis-react",
-  "version": "1.0.11",
-  "description": "Thin React adapters for the Kanosis Web Components.",
+  "name": "@endeavoury/kanonis-react",
+  "version": "1.0.10",
+  "description": "Thin React adapters for the Kanonis Web Components.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Endeavoury/Kanosis.git",
+    "url": "git+https://github.com/Endeavoury/Kanonis.git",
     "directory": "packages/react"
   },
   "type": "module",
@@ -23,7 +23,7 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@endeavoury/kanosis": "1.0.11",
+    "@endeavoury/kanonis": "1.0.10",
     "@lit/react": "1.0.8"
   },
   "peerDependencies": {

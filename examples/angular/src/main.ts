@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import '@endeavoury/kanosis';
+import '@endeavoury/kanonis';
 @Component({
   selector: 'app-root',
   standalone: true,

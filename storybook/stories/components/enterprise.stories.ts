@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import type { DsTableColumn } from '@endeavoury/kanosis';
+import type { DsTableColumn } from '@endeavoury/kanonis';
 
 const columns: DsTableColumn[] = [
   { key: 'name', label: 'Name', sortable: true },

@@ -1,3 +1,3 @@
-# @endeavoury/kanosis-styles
+# @endeavoury/kanonis-styles
 
-Shared Lit style foundations and an optional conservative global stylesheet. Component authors import the JavaScript style modules; applications may import `@endeavoury/kanosis-styles/global.css`.
+Shared Lit style foundations and an optional conservative global stylesheet. Component authors import the JavaScript style modules; applications may import `@endeavoury/kanonis-styles/global.css`.

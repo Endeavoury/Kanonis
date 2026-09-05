@@ -1,6 +1,6 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, query, queryAssignedElements } from 'lit/decorators.js';
-import { foundationStyles, mediaCompact } from '@endeavoury/kanosis-styles';
+import { foundationStyles, mediaCompact } from '@endeavoury/kanonis-styles';
 import { DsElement } from '../core/ds-element.js';
 
 export type DsDismissReason = 'button' | 'escape' | 'backdrop' | 'programmatic';

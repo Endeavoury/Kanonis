@@ -84,7 +84,7 @@ for await (const path of glob('packages/components/src/register/*.ts')) {
       tag,
       family,
       status: ready ? 'ready' : 'experimental',
-      owner: 'Kanosis design system',
+      owner: 'Kanonis design system',
       adoption: {
         state: readiness.productUseCase,
         evidence: stories,

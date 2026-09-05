@@ -3,11 +3,11 @@ import { readFile } from 'node:fs/promises';
 export const registry = 'https://npm.pkg.github.com';
 
 export const releasePackages = [
-  ['@endeavoury/kanosis-tokens', 'packages/tokens/package.json'],
-  ['@endeavoury/kanosis-styles', 'packages/styles/package.json'],
-  ['@endeavoury/kanosis', 'packages/components/package.json'],
-  ['@endeavoury/kanosis-react', 'packages/react/package.json'],
-  ['@endeavoury/kanosis-angular', 'packages/angular/package.json'],
+  ['@endeavoury/kanonis-tokens', 'packages/tokens/package.json'],
+  ['@endeavoury/kanonis-styles', 'packages/styles/package.json'],
+  ['@endeavoury/kanonis', 'packages/components/package.json'],
+  ['@endeavoury/kanonis-react', 'packages/react/package.json'],
+  ['@endeavoury/kanonis-angular', 'packages/angular/package.json'],
 ];
 
 export async function loadReleasePackages() {

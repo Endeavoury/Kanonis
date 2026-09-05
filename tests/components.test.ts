@@ -17,19 +17,19 @@ import type {
   DsSelect,
   DsSidebarItem,
   DsTabs,
-} from '@endeavoury/kanosis/classes';
-import { DsBulkActions, DsCombobox, DsFilterBuilder } from '@endeavoury/kanosis/classes';
-import type { DsCommandPalette, DsWorkspaceTabs } from '@endeavoury/kanosis/classes';
-import type { DsWorkspace, DsWorkspaceHeader } from '@endeavoury/kanosis/classes';
-import type { DsDatePicker, DsStepper, DsTaskList } from '@endeavoury/kanosis/classes';
-import type { DsPermissionMatrix, DsJsonEditor, DsDiffViewer } from '@endeavoury/kanosis/classes';
+} from '@endeavoury/kanonis/classes';
+import { DsBulkActions, DsCombobox, DsFilterBuilder } from '@endeavoury/kanonis/classes';
+import type { DsCommandPalette, DsWorkspaceTabs } from '@endeavoury/kanonis/classes';
+import type { DsWorkspace, DsWorkspaceHeader } from '@endeavoury/kanonis/classes';
+import type { DsDatePicker, DsStepper, DsTaskList } from '@endeavoury/kanonis/classes';
+import type { DsPermissionMatrix, DsJsonEditor, DsDiffViewer } from '@endeavoury/kanonis/classes';
 import type {
   DsChip,
   DsElement,
   DsReorderList,
   DsSegmentedControl,
   DsSplitButton,
-} from '@endeavoury/kanosis/classes';
+} from '@endeavoury/kanonis/classes';
 
 const mount = async <T extends HTMLElement>(element: T): Promise<T> => {
   document.body.append(element);

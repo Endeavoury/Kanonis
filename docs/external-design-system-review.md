@@ -7,20 +7,20 @@ System
 
 ## Executive conclusion
 
-Kanosis does not need another broad component expansion. It already has a strong
+Kanonis does not need another broad component expansion. It already has a strong
 framework-independent architecture and 118 registered custom elements. Its next maturity step is
 to make the existing catalog easier to trust, choose, combine, and evolve.
 
-The four reviewed systems are better than Kanosis in different areas:
+The four reviewed systems are better than Kanonis in different areas:
 
-| System                  | What it does better                                                              | Best lesson for Kanosis                                 | Adoption priority                    |
+| System                  | What it does better                                                              | Best lesson for Kanonis                                 | Adoption priority                    |
 | ----------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------ |
 | GitHub Primer           | Web-product guidance, component maturity, responsive and accessibility detail    | Prove component quality and publish task-level guidance | P0                                   |
 | Atlassian Design System | Token governance, content design, messaging, and complex interaction guidance    | Enforce foundations and document end-to-end behavior    | P0                                   |
 | Material Design 3       | Coherent visual roles, interaction states, semantic motion, and adaptive layouts | Turn raw scales into intent-based design rules          | P1, with P0 responsive work          |
 | Bootstrap 5.3           | Responsive layout tooling, customization surface, examples, and discoverability  | Offer a predictable responsive composition vocabulary   | P1, with P0 breakpoint consolidation |
 
-This is not a recommendation to copy their appearance or runtime architecture. Kanosis should keep
+This is not a recommendation to copy their appearance or runtime architecture. Kanonis should keep
 its semantic tokens, Lit Web Components, Shadow DOM, `ds-*` events, selective registration, and thin
 React and Angular integrations.
 
@@ -42,7 +42,7 @@ Priority means:
 - **P1 — next planned increment:** high product value after the P0 quality baseline exists.
 - **P2 — validate first:** useful only after a real product use case or adoption signal exists.
 
-## Kanosis baseline
+## Kanonis baseline
 
 ### Current strengths
 
@@ -78,17 +78,17 @@ mobile-first grid has six documented tiers, responsive containers, columns, gutt
 Its utility API makes the same vocabulary extensible, while root and component CSS variables expose
 a wide customization surface. The examples make common page arrangements easy to discover.
 
-Bootstrap is not the model to follow for Kanosis accessibility ownership. Its own documentation says
+Bootstrap is not the model to follow for Kanonis accessibility ownership. Its own documentation says
 authors may need to provide additional semantics and behavior, warns that some default palette
 combinations can miss WCAG contrast, and identifies custom validation styles and tooltips as not
-accessible to assistive technology. Kanosis should retain its stronger component-owned behavior.
+accessible to assistive technology. Kanonis should retain its stronger component-owned behavior.
 
-| Suggestion for Kanosis                                                                                                                 | Type       | Priority | Decision                                                                                                              |
+| Suggestion for Kanonis                                                                                                                 | Type       | Priority | Decision                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------- |
 | Publish one responsive contract for viewport ranges, containers, columns, and gutters; replace unexplained component-local breakpoints | Foundation | P0       | Adopt the consistency, using shared TypeScript/custom-media metadata because CSS variables cannot drive media queries |
 | Add responsive recipes for shell, settings form, dashboard, dense table, list-detail, and mobile action layouts                        | Pattern    | P1       | Adopt examples without adding a global class framework                                                                |
 | Let `ds-grid`, `ds-stack`, `ds-inline`, and `ds-container` express a small reviewed set of responsive variants                         | Component  | P1       | Adapt; prefer semantic properties or container-query behavior over hundreds of utility classes                        |
-| Document supported global and component-level customization, including tokens, slots, parts, and safe examples                         | Change     | P1       | Adopt Bootstrap's discoverability while preserving Kanosis encapsulation                                              |
+| Document supported global and component-level customization, including tokens, slots, parts, and safe examples                         | Change     | P1       | Adopt Bootstrap's discoverability while preserving Kanonis encapsulation                                              |
 | Add input-group-like composition only when a product needs prefixes, suffixes, or attached actions beyond current slots                | Component  | P2       | Validate first; do not add it solely for parity                                                                       |
 
 Official references: [grid system](https://getbootstrap.com/docs/5.3/layout/grid/),
@@ -110,17 +110,17 @@ availability.
 Material 3 Expressive also shows the value of semantic motion and deliberate action hierarchy, but
 its decorative shape and emotion-led direction is not automatically appropriate for finance and
 master-data applications. Platform availability varies; for example, Material documents some new
-components before a Web implementation is available. Kanosis should borrow design logic, not assume
+components before a Web implementation is available. Kanonis should borrow design logic, not assume
 Material Web parity.
 
-| Suggestion for Kanosis                                                                                                                             | Type       | Priority | Decision                                                                              |
+| Suggestion for Kanonis                                                                                                                             | Type       | Priority | Decision                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------- | ------------------------------------------------------------------------------------- |
 | Define shared enabled, hover, focus, pressed, selected, dragged, loading, and disabled state contracts with at least two cues for important states | Foundation | P0       | Adopt; audit existing elements against one state matrix                               |
 | Specify compact, medium, and expanded behavior for feed, list-detail, and supporting-pane layouts                                                  | Pattern    | P1       | Adapt to `ds-pane-group`, `ds-pane`, and `ds-inspector-pane`                          |
 | Replace duration-only motion guidance with semantic tokens such as control feedback, popup enter/exit, pane transition, and data update            | Foundation | P1       | Adopt intent-based naming; always map reduced motion                                  |
 | Add a segmented control and an overflow-aware action bar; consider a split button only for a proven primary-action-plus-menu case                  | Component  | P1       | Adapt Material action hierarchy without its visual treatment                          |
 | Add anatomy, variants, behavior, content, accessibility, responsive rules, and design/code availability to each component page                     | Change     | P0       | Adopt the documentation model                                                         |
-| Explore generated brand color roles and expressive shape only if Kanosis becomes multi-brand                                                       | Foundation | P2       | Validate first; current semantic light/dark roles are sufficient for present products |
+| Explore generated brand color roles and expressive shape only if Kanonis becomes multi-brand                                                       | Foundation | P2       | Validate first; current semantic light/dark roles are sufficient for present products |
 
 Official references: [Material Design 3](https://m3.material.io/),
 [interaction states](https://m3.material.io/foundations/interaction/states/overview),
@@ -130,7 +130,7 @@ Official references: [Material Design 3](https://m3.material.io/),
 
 ### GitHub Primer
 
-Primer is the closest benchmark for Kanosis's dense web applications. It is better at documenting
+Primer is the closest benchmark for Kanonis's dense web applications. It is better at documenting
 when and why to use a component, responsive behavior, content, and concrete accessibility
 expectations. Its DataTable guidance covers titles, row identity, sorting, pagination, asynchronous
 announcements, horizontal-scroll focus, zoom, text spacing, target sizes, and repeated action names.
@@ -140,7 +140,7 @@ from product-specific UI to a shared component. Its task patterns cover forms, l
 notifications, progressive disclosure, and saving. This prevents a component catalog from being
 mistaken for complete product guidance.
 
-| Suggestion for Kanosis                                                                                                                                                                       | Type       | Priority | Decision                                                           |
+| Suggestion for Kanonis                                                                                                                                                                       | Type       | Priority | Decision                                                           |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------- | ------------------------------------------------------------------ |
 | Assign every component an experimental, beta/ready, or deprecated status backed by explicit exit criteria                                                                                    | Change     | P0       | Adopt before calling all 122 elements production-ready             |
 | Harden `ds-data-table` and `ds-data-grid` for accessible names, row identity, repeated actions, busy/sort/page announcements, focusable overflow, numeric comparison, zoom, and text spacing | Component  | P0       | Adopt Primer's detailed acceptance model                           |
@@ -167,11 +167,11 @@ drag-and-drop guidance covers pointer affordance, drop feedback, keyboard-access
 live-region announcements, and focus restoration—an important model for future tree, board, column,
 and ordering workflows.
 
-| Suggestion for Kanosis                                                                                                                 | Type       | Priority | Decision                                                                            |
+| Suggestion for Kanonis                                                                                                                 | Type       | Priority | Decision                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------- | ----------------------------------------------------------------------------------- |
 | Generate CSS and TypeScript token outputs from one source and fail CI on unknown, mismatched, raw, or deprecated foundation values     | Foundation | P0       | Adopt; this directly prevents the drift found in the audit                          |
 | Define messaging by scope, urgency, persistence, action, and live-region policy; include writing rules                                 | Pattern    | P0       | Adopt across alert, banner, toast, maintenance notice, empty, and validation states |
-| Introduce semantic elevation and motion roles such as raised, overlay, overflow, popup enter, and pane exit                            | Foundation | P1       | Adapt to the simpler Kanosis visual language                                        |
+| Introduce semantic elevation and motion roles such as raised, overlay, overflow, popup enter, and pane exit                            | Foundation | P1       | Adapt to the simpler Kanonis visual language                                        |
 | Build reusable live-region, focus-restoration, and focus-containment utilities used by overlays, commands, data updates, and drag/drop | Component  | P1       | Adopt as internal primitives with public guidance where useful                      |
 | Define an accessible reorder/drag pattern for trees, columns, lists, and boards, always with visible controls or menu alternatives     | Pattern    | P1       | Adopt before shipping drag behavior; do not make pointer dragging the only path     |
 | Add token/component deprecation warnings and a migration-note template                                                                 | Change     | P1       | Adopt; add codemods only when a repetitive breaking migration appears               |
@@ -184,7 +184,7 @@ Official references: [foundations](https://atlassian.design/foundations),
 [message design](https://atlassian.design/foundations/content/designing-messages/), and
 [accessible drag and drop](https://atlassian.design/components/pragmatic-drag-and-drop/accessibility-guidelines/).
 
-## Prioritized Kanosis change plan
+## Prioritized Kanonis change plan
 
 The order below deliberately hardens what exists before introducing new public APIs.
 
@@ -245,7 +245,7 @@ be visible. Deprecated components must identify a replacement and removal plan.
 
 - Do not reproduce Bootstrap's global utility surface; it would weaken component encapsulation and
   semantic layout ownership.
-- Do not adopt Material's visual language wholesale; Kanosis serves information-dense finance and
+- Do not adopt Material's visual language wholesale; Kanonis serves information-dense finance and
   master-data products with its own tone.
 - Do not equate any system's large catalog with automatic accessibility. Official Bootstrap and
   Atlassian pages both identify cases where consumers still own critical behavior.
@@ -255,10 +255,10 @@ be visible. Deprecated components must identify a replacement and removal plan.
 
 ## Review cadence
 
-Revisit this benchmark every six months or before a major Kanosis release. At each review:
+Revisit this benchmark every six months or before a major Kanonis release. At each review:
 
 1. Re-run `npm run components:list` and reconcile catalog status.
 2. Re-check official source-system guidance and date the snapshot.
-3. Measure how many Kanosis components are experimental, ready, and deprecated.
+3. Measure how many Kanonis components are experimental, ready, and deprecated.
 4. Report P0 completion separately for foundations, components, patterns, and system changes.
 5. Remove proposed parity work that still lacks a product use case.

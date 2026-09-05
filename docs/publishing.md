@@ -1,6 +1,6 @@
 # Versioning and publishing
 
-The five public `@endeavoury/kanosis*` packages and all private workspaces use
+The five public `@endeavoury/kanonis*` packages and all private workspaces use
 one synchronized semantic version. The current baseline is `1.0.0`. Fixes use
 patch releases, additive changes use minor releases, and breaking changes use
 major releases.
@@ -41,7 +41,7 @@ patch, minor, or major increment. Manual runs are intended for controlled
 releases and recovery; normal releases should use the branch policy above.
 
 Packages are published to GitHub Packages and linked to
-`Endeavoury/Kanosis` through their `repository` metadata. GitHub
+`Endeavoury/Kanonis` through their `repository` metadata. GitHub
 Packages requires a scoped npm name and authenticated package access.
 
 ## One-time repository setup
@@ -85,19 +85,19 @@ The workflow verifies that the generated tag and package versions match and
 inspects each tarball with `npm pack --dry-run`. It then publishes in this
 dependency order:
 
-1. `@endeavoury/kanosis-tokens`
-2. `@endeavoury/kanosis-styles`
-3. `@endeavoury/kanosis`
-4. `@endeavoury/kanosis-react`
-5. `@endeavoury/kanosis-angular`
+1. `@endeavoury/kanonis-tokens`
+2. `@endeavoury/kanonis-styles`
+3. `@endeavoury/kanonis`
+4. `@endeavoury/kanonis-react`
+5. `@endeavoury/kanonis-angular`
 
 The same workflow builds the standalone Storybook image and publishes it as:
 
 ```text
-ghcr.io/endeavoury/kanosis-storybook:<version>
-ghcr.io/endeavoury/kanosis-storybook:v<version>
-ghcr.io/endeavoury/kanosis-storybook:sha-<commit>
-ghcr.io/endeavoury/kanosis-storybook:latest
+ghcr.io/endeavoury/kanonis-storybook:<version>
+ghcr.io/endeavoury/kanonis-storybook:v<version>
+ghcr.io/endeavoury/kanonis-storybook:sha-<commit>
+ghcr.io/endeavoury/kanonis-storybook:latest
 ```
 
 The image is limited to `linux/amd64` so the registry image and downloadable
@@ -109,7 +109,7 @@ After npm and container publication succeed, CI creates the GitHub Release. It
 contains:
 
 - one `.tgz` tarball for each npm package;
-- a loadable `kanosis-storybook-<version>-linux-amd64.tar.gz` image;
+- a loadable `kanonis-storybook-<version>-linux-amd64.tar.gz` image;
 - the immutable GHCR digest;
 - `release-manifest.json` with package and image references;
 - `SHA256SUMS` for every downloadable artifact.
@@ -117,7 +117,7 @@ contains:
 Load the attached image archive without contacting the registry:
 
 ```bash
-gzip -dc kanosis-storybook-1.0.1-linux-amd64.tar.gz | docker load
+gzip -dc kanonis-storybook-1.0.1-linux-amd64.tar.gz | docker load
 ```
 
 The workflow is safe to rerun: published npm versions are detected and
@@ -138,7 +138,7 @@ Authenticate with a classic personal access token that has `read:packages`,
 then install normally:
 
 ```bash
-npm install @endeavoury/kanosis
+npm install @endeavoury/kanonis
 ```
 
 The Finance Inzicht sibling workspace intentionally uses local `file:`

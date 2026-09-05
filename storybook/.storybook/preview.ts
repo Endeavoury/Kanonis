@@ -1,7 +1,7 @@
 import type { Decorator, Preview } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import '@endeavoury/kanosis';
-import '@endeavoury/kanosis/styles.css';
+import '@endeavoury/kanonis';
+import '@endeavoury/kanonis/styles.css';
 
 const withTheme: Decorator = (story, context) => {
   const theme = String(context.globals['theme'] ?? 'system');

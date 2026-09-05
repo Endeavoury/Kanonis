@@ -5,7 +5,7 @@ import {
   mediaCompact,
   spinnerStyles,
   surfaceStyles,
-} from '@endeavoury/kanosis-styles';
+} from '@endeavoury/kanonis-styles';
 import { DsElement, type DsTone } from '../core/ds-element.js';
 
 export class DsAlert extends DsElement {

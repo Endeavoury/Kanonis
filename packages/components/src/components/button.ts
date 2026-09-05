@@ -1,6 +1,6 @@
 import { css, html, nothing, type CSSResultGroup } from 'lit';
 import { property } from 'lit/decorators.js';
-import { controlFoundationStyles, spinnerStyles } from '@endeavoury/kanosis-styles';
+import { controlFoundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
 import { DsElement, type DsSize } from '../core/ds-element.js';
 
 export type DsButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';

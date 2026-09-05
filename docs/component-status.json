@@ -11,7 +11,7 @@
       "tag": "ds-action-bar",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -47,7 +47,7 @@
       "tag": "ds-activity-feed",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -83,7 +83,7 @@
       "tag": "ds-alert",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -129,7 +129,7 @@
       "tag": "ds-app-shell",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -175,7 +175,7 @@
       "tag": "ds-approval-flow",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -211,7 +211,7 @@
       "tag": "ds-audit-log",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -247,7 +247,7 @@
       "tag": "ds-avatar",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -285,7 +285,7 @@
       "tag": "ds-badge",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -327,7 +327,7 @@
       "tag": "ds-banner",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -365,7 +365,7 @@
       "tag": "ds-brand-mark",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -403,7 +403,7 @@
       "tag": "ds-breadcrumb",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -441,7 +441,7 @@
       "tag": "ds-breadcrumbs",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -479,7 +479,7 @@
       "tag": "ds-bulk-actions",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -515,7 +515,7 @@
       "tag": "ds-button",
       "family": "button",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -583,7 +583,7 @@
       "tag": "ds-button-group",
       "family": "button",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -623,7 +623,7 @@
       "tag": "ds-card",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -665,7 +665,7 @@
       "tag": "ds-change-summary",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -701,7 +701,7 @@
       "tag": "ds-checkbox",
       "family": "forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -737,7 +737,7 @@
       "tag": "ds-chip",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -773,7 +773,7 @@
       "tag": "ds-coachmark",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -809,7 +809,7 @@
       "tag": "ds-code-block",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -845,7 +845,7 @@
       "tag": "ds-code-editor",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -881,7 +881,7 @@
       "tag": "ds-column-manager",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -917,7 +917,7 @@
       "tag": "ds-combobox",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -953,7 +953,7 @@
       "tag": "ds-command-palette",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -989,7 +989,7 @@
       "tag": "ds-compare-view",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1025,7 +1025,7 @@
       "tag": "ds-container",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1063,7 +1063,7 @@
       "tag": "ds-context-menu",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1099,7 +1099,7 @@
       "tag": "ds-data-grid",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1135,7 +1135,7 @@
       "tag": "ds-data-table",
       "family": "data-table",
       "status": "ready",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1173,7 +1173,7 @@
       "tag": "ds-date-picker",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1209,7 +1209,7 @@
       "tag": "ds-description-list",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1245,7 +1245,7 @@
       "tag": "ds-detail-list",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1281,7 +1281,7 @@
       "tag": "ds-detail-sidebar",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1317,7 +1317,7 @@
       "tag": "ds-dialog",
       "family": "overlays",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1353,7 +1353,7 @@
       "tag": "ds-diff-viewer",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1389,7 +1389,7 @@
       "tag": "ds-disclosure",
       "family": "interaction",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1427,7 +1427,7 @@
       "tag": "ds-drawer",
       "family": "overlays",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1463,7 +1463,7 @@
       "tag": "ds-drop-zone",
       "family": "upload",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1499,7 +1499,7 @@
       "tag": "ds-empty-state",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1537,7 +1537,7 @@
       "tag": "ds-field-array",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1573,7 +1573,7 @@
       "tag": "ds-file-upload",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1609,7 +1609,7 @@
       "tag": "ds-filter-bar",
       "family": "patterns",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1647,7 +1647,7 @@
       "tag": "ds-filter-builder",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1683,7 +1683,7 @@
       "tag": "ds-form-field",
       "family": "forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1719,7 +1719,7 @@
       "tag": "ds-form-section",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1755,7 +1755,7 @@
       "tag": "ds-global-search",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1791,7 +1791,7 @@
       "tag": "ds-grid",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1831,7 +1831,7 @@
       "tag": "ds-help-panel",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1867,7 +1867,7 @@
       "tag": "ds-icon",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1919,7 +1919,7 @@
       "tag": "ds-icon-button",
       "family": "button",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -1963,7 +1963,7 @@
       "tag": "ds-illustration",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -1999,7 +1999,7 @@
       "tag": "ds-inline",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2053,7 +2053,7 @@
       "tag": "ds-input",
       "family": "forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2101,7 +2101,7 @@
       "tag": "ds-input-group",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2137,7 +2137,7 @@
       "tag": "ds-inspector-pane",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2175,7 +2175,7 @@
       "tag": "ds-job-status",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2211,7 +2211,7 @@
       "tag": "ds-json-editor",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2247,7 +2247,7 @@
       "tag": "ds-kpi-grid",
       "family": "patterns",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2293,7 +2293,7 @@
       "tag": "ds-list",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2331,7 +2331,7 @@
       "tag": "ds-list-item",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2369,7 +2369,7 @@
       "tag": "ds-live-region",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2405,7 +2405,7 @@
       "tag": "ds-loading-state",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2441,7 +2441,7 @@
       "tag": "ds-maintenance-notice",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2477,7 +2477,7 @@
       "tag": "ds-menu",
       "family": "overlays",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2517,7 +2517,7 @@
       "tag": "ds-menu-item",
       "family": "overlays",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2557,7 +2557,7 @@
       "tag": "ds-metric",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2605,7 +2605,7 @@
       "tag": "ds-navigation-group",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2641,7 +2641,7 @@
       "tag": "ds-notification-center",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -2677,7 +2677,7 @@
       "tag": "ds-page-header",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2723,7 +2723,7 @@
       "tag": "ds-pagination",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2759,7 +2759,7 @@
       "tag": "ds-pane",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2811,7 +2811,7 @@
       "tag": "ds-pane-content",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2849,7 +2849,7 @@
       "tag": "ds-pane-group",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2887,7 +2887,7 @@
       "tag": "ds-pane-header",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2925,7 +2925,7 @@
       "tag": "ds-pane-stack",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2961,7 +2961,7 @@
       "tag": "ds-pane-window",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -2997,7 +2997,7 @@
       "tag": "ds-panel",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3045,7 +3045,7 @@
       "tag": "ds-permission-matrix",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3081,7 +3081,7 @@
       "tag": "ds-progress",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3117,7 +3117,7 @@
       "tag": "ds-quick-actions",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3153,7 +3153,7 @@
       "tag": "ds-radio",
       "family": "secondary-forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3189,7 +3189,7 @@
       "tag": "ds-radio-group",
       "family": "secondary-forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3225,7 +3225,7 @@
       "tag": "ds-range",
       "family": "secondary-forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3261,7 +3261,7 @@
       "tag": "ds-record-header",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3297,7 +3297,7 @@
       "tag": "ds-reorder-item",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3333,7 +3333,7 @@
       "tag": "ds-reorder-list",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3369,7 +3369,7 @@
       "tag": "ds-role-badge",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3405,7 +3405,7 @@
       "tag": "ds-saved-view",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3441,7 +3441,7 @@
       "tag": "ds-scrollable-pane",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3477,7 +3477,7 @@
       "tag": "ds-search-input",
       "family": "forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3517,7 +3517,7 @@
       "tag": "ds-segment",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3553,7 +3553,7 @@
       "tag": "ds-segmented-control",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3589,7 +3589,7 @@
       "tag": "ds-select",
       "family": "forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3631,7 +3631,7 @@
       "tag": "ds-sidebar",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3671,7 +3671,7 @@
       "tag": "ds-sidebar-item",
       "family": "navigation",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3711,7 +3711,7 @@
       "tag": "ds-skeleton",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3747,7 +3747,7 @@
       "tag": "ds-split-button",
       "family": "enhancements",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3783,7 +3783,7 @@
       "tag": "ds-stack",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3839,7 +3839,7 @@
       "tag": "ds-status-badge",
       "family": "display",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3881,7 +3881,7 @@
       "tag": "ds-stepper",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -3917,7 +3917,7 @@
       "tag": "ds-switch",
       "family": "secondary-forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3953,7 +3953,7 @@
       "tag": "ds-tab",
       "family": "interaction",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -3989,7 +3989,7 @@
       "tag": "ds-tabs",
       "family": "interaction",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4025,7 +4025,7 @@
       "tag": "ds-task-list",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4061,7 +4061,7 @@
       "tag": "ds-tenant-switcher",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4097,7 +4097,7 @@
       "tag": "ds-textarea",
       "family": "secondary-forms",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4133,7 +4133,7 @@
       "tag": "ds-theme-toggle",
       "family": "interaction",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4169,7 +4169,7 @@
       "tag": "ds-time-picker",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4205,7 +4205,7 @@
       "tag": "ds-timeline",
       "family": "enterprise-p2",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4241,7 +4241,7 @@
       "tag": "ds-toast",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4279,7 +4279,7 @@
       "tag": "ds-toast-region",
       "family": "feedback",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4317,7 +4317,7 @@
       "tag": "ds-tooltip",
       "family": "overlays",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4353,7 +4353,7 @@
       "tag": "ds-tour",
       "family": "enterprise-p3",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4389,7 +4389,7 @@
       "tag": "ds-tree",
       "family": "tree",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4425,7 +4425,7 @@
       "tag": "ds-tree-item",
       "family": "tree",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4461,7 +4461,7 @@
       "tag": "ds-user-menu",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4497,7 +4497,7 @@
       "tag": "ds-validation-summary",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4533,7 +4533,7 @@
       "tag": "ds-view-toolbar",
       "family": "enterprise",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [
@@ -4569,7 +4569,7 @@
       "tag": "ds-workspace",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4607,7 +4607,7 @@
       "tag": "ds-workspace-header",
       "family": "layout",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
@@ -4643,7 +4643,7 @@
       "tag": "ds-workspace-tabs",
       "family": "enterprise-p1",
       "status": "experimental",
-      "owner": "Kanosis design system",
+      "owner": "Kanonis design system",
       "adoption": {
         "state": "validation-required",
         "evidence": [

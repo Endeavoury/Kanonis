@@ -22,7 +22,7 @@ export function warnDeprecated(
   if (deprecationWarnings.has(key)) return;
   deprecationWarnings.add(key);
   console.warn(
-    `[Kanosis] ${api} is deprecated; use ${replacement}. Removal is planned for ${removalVersion}.`,
+    `[Kanonis] ${api} is deprecated; use ${replacement}. Removal is planned for ${removalVersion}.`,
   );
 }
 

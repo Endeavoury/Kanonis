@@ -1,3 +1,3 @@
-# @endeavoury/kanosis-angular
+# @endeavoury/kanonis-angular
 
-Angular registration and schema helpers for `@endeavoury/kanosis`. Angular renders the same native Web Components; this package contains no templates or visual implementation.
+Angular registration and schema helpers for `@endeavoury/kanonis`. Angular renders the same native Web Components; this package contains no templates or visual implementation.

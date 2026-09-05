@@ -1,9 +1,9 @@
-import '@endeavoury/kanosis/styles.css';
-import '@endeavoury/kanosis/button';
-import '@endeavoury/kanosis/forms';
-import '@endeavoury/kanosis/display';
-import '@endeavoury/kanosis/feedback';
-import '@endeavoury/kanosis/layout';
+import '@endeavoury/kanonis/styles.css';
+import '@endeavoury/kanonis/button';
+import '@endeavoury/kanonis/forms';
+import '@endeavoury/kanonis/display';
+import '@endeavoury/kanonis/feedback';
+import '@endeavoury/kanonis/layout';
 
 document.querySelector('main')!.innerHTML = `
   <ds-container size="narrow">

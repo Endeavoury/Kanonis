@@ -1,6 +1,6 @@
-# @endeavoury/kanosis
+# @endeavoury/kanonis
 
-Product-neutral Lit Web Components for Kanosis. Import the package root to register all elements, a grouped entry point such as `/button`, `/forms`, `/interaction`, `/overlays`, `/navigation`, `/tree`, or `/enterprise` for selective registration, and `/styles.css` for the optional global foundation.
+Product-neutral Lit Web Components for Kanonis. Import the package root to register all elements, a grouped entry point such as `/button`, `/forms`, `/interaction`, `/overlays`, `/navigation`, `/tree`, or `/enterprise` for selective registration, and `/styles.css` for the optional global foundation.
 
 The first enterprise workflow release is the P0 data-management set: `ds-data-grid`, `ds-filter-builder`, `ds-view-toolbar`, `ds-column-manager`, `ds-bulk-actions`, `ds-saved-view`, `ds-combobox`, and `ds-validation-summary`.
 

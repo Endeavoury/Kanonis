@@ -1,4 +1,4 @@
-@import '@endeavoury/kanosis-tokens/tokens.css';
+@import '@endeavoury/kanonis-tokens/tokens.css';
 
 :where(html) {
   background: var(--ds-color-bg-canvas);

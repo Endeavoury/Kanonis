@@ -1,6 +1,6 @@
 # Kanonis
 
-A standalone, framework-independent design system shared across the Kanonis product family. Lit Web Components are the only component implementation; Vanilla JavaScript, React, and Angular consume those same custom elements. Kanonis packages use the `@endeavoury/kanosis*` package family, while the component contracts and semantic tokens remain product-neutral.
+A standalone, framework-independent design system shared across the Kanonis product family. Lit Web Components are the only component implementation; Vanilla JavaScript, React, and Angular consume those same custom elements. Kanonis packages use the `@endeavoury/kanonis*` package family, while the component contracts and semantic tokens remain product-neutral.
 
 ![Oikonomis financial insights example](docs/images/finance-workspace-example.png)
 
@@ -90,7 +90,7 @@ creates a GitHub Release with checksummed npm tarballs and a loadable Linux
 AMD64 Docker archive.
 
 ```bash
-docker pull ghcr.io/endeavoury/kanosis-storybook:1.0.1
+docker pull ghcr.io/endeavoury/kanonis-storybook:1.0.1
 ```
 
 See [Versioning and publishing](docs/publishing.md) for the one-time package
@@ -119,18 +119,18 @@ Nomopsis/  → legal / legislation visualization
 ```
 
 Consumer applications can use the same packages from Vanilla, React, or
-Angular. The `@endeavoury/kanosis` package family provides the shared runtime;
+Angular. The `@endeavoury/kanonis` package family provides the shared runtime;
 product names do not change the stable `ds-*` element contracts.
 
 ## Packages
 
 | Package                       | Purpose                                                       |
 | ----------------------------- | ------------------------------------------------------------- |
-| `@endeavoury/kanosis-tokens`  | Semantic CSS tokens and typed token metadata                  |
-| `@endeavoury/kanosis-styles`  | Opt-in global CSS and shared Lit style foundations            |
-| `@endeavoury/kanosis`         | Web Component classes and registration entry points           |
-| `@endeavoury/kanosis-react`   | Thin typed React adapters around the Web Components           |
-| `@endeavoury/kanosis-angular` | Angular schema/registration helpers; no visual implementation |
+| `@endeavoury/kanonis-tokens`  | Semantic CSS tokens and typed token metadata                  |
+| `@endeavoury/kanonis-styles`  | Opt-in global CSS and shared Lit style foundations            |
+| `@endeavoury/kanonis`         | Web Component classes and registration entry points           |
+| `@endeavoury/kanonis-react`   | Thin typed React adapters around the Web Components           |
+| `@endeavoury/kanonis-angular` | Angular schema/registration helpers; no visual implementation |
 
 Published packages are hosted by GitHub Packages. Consumers authenticate with
 a token that has `read:packages`, then map the scope in their project or user
@@ -141,14 +141,14 @@ a token that has `read:packages`, then map the scope in their project or user
 ```
 
 ```bash
-npm install @endeavoury/kanosis
+npm install @endeavoury/kanonis
 ```
 
 ## Usage
 
 ```ts
-import '@endeavoury/kanosis';
-import '@endeavoury/kanosis/styles.css';
+import '@endeavoury/kanonis';
+import '@endeavoury/kanonis/styles.css';
 ```
 
 ```html
@@ -160,8 +160,8 @@ import '@endeavoury/kanosis/styles.css';
 Register only a group when bundle size matters:
 
 ```ts
-import '@endeavoury/kanosis/button';
-import '@endeavoury/kanosis/forms';
+import '@endeavoury/kanonis/button';
+import '@endeavoury/kanonis/forms';
 ```
 
 The global stylesheet is intentionally opt-in. It installs tokens, theme defaults, typography, page colors, a small box-sizing normalization, and a few documented layout helpers. It does not restyle arbitrary buttons, inputs, headings, or links.

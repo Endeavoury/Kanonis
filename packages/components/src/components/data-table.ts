@@ -1,6 +1,6 @@
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, state } from 'lit/decorators.js';
-import { a11yStyles, foundationStyles, spinnerStyles } from '@endeavoury/kanosis-styles';
+import { a11yStyles, foundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
 import { DsElement, type DsDensity } from '../core/ds-element.js';
 
 export interface DsTableColumn<Row extends Record<string, unknown> = Record<string, unknown>> {

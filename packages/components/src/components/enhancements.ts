@@ -6,7 +6,7 @@ import {
   mediaCompact,
   responsiveBreakpoints,
   surfaceStyles,
-} from '@endeavoury/kanosis-styles';
+} from '@endeavoury/kanonis-styles';
 import { announce } from '../core/accessibility.js';
 import { DsElement } from '../core/ds-element.js';
 
@@ -630,7 +630,7 @@ export class DsBrandMark extends DsElement {
       }
     `,
   ];
-  @property() name = 'Kanosis';
+  @property() name = 'Kanonis';
   @property({ type: Boolean }) symbolOnly = false;
   protected override render() {
     return html`<svg

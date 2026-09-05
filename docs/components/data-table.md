@@ -78,6 +78,6 @@ contract applies; do not put the table in a second horizontal scrolling containe
 - Storybook: `Components/Data Table`, including compact, empty/loading, and overflow examples.
 - Behavior and accessibility: `tests/components.test.ts` and `tests/accessibility.test.ts`.
 - Visual matrix: `tests/visual-regression.spec.ts`.
-- Vanilla: `@endeavoury/kanosis/data-table`; React: `DataTable`; Angular: registered custom element.
+- Vanilla: `@endeavoury/kanonis/data-table`; React: `DataTable`; Angular: registered custom element.
 - Migration: no deprecated table APIs. Treat `ds-data-grid` as experimental until editable-grid
   keyboard and selection models are specified.
