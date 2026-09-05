@@ -6,7 +6,7 @@ const box = (label: string) =>
   >
     ${label}
   </div>`;
-const meta: Meta = { title: 'Components/Layout', tags: ['autodocs'] };
+const meta: Meta = { title: 'Composites/Layout', tags: ['autodocs'] };
 export default meta;
 export const Stack: StoryObj = {
   render: () => html`<kanonis-stack gap="3">${box('First')}${box('Second')}${box('Third')}</kanonis-stack>`,

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 
 const meta: Meta = {
-  title: 'Components/Interaction',
+  title: 'Composites/Interaction',
   tags: ['autodocs'],
 };
 

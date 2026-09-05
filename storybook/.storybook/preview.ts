@@ -84,7 +84,7 @@ const preview: Preview = {
   parameters: {
     options: {
       storySort: {
-        order: ['Introduction', 'Foundation', 'Components', 'Patterns'],
+        order: ['Introduction', 'Foundation', 'Components', 'Composites', 'Patterns', 'Pages'],
       },
     },
     controls: { expanded: true },

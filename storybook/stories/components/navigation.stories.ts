@@ -14,7 +14,7 @@ const sidebar = () =>
     ><kanonis-status-badge slot="footer" tone="success">System online</kanonis-status-badge></kanonis-sidebar
   >`;
 const meta: Meta = {
-  title: 'Components/Navigation',
+  title: 'Composites/Navigation',
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },
 };

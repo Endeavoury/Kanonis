@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 
-const meta: Meta = { title: 'Components/Tree navigation', tags: ['autodocs'] };
+const meta: Meta = { title: 'Composites/Tree navigation', tags: ['autodocs'] };
 export default meta;
 
 export const NodeNavigation: StoryObj = {
