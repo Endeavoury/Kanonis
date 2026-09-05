@@ -159,6 +159,26 @@ export const Welcome: StoryObj = {
           color: var(--kanonis-color-text-secondary);
           font-size: 0.875rem;
         }
+        .constraint-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 12px;
+          margin-top: 20px;
+        }
+        .constraint {
+          padding: 18px;
+          border: 1px solid var(--kanonis-color-border-subtle);
+          border-radius: 12px;
+          background: var(--kanonis-color-bg-surface);
+        }
+        .constraint h3 {
+          margin-bottom: 8px;
+        }
+        .constraint p {
+          margin: 0;
+          color: var(--kanonis-color-text-secondary);
+          line-height: 1.55;
+        }
       </style>
       <main class="intro">
         <p class="eyebrow">Cross-framework Web Components</p>
@@ -254,6 +274,63 @@ export const Welcome: StoryObj = {
               <code>@endeavoury/kanonis-angular</code
               ><span>Angular registration and schema helpers.</span>
             </div>
+          </div>
+        </section>
+        <section class="section" aria-labelledby="architecture-heading">
+          <h2 id="architecture-heading">Architecture, constraints, and grouping</h2>
+          <p class="section-copy">
+            Storybook follows the same boundaries as the implementation. These constraints keep
+            the system predictable as new components, product integrations, and patterns are added.
+          </p>
+          <div class="constraint-grid">
+            <article class="constraint">
+              <h3>Introduction</h3>
+              <p>Explains Kanonis identity, principles, installation, integrations, and contribution guidance.</p>
+            </article>
+            <article class="constraint">
+              <h3>Foundation</h3>
+              <p>Documents tokens and rules: color, type, icons, scale, themes, accessibility, and motion.</p>
+            </article>
+            <article class="constraint">
+              <h3>Layout</h3>
+              <p>Defines page structure such as app shells, workspaces, pane windows, stacks, grids, and containers.</p>
+            </article>
+            <article class="constraint">
+              <h3>Components</h3>
+              <p>Contains reusable controls and UI elements that can usually render without a Kanonis parent.</p>
+            </article>
+            <article class="constraint">
+              <h3>Composites</h3>
+              <p>Shows parent-child assemblies such as tabs, menus, trees, navigation groups, and pane compositions.</p>
+            </article>
+            <article class="constraint">
+              <h3>Patterns</h3>
+              <p>Captures repeatable product workflows, including filtering, messaging, KPI layouts, and adaptive behavior.</p>
+            </article>
+            <article class="constraint">
+              <h3>Pages</h3>
+              <p>Demonstrates complete product screens assembled from Kanonis components and patterns.</p>
+            </article>
+            <article class="constraint">
+              <h3>Placement rule</h3>
+              <p>Use Components for a thing, Composites for a component relationship, Patterns for a workflow, and Pages for a screen.</p>
+            </article>
+            <article class="constraint">
+              <h3>Composition rule</h3>
+              <p>Parent components own coordination. Child components use their documented parent, slot, event, and keyboard contracts.</p>
+            </article>
+            <article class="constraint">
+              <h3>Layout rule</h3>
+              <p>Fit content first, preserve minimum usable widths, and introduce scrolling only when content cannot fit.</p>
+            </article>
+            <article class="constraint">
+              <h3>Overflow rule</h3>
+              <p>The pane window owns horizontal scrolling. Individual pane bodies own vertical scrolling. The document stays stable.</p>
+            </article>
+            <article class="constraint">
+              <h3>Accessibility rule</h3>
+              <p>Maintain semantic structure, one clear page heading, visible focus, keyboard access, and status text beyond color.</p>
+            </article>
           </div>
         </section>
         <section class="section" aria-labelledby="usage-heading">
