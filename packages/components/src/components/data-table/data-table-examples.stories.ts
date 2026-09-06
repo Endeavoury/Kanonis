@@ -54,7 +54,7 @@ const columns: KanonisTableColumn[] = [
   },
 ];
 const meta: Meta = {
-  title: 'Components/Data Table',
+  title: 'Components/kanonis-data-table',
   tags: ['autodocs'],
   argTypes: {
     density: { control: 'select', options: ['compact', 'comfortable'] },

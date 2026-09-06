@@ -47,7 +47,7 @@ const cases = [
   },
   {
     name: 'data-table-zoom-reflow',
-    story: 'components-data-table--long-content-and-overflow',
+    story: 'components-kanonis-data-table--long-content-and-overflow',
     width: 390,
     height: 844,
     globals: 'theme:light;contrast:more;brand:finance;direction:ltr',
