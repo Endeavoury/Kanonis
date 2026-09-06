@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisReorderList } from './reorder-list.js';
 import '@endeavoury/kanonis';
 
@@ -52,6 +53,15 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const AccessibleReordering: StoryObj = {
+  render: () =>
+    html`<kanonis-reorder-list label="Dashboard panels">
+      <kanonis-reorder-item value="summary" label="Summary">Summary</kanonis-reorder-item>
+      <kanonis-reorder-item value="activity" label="Activity">Activity</kanonis-reorder-item>
+      <kanonis-reorder-item value="audit" label="Audit log">Audit log</kanonis-reorder-item>
+    </kanonis-reorder-list>`,
 };
 
 void KanonisReorderList;

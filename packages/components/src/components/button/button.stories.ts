@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisButton } from './button.js';
 import '@endeavoury/kanonis';
 
@@ -81,6 +82,42 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const ButtonPlayground: StoryObj = {
+  args: { variant: 'primary', size: 'medium', disabled: false, loading: false },
+  render: (args) =>
+    html`<kanonis-button
+      variant=${args['variant']}
+      size=${args['size']}
+      ?disabled=${args['disabled']}
+      ?loading=${args['loading']}
+      ><kanonis-icon slot="prefix" name="plus"></kanonis-icon>Add transaction</kanonis-button
+    >`,
+};
+
+export const VariantsAndSizes: StoryObj = {
+  render: () =>
+    html`<kanonis-stack
+      >${['small', 'medium', 'large'].map((size) => html`<kanonis-inline>${['primary', 'secondary', 'ghost', 'danger'].map((variant) => html`<kanonis-button variant=${variant} size=${size}>${variant}</kanonis-button>`)}</kanonis-inline>`)}</kanonis-stack
+    >`,
+};
+
+export const LoadingDisabledAndWidth: StoryObj = {
+  render: () =>
+    html`<kanonis-stack
+      ><kanonis-inline
+        ><kanonis-button loading>Saving</kanonis-button
+        ><kanonis-button disabled>Unavailable</kanonis-button></kanonis-inline
+      ><kanonis-button full-width>Full-width action</kanonis-button></kanonis-stack
+    >`,
+};
+
+export const LinkButton: StoryObj = {
+  render: () =>
+    html`<kanonis-button href="/documentation" variant="secondary" target="_blank"
+      ><kanonis-icon slot="prefix" name="book"></kanonis-icon>Open documentation</kanonis-button
+    >`,
 };
 
 void KanonisButton;

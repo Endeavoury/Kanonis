@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisEmptyState } from './empty-state.js';
 import '@endeavoury/kanonis';
 
@@ -55,6 +56,16 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Empty: StoryObj = {
+  render: () =>
+    html`<kanonis-empty-state
+      heading="No transactions found"
+      description="Change the filters or import a bank statement to populate this view."
+      ><kanonis-icon slot="icon" name="table"></kanonis-icon
+      ><kanonis-button slot="actions">Import statement</kanonis-button></kanonis-empty-state
+    >`,
 };
 
 void KanonisEmptyState;

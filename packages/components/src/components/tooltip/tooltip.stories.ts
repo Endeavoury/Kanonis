@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisTooltip } from './tooltip.js';
 import '@endeavoury/kanonis';
 
@@ -61,6 +62,13 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Tooltip: StoryObj = {
+  render: () =>
+    html`<kanonis-tooltip content="Refresh balances from the connected bank">
+      <kanonis-icon-button label="Refresh balances" icon="refresh"></kanonis-icon-button>
+    </kanonis-tooltip>`,
 };
 
 void KanonisTooltip;

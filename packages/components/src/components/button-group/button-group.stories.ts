@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisButtonGroup } from './button-group.js';
 import '@endeavoury/kanonis';
 
@@ -53,6 +54,22 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const IconButtonAndGroup: StoryObj = {
+  render: () =>
+    html`<kanonis-inline
+      ><kanonis-icon-button label="Refresh"
+        ><kanonis-icon name="refresh"></kanonis-icon></kanonis-icon-button
+      ><kanonis-button-group label="Period navigation"
+        ><kanonis-icon-button label="Previous"
+          ><kanonis-icon name="chevron-left"></kanonis-icon></kanonis-icon-button
+        ><kanonis-button variant="secondary">August 2026</kanonis-button
+        ><kanonis-icon-button label="Next"
+          ><kanonis-icon
+            name="chevron-right"
+          ></kanonis-icon></kanonis-icon-button></kanonis-button-group
+    ></kanonis-inline>`,
 };
 
 void KanonisButtonGroup;

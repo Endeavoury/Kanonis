@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisLoadingState } from './loading-state.js';
 import '@endeavoury/kanonis';
 
@@ -53,6 +54,11 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Loading: StoryObj = {
+  render: () =>
+    html`<kanonis-loading-state label="Calculating financial overview"></kanonis-loading-state>`,
 };
 
 void KanonisLoadingState;

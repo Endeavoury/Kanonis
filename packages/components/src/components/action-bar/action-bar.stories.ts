@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisActionBar } from './action-bar.js';
 import '@endeavoury/kanonis';
 
@@ -55,6 +56,44 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const ActionComposition: StoryObj = {
+  render: () =>
+    html`<kanonis-stack gap="6">
+      <kanonis-segmented-control label="Report period" value="month">
+        <kanonis-segment value="week">Week</kanonis-segment>
+        <kanonis-segment value="month">Month</kanonis-segment>
+        <kanonis-segment value="year">Year</kanonis-segment>
+      </kanonis-segmented-control>
+
+      <kanonis-action-bar label="Record actions" collapse-at-compact>
+        <kanonis-button>Save</kanonis-button>
+        <kanonis-button variant="secondary" data-overflow>Duplicate</kanonis-button>
+        <kanonis-button variant="danger" data-overflow slot="overflow">Delete</kanonis-button>
+      </kanonis-action-bar>
+
+      <kanonis-split-button label="Publish" menu-label="Publishing options">
+        Publish
+        <kanonis-menu-item slot="menu" value="schedule">Schedule</kanonis-menu-item>
+        <kanonis-menu-item slot="menu" value="draft">Save draft</kanonis-menu-item>
+      </kanonis-split-button>
+
+      <kanonis-inline>
+        <kanonis-chip value="open" label="Open" selected dismissible>Open</kanonis-chip>
+        <kanonis-chip value="closed" label="Closed">Closed</kanonis-chip>
+      </kanonis-inline>
+
+      <kanonis-input-group label="Repository URL">
+        <span slot="prefix">https://</span>
+        <kanonis-input
+          label="Repository host"
+          hide-label
+          value="example.test/project"
+        ></kanonis-input>
+        <kanonis-button slot="suffix" variant="ghost">Copy</kanonis-button>
+      </kanonis-input-group>
+    </kanonis-stack>`,
 };
 
 void KanonisActionBar;

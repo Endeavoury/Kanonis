@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisAlert } from './alert.js';
 import '@endeavoury/kanonis';
 
@@ -61,6 +62,13 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Alerts: StoryObj = {
+  render: () =>
+    html`<kanonis-stack
+      >${['info', 'success', 'warning', 'danger'].map((tone) => html`<kanonis-alert tone=${tone} heading=${tone[0]!.toUpperCase() + tone.slice(1)} ?dismissible=${tone === 'info'}>A concise message explains what happened and what the user can do next.</kanonis-alert>`)}</kanonis-stack
+    >`,
 };
 
 void KanonisAlert;

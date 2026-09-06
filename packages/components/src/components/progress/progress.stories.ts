@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisProgress } from './progress.js';
 import '@endeavoury/kanonis';
 
@@ -65,6 +66,20 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Progress: StoryObj = {
+  render: () =>
+    html`<kanonis-stack>
+      <kanonis-progress label="Importing statements" value="68" show-value></kanonis-progress>
+      <kanonis-progress label="Validating transactions" tone="success"></kanonis-progress>
+      <kanonis-progress
+        label="Storage usage"
+        value="86"
+        tone="warning"
+        show-value
+      ></kanonis-progress>
+    </kanonis-stack>`,
 };
 
 void KanonisProgress;

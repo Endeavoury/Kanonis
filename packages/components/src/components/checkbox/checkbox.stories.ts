@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisCheckbox } from './checkbox.js';
 import '@endeavoury/kanonis';
 
@@ -65,6 +66,15 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Checkbox: StoryObj = {
+  render: () =>
+    html`<kanonis-stack
+      ><kanonis-checkbox checked>Apply to future matching entries</kanonis-checkbox
+      ><kanonis-checkbox required helpText="This choice is required">Accept policy</kanonis-checkbox
+      ><kanonis-checkbox disabled>Unavailable option</kanonis-checkbox></kanonis-stack
+    >`,
 };
 
 void KanonisCheckbox;

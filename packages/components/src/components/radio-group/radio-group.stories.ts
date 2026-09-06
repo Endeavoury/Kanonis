@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisRadioGroup } from './radio-group.js';
 import '@endeavoury/kanonis';
 
@@ -65,6 +66,15 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const RadioGroup: StoryObj = {
+  render: () =>
+    html`<kanonis-radio-group label="Export format" value="csv" required>
+      <kanonis-radio value="csv">CSV spreadsheet</kanonis-radio>
+      <kanonis-radio value="camt">CAMT XML</kanonis-radio>
+      <kanonis-radio value="pdf" disabled>PDF report (coming soon)</kanonis-radio>
+    </kanonis-radio-group>`,
 };
 
 void KanonisRadioGroup;

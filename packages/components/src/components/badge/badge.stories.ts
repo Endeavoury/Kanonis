@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisBadge } from './badge.js';
 import '@endeavoury/kanonis';
 
@@ -57,6 +58,13 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Badges: StoryObj = {
+  render: () =>
+    html`<kanonis-inline
+      >${['neutral', 'accent', 'success', 'warning', 'danger', 'info'].map((tone) => html`<kanonis-badge tone=${tone}>${tone}</kanonis-badge>`)}</kanonis-inline
+    >`,
 };
 
 void KanonisBadge;

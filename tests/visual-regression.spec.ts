@@ -3,21 +3,21 @@ import { expect, test } from '@playwright/test';
 const cases = [
   {
     name: 'actions-light-compact',
-    story: 'components-maturity-additions--action-composition',
+    story: 'components-kanonis-action-bar--action-composition',
     width: 390,
     height: 844,
     globals: 'theme:light;contrast:standard;brand:default;direction:ltr',
   },
   {
     name: 'actions-dark-expanded',
-    story: 'components-maturity-additions--action-composition',
+    story: 'components-kanonis-action-bar--action-composition',
     width: 900,
     height: 800,
     globals: 'theme:dark;contrast:standard;brand:default;direction:ltr',
   },
   {
     name: 'actions-high-contrast',
-    story: 'components-maturity-additions--action-composition',
+    story: 'components-kanonis-action-bar--action-composition',
     width: 768,
     height: 900,
     globals: 'theme:light;contrast:more;brand:default;direction:ltr',
@@ -25,7 +25,7 @@ const cases = [
   },
   {
     name: 'actions-rtl',
-    story: 'components-maturity-additions--action-composition',
+    story: 'components-kanonis-action-bar--action-composition',
     width: 768,
     height: 900,
     globals: 'theme:light;contrast:standard;brand:ontology;direction:rtl',

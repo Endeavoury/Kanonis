@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisMetric } from './metric.js';
 import '@endeavoury/kanonis';
 
@@ -63,6 +64,47 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Metrics: StoryObj = {
+  render: () =>
+    html`<kanonis-kpi-grid columns="4"
+      ><kanonis-metric
+        label="Income"
+        value="€6,200.00"
+        detail="External cash received"
+        tone="success"
+      ></kanonis-metric
+      ><kanonis-metric
+        label="Expenses"
+        value="€3,441.00"
+        detail="External spending"
+        tone="danger"
+      ></kanonis-metric
+      ><kanonis-metric
+        label="Savings"
+        value="+€2,759.00"
+        detail="44.5% savings rate"
+        tone="warning"
+      ></kanonis-metric
+      ><kanonis-metric
+        label="Transactions"
+        value="21"
+        detail="August 2026"
+        tone="accent"
+      ></kanonis-metric
+    ></kanonis-kpi-grid>`,
+};
+
+export const LongMetricContent: StoryObj = {
+  render: () =>
+    html`<div style="max-width:220px">
+      <kanonis-metric
+        label="Extremely descriptive metric label"
+        value="€123,456,789.12"
+        detail="Long supporting detail wraps without escaping the surface"
+      ></kanonis-metric>
+    </div>`,
 };
 
 void KanonisMetric;

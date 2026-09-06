@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisBrandMark } from './brand-mark.js';
 import '@endeavoury/kanonis';
 
@@ -55,6 +56,20 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const SharedAssets: StoryObj = {
+  render: () =>
+    html`<kanonis-stack gap="6">
+      <kanonis-brand-mark></kanonis-brand-mark>
+      <kanonis-inline>
+        <kanonis-illustration variant="empty" label="Empty archive"></kanonis-illustration>
+        <kanonis-illustration variant="search" label="Search"></kanonis-illustration>
+        <kanonis-illustration variant="success" label="Success"></kanonis-illustration>
+        <kanonis-illustration variant="error" label="Error"></kanonis-illustration>
+      </kanonis-inline>
+      <kanonis-live-region message="Example update completed"></kanonis-live-region>
+    </kanonis-stack>`,
 };
 
 void KanonisBrandMark;

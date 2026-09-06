@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisSearchInput } from './search-input.js';
 import '@endeavoury/kanonis';
 
@@ -53,6 +54,15 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const SearchInput: StoryObj = {
+  render: () =>
+    html`<kanonis-search-input
+      label="Search ledger"
+      placeholder="Counterparty, IBAN, reference or description"
+      value="Albert"
+    ></kanonis-search-input>`,
 };
 
 void KanonisSearchInput;

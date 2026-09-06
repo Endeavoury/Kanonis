@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisToast } from './toast.js';
 import '@endeavoury/kanonis';
 
@@ -67,6 +68,21 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Toasts: StoryObj = {
+  render: () =>
+    html`<div style="min-height:16rem">
+      <kanonis-toast-region label="Example notifications">
+        <kanonis-toast heading="Import completed" tone="success" duration="0">
+          24 new transactions were added.
+        </kanonis-toast>
+        <kanonis-toast heading="Connection needs attention" tone="warning" duration="0">
+          Reconnect the bank to refresh balances.
+          <kanonis-button slot="actions" size="small" variant="secondary">Reconnect</kanonis-button>
+        </kanonis-toast>
+      </kanonis-toast-region>
+    </div>`,
 };
 
 void KanonisToast;

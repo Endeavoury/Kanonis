@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisRange } from './range.js';
 import '@endeavoury/kanonis';
 
@@ -69,6 +70,18 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Range: StoryObj = {
+  render: () =>
+    html`<kanonis-range
+      label="Forecast confidence"
+      value="72"
+      min="0"
+      max="100"
+      show-value
+      helpText="Adjust the confidence threshold"
+    ></kanonis-range>`,
 };
 
 void KanonisRange;

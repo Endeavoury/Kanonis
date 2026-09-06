@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisMenu } from './menu.js';
 import '@endeavoury/kanonis';
 
@@ -61,6 +62,19 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Menu: StoryObj = {
+  render: () =>
+    html`<kanonis-menu label="Transaction actions">
+      <span slot="trigger">Actions</span>
+      <kanonis-menu-item value="edit"
+        ><kanonis-icon slot="icon" name="edit"></kanonis-icon>Edit</kanonis-menu-item
+      >
+      <kanonis-menu-item value="duplicate">Duplicate</kanonis-menu-item>
+      <kanonis-menu-item value="archive" disabled>Archive</kanonis-menu-item>
+      <kanonis-menu-item value="delete" tone="danger">Delete</kanonis-menu-item>
+    </kanonis-menu>`,
 };
 
 void KanonisMenu;

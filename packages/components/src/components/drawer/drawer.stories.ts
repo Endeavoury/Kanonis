@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisDrawer } from './drawer.js';
 import '@endeavoury/kanonis';
 
@@ -57,6 +58,22 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Drawer: StoryObj = {
+  render: () =>
+    html`<kanonis-stack>
+      <kanonis-button
+        @click=${() => (document.querySelector('kanonis-drawer') as HTMLElement & { show(): void })?.show()}
+        >Open account details</kanonis-button
+      >
+      <kanonis-drawer heading="Account details" description="Daily account · 4300">
+        <kanonis-stack>
+          <kanonis-metric label="Current balance" value="€ 4,285.30"></kanonis-metric>
+          <kanonis-disclosure summary="Identifiers">NL12 BANK 3456 7890 12</kanonis-disclosure>
+        </kanonis-stack>
+      </kanonis-drawer>
+    </kanonis-stack>`,
 };
 
 void KanonisDrawer;

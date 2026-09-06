@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisAvatar } from './avatar.js';
 import '@endeavoury/kanonis';
 
@@ -61,6 +62,15 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Avatars: StoryObj = {
+  render: () =>
+    html`<kanonis-inline
+      ><kanonis-avatar name="Roy Gerritse" size="small"></kanonis-avatar
+      ><kanonis-avatar name="Roy Gerritse"></kanonis-avatar
+      ><kanonis-avatar name="Oikonomis" size="large"></kanonis-avatar
+    ></kanonis-inline>`,
 };
 
 void KanonisAvatar;

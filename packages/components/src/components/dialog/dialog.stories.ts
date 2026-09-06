@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisDialog } from './dialog.js';
 import '@endeavoury/kanonis';
 
@@ -61,6 +62,23 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Dialog: StoryObj = {
+  render: () =>
+    html`<kanonis-stack>
+      <kanonis-button
+        @click=${() => (document.querySelector('kanonis-dialog') as HTMLElement & { show(): void })?.show()}
+        >Open confirmation</kanonis-button
+      >
+      <kanonis-dialog heading="Delete connection?" description="This action cannot be undone.">
+        Existing imported transactions remain available.
+        <kanonis-inline slot="footer">
+          <kanonis-button variant="secondary">Cancel</kanonis-button>
+          <kanonis-button variant="danger">Delete connection</kanonis-button>
+        </kanonis-inline>
+      </kanonis-dialog>
+    </kanonis-stack>`,
 };
 
 void KanonisDialog;

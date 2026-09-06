@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisSkeleton } from './skeleton.js';
 import '@endeavoury/kanonis';
 
@@ -61,6 +62,18 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Skeletons: StoryObj = {
+  render: () =>
+    html`<kanonis-inline wrap="false" align="start">
+      <kanonis-skeleton shape="circle" width="3rem" height="3rem"></kanonis-skeleton>
+      <kanonis-stack style="width:min(100%,28rem)" gap="2">
+        <kanonis-skeleton width="42%" height="1.1rem"></kanonis-skeleton>
+        <kanonis-skeleton width="100%"></kanonis-skeleton>
+        <kanonis-skeleton width="76%"></kanonis-skeleton>
+      </kanonis-stack>
+    </kanonis-inline>`,
 };
 
 void KanonisSkeleton;

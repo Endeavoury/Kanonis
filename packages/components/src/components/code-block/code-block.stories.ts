@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisCodeBlock } from './code-block.js';
 import '@endeavoury/kanonis';
 
@@ -57,6 +58,13 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const CodeBlock: StoryObj = {
+  render: () =>
+    html`<kanonis-code-block label="Canonical relationship" language="YAML"
+      >source: Customer target: Country cardinality: ManyToOne</kanonis-code-block
+    >`,
 };
 
 void KanonisCodeBlock;

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisFormField } from './form-field.js';
 import '@endeavoury/kanonis';
 
@@ -59,6 +60,17 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const FormFieldComposition: StoryObj = {
+  render: () =>
+    html`<kanonis-form-field
+      label="Composed field"
+      helpText="Form field can arrange a custom or native control"
+      ><input
+        style="height:40px;border:1px solid var(--kanonis-color-border-default);border-radius:7px;background:var(--kanonis-color-bg-surface);color:var(--kanonis-color-text-primary);padding:0 12px"
+        value="Native consumer control"
+    /></kanonis-form-field>`,
 };
 
 void KanonisFormField;

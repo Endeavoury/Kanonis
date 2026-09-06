@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisCard } from './card.js';
 import '@endeavoury/kanonis';
 
@@ -57,6 +58,28 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const CardsAndPanels: StoryObj = {
+  render: () =>
+    html`<kanonis-grid columns="2" responsive
+      ><kanonis-card
+        ><strong slot="header">Account</strong
+        ><kanonis-badge slot="actions" tone="success">Active</kanonis-badge>
+        <p>Daily account · NL91 •••• 4300</p>
+        <strong>€12,840.22</strong><span slot="footer">Updated a minute ago</span></kanonis-card
+      ><kanonis-panel
+        eyebrow="Analytics"
+        heading="Spending by category"
+        description="A technical panel with a stable action slot"
+        ><kanonis-button slot="actions" variant="secondary" size="small"
+          >View details</kanonis-button
+        >
+        <p>
+          Charts and application-specific visualizations compose inside this neutral surface.
+        </p></kanonis-panel
+      ></kanonis-grid
+    >`,
 };
 
 void KanonisCard;

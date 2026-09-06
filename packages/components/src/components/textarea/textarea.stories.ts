@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisTextarea } from './textarea.js';
 import '@endeavoury/kanonis';
 
@@ -75,6 +76,16 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Textarea: StoryObj = {
+  render: () =>
+    html`<kanonis-textarea
+      label="Internal note"
+      placeholder="Add context for this transaction"
+      helpText="Visible only to your finance team"
+      maxlength="500"
+    ></kanonis-textarea>`,
 };
 
 void KanonisTextarea;

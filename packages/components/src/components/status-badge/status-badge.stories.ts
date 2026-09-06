@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisStatusBadge } from './status-badge.js';
 import '@endeavoury/kanonis';
 
@@ -57,6 +58,16 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const StatusBadges: StoryObj = {
+  render: () =>
+    html`<kanonis-inline
+      ><kanonis-status-badge tone="success">Online</kanonis-status-badge
+      ><kanonis-status-badge tone="warning">Sync pending</kanonis-status-badge
+      ><kanonis-status-badge tone="danger">Offline</kanonis-status-badge
+      ><kanonis-status-badge>Unknown</kanonis-status-badge></kanonis-inline
+    >`,
 };
 
 void KanonisStatusBadge;

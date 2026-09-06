@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisSelect } from './select.js';
 import '@endeavoury/kanonis';
 
@@ -75,6 +76,22 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+const accountOptions = [
+  { label: 'All accounts', value: 'all' },
+  { label: 'Daily account · 4300', value: 'daily' },
+  { label: 'Savings · 9308', value: 'savings' },
+];
+
+export const Select: StoryObj = {
+  render: () =>
+    html`<kanonis-select
+      label="Account"
+      value="daily"
+      .options=${accountOptions}
+      helpText="Choose the account scope"
+    ></kanonis-select>`,
 };
 
 void KanonisSelect;

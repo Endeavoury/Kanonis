@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisDescriptionList } from './description-list.js';
 import '@endeavoury/kanonis';
 
@@ -55,6 +56,18 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const StructuredMetadata: StoryObj = {
+  render: () =>
+    html`<kanonis-description-list
+      .items=${[
+        { term: 'Authoritative Node', value: 'Commercial master data' },
+        { term: 'Object URI', value: 'https://customer.example/id/customer/42' },
+        { term: 'Schema version', value: '2.4.0' },
+        { term: 'Steward', value: 'Data Governance' },
+      ]}
+    ></kanonis-description-list>`,
 };
 
 void KanonisDescriptionList;

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisDropZone } from './drop-zone.js';
 import '@endeavoury/kanonis';
 
@@ -69,6 +70,18 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const DropZone: StoryObj = {
+  render: () =>
+    html`<kanonis-drop-zone
+      label="Choose or drop CAMT files"
+      hint="XML or ZIP · up to 10 files"
+      accept=".xml,.zip,application/xml,application/zip"
+      max-files="10"
+      multiple
+      ><kanonis-icon slot="icon" name="upload"></kanonis-icon
+    ></kanonis-drop-zone>`,
 };
 
 void KanonisDropZone;

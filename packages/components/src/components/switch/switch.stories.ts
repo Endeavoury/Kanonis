@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
 import { KanonisSwitch } from './switch.js';
 import '@endeavoury/kanonis';
 
@@ -63,6 +64,16 @@ export const Usage: Story = {
     container.append(component, events);
     return container;
   },
+};
+
+export const Switch: StoryObj = {
+  render: () =>
+    html`<kanonis-stack>
+      <kanonis-switch checked helpText="Receive an email after every successful import"
+        >Import notifications</kanonis-switch
+      >
+      <kanonis-switch disabled>Managed by your organization</kanonis-switch>
+    </kanonis-stack>`,
 };
 
 void KanonisSwitch;
