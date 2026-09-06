@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTimeline } from '@endeavoury/kanonis/classes';
+import { KanonisTimeline } from '../../../../packages/components/src/components/timeline/timeline.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-timeline', tags: ['autodocs'] };

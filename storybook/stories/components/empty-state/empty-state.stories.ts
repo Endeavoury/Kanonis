@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisEmptyState } from '@endeavoury/kanonis/classes';
+import { KanonisEmptyState } from '../../../../packages/components/src/components/empty-state/empty-state.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-empty-state', tags: ['autodocs'] };

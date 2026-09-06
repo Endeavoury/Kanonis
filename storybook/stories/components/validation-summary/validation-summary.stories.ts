@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisValidationSummary } from '@endeavoury/kanonis/classes';
+import { KanonisValidationSummary } from '../../../../packages/components/src/components/validation-summary/validation-summary.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-validation-summary', tags: ['autodocs'] };

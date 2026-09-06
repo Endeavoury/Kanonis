@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTimePicker } from '@endeavoury/kanonis/classes';
+import { KanonisTimePicker } from '../../../../packages/components/src/components/time-picker/time-picker.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-time-picker', tags: ['autodocs'] };

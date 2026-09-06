@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTree } from '@endeavoury/kanonis/classes';
+import { KanonisTree } from '../../../../packages/components/src/components/tree/tree.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-tree', tags: ['autodocs'] };

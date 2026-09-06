@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisGlobalSearch } from '@endeavoury/kanonis/classes';
+import { KanonisGlobalSearch } from '../../../../packages/components/src/components/global-search/global-search.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-global-search', tags: ['autodocs'] };

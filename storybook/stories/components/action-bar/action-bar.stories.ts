@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisActionBar } from '@endeavoury/kanonis/classes';
+import { KanonisActionBar } from '../../../../packages/components/src/components/action-bar/action-bar.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-action-bar', tags: ['autodocs'] };

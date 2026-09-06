@@ -1,7 +1,8 @@
+import { foundationStyles } from '@endeavoury/kanonis-styles';
 import { css, html, nothing, svg, type CSSResultGroup, type TemplateResult } from 'lit';
 import { property } from 'lit/decorators.js';
-import { foundationStyles } from '@endeavoury/kanonis-styles';
 import { KanonisElement } from '../../core/kanonis-element.js';
+
 
 export type KanonisIconName =
   | 'plus'
@@ -33,7 +34,8 @@ export type KanonisIconName =
   | 'edit'
   | 'trash'
   | 'arrow-right';
-const paths: Record<KanonisIconName, TemplateResult> = {
+
+export const paths: Record<KanonisIconName, TemplateResult> = {
   plus: svg`<path d="M12 5v14M5 12h14" />`,
   search: svg`<circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" />`,
   refresh: svg`<path d="M20 11a8 8 0 1 0-2 5.5M20 4v7h-7" />`,

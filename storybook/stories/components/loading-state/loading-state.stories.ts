@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisLoadingState } from '@endeavoury/kanonis/classes';
+import { KanonisLoadingState } from '../../../../packages/components/src/components/loading-state/loading-state.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-loading-state', tags: ['autodocs'] };

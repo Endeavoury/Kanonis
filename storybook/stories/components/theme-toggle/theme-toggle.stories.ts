@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisThemeToggle } from '@endeavoury/kanonis/classes';
+import { KanonisThemeToggle } from '../../../../packages/components/src/components/theme-toggle/theme-toggle.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-theme-toggle', tags: ['autodocs'] };

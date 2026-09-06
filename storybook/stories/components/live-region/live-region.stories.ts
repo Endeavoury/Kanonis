@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisLiveRegion } from '@endeavoury/kanonis/classes';
+import { KanonisLiveRegion } from '../../../../packages/components/src/components/live-region/live-region.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-live-region', tags: ['autodocs'] };

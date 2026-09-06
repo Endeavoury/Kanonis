@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisMaintenanceNotice } from '@endeavoury/kanonis/classes';
+import { KanonisMaintenanceNotice } from '../../../../packages/components/src/components/maintenance-notice/maintenance-notice.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-maintenance-notice', tags: ['autodocs'] };

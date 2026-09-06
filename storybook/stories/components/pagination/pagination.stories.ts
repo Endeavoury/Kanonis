@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisPagination } from '@endeavoury/kanonis/classes';
+import { KanonisPagination } from '../../../../packages/components/src/components/pagination/pagination.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-pagination', tags: ['autodocs'] };

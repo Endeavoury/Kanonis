@@ -1,2 +1,13 @@
-// Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisJobStatus } from '../enterprise-p2/enterprise-p2.js';
+import { html } from 'lit';
+import { property } from 'lit/decorators.js';
+import { KanonisProgress } from '../progress/progress.js';
+
+
+export class KanonisJobStatus extends KanonisProgress {
+  @property() status = 'Processing';
+  protected override render() {
+    return html`<div aria-label=${this.status}>
+      <strong>${this.status}</strong>${super.render()}
+    </div>`;
+  }
+}

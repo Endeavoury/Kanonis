@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisDrawer } from '@endeavoury/kanonis/classes';
+import { KanonisDrawer } from '../../../../packages/components/src/components/drawer/drawer.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-drawer', tags: ['autodocs'] };

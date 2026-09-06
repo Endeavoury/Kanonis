@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisActivityFeed } from '@endeavoury/kanonis/classes';
+import { KanonisActivityFeed } from '../../../../packages/components/src/components/activity-feed/activity-feed.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-activity-feed', tags: ['autodocs'] };

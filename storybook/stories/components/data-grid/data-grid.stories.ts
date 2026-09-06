@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisDataGrid } from '@endeavoury/kanonis/classes';
+import { KanonisDataGrid } from '../../../../packages/components/src/components/data-grid/data-grid.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-data-grid', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisSwitch } from '@endeavoury/kanonis/classes';
+import { KanonisSwitch } from '../../../../packages/components/src/components/switch/switch.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-switch', tags: ['autodocs'] };

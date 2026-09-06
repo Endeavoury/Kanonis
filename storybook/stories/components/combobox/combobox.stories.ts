@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisCombobox } from '@endeavoury/kanonis/classes';
+import { KanonisCombobox } from '../../../../packages/components/src/components/combobox/combobox.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-combobox', tags: ['autodocs'] };

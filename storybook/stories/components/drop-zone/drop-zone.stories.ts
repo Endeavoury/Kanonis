@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisDropZone } from '@endeavoury/kanonis/classes';
+import { KanonisDropZone } from '../../../../packages/components/src/components/drop-zone/drop-zone.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-drop-zone', tags: ['autodocs'] };

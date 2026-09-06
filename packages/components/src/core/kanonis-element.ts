@@ -1,5 +1,6 @@
 import { LitElement } from 'lit';
 
+
 export class KanonisElement extends LitElement {
   protected emit<T>(name: string, detail: T): CustomEvent<T> {
     const event = new CustomEvent<T>(name, { detail, bubbles: true, composed: true });

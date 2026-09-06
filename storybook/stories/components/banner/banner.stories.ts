@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisBanner } from '@endeavoury/kanonis/classes';
+import { KanonisBanner } from '../../../../packages/components/src/components/banner/banner.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-banner', tags: ['autodocs'] };

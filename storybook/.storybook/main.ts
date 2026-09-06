@@ -3,6 +3,5 @@ const config: StorybookConfig = {
   stories: ['../stories/**/*.stories.@(ts|mdx)'],
   addons: ['@storybook/addon-docs', '@storybook/addon-a11y'],
   framework: { name: '@storybook/web-components-vite', options: {} },
-  docs: { autodocs: 'tag' },
 };
 export default config;

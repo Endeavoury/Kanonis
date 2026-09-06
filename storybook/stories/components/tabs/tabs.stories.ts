@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTabs } from '@endeavoury/kanonis/classes';
+import { KanonisTabs } from '../../../../packages/components/src/components/tabs/tabs.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-tabs', tags: ['autodocs'] };

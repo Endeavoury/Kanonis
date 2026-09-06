@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisToastRegion } from '@endeavoury/kanonis/classes';
+import { KanonisToastRegion } from '../../../../packages/components/src/components/toast-region/toast-region.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-toast-region', tags: ['autodocs'] };

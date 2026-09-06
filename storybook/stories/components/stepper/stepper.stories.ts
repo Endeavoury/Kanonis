@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisStepper } from '@endeavoury/kanonis/classes';
+import { KanonisStepper } from '../../../../packages/components/src/components/stepper/stepper.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-stepper', tags: ['autodocs'] };

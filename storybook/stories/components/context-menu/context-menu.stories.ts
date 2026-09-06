@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisContextMenu } from '@endeavoury/kanonis/classes';
+import { KanonisContextMenu } from '../../../../packages/components/src/components/context-menu/context-menu.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-context-menu', tags: ['autodocs'] };

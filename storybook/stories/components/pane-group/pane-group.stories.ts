@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisPaneGroup } from '@endeavoury/kanonis/classes';
+import { KanonisPaneGroup } from '../../../../packages/components/src/components/pane-group/pane-group.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-pane-group', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisWorkspaceHeader } from '@endeavoury/kanonis/classes';
+import { KanonisWorkspaceHeader } from '../../../../packages/components/src/components/workspace-header/workspace-header.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-workspace-header', tags: ['autodocs'] };

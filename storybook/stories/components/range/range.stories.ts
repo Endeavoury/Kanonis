@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisRange } from '@endeavoury/kanonis/classes';
+import { KanonisRange } from '../../../../packages/components/src/components/range/range.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-range', tags: ['autodocs'] };

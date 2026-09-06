@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisMetric } from '@endeavoury/kanonis/classes';
+import { KanonisMetric } from '../../../../packages/components/src/components/metric/metric.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-metric', tags: ['autodocs'] };

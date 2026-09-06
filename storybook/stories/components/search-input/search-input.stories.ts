@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisSearchInput } from '@endeavoury/kanonis/classes';
+import { KanonisSearchInput } from '../../../../packages/components/src/components/search-input/search-input.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-search-input', tags: ['autodocs'] };

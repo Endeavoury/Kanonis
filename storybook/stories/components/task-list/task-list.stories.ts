@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTaskList } from '@endeavoury/kanonis/classes';
+import { KanonisTaskList } from '../../../../packages/components/src/components/task-list/task-list.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-task-list', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisDetailSidebar } from '@endeavoury/kanonis/classes';
+import { KanonisDetailSidebar } from '../../../../packages/components/src/components/detail-sidebar/detail-sidebar.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-detail-sidebar', tags: ['autodocs'] };

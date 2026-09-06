@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTenantSwitcher } from '@endeavoury/kanonis/classes';
+import { KanonisTenantSwitcher } from '../../../../packages/components/src/components/tenant-switcher/tenant-switcher.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-tenant-switcher', tags: ['autodocs'] };

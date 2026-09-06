@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisRecordHeader } from '@endeavoury/kanonis/classes';
+import { KanonisRecordHeader } from '../../../../packages/components/src/components/record-header/record-header.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-record-header', tags: ['autodocs'] };

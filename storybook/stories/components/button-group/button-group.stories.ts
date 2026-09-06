@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisButtonGroup } from '@endeavoury/kanonis/classes';
+import { KanonisButtonGroup } from '../../../../packages/components/src/components/button-group/button-group.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-button-group', tags: ['autodocs'] };

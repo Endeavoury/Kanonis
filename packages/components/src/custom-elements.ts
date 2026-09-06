@@ -1,19 +1,9 @@
-import type { KanonisButton, KanonisButtonGroup, KanonisIconButton } from './components/button/button.js';
-import type { KanonisIcon } from './components/icon/icon.js';
 import type {
-  KanonisCheckbox,
-  KanonisFormField,
-  KanonisInput,
-  KanonisSearchInput,
-  KanonisSelect,
-} from './components/forms/forms.js';
-import type {
-  KanonisRadio,
-  KanonisRadioGroup,
-  KanonisRange,
-  KanonisSwitch,
-  KanonisTextarea,
-} from './components/secondary-forms/secondary-forms.js';
+  KanonisButton,
+  KanonisButtonGroup,
+  KanonisIconButton,
+} from './components/button/index.js';
+import type { KanonisDataTable } from './components/data-table/index.js';
 import type {
   KanonisAvatar,
   KanonisBadge,
@@ -23,49 +13,20 @@ import type {
   KanonisMetric,
   KanonisPanel,
   KanonisStatusBadge,
-} from './components/display/display.js';
+} from './components/display/index.js';
 import type {
-  KanonisAlert,
-  KanonisEmptyState,
-  KanonisLoadingState,
-  KanonisProgress,
-  KanonisSkeleton,
-  KanonisToast,
-  KanonisToastRegion,
-} from './components/feedback/feedback.js';
-import type { KanonisDisclosure, KanonisTab, KanonisTabs, KanonisThemeToggle } from './components/interaction/interaction.js';
-import type { KanonisDialog, KanonisDrawer, KanonisMenu, KanonisMenuItem, KanonisTooltip } from './components/overlays/overlays.js';
-import type { KanonisDropZone } from './components/upload/upload.js';
-import type { KanonisDataTable } from './components/data-table/data-table.js';
-import type {
-  KanonisContainer,
-  KanonisDetailSidebar,
-  KanonisGrid,
-  KanonisInline,
-  KanonisInspectorPane,
-  KanonisPane,
-  KanonisPaneContent,
-  KanonisPaneGroup,
-  KanonisPaneStack,
-  KanonisPaneHeader,
-  KanonisPaneWindow,
-  KanonisPageHeader,
-  KanonisScrollablePane,
-  KanonisStack,
-  KanonisWorkspace,
-  KanonisWorkspaceHeader,
-} from './components/layout/layout.js';
-import type { KanonisAppShell, KanonisSidebar, KanonisSidebarItem } from './components/navigation/navigation.js';
-import type {
-  KanonisBulkActions,
-  KanonisColumnManager,
-  KanonisCombobox,
-  KanonisDataGrid,
-  KanonisFilterBuilder,
-  KanonisSavedView,
-  KanonisValidationSummary,
-  KanonisViewToolbar,
-} from './components/enterprise/enterprise.js';
+  KanonisActionBar,
+  KanonisBrandMark,
+  KanonisChip,
+  KanonisIllustration,
+  KanonisInputGroup,
+  KanonisLiveRegion,
+  KanonisReorderItem,
+  KanonisReorderList,
+  KanonisSegment,
+  KanonisSegmentedControl,
+  KanonisSplitButton,
+} from './components/enhancements/index.js';
 import type {
   KanonisBanner,
   KanonisCommandPalette,
@@ -79,7 +40,7 @@ import type {
   KanonisTenantSwitcher,
   KanonisUserMenu,
   KanonisWorkspaceTabs,
-} from './components/enterprise-p1/enterprise-p1.js';
+} from './components/enterprise-p1/index.js';
 import type {
   KanonisActivityFeed,
   KanonisApprovalFlow,
@@ -93,42 +54,101 @@ import type {
   KanonisTaskList,
   KanonisTimePicker,
   KanonisTimeline,
-} from './components/enterprise-p2/enterprise-p2.js';
+} from './components/enterprise-p2/index.js';
 import type {
   KanonisAuditLog,
-  KanonisPermissionMatrix,
-  KanonisRoleBadge,
-  KanonisDiffViewer,
+  KanonisCoachmark,
   KanonisCodeEditor,
+  KanonisCompareView,
+  KanonisDiffViewer,
+  KanonisHelpPanel,
   KanonisJsonEditor,
   KanonisMaintenanceNotice,
-  KanonisHelpPanel,
+  KanonisPermissionMatrix,
+  KanonisRoleBadge,
   KanonisTour,
-  KanonisCoachmark,
-  KanonisCompareView,
-} from './components/enterprise-p3/enterprise-p3.js';
+} from './components/enterprise-p3/index.js';
+import type {
+  KanonisBulkActions,
+  KanonisColumnManager,
+  KanonisCombobox,
+  KanonisDataGrid,
+  KanonisFilterBuilder,
+  KanonisSavedView,
+  KanonisValidationSummary,
+  KanonisViewToolbar,
+} from './components/enterprise/index.js';
+import type {
+  KanonisAlert,
+  KanonisEmptyState,
+  KanonisLoadingState,
+  KanonisProgress,
+  KanonisSkeleton,
+  KanonisToast,
+  KanonisToastRegion,
+} from './components/feedback/index.js';
+import type {
+  KanonisCheckbox,
+  KanonisFormField,
+  KanonisInput,
+  KanonisSearchInput,
+  KanonisSelect,
+} from './components/forms/index.js';
+import type { KanonisIcon } from './components/icon/index.js';
+import type {
+  KanonisDisclosure,
+  KanonisTab,
+  KanonisTabs,
+  KanonisThemeToggle,
+} from './components/interaction/index.js';
+import type {
+  KanonisContainer,
+  KanonisDetailSidebar,
+  KanonisGrid,
+  KanonisInline,
+  KanonisInspectorPane,
+  KanonisPageHeader,
+  KanonisPane,
+  KanonisPaneContent,
+  KanonisPaneGroup,
+  KanonisPaneHeader,
+  KanonisPaneStack,
+  KanonisPaneWindow,
+  KanonisScrollablePane,
+  KanonisStack,
+  KanonisWorkspace,
+  KanonisWorkspaceHeader,
+} from './components/layout/index.js';
 import type {
   KanonisBreadcrumb,
   KanonisBreadcrumbs,
   KanonisList,
   KanonisListItem,
   KanonisPagination,
-} from './components/navigation-extras/navigation-extras.js';
-import type { KanonisFilterBar, KanonisKpiGrid } from './components/patterns/patterns.js';
-import type { KanonisTree, KanonisTreeItem } from './components/tree/tree.js';
+} from './components/navigation-extras/index.js';
 import type {
-  KanonisActionBar,
-  KanonisBrandMark,
-  KanonisChip,
-  KanonisIllustration,
-  KanonisInputGroup,
-  KanonisLiveRegion,
-  KanonisReorderItem,
-  KanonisReorderList,
-  KanonisSegment,
-  KanonisSegmentedControl,
-  KanonisSplitButton,
-} from './components/enhancements/enhancements.js';
+  KanonisAppShell,
+  KanonisSidebar,
+  KanonisSidebarItem,
+} from './components/navigation/index.js';
+import type {
+  KanonisDialog,
+  KanonisDrawer,
+  KanonisMenu,
+  KanonisMenuItem,
+  KanonisTooltip,
+} from './components/overlays/index.js';
+import type { KanonisFilterBar, KanonisKpiGrid } from './components/patterns/index.js';
+import type {
+  KanonisRadio,
+  KanonisRadioGroup,
+  KanonisRange,
+  KanonisSwitch,
+  KanonisTextarea,
+} from './components/secondary-forms/index.js';
+import type { KanonisTree, KanonisTreeItem } from './components/tree/index.js';
+import type { KanonisDropZone } from './components/upload/index.js';
+
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -257,4 +277,4 @@ declare global {
   }
 }
 
-export {};
+export { };

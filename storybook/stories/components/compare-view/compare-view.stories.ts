@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisCompareView } from '@endeavoury/kanonis/classes';
+import { KanonisCompareView } from '../../../../packages/components/src/components/compare-view/compare-view.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-compare-view', tags: ['autodocs'] };

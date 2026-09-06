@@ -1,4 +1,3 @@
-import { defineComponent } from '../core/kanonis-element.js';
 import {
   KanonisBulkActions,
   KanonisColumnManager,
@@ -8,7 +7,9 @@ import {
   KanonisSavedView,
   KanonisValidationSummary,
   KanonisViewToolbar,
-} from '../components/enterprise/enterprise.js';
+} from '../components/enterprise/index.js';
+import { defineComponent } from '../core/kanonis-element.js';
+
 
 defineComponent('kanonis-data-grid', KanonisDataGrid);
 defineComponent('kanonis-filter-builder', KanonisFilterBuilder);
@@ -19,21 +20,21 @@ defineComponent('kanonis-saved-view', KanonisSavedView);
 defineComponent('kanonis-combobox', KanonisCombobox);
 defineComponent('kanonis-validation-summary', KanonisValidationSummary);
 
-export {
-  KanonisBulkActions,
-  KanonisColumnManager,
-  KanonisCombobox,
-  KanonisDataGrid,
-  KanonisFilterBuilder,
-  KanonisSavedView,
-  KanonisValidationSummary,
-  KanonisViewToolbar,
-};
 export type {
-  KanonisColumnOption,
-  KanonisComboOption,
-  KanonisFilterField,
-  KanonisFilterRule,
-  KanonisSavedViewOption,
-  KanonisValidationError,
-} from '../components/enterprise/enterprise.js';
+KanonisColumnOption,
+KanonisComboOption,
+KanonisFilterField,
+KanonisFilterRule,
+KanonisSavedViewOption,
+KanonisValidationError
+} from '../components/enterprise/index.js';
+export {
+KanonisBulkActions,
+KanonisColumnManager,
+KanonisCombobox,
+KanonisDataGrid,
+KanonisFilterBuilder,
+KanonisSavedView,
+KanonisValidationSummary,
+KanonisViewToolbar
+};

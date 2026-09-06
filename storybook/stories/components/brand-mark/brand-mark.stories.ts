@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisBrandMark } from '@endeavoury/kanonis/classes';
+import { KanonisBrandMark } from '../../../../packages/components/src/components/brand-mark/brand-mark.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-brand-mark', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisSplitButton } from '@endeavoury/kanonis/classes';
+import { KanonisSplitButton } from '../../../../packages/components/src/components/split-button/split-button.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-split-button', tags: ['autodocs'] };

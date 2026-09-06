@@ -1,2 +1,17 @@
-// Transitional per-component entry point. Implementation remains in the grouped Lit module until template/style extraction.
-export { KanonisJsonEditor } from '../enterprise-p3/enterprise-p3.js';
+import { html, nothing } from 'lit';
+import { property } from 'lit/decorators.js';
+import { KanonisCodeEditor } from '../code-editor/code-editor.js';
+
+
+export class KanonisJsonEditor extends KanonisCodeEditor {
+  @property() invalidMessage = '';
+  protected override render() {
+    let invalid = this.invalidMessage;
+    try {
+      if (this.value.trim()) JSON.parse(this.value);
+    } catch {
+      invalid = invalid || 'Invalid JSON';
+    }
+    return html`${super.render()}${invalid ? html`<p role="alert" style="color:var(--kanonis-color-danger);font-size:var(--kanonis-font-size-sm)">${invalid}</p>` : nothing}`;
+  }
+}

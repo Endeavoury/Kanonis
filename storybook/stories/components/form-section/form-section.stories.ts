@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisFormSection } from '@endeavoury/kanonis/classes';
+import { KanonisFormSection } from '../../../../packages/components/src/components/form-section/form-section.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-form-section', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisSegment } from '@endeavoury/kanonis/classes';
+import { KanonisSegment } from '../../../../packages/components/src/components/segment/segment.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-segment', tags: ['autodocs'] };

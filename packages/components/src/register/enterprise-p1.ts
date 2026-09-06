@@ -1,4 +1,3 @@
-import { defineComponent } from '../core/kanonis-element.js';
 import {
   KanonisBanner,
   KanonisCommandPalette,
@@ -12,7 +11,9 @@ import {
   KanonisTenantSwitcher,
   KanonisUserMenu,
   KanonisWorkspaceTabs,
-} from '../components/enterprise-p1/enterprise-p1.js';
+} from '../components/enterprise-p1/index.js';
+import { defineComponent } from '../core/kanonis-element.js';
+
 
 defineComponent('kanonis-command-palette', KanonisCommandPalette);
 defineComponent('kanonis-global-search', KanonisGlobalSearch);
@@ -27,24 +28,24 @@ defineComponent('kanonis-detail-list', KanonisDetailList);
 defineComponent('kanonis-notification-center', KanonisNotificationCenter);
 defineComponent('kanonis-banner', KanonisBanner);
 
-export {
-  KanonisBanner,
-  KanonisCommandPalette,
-  KanonisContextMenu,
-  KanonisDetailList,
-  KanonisGlobalSearch,
-  KanonisNavigationGroup,
-  KanonisNotificationCenter,
-  KanonisQuickActions,
-  KanonisRecordHeader,
-  KanonisTenantSwitcher,
-  KanonisUserMenu,
-  KanonisWorkspaceTabs,
-};
 export type {
-  KanonisCommand,
-  KanonisDetailItem,
-  KanonisNotification,
-  KanonisTenant,
-  KanonisWorkspaceTab,
-} from '../components/enterprise-p1/enterprise-p1.js';
+KanonisCommand,
+KanonisDetailItem,
+KanonisNotification,
+KanonisTenant,
+KanonisWorkspaceTab
+} from '../components/enterprise-p1/index.js';
+export {
+KanonisBanner,
+KanonisCommandPalette,
+KanonisContextMenu,
+KanonisDetailList,
+KanonisGlobalSearch,
+KanonisNavigationGroup,
+KanonisNotificationCenter,
+KanonisQuickActions,
+KanonisRecordHeader,
+KanonisTenantSwitcher,
+KanonisUserMenu,
+KanonisWorkspaceTabs
+};

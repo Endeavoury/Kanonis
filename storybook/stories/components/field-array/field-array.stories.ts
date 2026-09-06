@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisFieldArray } from '@endeavoury/kanonis/classes';
+import { KanonisFieldArray } from '../../../../packages/components/src/components/field-array/field-array.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-field-array', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisKpiGrid } from '@endeavoury/kanonis/classes';
+import { KanonisKpiGrid } from '../../../../packages/components/src/components/kpi-grid/kpi-grid.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-kpi-grid', tags: ['autodocs'] };

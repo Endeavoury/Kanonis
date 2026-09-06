@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisQuickActions } from '@endeavoury/kanonis/classes';
+import { KanonisQuickActions } from '../../../../packages/components/src/components/quick-actions/quick-actions.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-quick-actions', tags: ['autodocs'] };

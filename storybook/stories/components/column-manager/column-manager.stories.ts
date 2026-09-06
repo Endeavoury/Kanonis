@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisColumnManager } from '@endeavoury/kanonis/classes';
+import { KanonisColumnManager } from '../../../../packages/components/src/components/column-manager/column-manager.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-column-manager', tags: ['autodocs'] };

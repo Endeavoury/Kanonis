@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisFormField } from '@endeavoury/kanonis/classes';
+import { KanonisFormField } from '../../../../packages/components/src/components/form-field/form-field.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-form-field', tags: ['autodocs'] };

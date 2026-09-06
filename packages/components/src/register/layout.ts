@@ -1,22 +1,23 @@
-import { defineComponent } from '../core/kanonis-element.js';
 import {
   KanonisContainer,
   KanonisDetailSidebar,
   KanonisGrid,
   KanonisInline,
   KanonisInspectorPane,
+  KanonisPageHeader,
   KanonisPane,
   KanonisPaneContent,
   KanonisPaneGroup,
   KanonisPaneHeader,
-  KanonisPageHeader,
-  KanonisScrollablePane,
-  KanonisStack,
   KanonisPaneStack,
   KanonisPaneWindow,
+  KanonisScrollablePane,
+  KanonisStack,
   KanonisWorkspace,
   KanonisWorkspaceHeader,
-} from '../components/layout/layout.js';
+} from '../components/layout/index.js';
+import { defineComponent } from '../core/kanonis-element.js';
+
 defineComponent('kanonis-workspace', KanonisWorkspace);
 defineComponent('kanonis-workspace-header', KanonisWorkspaceHeader);
 defineComponent('kanonis-pane-window', KanonisPaneWindow);
@@ -34,20 +35,15 @@ defineComponent('kanonis-pane-header', KanonisPaneHeader);
 defineComponent('kanonis-pane-content', KanonisPaneContent);
 defineComponent('kanonis-inspector-pane', KanonisInspectorPane);
 export {
-  KanonisContainer,
-  KanonisDetailSidebar,
-  KanonisGrid,
-  KanonisInline,
-  KanonisInspectorPane,
-  KanonisPane,
-  KanonisPaneContent,
-  KanonisPaneGroup,
-  KanonisPaneHeader,
-  KanonisPageHeader,
-  KanonisScrollablePane,
-  KanonisStack,
-  KanonisPaneStack,
-  KanonisPaneWindow,
-  KanonisWorkspace,
-  KanonisWorkspaceHeader,
+KanonisContainer,
+KanonisDetailSidebar,
+KanonisGrid,
+KanonisInline,
+KanonisInspectorPane,KanonisPageHeader,KanonisPane,
+KanonisPaneContent,
+KanonisPaneGroup,
+KanonisPaneHeader,KanonisPaneStack,
+KanonisPaneWindow,KanonisScrollablePane,
+KanonisStack,KanonisWorkspace,
+KanonisWorkspaceHeader
 };

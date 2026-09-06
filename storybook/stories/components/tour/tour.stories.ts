@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTour } from '@endeavoury/kanonis/classes';
+import { KanonisTour } from '../../../../packages/components/src/components/tour/tour.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-tour', tags: ['autodocs'] };

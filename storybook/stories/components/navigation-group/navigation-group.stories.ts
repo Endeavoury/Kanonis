@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisNavigationGroup } from '@endeavoury/kanonis/classes';
+import { KanonisNavigationGroup } from '../../../../packages/components/src/components/navigation-group/navigation-group.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-navigation-group', tags: ['autodocs'] };

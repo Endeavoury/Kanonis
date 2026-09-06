@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisBadge } from '@endeavoury/kanonis/classes';
+import { KanonisBadge } from '../../../../packages/components/src/components/badge/badge.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-badge', tags: ['autodocs'] };

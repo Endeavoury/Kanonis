@@ -1,4 +1,3 @@
-import { defineComponent } from '../core/kanonis-element.js';
 import {
   KanonisAvatar,
   KanonisBadge,
@@ -8,7 +7,9 @@ import {
   KanonisMetric,
   KanonisPanel,
   KanonisStatusBadge,
-} from '../components/display/display.js';
+} from '../components/display/index.js';
+import { defineComponent } from '../core/kanonis-element.js';
+
 defineComponent('kanonis-badge', KanonisBadge);
 defineComponent('kanonis-status-badge', KanonisStatusBadge);
 defineComponent('kanonis-avatar', KanonisAvatar);
@@ -17,4 +18,4 @@ defineComponent('kanonis-code-block', KanonisCodeBlock);
 defineComponent('kanonis-description-list', KanonisDescriptionList);
 defineComponent('kanonis-panel', KanonisPanel);
 defineComponent('kanonis-metric', KanonisMetric);
-export { KanonisAvatar, KanonisBadge, KanonisCard, KanonisCodeBlock, KanonisDescriptionList, KanonisMetric, KanonisPanel, KanonisStatusBadge };
+export { KanonisAvatar,KanonisBadge,KanonisCard,KanonisCodeBlock,KanonisDescriptionList,KanonisMetric,KanonisPanel,KanonisStatusBadge };

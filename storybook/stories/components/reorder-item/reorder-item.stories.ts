@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisReorderItem } from '@endeavoury/kanonis/classes';
+import { KanonisReorderItem } from '../../../../packages/components/src/components/reorder-item/reorder-item.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-reorder-item', tags: ['autodocs'] };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisAppShell } from '@endeavoury/kanonis/classes';
+import { KanonisAppShell } from '../../../../packages/components/src/components/app-shell/app-shell.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-app-shell', tags: ['autodocs'] };

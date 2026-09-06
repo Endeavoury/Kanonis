@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisCheckbox } from '@endeavoury/kanonis/classes';
+import { KanonisCheckbox } from '../../../../packages/components/src/components/checkbox/checkbox.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-checkbox', tags: ['autodocs'] };

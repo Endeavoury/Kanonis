@@ -1,7 +1,8 @@
+import { a11yStyles, foundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
 import { css, html, nothing, type CSSResultGroup, type PropertyValues } from 'lit';
 import { property, state } from 'lit/decorators.js';
-import { a11yStyles, foundationStyles, spinnerStyles } from '@endeavoury/kanonis-styles';
 import { KanonisElement, type KanonisDensity } from '../../core/kanonis-element.js';
+
 
 export interface KanonisTableColumn<Row extends Record<string, unknown> = Record<string, unknown>> {
   key: keyof Row | string;
@@ -13,10 +14,12 @@ export interface KanonisTableColumn<Row extends Record<string, unknown> = Record
   width?: string;
   format?: (value: unknown, row: Row) => unknown;
 }
+
 export interface KanonisSortDetail {
   key: string;
   direction: 'ascending' | 'descending';
 }
+
 export interface KanonisRowSelectDetail<Row = Record<string, unknown>> {
   row: Row;
   index: number;

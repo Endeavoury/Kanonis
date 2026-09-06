@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisBulkActions } from '@endeavoury/kanonis/classes';
+import { KanonisBulkActions } from '../../../../packages/components/src/components/bulk-actions/bulk-actions.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-bulk-actions', tags: ['autodocs'] };

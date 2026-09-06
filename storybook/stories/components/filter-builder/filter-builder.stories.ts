@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisFilterBuilder } from '@endeavoury/kanonis/classes';
+import { KanonisFilterBuilder } from '../../../../packages/components/src/components/filter-builder/filter-builder.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-filter-builder', tags: ['autodocs'] };

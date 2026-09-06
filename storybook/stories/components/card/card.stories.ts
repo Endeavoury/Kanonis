@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisCard } from '@endeavoury/kanonis/classes';
+import { KanonisCard } from '../../../../packages/components/src/components/card/card.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-card', tags: ['autodocs'] };

@@ -237,3 +237,24 @@ guarded registration entrypoints
           ↓
 full bundle / individual imports / framework adapters
 ```
+
+## Component source layout
+
+Every registered element owns its implementation in
+`packages/components/src/components/<name>/<name>.ts` and its registration in
+`<name>/register.ts`. For example, `button/button.ts` implements only
+`KanonisButton`; `button-group/button-group.ts` implements `KanonisButtonGroup`.
+Lit templates and component styles remain inline in those implementation files.
+
+Component-specific helpers and public types live with their component. Helpers
+used by several components live in the relevant family’s `shared.ts`, preserving
+a single instance of shared styles and state. Cross-component inheritance uses
+direct imports from the base component. Family `index.ts` files contain exports
+only; existing public package entry points remain available through these barrels.
+
+Dedicated examples remain in
+`storybook/stories/components/<name>/<name>.stories.ts` and import the individual
+implementation. Existing composition and page stories remain in Storybook.
+`npm run verify:components` checks that every registered class has exactly one
+implementation in its matching directory, preventing re-export stubs from
+replacing real component implementations.

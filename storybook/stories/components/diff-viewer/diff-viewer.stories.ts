@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisDiffViewer } from '@endeavoury/kanonis/classes';
+import { KanonisDiffViewer } from '../../../../packages/components/src/components/diff-viewer/diff-viewer.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-diff-viewer', tags: ['autodocs'] };

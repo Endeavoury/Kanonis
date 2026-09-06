@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisApprovalFlow } from '@endeavoury/kanonis/classes';
+import { KanonisApprovalFlow } from '../../../../packages/components/src/components/approval-flow/approval-flow.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-approval-flow', tags: ['autodocs'] };

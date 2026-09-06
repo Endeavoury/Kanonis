@@ -10,11 +10,9 @@ if (!name || !/^[a-z0-9-]+$/.test(name)) {
 }
 
 const root = join('packages/components/src/components', name);
-await mkdir(root, { recursive: true });
-const className = `Ds${name.split('-').map((part) => part[0].toUpperCase() + part.slice(1)).join('')}`;
+await mkdir(root);
+const className = `Kanonis${name.split('-').map((part) => part[0].toUpperCase() + part.slice(1)).join('')}`;
 const tag = `kanonis-${name}`;
 await writeFile(join(root, `${name}.ts`), `import { LitElement, html } from 'lit';\n\nexport class ${className} extends LitElement {\n  render() { return html\`<slot></slot>\`; }\n}\n`);
-await writeFile(join(root, `${name}.scss`), `:host {\n  display: block;\n}\n`);
-await writeFile(join(root, `${name}.html`), `<${tag}></${tag}>\n`);
 await writeFile(join(root, 'register.ts'), `import { defineComponent } from '../../core/kanonis-element.js';\nimport { ${className} } from './${name}.js';\n\ndefineComponent('${tag}', ${className});\nexport { ${className} };\n`);
 console.log(`Scaffolded ${basename(root)} at ${root}`);

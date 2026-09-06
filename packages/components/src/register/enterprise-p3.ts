@@ -1,17 +1,18 @@
-import { defineComponent } from '../core/kanonis-element.js';
 import {
   KanonisAuditLog,
-  KanonisPermissionMatrix,
-  KanonisRoleBadge,
-  KanonisDiffViewer,
+  KanonisCoachmark,
   KanonisCodeEditor,
+  KanonisCompareView,
+  KanonisDiffViewer,
+  KanonisHelpPanel,
   KanonisJsonEditor,
   KanonisMaintenanceNotice,
-  KanonisHelpPanel,
+  KanonisPermissionMatrix,
+  KanonisRoleBadge,
   KanonisTour,
-  KanonisCoachmark,
-  KanonisCompareView,
-} from '../components/enterprise-p3/enterprise-p3.js';
+} from '../components/enterprise-p3/index.js';
+import { defineComponent } from '../core/kanonis-element.js';
+
 defineComponent('kanonis-audit-log', KanonisAuditLog);
 defineComponent('kanonis-permission-matrix', KanonisPermissionMatrix);
 defineComponent('kanonis-role-badge', KanonisRoleBadge);
@@ -23,23 +24,15 @@ defineComponent('kanonis-help-panel', KanonisHelpPanel);
 defineComponent('kanonis-tour', KanonisTour);
 defineComponent('kanonis-coachmark', KanonisCoachmark);
 defineComponent('kanonis-compare-view', KanonisCompareView);
-export {
-  KanonisAuditLog,
-  KanonisPermissionMatrix,
-  KanonisRoleBadge,
-  KanonisDiffViewer,
-  KanonisCodeEditor,
-  KanonisJsonEditor,
-  KanonisMaintenanceNotice,
-  KanonisHelpPanel,
-  KanonisTour,
-  KanonisCoachmark,
-  KanonisCompareView,
-};
 export type {
-  KanonisAuditEntry,
-  KanonisDiffLine,
-  KanonisPermission,
-  KanonisPermissionRole,
-  KanonisTourStep,
-} from '../components/enterprise-p3/enterprise-p3.js';
+KanonisAuditEntry,
+KanonisDiffLine,
+KanonisPermission,
+KanonisPermissionRole,
+KanonisTourStep
+} from '../components/enterprise-p3/index.js';
+export {
+KanonisAuditLog,KanonisCoachmark,KanonisCodeEditor,KanonisCompareView,KanonisDiffViewer,KanonisHelpPanel,KanonisJsonEditor,
+KanonisMaintenanceNotice,KanonisPermissionMatrix,
+KanonisRoleBadge,KanonisTour
+};

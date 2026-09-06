@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisAvatar } from '@endeavoury/kanonis/classes';
+import { KanonisAvatar } from '../../../../packages/components/src/components/avatar/avatar.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-avatar', tags: ['autodocs'] };

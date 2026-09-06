@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisBreadcrumbs } from '@endeavoury/kanonis/classes';
+import { KanonisBreadcrumbs } from '../../../../packages/components/src/components/breadcrumbs/breadcrumbs.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-breadcrumbs', tags: ['autodocs'] };

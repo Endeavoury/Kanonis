@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisTextarea } from '@endeavoury/kanonis/classes';
+import { KanonisTextarea } from '../../../../packages/components/src/components/textarea/textarea.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-textarea', tags: ['autodocs'] };

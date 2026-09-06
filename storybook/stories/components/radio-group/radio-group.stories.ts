@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisRadioGroup } from '@endeavoury/kanonis/classes';
+import { KanonisRadioGroup } from '../../../../packages/components/src/components/radio-group/radio-group.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-radio-group', tags: ['autodocs'] };

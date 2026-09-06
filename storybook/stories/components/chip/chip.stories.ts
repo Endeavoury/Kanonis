@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisChip } from '@endeavoury/kanonis/classes';
+import { KanonisChip } from '../../../../packages/components/src/components/chip/chip.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-chip', tags: ['autodocs'] };

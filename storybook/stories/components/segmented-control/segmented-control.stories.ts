@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisSegmentedControl } from '@endeavoury/kanonis/classes';
+import { KanonisSegmentedControl } from '../../../../packages/components/src/components/segmented-control/segmented-control.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-segmented-control', tags: ['autodocs'] };

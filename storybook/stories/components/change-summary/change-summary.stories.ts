@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisChangeSummary } from '@endeavoury/kanonis/classes';
+import { KanonisChangeSummary } from '../../../../packages/components/src/components/change-summary/change-summary.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-change-summary', tags: ['autodocs'] };

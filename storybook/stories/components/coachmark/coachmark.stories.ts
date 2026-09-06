@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisCoachmark } from '@endeavoury/kanonis/classes';
+import { KanonisCoachmark } from '../../../../packages/components/src/components/coachmark/coachmark.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-coachmark', tags: ['autodocs'] };

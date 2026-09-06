@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
-import { KanonisNotificationCenter } from '@endeavoury/kanonis/classes';
+import { KanonisNotificationCenter } from '../../../../packages/components/src/components/notification-center/notification-center.js';
 import '@endeavoury/kanonis';
 
 const meta: Meta = { title: 'Components/kanonis-notification-center', tags: ['autodocs'] };
