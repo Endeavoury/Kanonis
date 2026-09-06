@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis-angular",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Thin Angular helpers for the Kanonis Web Components.",
   "license": "MIT",
   "repository": {
@@ -23,7 +23,7 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@endeavoury/kanonis": "1.0.21"
+    "@endeavoury/kanonis": "1.0.22"
   },
   "peerDependencies": {
     "@angular/core": ">=17"
