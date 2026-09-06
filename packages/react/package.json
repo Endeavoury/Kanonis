@@ -1,6 +1,6 @@
 {
   "name": "@endeavoury/kanonis-react",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Thin React adapters for the Kanonis Web Components.",
   "license": "MIT",
   "repository": {
@@ -23,7 +23,7 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@endeavoury/kanonis": "1.0.22",
+    "@endeavoury/kanonis": "1.0.23",
     "@lit/react": "1.0.8"
   },
   "peerDependencies": {
