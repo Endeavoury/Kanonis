@@ -1,12 +1,12 @@
 import { glob, readFile, writeFile } from 'node:fs/promises';
-import { basename } from 'node:path';
+import { basename, dirname } from 'node:path';
 
 const outputPath = 'docs/component-status.json';
 const accessibilityTests = await readFile('tests/accessibility.test.ts', 'utf8');
 const behaviorTests = await readFile('tests/components.test.ts', 'utf8');
 const visualTests = await readFile('tests/visual-regression.spec.ts', 'utf8');
 const storySources = [];
-for await (const storyPath of glob('storybook/stories/**/*.stories.ts'))
+for await (const storyPath of glob(['storybook/stories/**/*.stories.ts', 'packages/components/src/components/**/*.stories.ts']))
   storySources.push({ path: storyPath, source: await readFile(storyPath, 'utf8') });
 const entries = new Map();
 const dedicatedGuides = new Map([
@@ -41,9 +41,17 @@ const visualMatrixTags = new Set([
   'kanonis-split-button',
 ]);
 
-for await (const path of glob('packages/components/src/register/*.ts')) {
+const families = new Map();
+const entryFiles = [];
+for await (const entry of glob('packages/components/src/components/*/entry.ts')) entryFiles.push(entry);
+for (const entry of entryFiles.sort()) {
+  for (const match of (await readFile(entry, 'utf8')).matchAll(/import '\.\.\/([^/]+)\/register\.js'/g))
+    families.set(match[1], basename(dirname(entry)));
+}
+
+for await (const path of glob('packages/components/src/components/*/register.ts')) {
   const source = await readFile(path, 'utf8');
-  const family = basename(path, '.ts');
+  const family = families.get(basename(dirname(path))) ?? basename(dirname(path));
   for (const match of source.matchAll(/defineComponent\('([^']+)'/g)) {
     const tag = match[1];
     const accessibilityReview = accessibilityTests.includes(`<${tag}`)
@@ -114,7 +122,7 @@ const generated = `${JSON.stringify(
   {
     schemaVersion: 1,
     statuses: ['experimental', 'ready', 'deprecated'],
-    generatedFrom: 'packages/components/src/register/*.ts',
+    generatedFrom: 'packages/components/src/components/*/register.ts',
     components,
   },
   null,

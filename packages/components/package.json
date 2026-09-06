@@ -11,7 +11,8 @@
   "type": "module",
   "sideEffects": [
     "./dist/index.js",
-    "./dist/register/*.js"
+    "./dist/components/*/entry.js",
+    "./dist/components/*/register.js"
   ],
   "files": [
     "dist",
@@ -28,80 +29,80 @@
       "import": "./dist/classes.js"
     },
     "./button": {
-      "types": "./dist/register/button.d.ts",
-      "import": "./dist/register/button.js"
+      "types": "./dist/components/button/entry.d.ts",
+      "import": "./dist/components/button/entry.js"
     },
     "./forms": {
-      "types": "./dist/register/forms.d.ts",
-      "import": "./dist/register/forms.js"
+      "types": "./dist/components/forms/entry.d.ts",
+      "import": "./dist/components/forms/entry.js"
     },
     "./secondary-forms": {
-      "types": "./dist/register/secondary-forms.d.ts",
-      "import": "./dist/register/secondary-forms.js"
+      "types": "./dist/components/secondary-forms/entry.d.ts",
+      "import": "./dist/components/secondary-forms/entry.js"
     },
     "./display": {
-      "types": "./dist/register/display.d.ts",
-      "import": "./dist/register/display.js"
+      "types": "./dist/components/display/entry.d.ts",
+      "import": "./dist/components/display/entry.js"
     },
     "./feedback": {
-      "types": "./dist/register/feedback.d.ts",
-      "import": "./dist/register/feedback.js"
+      "types": "./dist/components/feedback/entry.d.ts",
+      "import": "./dist/components/feedback/entry.js"
     },
     "./interaction": {
-      "types": "./dist/register/interaction.d.ts",
-      "import": "./dist/register/interaction.js"
+      "types": "./dist/components/interaction/entry.d.ts",
+      "import": "./dist/components/interaction/entry.js"
     },
     "./overlays": {
-      "types": "./dist/register/overlays.d.ts",
-      "import": "./dist/register/overlays.js"
+      "types": "./dist/components/overlays/entry.d.ts",
+      "import": "./dist/components/overlays/entry.js"
     },
     "./upload": {
-      "types": "./dist/register/upload.d.ts",
-      "import": "./dist/register/upload.js"
+      "types": "./dist/components/upload/entry.d.ts",
+      "import": "./dist/components/upload/entry.js"
     },
     "./data-table": {
-      "types": "./dist/register/data-table.d.ts",
-      "import": "./dist/register/data-table.js"
+      "types": "./dist/components/data-table/entry.d.ts",
+      "import": "./dist/components/data-table/entry.js"
     },
     "./layout": {
-      "types": "./dist/register/layout.d.ts",
-      "import": "./dist/register/layout.js"
+      "types": "./dist/components/layout/entry.d.ts",
+      "import": "./dist/components/layout/entry.js"
     },
     "./navigation": {
-      "types": "./dist/register/navigation.d.ts",
-      "import": "./dist/register/navigation.js"
+      "types": "./dist/components/navigation/entry.d.ts",
+      "import": "./dist/components/navigation/entry.js"
     },
     "./navigation-extras": {
-      "types": "./dist/register/navigation-extras.d.ts",
-      "import": "./dist/register/navigation-extras.js"
+      "types": "./dist/components/navigation-extras/entry.d.ts",
+      "import": "./dist/components/navigation-extras/entry.js"
     },
     "./patterns": {
-      "types": "./dist/register/patterns.d.ts",
-      "import": "./dist/register/patterns.js"
+      "types": "./dist/components/patterns/entry.d.ts",
+      "import": "./dist/components/patterns/entry.js"
     },
     "./tree": {
-      "types": "./dist/register/tree.d.ts",
-      "import": "./dist/register/tree.js"
+      "types": "./dist/components/tree/entry.d.ts",
+      "import": "./dist/components/tree/entry.js"
     },
     "./enterprise": {
-      "types": "./dist/register/enterprise.d.ts",
-      "import": "./dist/register/enterprise.js"
+      "types": "./dist/components/enterprise/entry.d.ts",
+      "import": "./dist/components/enterprise/entry.js"
     },
     "./enterprise-p1": {
-      "types": "./dist/register/enterprise-p1.d.ts",
-      "import": "./dist/register/enterprise-p1.js"
+      "types": "./dist/components/enterprise-p1/entry.d.ts",
+      "import": "./dist/components/enterprise-p1/entry.js"
     },
     "./enterprise-p2": {
-      "types": "./dist/register/enterprise-p2.d.ts",
-      "import": "./dist/register/enterprise-p2.js"
+      "types": "./dist/components/enterprise-p2/entry.d.ts",
+      "import": "./dist/components/enterprise-p2/entry.js"
     },
     "./enterprise-p3": {
-      "types": "./dist/register/enterprise-p3.d.ts",
-      "import": "./dist/register/enterprise-p3.js"
+      "types": "./dist/components/enterprise-p3/entry.d.ts",
+      "import": "./dist/components/enterprise-p3/entry.js"
     },
     "./enhancements": {
-      "types": "./dist/register/enhancements.d.ts",
-      "import": "./dist/register/enhancements.js"
+      "types": "./dist/components/enhancements/entry.d.ts",
+      "import": "./dist/components/enhancements/entry.js"
     }
   },
   "scripts": {

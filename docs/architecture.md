@@ -250,11 +250,16 @@ Component-specific helpers and public types live with their component. Helpers
 used by several components live in the relevant family’s `shared.ts`, preserving
 a single instance of shared styles and state. Cross-component inheritance uses
 direct imports from the base component. Family `index.ts` files contain exports
-only; existing public package entry points remain available through these barrels.
+only. Family `entry.ts` files preserve existing package subpaths by importing the
+individual `register.ts` files and exporting the public API. Only the individual
+registration files call `defineComponent`; there is no separate `src/register/` tree.
 
-Dedicated examples remain in
-`storybook/stories/components/<name>/<name>.stories.ts` and import the individual
-implementation. Existing composition and page stories remain in Storybook.
+Dedicated examples live in
+`packages/components/src/components/<name>/<name>.stories.ts` and import the individual
+implementation. Component-family examples live beside their family barrels.
+Storybook discovers these colocated stories and keeps only its configuration,
+introduction, foundations, cross-component patterns, and page examples centrally.
+Component builds exclude `*.stories.ts`; Storybook typechecks them separately.
 `npm run verify:components` checks that every registered class has exactly one
 implementation in its matching directory, preventing re-export stubs from
 replacing real component implementations.

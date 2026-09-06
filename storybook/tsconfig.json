@@ -3,7 +3,13 @@
   "compilerOptions": {
     "noEmit": true,
     "paths": {},
-    "types": ["vite/client"]
+    "types": [
+      "vite/client"
+    ]
   },
-  "include": [".storybook/**/*.ts", "stories/**/*.ts"]
+  "include": [
+    ".storybook/**/*.ts",
+    "stories/**/*.ts",
+    "../packages/components/src/components/**/*.stories.ts"
+  ]
 }

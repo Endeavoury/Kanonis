@@ -1,5 +1,5 @@
-import { glob, readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { access, glob, readFile } from 'node:fs/promises';
+import { basename, dirname, resolve } from 'node:path';
 import ts from 'typescript';
 
 const root = 'packages/components/src/components';
@@ -29,6 +29,17 @@ for await (const file of glob(`${root}/**/*.ts`)) {
     found.add(name);
   }
 }
+for (const file of expected.values()) {
+  const directory = dirname(file);
+  await access(resolve(directory, `${basename(file, '.ts')}.stories.ts`));
+  const registration = await readFile(resolve(directory, 'register.ts'), 'utf8');
+  const definitions = [...registration.matchAll(/defineComponent\('([^']+)'/g)];
+  if (definitions.length !== 1 || definitions[0][1] !== `kanonis-${basename(directory)}`)
+    throw new Error(`Expected exactly one matching registration in ${directory}/register.ts`);
+}
+for await (const file of glob('packages/components/src/register/*.ts'))
+  throw new Error(`Registration must be colocated with its component: ${file}`);
+
 const missing = [...expected.keys()].filter((name) => !found.has(name));
 if (missing.length) throw new Error(`Missing component implementations: ${missing.join(', ')}`);
 console.log(

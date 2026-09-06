@@ -15,4 +15,5 @@ const className = `Kanonis${name.split('-').map((part) => part[0].toUpperCase() 
 const tag = `kanonis-${name}`;
 await writeFile(join(root, `${name}.ts`), `import { LitElement, html } from 'lit';\n\nexport class ${className} extends LitElement {\n  render() { return html\`<slot></slot>\`; }\n}\n`);
 await writeFile(join(root, 'register.ts'), `import { defineComponent } from '../../core/kanonis-element.js';\nimport { ${className} } from './${name}.js';\n\ndefineComponent('${tag}', ${className});\nexport { ${className} };\n`);
+await writeFile(join(root, `${name}.stories.ts`), `import type { Meta, StoryObj } from '@storybook/web-components-vite';\nimport { html } from 'lit';\nimport './register.js';\n\nconst meta: Meta = { title: 'Components/${tag}', tags: ['autodocs'] };\nexport default meta;\nexport const Default: StoryObj = { render: () => html\`<${tag}>Example</${tag}>\` };\n`);
 console.log(`Scaffolded ${basename(root)} at ${root}`);

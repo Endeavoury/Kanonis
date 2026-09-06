@@ -5,7 +5,7 @@
     "ready",
     "deprecated"
   ],
-  "generatedFrom": "packages/components/src/register/*.ts",
+  "generatedFrom": "packages/components/src/components/*/register.ts",
   "components": [
     {
       "tag": "kanonis-action-bar",
@@ -15,8 +15,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/action-bar/action-bar.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts"
+          "packages/components/src/components/action-bar/action-bar.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -26,8 +26,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/action-bar/action-bar.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts"
+          "packages/components/src/components/action-bar/action-bar.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -53,8 +53,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/activity-feed/activity-feed.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/activity-feed/activity-feed.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -64,8 +64,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/activity-feed/activity-feed.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/activity-feed/activity-feed.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -91,8 +91,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/alert/alert.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
+          "packages/components/src/components/alert/alert.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
           "storybook/stories/introduction.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -107,8 +107,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/alert/alert.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
+          "packages/components/src/components/alert/alert.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
           "storybook/stories/introduction.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -139,9 +139,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/app-shell/app-shell.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/app-shell/app-shell.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts",
@@ -155,9 +155,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/app-shell/app-shell.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/app-shell/app-shell.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts",
@@ -187,8 +187,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/approval-flow/approval-flow.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/approval-flow/approval-flow.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -198,8 +198,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/approval-flow/approval-flow.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/approval-flow/approval-flow.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -225,8 +225,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/audit-log/audit-log.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/audit-log/audit-log.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -236,8 +236,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/audit-log/audit-log.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/audit-log/audit-log.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -263,9 +263,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/avatar/avatar.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/navigation.stories.ts"
+          "packages/components/src/components/avatar/avatar.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -275,9 +275,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/avatar/avatar.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/navigation.stories.ts"
+          "packages/components/src/components/avatar/avatar.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -303,10 +303,10 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/badge/badge.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/badge/badge.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -317,10 +317,10 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/badge/badge.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/badge/badge.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -347,8 +347,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/banner/banner.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
+          "packages/components/src/components/banner/banner.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -359,8 +359,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/banner/banner.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
+          "packages/components/src/components/banner/banner.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -387,8 +387,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/brand-mark/brand-mark.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
+          "packages/components/src/components/brand-mark/brand-mark.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
           "storybook/stories/foundations/themes.stories.ts"
         ]
       },
@@ -399,8 +399,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/brand-mark/brand-mark.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
+          "packages/components/src/components/brand-mark/brand-mark.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
           "storybook/stories/foundations/themes.stories.ts"
         ]
       },
@@ -427,10 +427,10 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/breadcrumb/breadcrumb.stories.ts",
-          "storybook/stories/components/breadcrumbs/breadcrumbs.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts"
+          "packages/components/src/components/breadcrumb/breadcrumb.stories.ts",
+          "packages/components/src/components/breadcrumbs/breadcrumbs.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -440,10 +440,10 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/breadcrumb/breadcrumb.stories.ts",
-          "storybook/stories/components/breadcrumbs/breadcrumbs.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts"
+          "packages/components/src/components/breadcrumb/breadcrumb.stories.ts",
+          "packages/components/src/components/breadcrumbs/breadcrumbs.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -469,9 +469,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/breadcrumbs/breadcrumbs.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts"
+          "packages/components/src/components/breadcrumbs/breadcrumbs.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -481,9 +481,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/breadcrumbs/breadcrumbs.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts"
+          "packages/components/src/components/breadcrumbs/breadcrumbs.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -509,8 +509,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/bulk-actions/bulk-actions.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/bulk-actions/bulk-actions.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -520,8 +520,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/bulk-actions/bulk-actions.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/bulk-actions/bulk-actions.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -547,20 +547,20 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/button-group/button-group.stories.ts",
-          "storybook/stories/components/button/button.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button-group/button-group.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/button/button.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/introduction.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
@@ -575,20 +575,20 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/button-group/button-group.stories.ts",
-          "storybook/stories/components/button/button.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button-group/button-group.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/button/button.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/introduction.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
@@ -619,8 +619,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/button-group/button-group.stories.ts",
+          "packages/components/src/components/button-group/button-group.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
@@ -632,8 +632,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/button-group/button-group.stories.ts",
+          "packages/components/src/components/button-group/button-group.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
@@ -661,9 +661,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/card/card.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/card/card.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -675,9 +675,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/card/card.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/card/card.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -705,8 +705,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/change-summary/change-summary.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/change-summary/change-summary.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -716,8 +716,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/change-summary/change-summary.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/change-summary/change-summary.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -743,8 +743,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/checkbox/checkbox.stories.ts",
-          "storybook/stories/components/forms.stories.ts"
+          "packages/components/src/components/checkbox/checkbox.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -754,8 +754,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/checkbox/checkbox.stories.ts",
-          "storybook/stories/components/forms.stories.ts"
+          "packages/components/src/components/checkbox/checkbox.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -781,8 +781,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/chip/chip.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts"
+          "packages/components/src/components/chip/chip.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -792,8 +792,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/chip/chip.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts"
+          "packages/components/src/components/chip/chip.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -819,8 +819,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/coachmark/coachmark.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/coachmark/coachmark.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -830,8 +830,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/coachmark/coachmark.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/coachmark/coachmark.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -857,8 +857,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/code-block/code-block.stories.ts",
-          "storybook/stories/components/display.stories.ts"
+          "packages/components/src/components/code-block/code-block.stories.ts",
+          "packages/components/src/components/display/display.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -868,8 +868,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/code-block/code-block.stories.ts",
-          "storybook/stories/components/display.stories.ts"
+          "packages/components/src/components/code-block/code-block.stories.ts",
+          "packages/components/src/components/display/display.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -895,8 +895,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/code-editor/code-editor.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/code-editor/code-editor.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -906,8 +906,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/code-editor/code-editor.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/code-editor/code-editor.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -933,8 +933,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/column-manager/column-manager.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/column-manager/column-manager.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -944,8 +944,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/column-manager/column-manager.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/column-manager/column-manager.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -971,8 +971,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/combobox/combobox.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/combobox/combobox.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -982,8 +982,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/combobox/combobox.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/combobox/combobox.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1009,8 +1009,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/command-palette/command-palette.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts"
+          "packages/components/src/components/command-palette/command-palette.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1020,8 +1020,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/command-palette/command-palette.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts"
+          "packages/components/src/components/command-palette/command-palette.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1047,8 +1047,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/compare-view/compare-view.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/compare-view/compare-view.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1058,8 +1058,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/compare-view/compare-view.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/compare-view/compare-view.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1085,8 +1085,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/container/container.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/container/container.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -1097,8 +1097,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/container/container.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/container/container.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -1125,8 +1125,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/context-menu/context-menu.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts"
+          "packages/components/src/components/context-menu/context-menu.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1136,8 +1136,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/context-menu/context-menu.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts"
+          "packages/components/src/components/context-menu/context-menu.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1163,8 +1163,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/data-grid/data-grid.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/data-grid/data-grid.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -1174,8 +1174,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/data-table.md",
         "stories": [
-          "storybook/stories/components/data-grid/data-grid.stories.ts",
-          "storybook/stories/components/enterprise.stories.ts"
+          "packages/components/src/components/data-grid/data-grid.stories.ts",
+          "packages/components/src/components/enterprise/enterprise.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1201,8 +1201,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/data-table.stories.ts",
-          "storybook/stories/components/data-table/data-table.stories.ts",
+          "packages/components/src/components/data-table/data-table-examples.stories.ts",
+          "packages/components/src/components/data-table/data-table.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -1213,8 +1213,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/data-table.md",
         "stories": [
-          "storybook/stories/components/data-table.stories.ts",
-          "storybook/stories/components/data-table/data-table.stories.ts",
+          "packages/components/src/components/data-table/data-table-examples.stories.ts",
+          "packages/components/src/components/data-table/data-table.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -1241,8 +1241,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/date-picker/date-picker.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/date-picker/date-picker.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1252,8 +1252,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/date-picker/date-picker.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts"
+          "packages/components/src/components/date-picker/date-picker.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1279,8 +1279,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/description-list/description-list.stories.ts",
-          "storybook/stories/components/display.stories.ts"
+          "packages/components/src/components/description-list/description-list.stories.ts",
+          "packages/components/src/components/display/display.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -1290,8 +1290,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/description-list/description-list.stories.ts",
-          "storybook/stories/components/display.stories.ts"
+          "packages/components/src/components/description-list/description-list.stories.ts",
+          "packages/components/src/components/display/display.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1317,8 +1317,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/detail-list/detail-list.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts"
+          "packages/components/src/components/detail-list/detail-list.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1328,8 +1328,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/detail-list/detail-list.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts"
+          "packages/components/src/components/detail-list/detail-list.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1355,8 +1355,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/detail-sidebar/detail-sidebar.stories.ts",
-          "storybook/stories/components/layout.stories.ts"
+          "packages/components/src/components/detail-sidebar/detail-sidebar.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1366,8 +1366,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/detail-sidebar/detail-sidebar.stories.ts",
-          "storybook/stories/components/layout.stories.ts"
+          "packages/components/src/components/detail-sidebar/detail-sidebar.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1393,8 +1393,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/dialog/dialog.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/dialog/dialog.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -1404,8 +1404,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/dialog/dialog.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/dialog/dialog.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1431,8 +1431,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/diff-viewer/diff-viewer.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/diff-viewer/diff-viewer.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1442,8 +1442,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/diff-viewer/diff-viewer.stories.ts",
-          "storybook/stories/components/enterprise-p3.stories.ts"
+          "packages/components/src/components/diff-viewer/diff-viewer.stories.ts",
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1469,9 +1469,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/disclosure/disclosure.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/disclosure/disclosure.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -1481,9 +1481,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/disclosure/disclosure.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/disclosure/disclosure.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1509,8 +1509,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/drawer/drawer.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/drawer/drawer.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1520,8 +1520,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/drawer/drawer.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/drawer/drawer.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1547,8 +1547,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/drop-zone/drop-zone.stories.ts",
-          "storybook/stories/components/forms.stories.ts"
+          "packages/components/src/components/drop-zone/drop-zone.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -1558,8 +1558,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/drop-zone/drop-zone.stories.ts",
-          "storybook/stories/components/forms.stories.ts"
+          "packages/components/src/components/drop-zone/drop-zone.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1585,8 +1585,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/empty-state/empty-state.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
+          "packages/components/src/components/empty-state/empty-state.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -1597,8 +1597,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/empty-state/empty-state.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
+          "packages/components/src/components/empty-state/empty-state.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -1625,8 +1625,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/field-array/field-array.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/field-array/field-array.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1636,8 +1636,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/field-array/field-array.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/field-array/field-array.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1663,8 +1663,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/file-upload/file-upload.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/file-upload/file-upload.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1674,8 +1674,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/file-upload/file-upload.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/file-upload/file-upload.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1701,8 +1701,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/filter-bar/filter-bar.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -1713,8 +1713,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/filter-bar/filter-bar.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -1741,8 +1741,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/filter-builder/filter-builder.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/filter-builder/filter-builder.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1752,8 +1752,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/filter-builder/filter-builder.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/filter-builder/filter-builder.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1779,8 +1779,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/form-field/form-field.stories.ts",
-          "storybook/stories/components/forms.stories.ts"
+          "packages/components/src/components/form-field/form-field.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1790,8 +1790,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/form-field/form-field.stories.ts",
-          "storybook/stories/components/forms.stories.ts"
+          "packages/components/src/components/form-field/form-field.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1817,8 +1817,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/form-section/form-section.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/form-section/form-section.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1828,8 +1828,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/form-section/form-section.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/form-section/form-section.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1855,8 +1855,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/global-search/global-search.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/global-search/global-search.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1866,8 +1866,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/global-search/global-search.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/global-search/global-search.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1893,9 +1893,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/grid/grid.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/grid/grid.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -1906,9 +1906,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/grid/grid.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/grid/grid.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -1935,8 +1935,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/help-panel/help-panel.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/help-panel/help-panel.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -1946,8 +1946,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/help-panel/help-panel.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/help-panel/help-panel.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -1973,14 +1973,14 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/icon-button/icon-button.stories.ts",
-          "storybook/stories/components/icon/icon.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/icon-button/icon-button.stories.ts",
+          "packages/components/src/components/icon/icon.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/foundations/icons.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
@@ -1993,14 +1993,14 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/icon-button/icon-button.stories.ts",
-          "storybook/stories/components/icon/icon.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/icon-button/icon-button.stories.ts",
+          "packages/components/src/components/icon/icon.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/foundations/icons.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
@@ -2029,11 +2029,11 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/icon-button/icon-button.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/icon-button/icon-button.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
       },
@@ -2044,11 +2044,11 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/icon-button/icon-button.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/icon-button/icon-button.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
       },
@@ -2075,8 +2075,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/illustration/illustration.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/illustration/illustration.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2086,8 +2086,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/illustration/illustration.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/illustration/illustration.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2113,15 +2113,15 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/inline/inline.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/inline/inline.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -2133,15 +2133,15 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/inline/inline.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/inline/inline.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -2169,13 +2169,13 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/input-group/input-group.stories.ts",
-          "storybook/stories/components/input/input.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/input-group/input-group.stories.ts",
+          "packages/components/src/components/input/input.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -2187,13 +2187,13 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/input-group/input-group.stories.ts",
-          "storybook/stories/components/input/input.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/input-group/input-group.stories.ts",
+          "packages/components/src/components/input/input.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -2221,8 +2221,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/input-group/input-group.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/input-group/input-group.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2232,8 +2232,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/input-group/input-group.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/input-group/input-group.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2259,8 +2259,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/inspector-pane/inspector-pane.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/inspector-pane/inspector-pane.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2271,8 +2271,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/inspector-pane/inspector-pane.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
+          "packages/components/src/components/inspector-pane/inspector-pane.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2299,8 +2299,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/job-status/job-status.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/job-status/job-status.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -2310,8 +2310,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/job-status/job-status.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/job-status/job-status.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2337,8 +2337,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/json-editor/json-editor.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/json-editor/json-editor.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -2348,8 +2348,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/json-editor/json-editor.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/json-editor/json-editor.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2375,11 +2375,11 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/kpi-grid/kpi-grid.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/kpi-grid/kpi-grid-examples.stories.ts",
+          "packages/components/src/components/kpi-grid/kpi-grid.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/introduction.stories.ts",
-          "storybook/stories/patterns/kpi-grid.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
@@ -2391,11 +2391,11 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/kpi-grid/kpi-grid.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/kpi-grid/kpi-grid-examples.stories.ts",
+          "packages/components/src/components/kpi-grid/kpi-grid.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/introduction.stories.ts",
-          "storybook/stories/patterns/kpi-grid.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
@@ -2423,9 +2423,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/list-item/list-item.stories.ts",
-          "storybook/stories/components/list/list.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/list-item/list-item.stories.ts",
+          "packages/components/src/components/list/list.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2436,9 +2436,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/list-item/list-item.stories.ts",
-          "storybook/stories/components/list/list.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/list-item/list-item.stories.ts",
+          "packages/components/src/components/list/list.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2465,8 +2465,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/list-item/list-item.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/list-item/list-item.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2477,8 +2477,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/list-item/list-item.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
+          "packages/components/src/components/list-item/list-item.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2505,8 +2505,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/live-region/live-region.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/live-region/live-region.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2516,8 +2516,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/live-region/live-region.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/live-region/live-region.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2543,8 +2543,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/loading-state/loading-state.stories.ts"
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/loading-state/loading-state.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2554,8 +2554,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/loading-state/loading-state.stories.ts"
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/loading-state/loading-state.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2581,8 +2581,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/maintenance-notice/maintenance-notice.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/maintenance-notice/maintenance-notice.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -2592,8 +2592,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/maintenance-notice/maintenance-notice.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/maintenance-notice/maintenance-notice.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2619,11 +2619,11 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/menu-item/menu-item.stories.ts",
-          "storybook/stories/components/menu/menu.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/menu-item/menu-item.stories.ts",
+          "packages/components/src/components/menu/menu.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2633,11 +2633,11 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/menu-item/menu-item.stories.ts",
-          "storybook/stories/components/menu/menu.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/menu-item/menu-item.stories.ts",
+          "packages/components/src/components/menu/menu.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2663,10 +2663,10 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/menu-item/menu-item.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/menu-item/menu-item.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2676,10 +2676,10 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/menu-item/menu-item.stories.ts",
-          "storybook/stories/components/overlays.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/menu-item/menu-item.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2705,12 +2705,12 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/metric/metric.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/kpi-grid/kpi-grid-examples.stories.ts",
+          "packages/components/src/components/metric/metric.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/introduction.stories.ts",
-          "storybook/stories/patterns/kpi-grid.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
@@ -2722,12 +2722,12 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/metric/metric.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/kpi-grid/kpi-grid-examples.stories.ts",
+          "packages/components/src/components/metric/metric.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
           "storybook/stories/introduction.stories.ts",
-          "storybook/stories/patterns/kpi-grid.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts"
         ]
@@ -2755,8 +2755,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/navigation-group/navigation-group.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/navigation-group/navigation-group.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -2766,8 +2766,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/navigation-group/navigation-group.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/navigation-group/navigation-group.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2793,8 +2793,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/notification-center/notification-center.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/notification-center/notification-center.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -2804,8 +2804,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/notification-center/notification-center.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/notification-center/notification-center.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2831,9 +2831,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/page-header/page-header.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/page-header/page-header.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts",
@@ -2847,9 +2847,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/page-header/page-header.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/page-header/page-header.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/monthly-overview.stories.ts",
@@ -2879,8 +2879,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/pagination/pagination.stories.ts"
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/pagination/pagination.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -2890,8 +2890,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/pagination/pagination.stories.ts"
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/pagination/pagination.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -2917,16 +2917,16 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-content/pane-content.stories.ts",
-          "storybook/stories/components/pane-group/pane-group.stories.ts",
-          "storybook/stories/components/pane-header/pane-header.stories.ts",
-          "storybook/stories/components/pane-stack/pane-stack.stories.ts",
-          "storybook/stories/components/pane-window/pane-window.stories.ts",
-          "storybook/stories/components/pane/pane.stories.ts",
-          "storybook/stories/components/panel/panel.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-content/pane-content.stories.ts",
+          "packages/components/src/components/pane-group/pane-group.stories.ts",
+          "packages/components/src/components/pane-header/pane-header.stories.ts",
+          "packages/components/src/components/pane-stack/pane-stack.stories.ts",
+          "packages/components/src/components/pane-window/pane-window.stories.ts",
+          "packages/components/src/components/pane/pane.stories.ts",
+          "packages/components/src/components/panel/panel.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts",
@@ -2942,16 +2942,16 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-content/pane-content.stories.ts",
-          "storybook/stories/components/pane-group/pane-group.stories.ts",
-          "storybook/stories/components/pane-header/pane-header.stories.ts",
-          "storybook/stories/components/pane-stack/pane-stack.stories.ts",
-          "storybook/stories/components/pane-window/pane-window.stories.ts",
-          "storybook/stories/components/pane/pane.stories.ts",
-          "storybook/stories/components/panel/panel.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-content/pane-content.stories.ts",
+          "packages/components/src/components/pane-group/pane-group.stories.ts",
+          "packages/components/src/components/pane-header/pane-header.stories.ts",
+          "packages/components/src/components/pane-stack/pane-stack.stories.ts",
+          "packages/components/src/components/pane-window/pane-window.stories.ts",
+          "packages/components/src/components/pane/pane.stories.ts",
+          "packages/components/src/components/panel/panel.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts",
@@ -2983,8 +2983,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-content/pane-content.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-content/pane-content.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -2995,8 +2995,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-content/pane-content.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-content/pane-content.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -3023,8 +3023,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-group/pane-group.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-group/pane-group.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -3035,8 +3035,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-group/pane-group.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-group/pane-group.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -3063,8 +3063,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-header/pane-header.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-header/pane-header.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -3075,8 +3075,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-header/pane-header.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-header/pane-header.stories.ts",
           "storybook/stories/patterns/adaptive-layouts.stories.ts"
         ]
       },
@@ -3103,8 +3103,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-stack/pane-stack.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-stack/pane-stack.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3114,8 +3114,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-stack/pane-stack.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-stack/pane-stack.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3141,8 +3141,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-window/pane-window.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-window/pane-window.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3152,8 +3152,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/pane-window/pane-window.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/pane-window/pane-window.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3179,9 +3179,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/panel/panel.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/panel/panel.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -3196,9 +3196,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/panel/panel.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/panel/panel.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
           "storybook/stories/foundations/themes.stories.ts",
           "storybook/stories/product/dashboard.stories.ts",
@@ -3229,8 +3229,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/permission-matrix/permission-matrix.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/permission-matrix/permission-matrix.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3240,8 +3240,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/permission-matrix/permission-matrix.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/permission-matrix/permission-matrix.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3267,8 +3267,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/progress/progress.stories.ts"
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/progress/progress.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3278,8 +3278,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/progress/progress.stories.ts"
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/progress/progress.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3305,8 +3305,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/quick-actions/quick-actions.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/quick-actions/quick-actions.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3316,8 +3316,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/quick-actions/quick-actions.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/quick-actions/quick-actions.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3343,9 +3343,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/radio-group/radio-group.stories.ts",
-          "storybook/stories/components/radio/radio.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/radio-group/radio-group.stories.ts",
+          "packages/components/src/components/radio/radio.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3355,9 +3355,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/radio-group/radio-group.stories.ts",
-          "storybook/stories/components/radio/radio.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/radio-group/radio-group.stories.ts",
+          "packages/components/src/components/radio/radio.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3383,8 +3383,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/radio-group/radio-group.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/radio-group/radio-group.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3394,8 +3394,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/radio-group/radio-group.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/radio-group/radio-group.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3421,8 +3421,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/range/range.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/range/range.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3432,8 +3432,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/range/range.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/range/range.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3459,8 +3459,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/record-header/record-header.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/record-header/record-header.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3470,8 +3470,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/record-header/record-header.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/record-header/record-header.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3497,8 +3497,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/reorder-item/reorder-item.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/reorder-item/reorder-item.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3508,8 +3508,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/reorder-item/reorder-item.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/reorder-item/reorder-item.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3535,8 +3535,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/reorder-list/reorder-list.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/reorder-list/reorder-list.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3546,8 +3546,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/reorder-list/reorder-list.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/reorder-list/reorder-list.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3573,8 +3573,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/role-badge/role-badge.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/role-badge/role-badge.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3584,8 +3584,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/role-badge/role-badge.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/role-badge/role-badge.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3611,8 +3611,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/saved-view/saved-view.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/saved-view/saved-view.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3622,8 +3622,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/saved-view/saved-view.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/saved-view/saved-view.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3649,8 +3649,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/scrollable-pane/scrollable-pane.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/scrollable-pane/scrollable-pane.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3660,8 +3660,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/scrollable-pane/scrollable-pane.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/scrollable-pane/scrollable-pane.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3687,9 +3687,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/search-input/search-input.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/search-input/search-input.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -3700,9 +3700,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/search-input/search-input.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/search-input/search-input.stories.ts",
           "storybook/stories/product/ledger.stories.ts"
         ]
       },
@@ -3729,9 +3729,9 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/segment/segment.stories.ts",
-          "storybook/stories/components/segmented-control/segmented-control.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/segment/segment.stories.ts",
+          "packages/components/src/components/segmented-control/segmented-control.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3741,9 +3741,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/segment/segment.stories.ts",
-          "storybook/stories/components/segmented-control/segmented-control.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/segment/segment.stories.ts",
+          "packages/components/src/components/segmented-control/segmented-control.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3769,8 +3769,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/segmented-control/segmented-control.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/segmented-control/segmented-control.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3780,8 +3780,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/segmented-control/segmented-control.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/segmented-control/segmented-control.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3807,9 +3807,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/select/select.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/select/select.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -3821,9 +3821,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/select/select.stories.ts",
-          "storybook/stories/patterns/filter-bar.stories.ts",
+          "packages/components/src/components/filter-bar/filter-bar-examples.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/select/select.stories.ts",
           "storybook/stories/product/ledger.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
         ]
@@ -3851,11 +3851,11 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/sidebar-item/sidebar-item.stories.ts",
-          "storybook/stories/components/sidebar/sidebar.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/sidebar-item/sidebar-item.stories.ts",
+          "packages/components/src/components/sidebar/sidebar.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3865,11 +3865,11 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/sidebar-item/sidebar-item.stories.ts",
-          "storybook/stories/components/sidebar/sidebar.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/sidebar-item/sidebar-item.stories.ts",
+          "packages/components/src/components/sidebar/sidebar.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3895,10 +3895,10 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/sidebar-item/sidebar-item.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/sidebar-item/sidebar-item.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3908,10 +3908,10 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/sidebar-item/sidebar-item.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/sidebar-item/sidebar-item.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3937,8 +3937,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/skeleton/skeleton.stories.ts"
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/skeleton/skeleton.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -3948,8 +3948,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/skeleton/skeleton.stories.ts"
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/skeleton/skeleton.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -3975,8 +3975,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/split-button/split-button.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/split-button/split-button.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -3986,8 +3986,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/components/maturity-additions.md",
         "stories": [
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/split-button/split-button.stories.ts"
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/split-button/split-button.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4013,15 +4013,15 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/data-table.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
-          "storybook/stories/components/stack/stack.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/data-table/data-table-examples.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
+          "packages/components/src/components/stack/stack.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
@@ -4034,15 +4034,15 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/actions.stories.ts",
-          "storybook/stories/components/data-table.stories.ts",
-          "storybook/stories/components/enhancements.stories.ts",
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/overlays.stories.ts",
-          "storybook/stories/components/stack/stack.stories.ts",
+          "packages/components/src/components/button/actions.stories.ts",
+          "packages/components/src/components/data-table/data-table-examples.stories.ts",
+          "packages/components/src/components/enhancements/enhancements.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/overlays/overlays.stories.ts",
+          "packages/components/src/components/stack/stack.stories.ts",
           "storybook/stories/foundations/scales.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts",
           "storybook/stories/product/settings-import.stories.ts"
@@ -4071,10 +4071,10 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/status-badge/status-badge.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/status-badge/status-badge.stories.ts",
           "storybook/stories/foundations/themes.stories.ts"
         ]
       },
@@ -4085,10 +4085,10 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/display.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/navigation.stories.ts",
-          "storybook/stories/components/status-badge/status-badge.stories.ts",
+          "packages/components/src/components/display/display.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/navigation/navigation.stories.ts",
+          "packages/components/src/components/status-badge/status-badge.stories.ts",
           "storybook/stories/foundations/themes.stories.ts"
         ]
       },
@@ -4115,8 +4115,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/stepper/stepper.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/stepper/stepper.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4126,8 +4126,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/stepper/stepper.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/stepper/stepper.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4153,8 +4153,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/switch/switch.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/switch/switch.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4164,8 +4164,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/switch/switch.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/switch/switch.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4191,9 +4191,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/tab/tab.stories.ts",
-          "storybook/stories/components/tabs/tabs.stories.ts"
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/tab/tab.stories.ts",
+          "packages/components/src/components/tabs/tabs.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4203,9 +4203,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/tab/tab.stories.ts",
-          "storybook/stories/components/tabs/tabs.stories.ts"
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/tab/tab.stories.ts",
+          "packages/components/src/components/tabs/tabs.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4231,8 +4231,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/tabs/tabs.stories.ts"
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/tabs/tabs.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4242,8 +4242,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/tabs/tabs.stories.ts"
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/tabs/tabs.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4269,8 +4269,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/task-list/task-list.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/task-list/task-list.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4280,8 +4280,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/task-list/task-list.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/task-list/task-list.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4307,8 +4307,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/tenant-switcher/tenant-switcher.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/tenant-switcher/tenant-switcher.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4318,8 +4318,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/tenant-switcher/tenant-switcher.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/tenant-switcher/tenant-switcher.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4345,8 +4345,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/textarea/textarea.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/textarea/textarea.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4356,8 +4356,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/forms.stories.ts",
-          "storybook/stories/components/textarea/textarea.stories.ts"
+          "packages/components/src/components/forms/forms.stories.ts",
+          "packages/components/src/components/textarea/textarea.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4383,8 +4383,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/theme-toggle/theme-toggle.stories.ts"
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/theme-toggle/theme-toggle.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4394,8 +4394,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/interaction.stories.ts",
-          "storybook/stories/components/theme-toggle/theme-toggle.stories.ts"
+          "packages/components/src/components/interaction/interaction.stories.ts",
+          "packages/components/src/components/theme-toggle/theme-toggle.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4421,8 +4421,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/time-picker/time-picker.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/time-picker/time-picker.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4432,8 +4432,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/time-picker/time-picker.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/time-picker/time-picker.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4459,8 +4459,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/timeline/timeline.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/timeline/timeline.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4470,8 +4470,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p2.stories.ts",
-          "storybook/stories/components/timeline/timeline.stories.ts"
+          "packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts",
+          "packages/components/src/components/timeline/timeline.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4497,9 +4497,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/toast-region/toast-region.stories.ts",
-          "storybook/stories/components/toast/toast.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/toast-region/toast-region.stories.ts",
+          "packages/components/src/components/toast/toast.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -4510,9 +4510,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/toast-region/toast-region.stories.ts",
-          "storybook/stories/components/toast/toast.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/toast-region/toast-region.stories.ts",
+          "packages/components/src/components/toast/toast.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -4539,8 +4539,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/toast-region/toast-region.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/toast-region/toast-region.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -4551,8 +4551,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/feedback.stories.ts",
-          "storybook/stories/components/toast-region/toast-region.stories.ts",
+          "packages/components/src/components/feedback/feedback.stories.ts",
+          "packages/components/src/components/toast-region/toast-region.stories.ts",
           "storybook/stories/patterns/messaging.stories.ts"
         ]
       },
@@ -4579,8 +4579,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/overlays.stories.ts",
-          "storybook/stories/components/tooltip/tooltip.stories.ts"
+          "packages/components/src/components/overlays/overlays.stories.ts",
+          "packages/components/src/components/tooltip/tooltip.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4590,8 +4590,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/overlays.stories.ts",
-          "storybook/stories/components/tooltip/tooltip.stories.ts"
+          "packages/components/src/components/overlays/overlays.stories.ts",
+          "packages/components/src/components/tooltip/tooltip.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4617,8 +4617,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/tour/tour.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/tour/tour.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4628,8 +4628,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p3.stories.ts",
-          "storybook/stories/components/tour/tour.stories.ts"
+          "packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts",
+          "packages/components/src/components/tour/tour.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4655,9 +4655,9 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/tree-item/tree-item.stories.ts",
-          "storybook/stories/components/tree.stories.ts",
-          "storybook/stories/components/tree/tree.stories.ts"
+          "packages/components/src/components/tree-item/tree-item.stories.ts",
+          "packages/components/src/components/tree/tree-examples.stories.ts",
+          "packages/components/src/components/tree/tree.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4667,9 +4667,9 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/tree-item/tree-item.stories.ts",
-          "storybook/stories/components/tree.stories.ts",
-          "storybook/stories/components/tree/tree.stories.ts"
+          "packages/components/src/components/tree-item/tree-item.stories.ts",
+          "packages/components/src/components/tree/tree-examples.stories.ts",
+          "packages/components/src/components/tree/tree.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4695,8 +4695,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/tree-item/tree-item.stories.ts",
-          "storybook/stories/components/tree.stories.ts"
+          "packages/components/src/components/tree-item/tree-item.stories.ts",
+          "packages/components/src/components/tree/tree-examples.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4706,8 +4706,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/tree-item/tree-item.stories.ts",
-          "storybook/stories/components/tree.stories.ts"
+          "packages/components/src/components/tree-item/tree-item.stories.ts",
+          "packages/components/src/components/tree/tree-examples.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4733,8 +4733,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/user-menu/user-menu.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/user-menu/user-menu.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4744,8 +4744,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/user-menu/user-menu.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/user-menu/user-menu.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4771,8 +4771,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/validation-summary/validation-summary.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/validation-summary/validation-summary.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4782,8 +4782,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/validation-summary/validation-summary.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/validation-summary/validation-summary.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4809,8 +4809,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/view-toolbar/view-toolbar.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/view-toolbar/view-toolbar.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4820,8 +4820,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise.stories.ts",
-          "storybook/stories/components/view-toolbar/view-toolbar.stories.ts"
+          "packages/components/src/components/enterprise/enterprise.stories.ts",
+          "packages/components/src/components/view-toolbar/view-toolbar.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4847,11 +4847,11 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/workspace-header/workspace-header.stories.ts",
-          "storybook/stories/components/workspace-tabs/workspace-tabs.stories.ts",
-          "storybook/stories/components/workspace/workspace.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/workspace-header/workspace-header.stories.ts",
+          "packages/components/src/components/workspace-tabs/workspace-tabs.stories.ts",
+          "packages/components/src/components/workspace/workspace.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4861,11 +4861,11 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/workspace-header/workspace-header.stories.ts",
-          "storybook/stories/components/workspace-tabs/workspace-tabs.stories.ts",
-          "storybook/stories/components/workspace/workspace.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/workspace-header/workspace-header.stories.ts",
+          "packages/components/src/components/workspace-tabs/workspace-tabs.stories.ts",
+          "packages/components/src/components/workspace/workspace.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4891,8 +4891,8 @@
       "adoption": {
         "state": "shared-catalog",
         "evidence": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/workspace-header/workspace-header.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/workspace-header/workspace-header.stories.ts"
         ]
       },
       "accessibilityReview": "automated-composition",
@@ -4902,8 +4902,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": "docs/patterns/desktop-pane-workspace.md",
         "stories": [
-          "storybook/stories/components/layout.stories.ts",
-          "storybook/stories/components/workspace-header/workspace-header.stories.ts"
+          "packages/components/src/components/layout/layout.stories.ts",
+          "packages/components/src/components/workspace-header/workspace-header.stories.ts"
         ]
       },
       "stateCoverage": {
@@ -4929,8 +4929,8 @@
       "adoption": {
         "state": "validation-required",
         "evidence": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/workspace-tabs/workspace-tabs.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/workspace-tabs/workspace-tabs.stories.ts"
         ]
       },
       "accessibilityReview": "pending-component-matrix",
@@ -4940,8 +4940,8 @@
         "catalog": "docs/component-catalog.md",
         "guide": null,
         "stories": [
-          "storybook/stories/components/enterprise-p1.stories.ts",
-          "storybook/stories/components/workspace-tabs/workspace-tabs.stories.ts"
+          "packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts",
+          "packages/components/src/components/workspace-tabs/workspace-tabs.stories.ts"
         ]
       },
       "stateCoverage": {

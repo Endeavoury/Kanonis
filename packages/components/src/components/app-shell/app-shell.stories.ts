@@ -1,0 +1,14 @@
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import { html } from 'lit';
+import { KanonisAppShell } from './app-shell.js';
+import '@endeavoury/kanonis';
+
+const meta: Meta = { title: 'Components/kanonis-app-shell', tags: ['autodocs'] };
+export default meta;
+
+export const Default: StoryObj = {
+  name: 'kanonis-app-shell',
+  render: () => html`<div style="padding:2rem;max-width:960px"><kanonis-app-shell>Example</kanonis-app-shell></div>`,
+};
+
+void KanonisAppShell;

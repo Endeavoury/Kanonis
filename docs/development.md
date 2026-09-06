@@ -26,7 +26,7 @@ packages/components/src/components/<component>/
   <component>.scss        # design-source stylesheet (kept beside the element)
   <component>.html        # semantic anatomy/fixture markup
   register.ts             # defineComponent + public registration exports
-storybook/stories/components/<component>.stories.ts
+packages/components/src/components/<component>/<component>.stories.ts
 docs/components/<component>.md
 ```
 

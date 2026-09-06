@@ -13,32 +13,32 @@ manifest keeps catalog-only entries experimental rather than overstating their r
 
 ## Layout and navigation
 
-`kanonis-app-shell`, `kanonis-pane-group`, `kanonis-pane`, `kanonis-scrollable-pane`, `kanonis-sidebar`, `kanonis-inspector-pane`, `kanonis-pane-header`, `kanonis-pane-content`, `kanonis-navigation-group`, `kanonis-workspace-tabs` — [layout and productivity stories](../storybook/stories/components/enterprise-p1.stories.ts)
+`kanonis-app-shell`, `kanonis-pane-group`, `kanonis-pane`, `kanonis-scrollable-pane`, `kanonis-sidebar`, `kanonis-inspector-pane`, `kanonis-pane-header`, `kanonis-pane-content`, `kanonis-navigation-group`, `kanonis-workspace-tabs` — [layout and productivity stories](../packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts)
 
 ## Data, forms, and workflows
 
-`kanonis-data-grid`, `kanonis-data-table`, `kanonis-filter-builder`, `kanonis-filter-bar`, `kanonis-view-toolbar`, `kanonis-column-manager`, `kanonis-bulk-actions`, `kanonis-saved-view`, `kanonis-combobox`, `kanonis-validation-summary`, `kanonis-form-section`, `kanonis-field-array`, `kanonis-date-picker`, `kanonis-time-picker`, `kanonis-file-upload`, `kanonis-drop-zone`, `kanonis-stepper`, `kanonis-approval-flow`, `kanonis-task-list`, `kanonis-detail-list`, `kanonis-detail-sidebar`, `kanonis-record-header`, `kanonis-change-summary` — [productivity stories](../storybook/stories/components/enterprise.stories.ts), [workflow stories](../storybook/stories/components/enterprise-p2.stories.ts)
+`kanonis-data-grid`, `kanonis-data-table`, `kanonis-filter-builder`, `kanonis-filter-bar`, `kanonis-view-toolbar`, `kanonis-column-manager`, `kanonis-bulk-actions`, `kanonis-saved-view`, `kanonis-combobox`, `kanonis-validation-summary`, `kanonis-form-section`, `kanonis-field-array`, `kanonis-date-picker`, `kanonis-time-picker`, `kanonis-file-upload`, `kanonis-drop-zone`, `kanonis-stepper`, `kanonis-approval-flow`, `kanonis-task-list`, `kanonis-detail-list`, `kanonis-detail-sidebar`, `kanonis-record-header`, `kanonis-change-summary` — [productivity stories](../packages/components/src/components/enterprise/enterprise.stories.ts), [workflow stories](../packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts)
 
 ## Search, commands, and notifications
 
-`kanonis-command-palette`, `kanonis-global-search`, `kanonis-tenant-switcher`, `kanonis-user-menu`, `kanonis-context-menu`, `kanonis-quick-actions`, `kanonis-notification-center`, `kanonis-banner`, `kanonis-maintenance-notice`, `kanonis-help-panel`, `kanonis-tour`, `kanonis-coachmark` — [productivity stories](../storybook/stories/components/enterprise-p1.stories.ts), [governance stories](../storybook/stories/components/enterprise-p3.stories.ts)
+`kanonis-command-palette`, `kanonis-global-search`, `kanonis-tenant-switcher`, `kanonis-user-menu`, `kanonis-context-menu`, `kanonis-quick-actions`, `kanonis-notification-center`, `kanonis-banner`, `kanonis-maintenance-notice`, `kanonis-help-panel`, `kanonis-tour`, `kanonis-coachmark` — [productivity stories](../packages/components/src/components/enterprise-p1/enterprise-p1.stories.ts), [governance stories](../packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts)
 
 ## Audit, security, and developer tools
 
-`kanonis-audit-log`, `kanonis-permission-matrix`, `kanonis-role-badge`, `kanonis-diff-viewer`, `kanonis-code-editor`, `kanonis-json-editor`, `kanonis-compare-view`, `kanonis-job-status`, `kanonis-timeline`, `kanonis-activity-feed` — [P2 stories](../storybook/stories/components/enterprise-p2.stories.ts), [P3 stories](../storybook/stories/components/enterprise-p3.stories.ts)
+`kanonis-audit-log`, `kanonis-permission-matrix`, `kanonis-role-badge`, `kanonis-diff-viewer`, `kanonis-code-editor`, `kanonis-json-editor`, `kanonis-compare-view`, `kanonis-job-status`, `kanonis-timeline`, `kanonis-activity-feed` — [P2 stories](../packages/components/src/components/enterprise-p2/enterprise-p2.stories.ts), [P3 stories](../packages/components/src/components/enterprise-p3/enterprise-p3.stories.ts)
 
 ## Foundations and controls
 
-`kanonis-alert`, `kanonis-avatar`, `kanonis-badge`, `kanonis-breadcrumb`, `kanonis-breadcrumbs`, `kanonis-button`, `kanonis-button-group`, `kanonis-card`, `kanonis-checkbox`, `kanonis-code-block`, `kanonis-container`, `kanonis-description-list`, `kanonis-dialog`, `kanonis-disclosure`, `kanonis-drawer`, `kanonis-empty-state`, `kanonis-form-field`, `kanonis-grid`, `kanonis-icon`, `kanonis-icon-button`, `kanonis-inline`, `kanonis-input`, `kanonis-kpi-grid`, `kanonis-list`, `kanonis-list-item`, `kanonis-loading-state`, `kanonis-menu`, `kanonis-menu-item`, `kanonis-metric`, `kanonis-page-header`, `kanonis-pagination`, `kanonis-panel`, `kanonis-progress`, `kanonis-radio`, `kanonis-radio-group`, `kanonis-range`, `kanonis-search-input`, `kanonis-select`, `kanonis-sidebar-item`, `kanonis-skeleton`, `kanonis-stack`, `kanonis-status-badge`, `kanonis-switch`, `kanonis-tab`, `kanonis-tabs`, `kanonis-textarea`, `kanonis-theme-toggle`, `kanonis-toast`, `kanonis-toast-region`, `kanonis-tooltip`, `kanonis-tree`, `kanonis-tree-item` — [component stories](../storybook/stories/components)
+`kanonis-alert`, `kanonis-avatar`, `kanonis-badge`, `kanonis-breadcrumb`, `kanonis-breadcrumbs`, `kanonis-button`, `kanonis-button-group`, `kanonis-card`, `kanonis-checkbox`, `kanonis-code-block`, `kanonis-container`, `kanonis-description-list`, `kanonis-dialog`, `kanonis-disclosure`, `kanonis-drawer`, `kanonis-empty-state`, `kanonis-form-field`, `kanonis-grid`, `kanonis-icon`, `kanonis-icon-button`, `kanonis-inline`, `kanonis-input`, `kanonis-kpi-grid`, `kanonis-list`, `kanonis-list-item`, `kanonis-loading-state`, `kanonis-menu`, `kanonis-menu-item`, `kanonis-metric`, `kanonis-page-header`, `kanonis-pagination`, `kanonis-panel`, `kanonis-progress`, `kanonis-radio`, `kanonis-radio-group`, `kanonis-range`, `kanonis-search-input`, `kanonis-select`, `kanonis-sidebar-item`, `kanonis-skeleton`, `kanonis-stack`, `kanonis-status-badge`, `kanonis-switch`, `kanonis-tab`, `kanonis-tabs`, `kanonis-textarea`, `kanonis-theme-toggle`, `kanonis-toast`, `kanonis-toast-region`, `kanonis-tooltip`, `kanonis-tree`, `kanonis-tree-item` — [component stories](../packages/components/src/components)
 
 ## Action, accessibility, asset, and reordering additions
 
 `kanonis-live-region`, `kanonis-segmented-control`, `kanonis-segment`, `kanonis-action-bar`, `kanonis-split-button`,
 `kanonis-input-group`, `kanonis-chip`, `kanonis-illustration`, `kanonis-brand-mark`, `kanonis-reorder-list`,
-`kanonis-reorder-item` — [maturity addition stories](../storybook/stories/components/enhancements.stories.ts)
+`kanonis-reorder-item` — [maturity addition stories](../packages/components/src/components/enhancements/enhancements.stories.ts)
 
 `kanonis-workspace`, `kanonis-workspace-header`, `kanonis-pane-window`, `kanonis-pane-stack` — [desktop pane workspace
-stories](../storybook/stories/components/layout.stories.ts)
+stories](../packages/components/src/components/layout/layout.stories.ts)
 
 The full desktop composition is documented in [Desktop pane workspace](patterns/desktop-pane-workspace.md).
 

@@ -6,6 +6,18 @@
     "outDir": "dist",
     "tsBuildInfoFile": "../../.cache/components.tsbuildinfo"
   },
-  "references": [{ "path": "../tokens" }, { "path": "../styles" }],
-  "include": ["src/**/*.ts"]
+  "references": [
+    {
+      "path": "../tokens"
+    },
+    {
+      "path": "../styles"
+    }
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.stories.ts"
+  ]
 }

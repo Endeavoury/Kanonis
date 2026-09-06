@@ -4,10 +4,10 @@ import { glob, readFile } from 'node:fs/promises';
 import { relative } from 'node:path';
 
 const registrations = new Map();
-for await (const path of glob('packages/components/src/register/*.ts')) {
+for await (const path of glob('packages/components/src/components/*/register.ts')) {
   const source = await readFile(path, 'utf8');
   const imports = new Map();
-  for (const match of source.matchAll(/import\s*\{([^}]+)\}\s*from\s*['"](\.\.\/components\/[^'"]+)['"]/g)) {
+  for (const match of source.matchAll(/import\s*\{([^}]+)\}\s*from\s*['"](\.\/[^'"]+)['"]/g)) {
     for (const name of match[1].split(',').map((value) => value.trim()).filter(Boolean)) imports.set(name, match[2]);
   }
   for (const match of source.matchAll(/defineComponent\('([^']+)',\s*(\w+)\)/g)) {
@@ -21,7 +21,7 @@ for await (const path of glob('packages/components/src/register/*.ts')) {
 }
 
 const storyFiles = [];
-for await (const path of glob('storybook/stories/**/*.stories.ts')) {
+for await (const path of glob(['storybook/stories/**/*.stories.ts', 'packages/components/src/components/**/*.stories.ts'])) {
   storyFiles.push(path);
 }
 for (const component of registrations.values()) {

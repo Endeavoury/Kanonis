@@ -1,13 +1,13 @@
 import { glob, readFile } from 'node:fs/promises';
 
 const registered = new Set();
-for await (const path of glob('packages/components/src/register/*.ts')) {
+for await (const path of glob('packages/components/src/components/*/register.ts')) {
   const source = await readFile(path, 'utf8');
   for (const match of source.matchAll(/defineComponent\('([^']+)'/g)) registered.add(match[1]);
 }
 
 let stories = '';
-for await (const path of glob('storybook/stories/**/*.stories.ts'))
+for await (const path of glob(['storybook/stories/**/*.stories.ts', 'packages/components/src/components/**/*.stories.ts']))
   stories += await readFile(path, 'utf8');
 const catalog = await readFile('docs/component-catalog.md', 'utf8');
 const manifest = JSON.parse(await readFile('docs/component-status.json', 'utf8'));
