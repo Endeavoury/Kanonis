@@ -1,14 +1,62 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { html } from 'lit';
 import { KanonisTenantSwitcher } from './tenant-switcher.js';
 import '@endeavoury/kanonis';
 
-const meta: Meta = { title: 'Components/kanonis-tenant-switcher', tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Components/kanonis-tenant-switcher',
+  tags: ['autodocs'],
+  args: {
+    slotContent: 'Example content',
+    tenants: [],
+    value: 'Example value',
+    label: 'Workspace',
+  },
+  argTypes: {
+    slotContent: { control: 'text', description: 'Default-slot content.' },
+    tenants: { control: 'object', description: 'Public property (KanonisTenant[]).' },
+    value: { control: 'text', description: 'Public property.' },
+    label: { control: 'text', description: 'Public property.' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Properties: `tenants`, `value`, `label`. This component does not expose a slot. Events: `kanonis-tenant-change`.',
+      },
+    },
+  },
+};
 export default meta;
 
-export const Default: StoryObj = {
-  name: 'kanonis-tenant-switcher',
-  render: () => html`<div style="padding:2rem;max-width:960px"><kanonis-tenant-switcher>Example</kanonis-tenant-switcher></div>`,
+type Story = StoryObj<typeof meta>;
+
+/** Use the Controls panel to try every public property. Emitted events appear below the component. */
+export const Usage: Story = {
+  render: (args) => {
+    const container = document.createElement('section');
+    container.style.cssText = 'display:grid;gap:1rem;max-width:960px';
+    const component = document.createElement('kanonis-tenant-switcher') as HTMLElement &
+      Record<string, unknown>;
+    const { slotContent, ...properties } = args as Record<string, unknown>;
+    Object.assign(component, properties);
+    component.textContent = String(slotContent ?? 'Example content');
+    const events = document.createElement('output');
+    events.setAttribute('aria-live', 'polite');
+    events.style.cssText =
+      'min-height:1.5rem;color:var(--kanonis-color-text-secondary);font-size:var(--kanonis-font-size-sm)';
+    events.textContent = 'Interact with the component to inspect its events.';
+    for (const eventName of ['kanonis-tenant-change'] as readonly string[]) {
+      component.addEventListener(eventName, (event) => {
+        const detail =
+          event instanceof CustomEvent && event.detail !== undefined
+            ? ' — ' + JSON.stringify(event.detail)
+            : '';
+        events.textContent = eventName + detail;
+      });
+    }
+    container.append(component, events);
+    return container;
+  },
 };
 
 void KanonisTenantSwitcher;

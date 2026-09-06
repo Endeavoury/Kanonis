@@ -1,14 +1,88 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { html } from 'lit';
 import { KanonisInput } from './input.js';
 import '@endeavoury/kanonis';
 
-const meta: Meta = { title: 'Components/kanonis-input', tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Components/kanonis-input',
+  tags: ['autodocs'],
+  args: {
+    slotContent: 'Example content',
+    label: 'Example label',
+    name: 'example',
+    value: 'Example value',
+    type: 'text',
+    placeholder: 'Enter a value',
+    autocomplete: 'Example',
+    disabled: false,
+    required: false,
+    readonly: false,
+    minlength: 0,
+    maxlength: 0,
+    helpText: 'Helpful guidance appears here.',
+    error: 'Example validation message.',
+    size: 'medium',
+  },
+  argTypes: {
+    slotContent: { control: 'text', description: 'Default-slot content.' },
+    label: { control: 'text', description: 'Public property.' },
+    name: { control: 'text', description: 'Public property.' },
+    value: { control: 'text', description: 'Public property.' },
+    type: { control: 'text', description: 'Public property.' },
+    placeholder: { control: 'text', description: 'Public property.' },
+    autocomplete: { control: 'text', description: 'Public property.' },
+    disabled: { control: 'boolean', description: 'Public property.' },
+    required: { control: 'boolean', description: 'Public property.' },
+    readonly: { control: 'boolean', description: 'Public property.' },
+    minlength: { control: { type: 'number' }, description: 'Public property (number).' },
+    maxlength: { control: { type: 'number' }, description: 'Public property (number).' },
+    helpText: { control: 'text', description: 'Public property.' },
+    error: { control: 'text', description: 'Public property.' },
+    size: {
+      control: 'select',
+      options: ['small', 'medium', 'large'],
+      description: 'Public property (KanonisSize).',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Properties: `label`, `name`, `value`, `type`, `placeholder`, `autocomplete`, `disabled`, `required`, `readonly`, `minlength`, `maxlength`, `helpText`, `error`, `size`. Slots: `prefix`, `suffix`. Events: `kanonis-input`, `kanonis-change`.',
+      },
+    },
+  },
+};
 export default meta;
 
-export const Default: StoryObj = {
-  name: 'kanonis-input',
-  render: () => html`<div style="padding:2rem;max-width:960px"><kanonis-input>Example</kanonis-input></div>`,
+type Story = StoryObj<typeof meta>;
+
+/** Use the Controls panel to try every public property. Emitted events appear below the component. */
+export const Usage: Story = {
+  render: (args) => {
+    const container = document.createElement('section');
+    container.style.cssText = 'display:grid;gap:1rem;max-width:960px';
+    const component = document.createElement('kanonis-input') as HTMLElement &
+      Record<string, unknown>;
+    const { slotContent, ...properties } = args as Record<string, unknown>;
+    Object.assign(component, properties);
+    component.textContent = String(slotContent ?? 'Example content');
+    const events = document.createElement('output');
+    events.setAttribute('aria-live', 'polite');
+    events.style.cssText =
+      'min-height:1.5rem;color:var(--kanonis-color-text-secondary);font-size:var(--kanonis-font-size-sm)';
+    events.textContent = 'Interact with the component to inspect its events.';
+    for (const eventName of ['kanonis-input', 'kanonis-change'] as readonly string[]) {
+      component.addEventListener(eventName, (event) => {
+        const detail =
+          event instanceof CustomEvent && event.detail !== undefined
+            ? ' — ' + JSON.stringify(event.detail)
+            : '';
+        events.textContent = eventName + detail;
+      });
+    }
+    container.append(component, events);
+    return container;
+  },
 };
 
 void KanonisInput;

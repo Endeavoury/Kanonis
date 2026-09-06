@@ -34,7 +34,7 @@
     "test:a11y": "npm run build:packages && vitest run tests/accessibility.test.ts",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
-    "verify:stories": "node scripts/verify-story-coverage.mjs",
+    "verify:stories": "node scripts/verify-story-coverage.mjs && node scripts/verify-component-story-api.mjs",
     "verify:components": "node scripts/verify-component-structure.mjs && node scripts/generate-component-manifest.mjs --check && node scripts/verify-component-contract.mjs",
     "components:manifest": "node scripts/generate-component-manifest.mjs",
     "components:list": "node scripts/list-components.mjs",

@@ -1,14 +1,62 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { html } from 'lit';
 import { KanonisNotificationCenter } from './notification-center.js';
 import '@endeavoury/kanonis';
 
-const meta: Meta = { title: 'Components/kanonis-notification-center', tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Components/kanonis-notification-center',
+  tags: ['autodocs'],
+  args: {
+    slotContent: 'Example content',
+    notifications: [],
+    open: false,
+    label: 'Notifications',
+  },
+  argTypes: {
+    slotContent: { control: 'text', description: 'Default-slot content.' },
+    notifications: { control: 'object', description: 'Public property (KanonisNotification[]).' },
+    open: { control: 'boolean', description: 'Public property.' },
+    label: { control: 'text', description: 'Public property.' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Properties: `notifications`, `open`, `label`. This component does not expose a slot. Events: `kanonis-notification-read`.',
+      },
+    },
+  },
+};
 export default meta;
 
-export const Default: StoryObj = {
-  name: 'kanonis-notification-center',
-  render: () => html`<div style="padding:2rem;max-width:960px"><kanonis-notification-center>Example</kanonis-notification-center></div>`,
+type Story = StoryObj<typeof meta>;
+
+/** Use the Controls panel to try every public property. Emitted events appear below the component. */
+export const Usage: Story = {
+  render: (args) => {
+    const container = document.createElement('section');
+    container.style.cssText = 'display:grid;gap:1rem;max-width:960px';
+    const component = document.createElement('kanonis-notification-center') as HTMLElement &
+      Record<string, unknown>;
+    const { slotContent, ...properties } = args as Record<string, unknown>;
+    Object.assign(component, properties);
+    component.textContent = String(slotContent ?? 'Example content');
+    const events = document.createElement('output');
+    events.setAttribute('aria-live', 'polite');
+    events.style.cssText =
+      'min-height:1.5rem;color:var(--kanonis-color-text-secondary);font-size:var(--kanonis-font-size-sm)';
+    events.textContent = 'Interact with the component to inspect its events.';
+    for (const eventName of ['kanonis-notification-read'] as readonly string[]) {
+      component.addEventListener(eventName, (event) => {
+        const detail =
+          event instanceof CustomEvent && event.detail !== undefined
+            ? ' — ' + JSON.stringify(event.detail)
+            : '';
+        events.textContent = eventName + detail;
+      });
+    }
+    container.append(component, events);
+    return container;
+  },
 };
 
 void KanonisNotificationCenter;
